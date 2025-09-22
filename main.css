@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&display=swap');
 
 .londrina-shadow-regular {
   font-family: "Londrina Shadow", sans-serif;
@@ -12,6 +13,36 @@
   font-style: normal;
 }
 
+.londrina-outline-regular {
+  font-family: "Londrina Outline", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.londrina-solid-thin {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.londrina-solid-light {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.londrina-solid-regular {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.londrina-solid-black {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
 body {
   background-color: #fbfaf6;
 }
@@ -20,6 +51,16 @@ body {
   color: rgb(0, 0, 0);
   font-size: 4rem;
   font-family: "Londrina Shadow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: .75em;
+  /* border: 1px solid black; */
+}
+
+.logo-left .logo:hover {
+  color: rgb(0, 0, 0);
+  font-size: 4rem;
+  font-family: "Londrina Solid", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -66,11 +107,14 @@ body {
 }
 
 nav li {
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.4s ease-in-out;
   margin: 0 10px;
   list-style: none;
-  border: #333 solid 1px;
+  /* border: #333 solid 1px; */
+  background-color: #fbfaf6;
   display: inline-block;
   border-radius: 8px;
+  padding: 10px 15px;
 }
 
 nav a {
@@ -80,9 +124,27 @@ nav a {
   font-size: medium;
   font-weight: 400;
   font-style: normal;
+  font-family: 'Inter', sans-serif;
 }
 
 nav li:hover {
-  background-color: #333;
-  color: #fff;
+  color: #000000;
+  background-color: #f1f0eb;
+  /* border: 1px solid #000000; */
+  border-radius: 8px;
+}
+
+nav a:hover {
+  color: #000000;
+  padding: 10px 15px;
+  font-weight: 500;
+}
+
+.hero-name {
+  font-size: 5rem;
+  font-family: "Londrina Shadow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: .30em;
+  /* border: 1px solid black; */
 }

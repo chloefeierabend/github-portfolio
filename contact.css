@@ -1,0 +1,61 @@
+ .contact-button {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+    border-radius: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    border: 2px solid #C4C4C2;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    margin: 15px;
+    display: flex-row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.contact-button img{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.linkedin-button {
+    background-color: #B4D7FF;
+}
+
+.linkedin-button:hover {
+    background-color: #94bdff;
+}
+
+.email-button {
+    background-color: #E0F8FF;
+}
+
+.email-button:hover {
+    background-color: #bae1fc;
+}
+
+.bento-button {
+    background-color: #BABEFF;
+}
+
+.bento-button:hover {
+    background-color: #a1a1fa;
+}
+
+.contact-title{
+    font-size: 2rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: .90em;
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 15px;
+}

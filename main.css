@@ -47,6 +47,24 @@ body {
   background-color: #fbfaf6;
 }
 
+p{
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2{
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h3{
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
 .logo-left .logo {
   color: rgb(0, 0, 0);
   font-size: 4rem;
@@ -63,6 +81,7 @@ body {
   font-family: "Londrina Solid", sans-serif;
   font-weight: 400;
   font-style: normal;
+  cursor: pointer;
 }
 
 .container {
@@ -72,18 +91,27 @@ body {
   padding: 10px;
 }
 
-.navbar {
+nav.navbar {
   margin: 0;
   padding: 0;
+  z-index: 2;
   overflow: hidden;
   position: sticky;
   top: 0;
   width: 100%;
   justify-content: space-around;
   /* border: 1px solid rgb(74, 255, 50); */
-  backdrop-filter: blur(10px) saturate(180%);
+  /* backdrop-filter: blur(10px) saturate(180%);
   background-color: rgba(255, 255, 255, 0.25);
-  border-radius: 10px;
+  border-radius: 10px; */
+/* From https://css.glass */
+ background: rgba(251, 250, 246, .37);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.039);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+ border: 1px solid rgba(251, 250, 246, 0.3)
+
 }
 
 .logo-left {
@@ -122,7 +150,7 @@ nav a {
   color: #333;
   padding: 10px 15px;
   font-size: medium;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   font-family: 'Inter', sans-serif;
 }
@@ -137,7 +165,125 @@ nav li:hover {
 nav a:hover {
   color: #000000;
   padding: 10px 15px;
-  font-weight: 500;
+  font-weight: 600;
+}
+
+/* section{
+  position: relative;
+  top: 15vh;
+  left: 0;
+  width: 100%;
+} */
+
+/* .hero{
+  position: relative;
+  top: 15vh;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  border: 1px solid rgb(176, 15, 15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+
+.content{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+  max-width: 600px;
+  margin-bottom: 100px;
+}
+
+.lets-connect-button{
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: normal;
+  font-family: 'Inter', sans-serif;
+  background-color: #f1f0eb;
+  border-radius: 8px;
+  padding: 10px 26px;
+  border: 1px solid black;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.4s ease-in-out;
+}
+
+.lets-connect-button a{
+  text-decoration: none;
+  color: #333;
+}
+
+.lets-connect-button:hover{
+  color: #000000;
+  background-color: #DFF2E9;
+  border: 1px solid #000000;
+}
+
+.featured-projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 75vw;
+}
+
+@media (max-width: 768px) {
+  .featured-projects-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.hero {
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+}
+
+.hero-container{
+  width: 600px;
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-content{
+  position: relative;
+  max-width: 500px;
+  z-index: 1;
+  /* border: 1px solid black; */
+}
+
+.hero-name {
+  /* border: 1px solid black; */
+  margin-bottom: 0px;
 }
 
 .hero-name {
@@ -145,6 +291,252 @@ nav a:hover {
   font-family: "Londrina Shadow", sans-serif;
   font-weight: 400;
   font-style: normal;
-  line-height: .30em;
+  line-height: .90em;
+  margin-top: 0px;
+}
+
+.hero-description {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 1vh;
+  position: relative;
+  top: 50;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+}
+
+.hero-description p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
   /* border: 1px solid black; */
+}
+
+.hero-logo{
+  position: absolute;
+  top: -10px;
+  right: 0%;
+}
+
+.hero-logo img {
+  width: 220px;
+  height: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1vh;
+}
+
+.hero-buttons button {
+  font-size: 1rem;
+  background-color: #f1f0eb;
+  border: .5px solid black;
+  border-radius: 5px;
+  /* padding: .7vh 2vh; */
+  padding: 10px 26px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.4s ease-in-out;
+}
+
+.hero-buttons a{
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  color: #141414;
+  font-weight: 550;
+  font-style: normal;
+}
+
+.work-button:hover {
+  background-color: #DFE8FF;
+  /* border: 1px solid rgb(0, 143, 159);
+  background-color: aqua; */
+}
+
+.work-button:focus {
+  background-color: #DFE8FF;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.work-button:active {
+  background-color: #d6def6;
+  border: .5px solid rgb(0, 0, 0);
+}
+
+button:disabled {
+  background-color: #F4F3EE;
+  border: .5px solid #6B6B6B;
+  color: #6B6B6B;
+}
+
+.resume-button:hover {
+  background-color: #F2E7DF;
+}
+
+.resume-button:focus {
+  background-color: #F2E7DF;
+}
+
+.resume-button:active {
+  background-color: #edddd2;
+}
+
+.featured-projects{
+  margin-bottom: 250px;
+  position: relative;
+}
+
+.featured-projects-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto; /* center horizontally */
+  padding: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+  .featured-projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+.featured-project {
+  margin: 0;
+  padding: 15px;
+  /* border: 1px solid #ddd; */
+  border-radius: 2px;
+  background: #f1f0eb;
+  text-align: start;
+}
+
+.featured-project img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0px;
+  border-radius: 2px;
+}
+
+.featured-project h3 {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+  margin-top: 10px;
+}
+
+.featured-project p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  color: #444;
+}
+
+.featured-project-placeholder {
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+  border-radius: 2px;
+  background: #f1f0eb;
+}
+
+.site-footer {
+  width: 100%;
+  background: #efefe5;
+  padding: 28px 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  align-items: center;
+  gap: 36px;
+}
+
+.footer-logo {
+  width: 120px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  display: block;
+}
+
+.tagline {
+  max-width: 420px;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.45;
+  font-weight: 500;
+  color: #171717;
+}
+
+.footer-right {
+  display: grid;
+  grid-template-columns: 120px auto;
+  align-items: center;
+  column-gap: 24px;
+}
+
+.footer-portrait {
+  width: 120px;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-nav a {
+  display: block;
+  text-decoration: none;
+  color: #1f1f1f;
+  padding: 14px 0;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+  color: #000000;
+  background-color: #f1f0eb;
+}
+
+/* Responsiveness NOT FULLY TESTED*/
+@media (max-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 100px 1fr;
+    grid-auto-rows: auto;
+    row-gap: 28px;
+  }
+
+  .footer-right {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+
+  .footer-logo { width: 100px; }
+  .footer-portrait { width: 110px; }
+  .tagline { max-width: 32ch; }
+}
+
+@media (max-width: 520px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-left { justify-self: center; }
+  .footer-right {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+
+  .footer-nav a { padding: 4px 0; }
 }

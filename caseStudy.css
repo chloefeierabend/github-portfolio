@@ -1,0 +1,65 @@
+
+.hero-casestudy {
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+}
+
+.hero-container-casestudy {
+  margin: 0 auto;
+  width: 600px;
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-content-casestudy{
+  position: relative;
+  max-width: 500px;
+  z-index: 1;
+  /* border: 1px solid black; */
+}
+
+.hero-name-casestudy {
+  font-size: 5rem;
+  font-family: "Londrina Shadow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: .90em;
+  margin-top: 0px;
+}
+
+.hero-description-casestudy {
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 1vh;
+  position: relative;
+  top: 50;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+}
+
+.hero-description-casestudy p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  /* border: 1px solid black; */
+}
+
+.hero-logo-casestudy{
+  position: absolute;
+  top: -10px;
+  right: 0%;
+}
+
+.hero-logo-casestudy img {
+  width: 220px;
+  height: auto;
+}
+

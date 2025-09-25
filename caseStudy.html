@@ -4,9 +4,557 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="caseStudy.css">
+    <script src="carousel.js" defer></script>
+    <script src="caseStudy.js" defer></script>
+    <script src="https://kit.fontawesome.com/5973f658b0.js" crossorigin="anonymous"></script>
+    <title>Case Study</title>
 </head>
 <body>
-    <h1>contact</h1>
+     <nav class="navbar">
+      <div class="container">
+        <div class="logo-left">
+          <a href="index.html" class="logo">CF</a>
+        </div>
+        <ul class="nav">
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+<div class="content-casestudy">
+     <section class="hero-casestudy">
+          <div class="hero-container-casestudy">
+            <div class="hero-content-casestudy">
+              <h1 class="hero-name-casestudy">
+                <span class="londrina-shadow-regular hero-name-casestudy leading-tight">Chloe </br>Feierabend</span>
+              </h1>
+              <div class="hero-description-casestudy">
+                <p>Designer crafting intuitive, human-</br>centered experiences.  </p>
+              </div>
+            </div>   
+            <div class="hero-logo-casestudy" >
+              <img src="img/Logo_sept21.png" alt="Logo">
+            </div>
+          </div>
+    </section>  
+
+    <section class="top-button">
+     <button onclick="scrollToDesignImages()">Go to Design Images</button>
+    </section>
+
+    <section class="project-overview">
+        <h2>Project Title</h2>
+        <h3>Context</h3>
+        <p class="project-description-list">
+          Goal: Improve financial literacy for international students and Canadian newcomers.
+        </p>
+        <p class="project-description-list">Scope: Website with interactive modules, quizzes, and personality-based financial learning.</p>
+        <div class="project-context-table">
+            <div class="project-context">
+                <h3>Roles</h3>
+                <p>Lead UX/UI Designer, Front-End Developer</p>
+            </div>
+             <hr class="project-context-hr">
+             <div class="project-context">
+                <h3>Tools</h3>
+                <p>Figma, HTML, CSS, Tailwind, JavaScript, TypeScript,GitHub, Sveltekit</p>
+            </div>
+            <hr class="project-context-hr">
+            <div class="project-context">
+            <h3>Timeline</h3>
+            <p>3 Months, May 2025 - August 2025</p>
+            </div>
+            <hr class="project-context-hr">
+            <div class="project-context">
+            <h3>Collaborators</h3>
+            <p>1 Team Lead, 2 Developers</p>
+            </div>
+            <hr class="project-context-hr">
+        </div>
+    </section>
+
+    <!-- <section class="solution-overview">
+        <h3 class="solution-title">Solution</h3>
+         <p class="solution-description">Text here</p>
+    </section> -->
+
+    <section class="solution-overview">
+        <h3 class="solution-title">Problem Statement</h3>
+         <p class="solution-description">International students and newcomers face barriers in understanding Canadian financial systems. Existing tools are either too technical or lack cultural/contextual relevance. <strong>How might we make financial literacy accessible, engaging, and trustworthy for these users?</strong></p>
+    </section>
+
+    <section class="ideation" aria-labelledby="ideation-title">
+  <div class="ideation-container">
+    <h2 id="ideation-title">Ideation</h2>
+
+    <div class="ideation-grid">
+      <!-- Brainstorming -->
+      <article class="idea-card">
+        <div class="idea-icon" aria-hidden="true">
+         <i class="fa-solid fa-lightbulb" style="color: #000000;"></i>
+        </div>
+        <h3>Brainstorming</h3>
+        <p>Sketched gamified approaches (animal personalities, progress paths).</p>
+      </article>
+
+      <!-- User Flows -->
+      <article class="idea-card">
+        <div class="idea-icon" aria-hidden="true">
+         <i class="fa-solid fa-users-rectangle"></i>
+        </div>
+        <h3>User Flows</h3>
+        <p>Designed onboarding survey → personalized persona → course module flow.</p>
+      </article>
+
+      <!-- Storyboards -->
+      <article class="idea-card">
+        <div class="idea-icon" aria-hidden="true">
+         <i class="fa-solid fa-crop-simple"></i>
+        </div>
+        <h3>Wireframes</h3>
+        <p>Helped to visualize how a newcomer might discover, engage with, and apply lessons.</p>
+      </article>
+    </div>
+
+    <!-- <aside class="artifacts" aria-label="Artifacts">
+      <span class="artifacts-label">Artifacts:</span>
+      <a class="artifact-chip" href="#" title="View User Flow Map">User Flow Map</a>
+      <a class="artifact-chip" href="#" title="View Storyboard">Wireframes</a>
+    </aside> -->
+  </div>
+</section>
+
+<section class="prototyping" aria-labelledby="prototyping-title">
+  <div class="proto-container">
+    <h2 id="prototyping-title">Prototyping</h2>
+
+    <div class="proto-grid">
+      <!-- Low-Fidelity -->
+      <article class="proto-card">
+        <div class="proto-icon" aria-hidden="true">
+          <!-- wireframe icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-top-icon lucide-panel-top"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/></svg>
+        </div>
+        <h3>Low-Fidelity</h3>
+        <p>Wireframes in Figma showing module cards, quizzes, and progress indicators.</p>
+      </article>
+
+      <!-- High-Fidelity -->
+      <article class="proto-card">
+        <div class="proto-icon" aria-hidden="true">
+          <!-- palette/typography icon -->
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panels-top-left-icon lucide-panels-top-left"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+        </div>
+        <h3>High-Fidelity</h3>
+        <p>Applied brand identity with purple/green/teal palette, playful icons, and accessible typography (sans-serif, large headings).</p>
+        <ul class="palette" aria-label="Brand palette">
+          <li style="--sw:#8F4BB1" title="Purple"></li>
+          <li style="--sw:#2FF29E" title="Green"></li>
+          <li style="--sw:#00739D" title="Dark Teal"></li>
+        </ul>
+      </article>
+
+      <!-- Design System -->
+      <article class="proto-card">
+        <div class="proto-icon" aria-hidden="true">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-paintbrush-icon lucide-paintbrush"><path d="m14.622 17.897-10.68-2.913"/><path d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z"/><path d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15"/></svg>
+        </div>
+        <h3>Design System</h3>
+        <p>Used Figma Alignments, Spacing and UI Assets for consistency.</p>
+      </article>
+    </div>
+
+    <!-- <aside class="artifacts" aria-label="Artifacts">
+      <span class="artifacts-label">Artifact:</span>
+      <a class="artifact-chip" href="#">Wireframes</a>
+      <a class="artifact-chip" href="#">High-fidelity mockups</a>
+    </aside> -->
+  </div>
+</section>
+
+<section class="usability" aria-labelledby="usability-title">
+  <div class="usa-container">
+    <h2 id="usability-title">Usability Testing &amp; Outcomes</h2>
+
+    <div class="usa-grid">
+      <!-- Testing summary -->
+      <article class="usa-card usa-testing">
+        <h3>Testing</h3>
+        <p class="usa-participants">
+          <span class="usa-badge" aria-hidden="true">5</span>
+          <strong>Participants:</strong> international students
+        </p>
+        <ul class="usa-tasks" aria-label="Tasks">
+          <li>Completing a quiz</li>
+          <li>Checking progress</li>
+          <li>Reading module content</li>
+        </ul>
+      </article>
+
+      <!-- Findings -->
+      <article class="usa-card usa-findings">
+        <h3>Findings</h3>
+        <ul class="usa-list">
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Progress bar and quiz feedback were motivating.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Users appreciated plain language + icons.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h10M14 8l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Navigation needed simplification (added breadcrumbs + clearer CTAs).</span>
+          </li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Outcome -->
+    <aside class="usa-outcome" role="status" aria-live="polite">
+      <strong>Outcome:</strong> Improved flow, increased satisfaction, validated gamified approach.
+    </aside>
+  </div>
+</section>
+
+<section class="final-solution" aria-labelledby="final-title">
+  <div class="final-container">
+    <h2 id="final-title">Final Solution &amp; Design Brief</h2>
+
+    <div class="final-grid">
+      <!-- Survey & Mascots -->
+      <article class="fs-card">
+        <div class="fs-icon" aria-hidden="true">
+          <!-- clipboard/check -->
+          <svg viewBox="0 0 24 24"><path d="M9 3h6a2 2 0 0 1 2 2h1a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h1a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 3h6v2H9zM8 13l3 3 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Personality Survey</h3>
+        <p>Playful mascots guide the experience.</p>
+        <ul class="chip-row" aria-label="Mascots">
+          <li class="chip">🐯 Tiger</li>
+          <li class="chip">🐃 Ox</li>
+          <li class="chip">🦅 Eagle</li>
+          <li class="chip">🐉 Dragon</li>
+        </ul>
+      </article>
+
+      <!-- Course Modules -->
+      <article class="fs-card">
+        <div class="fs-icon" aria-hidden="true">
+          <!-- layers/modules -->
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers-icon lucide-layers"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>
+        </div>
+        <h3>Course Modules</h3>
+        <p>Targeted learning paths focused on credit and renting.</p>
+        <ul class="chip-row" aria-label="Modules">
+          <li class="chip">CreditBuilder™</li>
+          <li class="chip">RentBuilder™</li>
+        </ul>
+      </article>
+
+      <!-- Accessibility / Browsers -->
+      <article class="fs-card">
+        <div class="fs-icon" aria-hidden="true">
+          <!-- globe -->
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3a16 16 0 0 1 0 18M12 3a16 16 0 0 0 0 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Multi-Browser Accessibility</h3>
+        <p>Works reliably across modern browsers.</p>
+        <ul class="chip-row" aria-label="Browsers">
+          <li class="chip">Chrome</li>
+          <li class="chip">Edge</li>
+          <li class="chip">Firefox</li>
+          <li class="chip">Brave</li>
+        </ul>
+      </article>
+
+      <!-- Gamification -->
+      <article class="fs-card">
+        <div class="fs-icon" aria-hidden="true">
+          <!-- trophy/progress -->
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gamepad2-icon lucide-gamepad-2"><line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg>
+        </div>
+        <h3>Gamified Elements</h3>
+        <p>Motivation built into progress and feedback.</p>
+        <ul class="bullet-list">
+          <li>Progress bar &amp; quiz feedback</li>
+          <li class="flow">Learn <span aria-hidden="true">→</span> Apply <span aria-hidden="true">→</span> Grow</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Optional one-line brief -->
+    <aside class="final-brief">
+      A cohesive tool that personalizes learning, keeps users motivated, and stays accessible across environments.
+    </aside>
+  </div>
+</section>
+
+<section class="development" aria-labelledby="dev-title">
+  <div class="dev-container">
+    <h2 id="dev-title">Development</h2>
+
+    <p class="dev-built"><strong>Built with:</strong> SvelteKit + Tailwind</p>
+    <ul class="tech-chips" aria-label="Tech stack">
+      <li class="chip">SvelteKit</li>
+      <li class="chip">Tailwind CSS</li>
+      <li class="chip">MongoDB</li>
+    </ul>
+
+    <article class="dev-card">
+      <h3>Challenges</h3>
+      <ul class="dev-list">
+        <li>Cross-browser responsiveness (desktop-first → mobile adaptation).</li>
+        <li>Tailwind v4 setup issues (resolved with updated PostCSS config).</li>
+        <li>Database design for user quiz storage (MongoDB).</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="lessons" aria-labelledby="lessons-title">
+  <div class="lessons-container">
+    <h2 id="lessons-title">Reflect &amp; Lessons Learned</h2>
+
+    <ol class="lesson-grid">
+      <li class="lesson-card">
+        <div class="lesson-num" aria-hidden="true">1</div>
+        <h3>Simplicity Wins</h3>
+        <p>Designing financial education taught me that simplicity beats complexity. Users valued clarity and playfulness over feature overload.</p>
+      </li>
+
+      <li class="lesson-card">
+        <div class="lesson-num" aria-hidden="true">2</div>
+        <h3>Accessibility Matters</h3>
+        <p>Applying contrast, alt text, and screen-reader labels made the tool more inclusive and easier to navigate.</p>
+      </li>
+
+      <li class="lesson-card">
+        <div class="lesson-num" aria-hidden="true">3</div>
+        <h3>End-to-End Ownership</h3>
+        <p>Leading design from research → testing → dev handoff built confidence in managing full UX cycles.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="design-brief" aria-labelledby="brief-title">
+  <div class="brief-container">
+    <h2 id="brief-title">Design Brief</h2>
+
+    <div class="brief-grid">
+      <!-- Goals -->
+      <article class="brief-card">
+        <h3>Goals</h3>
+        <p>Make financial literacy accessible, engaging, and culturally relevant for newcomers.</p>
+      </article>
+
+      <!-- Target Audience -->
+      <article class="brief-card">
+        <h3>Target Audience</h3>
+        <p>International students and first-time Canadian residents.</p>
+      </article>
+
+      <!-- UI Rationale -->
+      <article class="brief-card brief-rationale">
+        <h3>UI Rationale</h3>
+        <dl class="brief-dl">
+          <div class="row">
+            <dt>Layout</dt>
+            <dd>Clear card-based modules with breadcrumbs for navigation.</dd>
+          </div>
+          <div class="row">
+            <dt>Typography</dt>
+            <dd>Large, legible sans-serif—friendly yet professional.</dd>
+          </div>
+          <div class="row">
+            <dt>Color</dt>
+            <dd>
+              Purple / Orange / Teal for a balance of trust + playfulness.
+              <ul class="palette" aria-label="Brand palette">
+                <li style="--sw:#8F4BB1" title="Purple"></li>
+          <li style="--sw:#2FF29E" title="Green"></li>
+          <li style="--sw:#00739D" title="Dark Teal"></li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </article>
+
+      <!-- Accessibility -->
+      <article class="brief-card">
+        <h3>Accessibility</h3>
+        <ul class="brief-list">
+          <li>Alt text &amp; ARIA labels</li>
+          <li>AODA color-contrast compliance</li>
+          <li>Tested across Chrome, Edge, Firefox, Brave</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Key Lesson -->
+    <aside class="brief-lesson" role="note">
+      <strong>Key Lesson Learned:</strong>
+      User testing challenged assumptions—playful mascots and visual metaphors resonated far more than anticipated, proving serious topics can still be fun.
+    </aside>
+  </div>
+</section>
+
+
+
+<!-- <section class="research-section">
+<h2 class="research">Research</h2>
+<h3>Question I asked</h3>
+<div class="left-research">
+<p>Blurb explanation text here</p>
+</div>
+<div class="right-research">
+    <list class="research-list">
+        <li>Blurb explanation text here</li>
+        <li>Blurb explanation text here</li>
+        <li>Blurb explanation text here</li>
+        <li>Blurb explanation text here</li>
+        <li>Blurb explanation text here</li>
+        <li>Blurb explanation text here</li>
+    </list>
+</div>
+</section>
+
+<section class="research-competitors">
+    <h2 class="competitors">Competitors</h2>
+    <h3>Question I asked</h3>
+    <div class="competitors-container">
+    <div class="competitor-section1">
+        <p>Blurb explanation text here</p>
+        <img src="img/Logo_sept21.png" alt="Logo">
+    </div>
+    <div class="competitor-section2">
+        <img src="img/Logo_sept21.png" alt="Logo">
+            <p>Blurb explanation text here</p>
+    </div>
+    </div>
+</section> -->
+
+<section class="graphics">
+
+</section>
+
+<section class="design-graphics">
+    <h2>Graphics</h2>
+<section class="carousel" aria-label="Case Study Carousel">
+  <div class="carousel-inner">
+    <div class="carousel-text">Text</div>
+
+    <!-- Three-column panel -->
+    <div class="carousel-panel">
+      <!-- Left column: arrow -->
+      <div class="arrow-col">
+       <button class="carousel-arrow prev" aria-label="Previous slide">
+  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M15 6l-6 6 6 6" fill="none"
+          stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+      </div>
+
+      <!-- Center column: viewport/track -->
+      <div class="viewport-col">
+        <div class="carousel-viewport" tabindex="0">
+          <ul class="carousel-track">
+            <li class="slide is-active" data-caption="caption one">
+              <div class="graphic">graphics</div>
+            </li>
+            <li class="slide" data-caption="caption two">
+              <div class="graphic">graphics</div>
+            </li>
+            <li class="slide" data-caption="caption three">
+              <div class="graphic">graphics</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right column: arrow -->
+      <div class="arrow-col">
+       <button class="carousel-arrow next" aria-label="Next slide">
+  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M9 6l6 6-6 6" fill="none"
+          stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="carousel-caption" aria-live="polite">caption one</p>
+</section>
+</section>
+
+<section class="design" id="design">
+    <div class="design-container">
+        <div class="design-left">
+            <h2>Design</h2>
+            <!-- <p class="design-description">Text here</p> -->
+        </div>
+        <div class="design-imgs">
+            <div class="design-img">
+             <img src="img/cta survey july 24.png" alt="CTA Survey">
+            <figcaption>CTA Survey - July 24 - Logged Out</figcaption>
+            </div>
+
+            <div class="design-img">
+             <img src="img/Home page Logged In Aug 21, 2025.png" alt="CTA Survey">
+            <figcaption>Home page with logged in user - aug 21</figcaption>
+            </div>
+
+            <div class="design-img">
+             <img src="img/Survey 3 Aug 21, 2025.png" alt="CTA Survey">
+            <figcaption>Survey, 3 questions complete with 5 left to go.</figcaption>
+            </div>
+
+            <div class="design-img">
+             <img src="img/Survey Complete Aug 21, 2025.png" alt="CTA Survey">
+            <figcaption>Survey Complete with a Quilong result</figcaption>
+            </div>
+
+              <div class="design-img">
+             <img src="img/future courses carousel aug 21, 2025.png" alt="CTA Survey">
+            <figcaption>Future Courses carousel - Aug 21</figcaption>
+            </div>
+
+            <div class="design-img">
+                <img src="img/join us today km aug 21, 2025.png" alt="Join us today">
+            <figcaption>Join us today - Aug 21</figcaption>
+            </div>
+       
+            <div class="design-img">
+             <img src="img/browse courses aug 21, 2025.png" alt="CTA Survey">
+            <figcaption>Browse Courses - Aug 21</figcaption>
+            </div>
+
+              <div class="design-img">
+             <img src="img/browse courses 3 aug, 2025.png" alt="CTA Survey">
+            <figcaption>Browse Courses - Aug 21</figcaption>
+            </div>
+
+                <div class="design-img">
+             <img src="img/Profile Page CF.png" alt="CTA Survey">
+            <figcaption>Profile Page - Aug 21</figcaption>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+</div>
+<p> add footer</p>
+<script src="carousel.js" defer></script>
 </body>
 </html>

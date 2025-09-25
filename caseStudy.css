@@ -821,7 +821,7 @@ dd{
   gap: 16px;
 }
 
-.carousel-text{ font:600 20px/1.2 system-ui,Segoe UI,Inter,Arial; color:var(--ink); }
+.carousel-text{ font:600 20px/1.2 system-ui,Segoe UI,Inter}
 
 /* three-column panel: [arrow | viewport | arrow] */
 .carousel-panel{
@@ -831,7 +831,7 @@ dd{
   gap:16px;
 }
 
-/* arrow columns keep buttons centered and ALWAYS visible */
+/* arrow columns keep buttons centered and always visible */
 .arrow-col{ display:grid; place-items:center; }
 .carousel-arrow{
   width:40px; height:40px; border-radius:50%;
@@ -844,17 +844,28 @@ dd{
 .carousel-arrow:active{ transform:scale(.96) }
 
 /* center column with sliding track */
-.viewport-col{ min-width:0; }                 /* allow track to shrink */
+.viewport-col{ min-width:0; }
 .carousel-viewport{ position:relative; overflow:hidden; }
 .carousel-track{ list-style:none; margin:0; padding:0; display:flex; transition:transform .45s ease; }
 .slide{ flex:0 0 100%; }
 
 /* demo panel */
 .graphic{
-  margin:24px; background:var(--panel); min-height:360px;
+  margin:24px;  min-height:360px;
   display:flex; align-items:center; justify-content:center;
   font:500 24px/1.2 system-ui,Segoe UI,Inter,Arial; color:var(--ink);
   border-radius:4px;
+  overflow:hidden;
+}
+/* .graphic img{ width:100%; height:100%; object-fit:cover; display:block; justify-content: center; } */
+/* TODO: Fix imgs to center */
+.graphic img {
+width:100%; height:100%; object-fit:cover; display:block; justify-content: center;
+  margin: auto;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
 }
 
 .carousel-caption{ text-align:center; margin:14px 0 0; color:#333; font:500 14px/1.4 system-ui; }

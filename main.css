@@ -365,7 +365,7 @@ nav a:focus-visible {
   font-size: clamp(0.95rem, 1.2vw, 1rem);
   font-weight: 600;
   font-family: "Inter", sans-serif;
-  background-color: #f1f0eb;
+  /* background-color: #f1f0eb; */
   border-radius: 8px;
   padding: 10px 26px;
   border: 1px solid #000;
@@ -381,8 +381,20 @@ nav a:focus-visible {
   font-weight: 600;
 }
 
-.lets-connect-button:hover {
+.lets-connect-button {
   background-color: #dff2e9;
+}
+.lets-connect-button:hover {
+  background-color: #d5f0e3;
+}
+.lets-connect-button:focus {
+  background-color: #d5f0e3;
+}
+.lets-connect-button:active {
+  background-color: #e0f4ea;
+}
+.work-button {
+  background-color: #e5ecfc;
 }
 .work-button:hover {
   background-color: #dfe8ff;
@@ -399,11 +411,14 @@ button:disabled {
   border-color: #6b6b6b;
   color: #6b6b6b;
 }
-.resume-button:hover {
+.resume-button {
   background-color: #f2e7df;
 }
+.resume-button:hover {
+  background-color: #f4e5db;
+}
 .resume-button:focus {
-  background-color: #f2e7df;
+  background-color: #f4e5db;
 }
 .resume-button:active {
   background-color: #edddd2;
@@ -508,6 +523,7 @@ button:disabled {
 
 .featured-project {
   margin: 0;
+  overflow: hidden;
   padding: 15px;
   border-radius: 8px;
   background: #f1f0eb;
@@ -516,9 +532,17 @@ button:disabled {
 
 .featured-project img {
   width: 100%;
-  height: auto;
+  height: 220px;
+  object-fit: cover;
   margin-bottom: 0;
   border-radius: 6px;
+  transition: transform 0.5s ease;
+  transform-origin: center center;
+}
+
+/* Hover zoom-in */
+.featured-project:hover img {
+  transform: scale(1.08);
 }
 
 .featured-project h3 {

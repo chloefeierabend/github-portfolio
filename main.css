@@ -189,14 +189,79 @@ nav a:focus-visible {
   color: #000;
   background-color: #f1f0eb;
 }
+/* Hamburger Menu */
 
-/* Stack nav below logo on narrow screens */
+.nav-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  padding: 8px 10px;
+  cursor: pointer;
+  color: #141414;
+  line-height: 0;
+}
+
+.nav-toggle:focus-visible {
+  outline: 3px solid #1e40af;
+  border-radius: 6px;
+}
+
+.menu-icon {
+  width: 2em;
+  height: 2em;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+/* Mobile layout */
 @media (max-width: 640px) {
-  .navbar .container {
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+
+  /* collapse nav by default */
+  .navbar .nav {
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.3s ease, opacity 0.2s ease;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    margin-left: 0;
+    padding-top: 10px;
+  }
+
+  .navbar .nav li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 6px 0;
+  }
+
+  /* open state */
+  .navbar.is-open .nav {
+    max-height: 240px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar.is-open .menu-icon {
+    transform: rotate(180deg);
+  }
+
+  .navbar .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: 8px;
   }
+
   .nav {
     justify-content: center;
     margin-left: 0;

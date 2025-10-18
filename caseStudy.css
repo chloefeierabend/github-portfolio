@@ -71,6 +71,50 @@ h1.hero-name-casestudy {
   width: 150px;
   height: auto;
 }
+/* Case Study hero */
+@media (max-width: 640px) {
+  .hero-casestudy {
+    overflow-x: hidden;
+  }
+
+  .hero-container-casestudy {
+    width: 100% !important;
+    margin: 0;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Logo sits above text on mobile and scales down */
+  .hero-logo-casestudy {
+    position: static;
+    order: -1;
+    justify-self: center;
+  }
+  .hero-logo-casestudy img {
+    max-width: 40vw;
+    height: auto;
+  }
+
+  /* Heading/text scale and wrap safely */
+  h1.hero-name-casestudy {
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 0.95;
+    margin: 0 0 12px;
+    word-break: break-word;
+    text-align: center;
+  }
+  .hero-description-casestudy {
+    display: grid;
+    gap: 8px;
+  }
+  .hero-description-casestudy p {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
 
 /* Top button */
 .top-button {
@@ -167,6 +211,17 @@ h1.hero-name-casestudy {
   font-size: 1rem;
   display: flex;
   justify-content: flex-end;
+  text-wrap: break-word;
+}
+
+@media (max-width: 640px) {
+  .project-context p {
+    font-size: 0.75rem;
+    justify-self: end;
+  }
+  .project-context h3 {
+    font-size: 0.85rem;
+  }
 }
 
 /* Solution overview */

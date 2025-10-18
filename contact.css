@@ -1,61 +1,126 @@
- .contact-button {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    font-size: 30px;
-    border-radius: 15px;
-    background-color: #fff;
-    cursor: pointer;
-    border: 2px solid #C4C4C2;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    margin: 15px;
-    display: flex-row;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
+/* Section layout */
+.contact {
+  padding: clamp(24px, 5vh, 60px) 0;
+  text-align: center;
 }
 
-.contact-button img{
-    width: 80px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+/* Title */
+.contact-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.1;
+  margin-bottom: clamp(16px, 3vh, 24px);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: #141414;
 }
 
+/* Wrapper */
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(12px, 3vw, 24px);
+}
+
+/* Grid for buttons */
+.contact-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(12px, 3vw, 20px);
+  justify-items: center;
+  align-items: center;
+}
+
+/* Contact links styled as buttons */
+.contact-button {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  /* Size */
+  width: clamp(110px, 24vw, 160px);
+  aspect-ratio: 1 / 1;
+  padding: 10px;
+
+  /* Look */
+  border-radius: 15px;
+  background-color: #fff;
+  border: 2px solid #c4c4c2;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+
+  /* Motion */
+  transition: background-color 0.25s ease, transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Icon inside */
+.contact-button img {
+  width: clamp(40px, 40%, 72px);
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+
+/* Hover & active states */
+.contact-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+.contact-button:active {
+  transform: translateY(0);
+}
+
+/* Focus accessibility */
+.contact-button:focus-visible {
+  outline: 3px solid #1e40af;
+  outline-offset: 3px;
+}
+
+/* Brand color variants */
 .linkedin-button {
-    background-color: #B4D7FF;
+  background-color: #b4d7ff;
 }
-
 .linkedin-button:hover {
-    background-color: #94bdff;
+  background-color: #94bdff;
 }
 
 .email-button {
-    background-color: #E0F8FF;
+  background-color: #e0f8ff;
 }
-
 .email-button:hover {
-    background-color: #bae1fc;
+  background-color: #bae1fc;
 }
 
 .bento-button {
-    background-color: #BABEFF;
+  background-color: #babeff;
 }
-
 .bento-button:hover {
-    background-color: #a1a1fa;
+  background-color: #a1a1fa;
 }
 
-.contact-title{
-    font-size: 2rem;
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    line-height: .90em;
-    margin-top: 0px;
-    text-align: center;
-    margin-bottom: 15px;
+/* Small phones: single column */
+@media (max-width: 420px) {
+  .contact-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-button {
+    width: 100%;
+    max-width: 240px;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .contact-button {
+    transition: none;
+  }
 }

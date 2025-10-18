@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <body>
-    <head>
+
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,78 +11,95 @@
     <link rel="stylesheet" href="contact.css">
     <title>Contact</title>
     <script src="https://kit.fontawesome.com/5973f658b0.js" crossorigin="anonymous"></script>
+    <script src="hamburger.js" defer></script>
   </head>
+
   <body>
     <script src="index.js"></script>
+    <!-- Navigation bar -->
     <nav class="navbar">
       <div class="container">
+        <!-- Logo -->
         <div class="logo-left">
           <a href="index.html" class="logo">CF</a>
         </div>
-        <ul class="nav">
-          <li><a href="#">Work</a></li>
-          <li><a href="#">Resume</a></li>
+
+        <!-- Hamburger button -->
+        <button class="nav-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
+          <!-- your SVG icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" class="menu-icon">
+            <path fill="currentColor"
+              d="M22 13c0 1.11-.89 2-2 2H4a2 2 0 1 1 0-4h9l2.5 2l2.5-2h2a2 2 0 0 1 2 2M12 3C3 3 3 9 3 9h18s0-6-9-6M3 18c0 1.66 1.34 3 3 3h12c1.66 0 3-1.34 3-3v-1H3z" />
+          </svg>
+        </button>
+
         <!-- Navigation links -->
+        <ul id="site-menu" class="nav">
+          <li><a href="index.html">Work</a></li>
+          <li><a href="#">Resume</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </nav>
+
     <div class="content">
       <div class="container">
         <section class="hero">
-    <!-- Content of the page -->
+          <!-- Content of the page -->
           <div class="hero-container">
             <div class="hero-content">
-        <!-- Hero section -->
+              <!-- Hero section -->
               <h1 class="hero-name border-1 border-black">
                 <span class="londrina-shadow-regular hero-name leading-tight">Chloe </span>
                 <span class="londrina-shadow-regular hero-name mt-0 leading-[2px]">Feierabend</span>
-              <!-- Title of the website -->
+                <!-- Title of the website -->
               </h1>
               <div class="hero-description">
-                <p>Designer crafting intuitive, human-</br>centered experiences.  </p>
+                <p>Designer crafting intuitive, human-</br>centered experiences. </p>
               </div>
               <!-- Description of the website -->
               <div class="hero-buttons">
                 <button class="hero-button work-button">
-                  <a href="#">Work</a>
-              <!-- Buttons for the hero section -->
+                  <a href="index.html">Work</a>
+                  <!-- Buttons for the hero section -->
                 </button>
                 <button class="hero-button resume-button">
                   <a href="#">Resume</a>
-                </button>  
+                </button>
               </div>
             </div>
-            <div class="hero-logo" >
+            <div class="hero-logo">
               <img src="img/Logo_sept21.png" alt="Logo">
             </div>
             <!-- Logo of the website -->
           </div>
-        </section>  
+        </section>
 
         <section class="contact">
-          <h2 class="contact-title">Let's Connect :) </h2>
+          <h2 class="contact-title">Let's Connect :)</h2>
+
           <div class="contact-container">
-        <!-- Contact section -->
             <div class="contact-buttons">
-          <!-- Title of the contact section -->
-              <button class="contact-button linkedin-button">
-          <!-- Container for the contact section -->
-                <img src="img/linkedin.png" alt="LinkedIn">
-            <!-- Buttons for the contact section -->
-              </button>
-              <button class="contact-button email-button">
-                <img src="img/mail.png" alt="Email">
-              </button>
-              <button class="contact-button bento-button">
-                <img src="img/bento.png" alt="Bento">
-              </button>
+              <a class="contact-button linkedin-button" href="https://linkedin.com/in/your-handle" target="_blank"
+                rel="noopener noreferrer" aria-label="Open LinkedIn profile">
+                <img src="img/linkedin.png" alt="">
+              </a>
+
+              <a class="contact-button email-button" href="mailto:you@example.com" aria-label="Send me an email">
+                <img src="img/mail.png" alt="">
+              </a>
+
+              <a class="contact-button bento-button" href="https://bento.me/yourprofile" target="_blank"
+                rel="noopener noreferrer" aria-label="Visit my Bento page">
+                <img src="img/bento.png" alt="">
+              </a>
             </div>
           </div>
         </section>
+
       </div>
     </div>
 
-</body>
-</html>
+  </body>
 
+</html>

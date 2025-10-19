@@ -381,6 +381,25 @@ nav a:focus-visible {
   transition: background-color 0.2s ease, color 0.2s ease,
     border-color 0.2s ease;
   cursor: pointer;
+  position: relative;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.lets-connect-button button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-button button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .lets-connect-button a,
@@ -530,6 +549,15 @@ button:disabled {
   padding: 20px clamp(12px, 3vw, 24px);
 }
 
+a.featured-project {
+  text-decoration: none;
+  color: #141414;
+}
+
+a.featured-project:visited {
+  color: #141414;
+}
+
 .featured-project {
   margin: 0;
   overflow: hidden;
@@ -537,6 +565,10 @@ button:disabled {
   border-radius: 8px;
   background: #f1f0eb;
   text-align: start;
+}
+
+.featured-project:hover {
+  background: #edece6;
 }
 
 .featured-project img {

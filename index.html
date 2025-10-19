@@ -10,18 +10,60 @@
   <meta name="description"
     content="Portfolio of Chloe Feierabend — UX/UI & Software Developer. Selected work, case studies, and contact information.">
   <link rel="stylesheet" href="main.css" />
-  <link rel="stylesheet" href="skip-button.css">
+  <!-- <link rel="stylesheet" href="skip-button.css"> -->
+  <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin>
 
-  <!-- New font links -->
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Outline&family=Londrina+Solid:wght@100;300;400;900&display=swap"
-    rel="stylesheet">
+
+  <!-- Non-blocking load: preload as style, then swap rel on load -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- No-JS fallback -->
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&display=swap">
+  </noscript>
 
   <title>Portfolio</title>
-  <script src="https://kit.fontawesome.com/5973f658b0.js" crossorigin="anonymous"></script>
+
   <script src="hamburger.js" defer></script>
+
+  <style>
+    .skip-to-content {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: rgb(251, 250, 246);
+      color: rgb(0, 0, 0);
+      padding: 10px 16px;
+      border-radius: 0 0 6px 0;
+      text-decoration: none;
+      font-weight: 600;
+      z-index: 100;
+      transition: top 0.3s ease;
+      font-family: "Inter", sans-serif;
+    }
+
+    /* Reveal on focus */
+    .skip-to-content:focus {
+      top: 0;
+      background: rgba(251, 250, 246, 0.772);
+      outline: 3px solid #1e40af;
+    }
+
+    /* Focus accessibility */
+    .skip-to-content:focus-visible {
+      outline: 3px solid #1e40af;
+      outline-offset: 3px;
+    }
+  </style>
 </head>
+<script src="https://kit.fontawesome.com/5973f658b0.js" crossorigin="anonymous" defer></script>
 
 <body>
   <!-- Skip link for screen reader and keyboard users -->
@@ -89,7 +131,7 @@
             </div>
             <!-- Logo for the hero section -->
             <div class="hero-logo">
-              <img src="img/Logo_sept21.png" alt="Logo" fetchpriority="high" decoding="async">
+              <img src="img/Logo_sept21.png" alt="Logo" loading="eager" fetchpriority="high" decoding="async">
             </div>
           </div>
         </section>

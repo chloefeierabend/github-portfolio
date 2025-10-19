@@ -1,0 +1,27 @@
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: rgb(251, 250, 246);
+  color: rgb(0, 0, 0);
+  padding: 10px 16px;
+  border-radius: 0 0 6px 0;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 100;
+  transition: top 0.3s ease;
+  font-family: "Inter", sans-serif;
+}
+
+/* Reveal on focus */
+.skip-to-content:focus {
+  top: 0;
+  background: rgba(251, 250, 246, 0.772);
+  outline: 3px solid #1e40af;
+}
+
+/* Focus accessibility */
+.skip-to-content:focus-visible {
+  outline: 3px solid #1e40af;
+  outline-offset: 3px;
+}

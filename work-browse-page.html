@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="All projects by Chloe Feierabend — UX/UI Design, Web Development, and Creative Work.">
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="work.css" />
+    <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin>
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Non-blocking load -->
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- No-JS fallback -->
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&display=swap">
+    </noscript>
+
+    <title>Work | Chloe Feierabend</title>
+    <script src="hamburger.js" defer></script>
+    <script src="work.js" defer></script>
+
+    <style>
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: rgb(251, 250, 246);
+            color: rgb(0, 0, 0);
+            padding: 10px 16px;
+            border-radius: 0 0 6px 0;
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 100;
+            transition: top 0.3s ease;
+            font-family: "Inter", sans-serif;
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+            background: rgba(251, 250, 246, 0.772);
+            outline: 3px solid #1e40af;
+        }
+
+        .skip-to-content:focus-visible {
+            outline: 3px solid #1e40af;
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+<script src="https://kit.fontawesome.com/5973f658b0.js" crossorigin="anonymous" defer></script>
+
+<body>
+    <!-- Skip link -->
+    <a href="#main" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-left">
+                <a href="index.html" class="logo">CF</a>
+            </div>
+
+            <button class="nav-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" class="menu-icon">
+                    <path fill="currentColor"
+                        d="M22 13c0 1.11-.89 2-2 2H4a2 2 0 1 1 0-4h9l2.5 2l2.5-2h2a2 2 0 0 1 2 2M12 3C3 3 3 9 3 9h18s0-6-9-6M3 18c0 1.66 1.34 3 3 3h12c1.66 0 3-1.34 3-3v-1H3z" />
+                </svg>
+            </button>
+
+            <ul id="site-menu" class="nav">
+                <li><a href="work.html" class="nav-active">Work</a></li>
+                <li><a href="#">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main">
+        <div class="content">
+            <div class="container">
+
+                <!-- Page Header -->
+                <header class="work-header">
+                    <h1 class="londrina-shadow-regular">My Work</h1>
+                    <p class="work-subtitle">A collection of projects spanning UX/UI design, web development, and
+                        creative explorations.</p>
+                </header>
+
+                <!-- Search and Filter Section -->
+                <section class="search-filter-section" aria-label="Search and filter projects">
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <label for="project-search" class="visually-hidden">Search projects</label>
+                        <div class="search-input-wrapper">
+                            <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+                            <input type="search" id="project-search" class="search-input"
+                                placeholder="Search projects..." autocomplete="off">
+                            <button class="search-clear" aria-label="Clear search" type="button" hidden>
+                                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Filter Controls -->
+                    <div class="filter-controls">
+                        <span class="filter-label">Filter by:</span>
+                        <div class="filter-buttons" role="group" aria-label="Project category filters">
+                            <button class="filter-btn active" data-filter="all">
+                                All
+                                <span class="filter-count" data-count="all"></span>
+                            </button>
+                            <button class="filter-btn" data-filter="ux-ui">
+                                UX/UI
+                                <span class="filter-count" data-count="ux-ui"></span>
+                            </button>
+                            <button class="filter-btn" data-filter="web-dev">
+                                Web Dev
+                                <span class="filter-count" data-count="web-dev"></span>
+                            </button>
+                            <button class="filter-btn" data-filter="graphic">
+                                Graphic
+                                <span class="filter-count" data-count="graphic"></span>
+                            </button>
+                            <button class="filter-btn" data-filter="other">
+                                Other
+                                <span class="filter-count" data-count="other"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Active filters display -->
+                    <div class="active-filters" hidden>
+                        <span class="active-filters-label">Active:</span>
+                        <div class="active-filters-tags"></div>
+                        <button class="clear-all-filters" type="button">Clear all</button>
+                    </div>
+                </section>
+
+                <!-- Results Info -->
+                <div class="results-info" aria-live="polite">
+                    <span class="results-count"></span>
+                </div>
+
+                <!-- Projects Grid -->
+                <section class="projects-section" aria-label="Projects">
+                    <div class="projects-grid">
+
+                        <!-- Project 1: Case Study (Featured) -->
+                        <article class="project-card featured" data-category="ux-ui"
+                            data-tags="figma, user research, case study, financial literacy, mobile, web">
+                            <a href="caseStudy.html" class="project-link">
+                                <div class="project-image-wrapper">
+                                    <span class="project-badge">Featured</span>
+                                    <img class="project-image" src="img/Home page Logged In Aug 21, 2025.png"
+                                        alt="Karla Learn financial literacy app interface showing the logged-in home page"
+                                        loading="lazy" decoding="async">
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-meta">
+                                        <span class="project-category">UX/UI Design</span>
+                                        <span class="project-year">2024–2025</span>
+                                    </div>
+                                    <h2 class="project-title">Karla Learn</h2>
+                                    <p class="project-description">Financial literacy tool built for international
+                                        students and newcomers to Canada. End-to-end case study from research to
+                                        high-fidelity prototypes.</p>
+                                    <div class="project-tags">
+                                        <span class="tag">Figma</span>
+                                        <span class="tag">User Research</span>
+                                        <span class="tag">Prototyping</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <!-- Project 2: Indie Game Jam Poster -->
+                        <article class="project-card" data-category="graphic"
+                            data-tags="poster, graphic design, illustration, game jam, event">
+                            <div class="project-link">
+                                <div class="project-image-wrapper">
+                                    <img class="project-image" src="img/Screenshot 2025-10-17 230947.png"
+                                        alt="Indie Game Jam promotional poster with vibrant colors" loading="lazy"
+                                        decoding="async">
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-meta">
+                                        <span class="project-category">Graphic Design</span>
+                                        <span class="project-year">2024–2025</span>
+                                    </div>
+                                    <h2 class="project-title">Indie Game Jam Poster</h2>
+                                    <p class="project-description">Promotional posters designed for local indie game jam
+                                        events. Bold typography meets playful illustration.</p>
+                                    <div class="project-tags">
+                                        <span class="tag">Illustrator</span>
+                                        <span class="tag">Print</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 3: Portfolio Website -->
+                        <article class="project-card" data-category="web-dev"
+                            data-tags="html, css, javascript, responsive, portfolio">
+                            <div class="project-link">
+                                <div class="project-image-wrapper">
+                                    <img class="project-image" src="img/Logo_sept21.png" alt="Portfolio website preview"
+                                        loading="lazy" decoding="async">
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-meta">
+                                        <span class="project-category">Web Development</span>
+                                        <span class="project-year">2025</span>
+                                    </div>
+                                    <h2 class="project-title">Personal Portfolio</h2>
+                                    <p class="project-description">This very website! Hand-coded with vanilla HTML, CSS,
+                                        and JavaScript. Focused on accessibility and performance.</p>
+                                    <div class="project-tags">
+                                        <span class="tag">HTML/CSS</span>
+                                        <span class="tag">JavaScript</span>
+                                        <span class="tag">Responsive</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 4: Pure Essence Design System -->
+                        <article class="project-card" data-category="ux-ui"
+                            data-tags="design system, figma, components, skincare, brand">
+                            <div class="project-link">
+                                <div class="project-image-wrapper">
+                                    <img class="project-image" src="img/Logo_sept21.png"
+                                        alt="Pure Essence design system components" loading="lazy" decoding="async">
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-meta">
+                                        <span class="project-category">UX/UI Design</span>
+                                        <span class="project-year">2025</span>
+                                    </div>
+                                    <h2 class="project-title">Pure Essence Design System</h2>
+                                    <p class="project-description">Comprehensive design system for a skincare brand.
+                                        Includes tokens, components, and documentation.</p>
+                                    <div class="project-tags">
+                                        <span class="tag">Figma</span>
+                                        <span class="tag">Design System</span>
+                                        <span class="tag">Documentation</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 5: Expense Tracker App -->
+                        <article class="project-card" data-category="web-dev"
+                            data-tags="android, kotlin, jetpack compose, mobile, mvvm">
+                            <div class="project-link">
+                                <div class="project-image-wrapper">
+                                    <img class="project-image" src="img/Logo_sept21.png"
+                                        alt="Expense tracker mobile app interface" loading="lazy" decoding="async">
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-meta">
+                                        <span class="project-category">Mobile Dev</span>
+                                        <span class="project-year">2025</span>
+                                    </div>
+                                    <h2 class="project-title">Expense Tracker App</h2>
+                                    <p class="project-description">Android application built with Jetpack Compose and
+                                        MVVM architecture. Track expenses with intuitive Material 3 design.</p>
+                                    <div class="project-tags">
+                                        <span class="tag">Kotlin</span>
+                                        <span class="tag">Jetpack Compose</span>
+                                        <span class="tag">MVVM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 6: Wayfinder -->
+                        <!-- <article class="project-card" data-category="other"
+                            data-tags="startup, business plan, navigation, festival, entrepreneurship">
+                            <div class="project-link">
+                                <div class="project-image-wrapper">
+                                    <img class="project-image" src="img/Logo_sept21.png"
+                                        alt="Wayfinder festival navigation concept" loading="lazy" decoding="async">
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-meta">
+                                        <span class="project-category">Startup Concept</span>
+                                        <span class="project-year">2025</span>
+                                    </div>
+                                    <h2 class="project-title">Wayfinder</h2>
+                                    <p class="project-description">Festival navigation system startup concept. Complete
+                                        business plan including market analysis and go-to-market strategy.</p>
+                                    <div class="project-tags">
+                                        <span class="tag">Business Plan</span>
+                                        <span class="tag">Product Strategy</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article> -->
+
+                    </div>
+
+                    <!-- No Results Message -->
+                    <div class="no-results" hidden>
+                        <div class="no-results-icon">
+                            <i class="fa-regular fa-folder-open" aria-hidden="true"></i>
+                        </div>
+                        <h3>No projects found</h3>
+                        <p>Try adjusting your search or filters to find what you're looking for.</p>
+                        <button class="reset-filters-btn" type="button">Reset filters</button>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <img class="footer-logo" src="img/CF_Box_Logo.png" alt="CF logo" fetchpriority="high" decoding="async">
+            </div>
+
+            <div class="footer-tagline">
+                <p class="tagline">
+                    Designer crafting intuitive,<br>
+                    human-centered experiences.
+                </p>
+            </div>
+
+            <div class="footer-right">
+                <nav class="footer-nav" aria-label="Footer">
+                    <a href="https://www.linkedin.com/in/chloe-feierabend/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i>
+                        LinkedIn</a>
+                    <a href="mailto:chloe.feierabend@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i>
+                        E-Mail</a>
+                    <a href="https://bento.me/chloefeierabend" target="_blank"><i>🍱</i> Bento</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+<!DOCTYPE html>

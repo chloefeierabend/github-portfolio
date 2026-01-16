@@ -167,8 +167,8 @@
 }
 
 .hero-casestudy h1 {
-  font-family: "Londrina Shadow", sans-serif;
-  font-weight: 400;
+  /* font-family: "Londrina Shadow", sans-serif;
+  font-weight: 400; */
   font-size: clamp(2.5rem, 7vw, 4rem);
   line-height: 1;
   margin: 0;

@@ -56,7 +56,7 @@ button {
 }
 
 /* Font Utility Classes */
-/* .londrina-shadow-regular {
+.londrina-shadow-regular {
   font-family: "Londrina Shadow", sans-serif;
   font-weight: 400;
 }
@@ -80,7 +80,7 @@ button {
 .londrina-solid-black {
   font-family: "Londrina Solid", sans-serif;
   font-weight: 900;
-} */
+}
 
 /* Typography */
 p,

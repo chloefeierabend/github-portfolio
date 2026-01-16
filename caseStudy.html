@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Case Study of Chloe Feierabend — A financial literacy tool that helps international students and newcomers to Canada.">
+    content="Case Study of Chloe Feierabend — Making Canadian finance less intimidating for newcomers.">
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="caseStudy.css">
-
-  <!-- New font links -->
+  <link rel="stylesheet" href="userFlow-CS.css" <link rel="stylesheet" href="lightbox.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Outline&family=Londrina+Solid:wght@100;300;400;900&display=swap"
@@ -20,214 +19,162 @@
   <script src="caseStudy.js" defer></script>
   <script src="hamburger.js" defer></script>
   <script src="https://kit.fontawesome.com/5973f658b0.js" crossorigin="anonymous"></script>
-  <title>Case Study</title>
+  <title>Karla Learn | Case Study</title>
 </head>
 
 <body>
   <!-- Navigation bar -->
-  <!-- Navigation bar -->
   <nav class="navbar">
     <div class="container">
-      <!-- Logo -->
       <div class="logo-left">
         <a href="../index.html" class="logo">CF</a>
       </div>
 
-      <!-- Hamburger button -->
       <button class="nav-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
-        <!-- your SVG icon -->
         <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" class="menu-icon">
           <path fill="currentColor"
             d="M22 13c0 1.11-.89 2-2 2H4a2 2 0 1 1 0-4h9l2.5 2l2.5-2h2a2 2 0 0 1 2 2M12 3C3 3 3 9 3 9h18s0-6-9-6M3 18c0 1.66 1.34 3 3 3h12c1.66 0 3-1.34 3-3v-1H3z" />
         </svg>
       </button>
 
-      <!-- Navigation links -->
       <ul id="site-menu" class="nav">
         <li><a href="work-browse-page.html">Work</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
-  <!-- Container for the case study content -->
+
+  <!-- Sticky Section Navigation -->
+  <aside class="section-nav" aria-label="Case study sections">
+    <ul>
+      <li><a href="#overview" class="nav-dot active" data-section="overview"><span>Overview</span></a></li>
+      <li><a href="#solution" class="nav-dot" data-section="solution"><span>Solution</span></a></li>
+      <li><a href="#testing" class="nav-dot" data-section="testing"><span>Testing</span></a></li>
+      <li><a href="#development" class="nav-dot" data-section="development"><span>Development</span></a></li>
+      <li><a href="#design" class="nav-dot" data-section="design"><span>Design</span></a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
   <div class="content-casestudy">
 
-    <!-- Hero section for the case study -->
+    <!-- HERO SECTION -->
     <section class="hero-casestudy">
-      <!-- Container for the hero section -->
       <div class="hero-container-casestudy">
-        <!-- Container for hero content -->
         <div class="hero-content-casestudy">
-          <!-- Title for the case study -->
-          <h1 class="hero-name-casestudy">
-            <span class="londrina-shadow-regular hero-name-casestudy leading-tight">Chloe </br>Feierabend</span>
-          </h1>
-          <!-- Description for the case study -->
-          <div class="hero-description-casestudy">
-            <p>Designer crafting intuitive, human-</br>centered experiences. </p>
+          <a href="work-browse-page.html" class="back-link">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            Back to Work
+          </a>
+          <h1 class="londrina-shadow-regular">Karla Learn</h1>
+          <p class="hero-tagline">Making Canadian finance less intimidating for newcomers.</p>
+
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-label">Role</span>
+              <span class="meta-value">Lead UX/UI Designer & Front-End Dev</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Timeline</span>
+              <span class="meta-value">May – Aug 2025</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Tools</span>
+              <span class="meta-value">Figma, SvelteKit</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Team</span>
+              <span class="meta-value">4 Members</span>
+            </div>
           </div>
         </div>
-        <!-- Logo for the case study -->
-        <div class="hero-logo-casestudy">
-          <img src="img/Logo_sept21.png" alt="Logo" fetchpriority="high" decoding="async">
+
+        <div class="hero-image-casestudy">
+          <img src="img/Home page Logged In Aug 21, 2025.png"
+            alt="Karla Learn app interface showing the home dashboard">
         </div>
       </div>
     </section>
 
-    <!-- Button to go to design images -->
+    <!-- Jump to designs button -->
     <section class="top-button">
-      <button onclick="scrollToDesignImages()">Go to Design
-        Images<span>
+      <button onclick="scrollToDesignImages()">Jump to Designs
+        <span>
           <img src="img/arrows.svg" alt="down arrows" fetchpriority="high" decoding="async">
-        </span></button>
+        </span>
+      </button>
     </section>
 
-    <!-- Overview of the project -->
-    <section class="project-overview">
-      <!-- Title for the project overview -->
-      <h2>Financial Literacy Tool Designed to Help Newcomers</h2>
-      <!-- Context for the project -->
-      <h3>Context</h3>
-      <!-- <p>This project was born from a need to provide financial education to international students and Canadian
-        newcomers. The goal was to create an interactive tool that would help users understand key financial concepts
-        and provide personalized learning experiences.</p> -->
-      <!-- Description for the project -->
-      <p class="project-description-list">
-        Goal: Improve financial literacy for international students and Canadian newcomers.
-      </p>
-      <!-- List of project description -->
-      <p class="project-description-list">Scope: Website with interactive modules, quizzes, and personality-based
-        financial learning.</p>
-      <!-- Table for project context -->
-      <div class="project-context-table">
-        <!-- Roles for the project -->
-        <div class="project-context">
-          <h3>Roles</h3>
-          <p>Lead UX/UI Designer, Front-End Developer</p>
-        </div>
-        <!-- Horizontal rule for the table -->
-        <hr class="project-context-hr">
-        <!-- Tools for the project -->
-        <div class="project-context">
-          <h3>Tools</h3>
-          <p>Figma, HTML, CSS, Tailwind, JavaScript, TypeScript,GitHub, Sveltekit</p>
-        </div>
-        <!-- Horizontal rule for the table -->
-        <hr class="project-context-hr">
-        <!-- Timeline for the project -->
-        <div class="project-context">
-          <h3>Timeline</h3>
-          <p>3 Months, May 2025 - August 2025</p>
-        </div>
-        <!-- Horizontal rule for the table -->
-        <hr class="project-context-hr">
-        <!-- Collaborators for the project -->
-        <div class="project-context">
-          <h3>Collaborators</h3>
-          <p>1 Team Lead, 2 Developers</p>
-        </div>
-        <!-- Horizontal rule for the table -->
-        <hr class="project-context-hr">
+    <!-- OVERVIEW SECTION -->
+    <section class="project-overview" id="overview">
+      <div class="section-header">
+        <span class="section-label">01</span>
+        <h2>Project Overview</h2>
       </div>
-    </section>
 
-    <!-- Solution overview -->
-    <section class="solution-overview">
-      <!-- Title for the solution overview -->
-      <h3 class="solution-title">Solution</h3>
-      <!-- Description for the solution -->
-      <p class="solution-description">The solution involved creating an interactive web application that would teach
-        users key financial concepts and provide personalized learning experiences. The application was designed to be
-        user-friendly and
-        accessible, with a focus on providing a seamless learning experience for users.
-    </section>
+      <div class="overview-grid">
+        <div class="overview-main">
+          <h3>The Challenge</h3>
+          <p>International students and newcomers to Canada often struggle with understanding the Canadian financial
+            system, from credit scores to budgeting to renting. Existing resources are scattered,
+            jargon-heavy, and
+            don't address the unique challenges faced by people new to the country.</p>
 
-    <!-- Usability testing section -->
-    <section class="usability" aria-labelledby="usability-title">
-      <div class="usa-container">
-        <!-- Title for the usability testing section -->
-        <h2 id="usability-title">Usability Testing &amp; Outcomes</h2>
+          <h3>The Goal</h3>
+          <p>Create an interactive, engaging tool that makes financial literacy accessible, culturally relevant, and
+            even fun for newcomers navigating money in Canada for the first time.</p>
+        </div>
 
-        <!-- Grid for usability testing section -->
-        <div class="usa-grid">
-          <!-- Testing summary -->
-          <article class="usa-card usa-testing">
-            <!-- Title for the usability testing -->
-            <h3>Testing</h3>
-            <!-- Participants for the usability testing -->
-            <p class="usa-participants">
-              <!-- Participants badge -->
-              <span class="usa-badge" aria-hidden="true">5</span>
-              <strong>Participants:</strong> international students
+        <div class="overview-sidebar">
+          <div class="context-card">
+            <h4>Scope</h4>
+            <p>Website with interactive modules, quizzes, and personality-based financial learning.</p>
+          </div>
+          <div class="context-card">
+            <h4>My Role</h4>
+            <p>Lead UX/UI Designer & Front-End Developer. Owned the design process from research through dev handoff.
             </p>
-            <!-- Tasks for the usability testing -->
-            <ul class="usa-tasks" aria-label="Tasks">
-              <!-- Tasks list item 1 -->
-              <li>Completing a quiz</li>
-              <!-- Tasks list item 2 -->
-              <li>Checking progress</li>
-              <!-- Tasks list item 3 -->
-              <li>Reading module content</li>
-            </ul>
-          </article>
-
-          <!-- Findings -->
-          <article class="usa-card usa-findings">
-            <!-- Title for the findings -->
-            <h3>Findings</h3>
-            <!-- Findings list -->
-            <ul class="usa-list">
-              <!-- Findings list item 1 -->
-              <li>
-                <!-- Icon for the findings list item 1 -->
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-                <!-- Text for the findings list item 1 -->
-                <span>Progress bar and quiz feedback were motivating.</span>
-              </li>
-              <!-- Findings list item 2 -->
-              <li>
-                <!-- Icon for the findings list item 2 -->
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-                <!-- Text for the findings list item 2 -->
-                <span>Users appreciated plain language + icons.</span>
-              </li>
-              <!-- Findings list item 3 -->
-              <li>
-                <!-- Icon for the findings list item 3 -->
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M4 12h10M14 8l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <!-- Text for the findings list item 3 -->
-                <span>Navigation needed simplification (added breadcrumbs + clearer CTAs).</span>
-              </li>
-            </ul>
-          </article>
+          </div>
         </div>
-
-        <!-- Outcome -->
-        <aside class="usa-outcome" role="status" aria-live="polite">
-          <!-- Title for the outcome -->
-          <strong>Outcome:</strong> Improved flow, increased satisfaction, validated gamified approach.
-        </aside>
       </div>
     </section>
 
-    <section class="final-solution" aria-labelledby="final-title">
+    <!-- STAT CALLOUT -->
+    <section class="stat-callout">
+      <div class="stat-callout-inner">
+        <div class="stat-item">
+          <span class="stat-number">997K+</span>
+          <span class="stat-label">International students in Canada (2024)</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">80%</span>
+          <span class="stat-label">Report concern about paying for their education</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">3 mo</span>
+          <span class="stat-label">Design & development timeline</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION SECTION -->
+    <section class="final-solution" id="solution" aria-labelledby="final-title">
       <div class="final-container">
-        <h2 id="final-title">Final Solution &amp; Design Brief</h2>
+        <div class="section-header">
+          <span class="section-label">02</span>
+          <h2 id="final-title">The Solution</h2>
+        </div>
+
+        <p class="section-intro">We created a web application that personalizes the learning experience through playful
+          mascots, gamified progress tracking, and bite-sized modules focused on the most pressing topics for newcomers.
+        </p>
 
         <div class="final-grid">
           <!-- Survey & Mascots -->
-          <article class="fs-card">
+          <article class="fs-card card-accent-purple">
             <div class="fs-icon" aria-hidden="true">
-              <!-- clipboard/check -->
               <svg viewBox="0 0 24 24">
                 <path
                   d="M9 3h6a2 2 0 0 1 2 2h1a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h1a2 2 0 0 1 2-2Z"
@@ -237,7 +184,7 @@
               </svg>
             </div>
             <h3>Personality Survey</h3>
-            <p>Playful mascots guide the experience.</p>
+            <p>Playful mascots guide the experience and match users to learning styles.</p>
             <ul class="chip-row" aria-label="Mascots">
               <li class="chip">🐯 Tiger</li>
               <li class="chip">🐃 Ox</li>
@@ -247,12 +194,10 @@
           </article>
 
           <!-- Course Modules -->
-          <article class="fs-card">
+          <article class="fs-card card-accent-teal">
             <div class="fs-icon" aria-hidden="true">
-              <!-- layers/modules -->
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-layers-icon lucide-layers">
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path
                   d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
                 <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
@@ -260,25 +205,24 @@
               </svg>
             </div>
             <h3>Course Modules</h3>
-            <p>Targeted learning paths focused on credit and renting.</p>
+            <p>Targeted learning paths focused on the most pressing topics.</p>
             <ul class="chip-row" aria-label="Modules">
               <li class="chip">Understanding Credit</li>
               <li class="chip">Learning to Budget</li>
             </ul>
           </article>
 
-          <!-- Accessibility / Browsers -->
-          <article class="fs-card">
+          <!-- Accessibility -->
+          <article class="fs-card card-accent-green">
             <div class="fs-icon" aria-hidden="true">
-              <!-- globe -->
               <svg viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8" />
                 <path d="M3 12h18M12 3a16 16 0 0 1 0 18M12 3a16 16 0 0 0 0 18" fill="none" stroke="currentColor"
                   stroke-width="1.6" stroke-linecap="round" />
               </svg>
             </div>
-            <h3>Multi-Browser Accessibility</h3>
-            <p>Works reliably across modern browsers.</p>
+            <h3>Multi-Browser Support</h3>
+            <p>Accessible and reliable across all modern browsers.</p>
             <ul class="chip-row" aria-label="Browsers">
               <li class="chip">Chrome</li>
               <li class="chip">Edge</li>
@@ -288,12 +232,10 @@
           </article>
 
           <!-- Gamification -->
-          <article class="fs-card">
+          <article class="fs-card card-accent-orange">
             <div class="fs-icon" aria-hidden="true">
-              <!-- trophy/progress -->
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-gamepad2-icon lucide-gamepad-2">
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="6" x2="10" y1="11" y2="11" />
                 <line x1="8" x2="8" y1="9" y2="13" />
                 <line x1="15" x2="15.01" y1="12" y2="12" />
@@ -302,89 +244,153 @@
                   d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z" />
               </svg>
             </div>
-            <h3>Gamified Elements</h3>
-            <p>Motivation built into progress and feedback.</p>
+            <h3>Gamified Learning</h3>
+            <p>Motivation built into every step of the journey.</p>
             <ul class="bullet-list">
-              <li>Progress bar &amp; quiz feedback</li>
+              <li>Progress bar & quiz feedback</li>
               <li class="flow">Learn <span aria-hidden="true">→</span> Apply <span aria-hidden="true">→</span> Grow</li>
             </ul>
           </article>
         </div>
+      </div>
+    </section>
 
-        <!-- Final Brief -->
-        <aside class="final-brief">
-          A cohesive tool that personalizes learning, keeps users motivated, and stays accessible across environments.
+    <!-- USABILITY TESTING SECTION -->
+    <section class="usability" id="testing" aria-labelledby="usability-title">
+      <div class="usa-container">
+        <div class="section-header">
+          <span class="section-label">03</span>
+          <h2 id="usability-title">Usability Testing</h2>
+        </div>
+
+        <div class="usa-grid">
+          <!-- Testing summary -->
+          <article class="usa-card usa-testing">
+            <h3>Testing Approach</h3>
+            <p class="usa-participants">
+              <span class="usa-badge" aria-hidden="true">5</span>
+              <strong>Participants:</strong> international students
+            </p>
+            <h4>Tasks Performed</h4>
+            <ul class="usa-tasks" aria-label="Tasks">
+              <li>Completing a personality quiz</li>
+              <li>Checking learning progress</li>
+              <li>Reading module content</li>
+            </ul>
+          </article>
+
+          <!-- Findings -->
+          <article class="usa-card usa-findings">
+            <h3>Key Findings</h3>
+            <ul class="usa-list">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <span>Progress bar and quiz feedback were highly motivating.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <span>Users appreciated plain language + visual icons.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 12h10M14 8l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>Navigation needed simplification—added breadcrumbs + clearer CTAs.</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Pull Quote -->
+        <blockquote class="pull-quote">
+          <p>"I wish I had had a tool like this when I first moved here. Finding out information was difficult and this
+            makes it more fun."
+          </p>
+          <cite>— Usability test participant</cite>
+        </blockquote>
+
+        <!-- Outcome -->
+        <aside class="usa-outcome" role="status" aria-live="polite">
+          <strong>Outcome:</strong> Improved navigation flow, increased user satisfaction, and validated the gamified
+          approach.
         </aside>
       </div>
     </section>
 
-    <section class="development" aria-labelledby="dev-title">
+    <!-- DEVELOPMENT SECTION -->
+    <section class="development" id="development" aria-labelledby="dev-title">
       <div class="dev-container">
-        <h2 id="dev-title">Development</h2>
+        <div class="section-header">
+          <span class="section-label">04</span>
+          <h2 id="dev-title">Development</h2>
+        </div>
 
-        <!-- Overview of the tech stack used -->
-        <p class="dev-built"><strong>Built with:</strong> SvelteKit + Tailwind</p>
+        <p class="dev-built"><strong>Built with:</strong> SvelteKit + Tailwind CSS</p>
 
-        <!-- List of technologies used -->
         <ul class="tech-chips" aria-label="Tech stack">
-          <li class="chip">SvelteKit</li>
-          <!-- Tailwind CSS is used for styling -->
-          <li class="chip">Tailwind CSS</li>
-          <!-- Database used for storing user quiz data -->
-          <li class="chip">MongoDB</li>
+          <li class="chip chip-tech">SvelteKit</li>
+          <li class="chip chip-tech">Tailwind CSS</li>
+          <li class="chip chip-tech">MongoDB</li>
+          <li class="chip chip-tech">TypeScript</li>
         </ul>
 
         <article class="dev-card">
-          <h3>Challenges</h3>
+          <h3>Challenges & Solutions</h3>
           <ul class="dev-list">
-            <!-- Cross-browser responsiveness was a challenge -->
-            <li>Cross-browser responsiveness (desktop-first → mobile adaptation).</li>
-            <!-- Tailwind v4 setup issues were resolved with updated PostCSS config -->
-            <li>Tailwind v4 setup issues (resolved with updated PostCSS config).</li>
-            <!-- Database design for user quiz storage was a challenge -->
-            <li>Database design for user quiz storage (MongoDB).</li>
+            <li><strong>Cross-browser responsiveness</strong> — Shifted from desktop-first to mobile-first approach
+              mid-project.</li>
+            <li><strong>Tailwind v4 setup</strong> — Resolved configuration issues with updated PostCSS config.</li>
+            <li><strong>Quiz data persistence</strong> — Designed MongoDB schema for storing user progress and results.
+            </li>
           </ul>
         </article>
       </div>
     </section>
 
+    <!-- LESSONS LEARNED -->
     <section class="lessons" aria-labelledby="lessons-title">
       <div class="lessons-container">
-        <h2 id="lessons-title">Reflect &amp; Lessons Learned</h2>
-        <!-- Lessons learned from the design process -->
+        <div class="section-header">
+          <span class="section-label">05</span>
+          <h2 id="lessons-title">Lessons Learned</h2>
+        </div>
+
         <ol class="lesson-grid">
-          <!-- First lesson learned -->
-          <li class="lesson-card">
+          <li class="lesson-card lesson-card--purple">
             <div class="lesson-num" aria-hidden="true">1</div>
             <h3>Simplicity Wins</h3>
-            <!-- Simplicity is key when designing financial education -->
-            <p>Designing financial education taught me that simplicity beats complexity. Users valued clarity and
-              playfulness over feature overload.</p>
+            <p>Users valued clarity and playfulness over feature overload. Serious topics can still be approachable.</p>
           </li>
 
-          <!-- Second lesson learned -->
-          <li class="lesson-card">
+          <li class="lesson-card lesson-card--teal">
             <div class="lesson-num" aria-hidden="true">2</div>
             <h3>Accessibility Matters</h3>
-            <!-- Accessibility is important for users -->
-            <p>Applying contrast, alt text, and screen-reader labels made the tool more inclusive and easier to
-              navigate.</p>
+            <p>Proper contrast, alt text, and screen-reader labels made the tool more inclusive for everyone.</p>
           </li>
 
-          <!-- Third lesson learned -->
-          <li class="lesson-card">
+          <li class="lesson-card lesson-card--green">
             <div class="lesson-num" aria-hidden="true">3</div>
             <h3>End-to-End Ownership</h3>
-            <!-- Designing from research to dev is important -->
-            <p>Leading design from research → testing → dev handoff built confidence in managing full UX cycles.</p>
+            <p>Leading from research → testing → dev handoff built confidence in managing full UX cycles.</p>
           </li>
         </ol>
       </div>
     </section>
 
+    <!-- DESIGN BRIEF -->
     <section class="design-brief" aria-labelledby="brief-title">
       <div class="brief-container">
-        <h2 id="brief-title">Design Brief</h2>
+        <div class="section-header">
+          <span class="section-label">06</span>
+          <h2 id="brief-title">Design Brief</h2>
+        </div>
 
         <div class="brief-grid">
           <!-- Goals -->
@@ -396,7 +402,7 @@
           <!-- Target Audience -->
           <article class="brief-card">
             <h3>Target Audience</h3>
-            <p>International students and first-time Canadian residents.</p>
+            <p>International students and first-time Canadian residents navigating a new financial system.</p>
           </article>
 
           <!-- UI Rationale -->
@@ -414,7 +420,7 @@
               <div class="row">
                 <dt>Color</dt>
                 <dd>
-                  Purple / Green / Dark Teal for a balance of trust + playfulness.
+                  Purple / Green / Teal for trust + playfulness.
                   <ul class="palette" aria-label="Brand palette">
                     <li style="--sw:#8F4BB1" title="Purple"></li>
                     <li style="--sw:#2FF29E" title="Green"></li>
@@ -429,66 +435,25 @@
           <article class="brief-card">
             <h3>Accessibility</h3>
             <ul class="brief-list">
-              <li>Alt text &amp; ARIA labels</li>
+              <li>Alt text & ARIA labels throughout</li>
               <li>AODA color-contrast compliance</li>
               <li>Tested across Chrome, Edge, Firefox, Brave</li>
             </ul>
           </article>
         </div>
-
-        <!-- Key Lesson -->
-        <aside class="brief-lesson" role="note">
-          <strong>Key Lesson Learned:</strong>
-          User testing challenged assumptions—playful mascots and visual metaphors resonated far more than anticipated,
-          proving serious topics can still be fun.
-        </aside>
       </div>
     </section>
 
-
-    <!-- TODO -->
-    <!-- <section class="research-section">
-<h2 class="research">Research</h2>
-<h3>Question I asked</h3>
-<div class="left-research">
-<p>Blurb explanation text here</p>
-</div>
-<div class="right-research">
-    <list class="research-list">
-        <li>Blurb explanation text here</li>
-        <li>Blurb explanation text here</li>
-        <li>Blurb explanation text here</li>
-        <li>Blurb explanation text here</li>
-        <li>Blurb explanation text here</li>
-        <li>Blurb explanation text here</li>
-    </list>
-</div>
-</section>
-
-<section class="research-competitors">
-    <h2 class="competitors">Competitors</h2>
-    <h3>Question I asked</h3>
-    <div class="competitors-container">
-    <div class="competitor-section1">
-        <p>Blurb explanation text here</p>
-        <img src="img/Logo_sept21.png" alt="Logo">
-    </div>
-    <div class="competitor-section2">
-        <img src="img/Logo_sept21.png" alt="Logo">
-            <p>Blurb explanation text here</p>
-    </div>
-    </div>
-</section> -->
-
+    <!-- GRAPHICS CAROUSEL -->
     <section class="design-graphics">
-      <h2>Graphics</h2>
+      <div class="section-header">
+        <span class="section-label">07</span>
+        <h2>Research & Graphics</h2>
+      </div>
+
       <section class="carousel" aria-label="Case Study Carousel">
         <div class="carousel-inner">
-          <!-- <div class="carousel-text">Text</div> -->
-
-          <!-- Three-column panel -->
           <div class="carousel-panel">
-            <!-- Left column: arrow -->
             <div class="arrow-col">
               <button class="carousel-arrow prev" aria-label="Previous slide">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -498,36 +463,35 @@
               </button>
             </div>
 
-            <!-- Center column: viewport/track -->
             <div class="viewport-col">
               <div class="carousel-viewport" tabindex="0">
                 <ul class="carousel-track">
-                  <li class="slide is-active" data-caption="User Persona for the financial literacy tool">
+                  <li class="slide is-active"
+                    data-caption="User Persona for Priya Sharma, an international student in Canada">
                     <div class="graphic">
-                      <img src="img/Black and White Simple User Persona Brainstorm.png" alt="User Persona"
-                        loading="lazy" decoding="async">
+                      <img src="img/UX Persona Priya Sharma Long.png" alt="User Persona for Priya Sharma" loading="lazy"
+                        decoding="async">
                     </div>
                   </li>
-                  <li class="slide is-active" data-caption="Empathy map for the financial literacy tool">
+                  <li class="slide" data-caption="Empathy map for Priya Sharma the international student">
                     <div class="graphic">
-                      <img src="img/Empathy Map.png" alt="Empathy Map" loading="lazy" decoding="async">
+                      <img src="img/UX Empathy Map Priya Sharma.png" alt="Empathy Map for Priya Sharma" loading="lazy"
+                        decoding="async">
                     </div>
                   </li>
-                  <li class="slide is-active" data-caption="User Flow for the financial literacy tool">
+                  <!-- <li class="slide" data-caption="User Flow for the financial literacy tool">
                     <div class="graphic">
                       <img src="img/User Flow.png" alt="User Flow" loading="lazy" decoding="async">
                     </div>
-                  </li>
-                  <li class="slide"
-                    data-caption="A source of inspiration for the financial literacy tool. Maya is one of the leading banking apps in the Philippines.">
+                  </li> -->
+                  <li class="slide" data-caption="Inspiration: Maya, a leading banking app in the Philippines.">
                     <div class="graphic">
                       <a href="https://www.maya.ph/" target="_blank" rel="noopener noreferrer">
                         <img src="img/mayaph.png" alt="Maya.ph" loading="lazy" decoding="async">
                       </a>
                     </div>
                   </li>
-                  <li class="slide"
-                    data-caption="A world map showing where the majority of international students come from. Found on CBIE.ca">
+                  <li class="slide" data-caption="International student origins worldwide. Source: CBIE.ca">
                     <div class="graphic">
                       <a href="https://cbie.ca/media/facts-and-figures/international-students/" target="_blank"
                         rel="noopener noreferrer">
@@ -539,7 +503,6 @@
               </div>
             </div>
 
-            <!-- Right column: arrow -->
             <div class="arrow-col">
               <button class="carousel-arrow next" aria-label="Next slide">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -551,87 +514,272 @@
           </div>
         </div>
 
-        <p class="carousel-caption" aria-live="polite">caption one</p>
+        <p class="carousel-caption" aria-live="polite">User Persona for the financial literacy tool</p>
       </section>
     </section>
 
-    <section class="design" id="design">
-      <!-- Container for the design section -->
-      <div class="design-container">
-        <!-- Left column for the design section -->
-        <div class="design-left">
-          <!-- Title for the design section -->
-          <h2>Design</h2>
-          <!-- Description for the design section -->
-          <!-- <p class="design-description">Text here</p> -->
+
+    <!-- USER FLOW SECTION -->
+    <section class="user-flow-section" aria-labelledby="flow-title">
+      <div class="section-header">
+        <span class="section-label">Research</span>
+        <h2 id="flow-title">User Flow</h2>
+      </div>
+      <p class="section-intro">How users navigate through Karla Learn from first visit to core features.</p>
+
+      <!-- Legend -->
+      <div class="flow-legend">
+        <div class="legend-item">
+          <span class="legend-dot legend-entry"></span>
+          <span>Entry Point</span>
         </div>
-        <!-- Right column for the design section -->
-        <div class="design-imgs">
-          <!-- Container for design images -->
-          <!-- Design image 1: CTA Survey - July 24 - Logged Out -->
-          <div class="design-img">
-            <img src="img/cta survey july 24.png" alt="CTA Survey" loading="lazy" decoding="async">
-            <figcaption>CTA Survey - July 24 - Logged Out</figcaption>
+        <div class="legend-item">
+          <span class="legend-dot legend-screen"></span>
+          <span>Screen</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot legend-decision"></span>
+          <span>Decision</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot legend-action"></span>
+          <span>Action</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot legend-endpoint"></span>
+          <span>Destination</span>
+        </div>
+      </div>
+
+      <div class="flow-diagram">
+
+        <!-- New User Entry -->
+        <div class="flow-block">
+          <h3 class="flow-block-title">New User Journey</h3>
+          <div class="flow-path flow-path-center">
+            <div class="flow-node flow-entry">New User</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node flow-screen">Landing Page</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node flow-decision">Take Survey?</div>
           </div>
 
-          <!-- Design image 2: Home page with logged in user - aug 21 -->
+          <!-- Branches -->
+          <div class="flow-branches">
+            <div class="flow-branch flow-branch-yes">
+              <span class="branch-label branch-label-yes">Yes</span>
+              <div class="flow-path-vertical">
+                <div class="flow-node flow-screen">Personality Survey</div>
+                <span class="flow-arrow-down">↓</span>
+                <div class="flow-node flow-screen">Mascot Reveal</div>
+                <span class="flow-arrow-down">↓</span>
+                <div class="flow-node flow-decision">Create Account?</div>
+                <span class="flow-arrow-down">↓</span>
+                <div class="flow-node flow-action">Sign Up</div>
+                <span class="flow-arrow-down">↓</span>
+                <div class="flow-node flow-endpoint">Home (Logged In)</div>
+              </div>
+            </div>
+
+            <div class="flow-branch flow-branch-skip">
+              <span class="branch-label branch-label-skip">Skip</span>
+              <div class="flow-path-vertical">
+                <div class="flow-node flow-screen">Browse Courses</div>
+                <span class="flow-arrow-down">↓</span>
+                <div class="flow-node flow-screen">Course Page</div>
+                <span class="flow-arrow-down">↓</span>
+                <div class="flow-node flow-action">View Content</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Returning User -->
+        <div class="flow-block">
+          <h3 class="flow-block-title">Returning User</h3>
+          <div class="flow-path flow-path-center">
+            <div class="flow-node flow-entry">Returning User</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node flow-screen">Login</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node flow-action">Authenticate</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node flow-endpoint">Home (Logged In)</div>
+          </div>
+        </div>
+
+        <!-- Core Features Grid -->
+        <div class="flow-block">
+          <h3 class="flow-block-title">Core Features</h3>
+          <div class="flow-features-grid">
+
+            <!-- Learning -->
+            <div class="flow-feature-card">
+              <div class="feature-icon">📚</div>
+              <h4>Learning</h4>
+              <div class="feature-flow">
+                <span class="flow-node-mini flow-screen">Browse Courses</span>
+                <span class="mini-arrow">↓</span>
+                <span class="flow-node-mini flow-screen">Course Page</span>
+                <span class="mini-arrow">↓</span>
+                <span class="flow-node-mini flow-action">Complete Lessons</span>
+                <span class="mini-arrow">↓</span>
+                <span class="flow-node-mini flow-endpoint">Quiz Results</span>
+              </div>
+            </div>
+
+            <!-- Profile -->
+            <div class="flow-feature-card">
+              <div class="feature-icon">👤</div>
+              <h4>Profile</h4>
+              <div class="feature-flow">
+                <span class="flow-node-mini flow-screen">My Profile</span>
+                <span class="mini-arrow">↓</span>
+                <span class="flow-node-mini flow-action">View Mascot</span>
+                <span class="mini-arrow">↓</span>
+                <span class="flow-node-mini flow-action">Track Progress</span>
+                <span class="mini-arrow">↓</span>
+                <span class="flow-node-mini flow-action">Edit Settings</span>
+              </div>
+            </div>
+
+            <!-- Social -->
+            <div class="flow-feature-card">
+              <div class="feature-icon">👥</div>
+              <h4>Social</h4>
+              <div class="feature-flow">
+                <span class="flow-node-mini flow-screen">Friends Page</span>
+                <span class="mini-arrow">↓</span>
+                <span class="flow-node-mini flow-screen">Friend Profile</span>
+                <span class="mini-arrow">↓</span>
+                <span class="flow-node-mini flow-action">View Progress</span>
+                <span class="mini-arrow">↓</span>
+                <span class="flow-node-mini flow-action">Add Friends</span>
+              </div>
+            </div>
+
+            <!-- Mascot -->
+            <div class="flow-feature-card">
+              <div class="feature-icon">🐯</div>
+              <h4>Retake Survey</h4>
+              <div class="feature-flow">
+                <span class="flow-node-mini flow-action">Retake CTA</span>
+                <span class="mini-arrow">↓</span>
+                <span class="flow-node-mini flow-screen">Survey</span>
+                <span class="mini-arrow">↓</span>
+                <span class="flow-node-mini flow-screen">New Result</span>
+                <span class="mini-arrow">↓</span>
+                <span class="flow-node-mini flow-endpoint">Update Profile</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DESIGN IMAGES -->
+    <section class="design" id="design">
+      <div class="design-container">
+        <div class="section-header">
+          <span class="section-label">08</span>
+          <h2>Final Designs</h2>
+        </div>
+
+        <div class="design-imgs">
+          <div class="design-img">
+            <img src="img/cta survey july 24.png" alt="CTA Survey" loading="lazy" decoding="async">
+            <figcaption>CTA Survey - Logged Out State</figcaption>
+          </div>
+
           <div class="design-img">
             <img src="img/Home page Logged In Aug 21, 2025.png" alt="Home page of a logged in user" loading="lazy"
               decoding="async">
-            <figcaption>Home page with logged in user - aug 21</figcaption>
+            <figcaption>Home Dashboard - Logged In</figcaption>
           </div>
 
-          <!-- Design image 3: Survey, 3 questions complete with 5 left to go -->
           <div class="design-img">
             <img src="img/Survey 3 Aug 21, 2025.png" alt="CTA Survey" loading="lazy" decoding="async">
-            <figcaption>Survey, 3 questions complete with 5 left to go.</figcaption>
+            <figcaption>Personality Survey - In Progress</figcaption>
           </div>
 
-          <!-- Design image 4: Survey Complete with a Quilong result -->
           <div class="design-img">
             <img src="img/Survey Complete Aug 21, 2025.png" alt="CTA Survey Complete" loading="lazy" decoding="async">
-            <figcaption>Survey Complete with a Quilong result</figcaption>
+            <figcaption>Survey Complete - Mascot Result</figcaption>
           </div>
 
-          <!-- Design image 5: Future Courses carousel -Aug 21 -->
           <div class="design-img">
             <img src="img/future courses carousel aug 21, 2025.png" alt="Future Courses" loading="lazy"
               decoding="async">
-            <figcaption>Future Courses carousel -Aug 21</figcaption>
+            <figcaption>Future Courses Carousel</figcaption>
           </div>
 
-          <!-- Design image 6: Join us today -Aug 21 -->
           <div class="design-img">
             <img src="img/join us today km aug 21, 2025.png" alt="Join us today" loading="lazy" decoding="async">
-            <figcaption>Join us today -Aug 21</figcaption>
+            <figcaption>Join Us CTA Section</figcaption>
           </div>
 
-          <!-- Design image 7: Browse Courses -Aug 21 -->
           <div class="design-img">
             <img src="img/browse courses aug 21, 2025.png" alt="Browse Courses" loading="lazy" decoding="async">
-            <figcaption>Browse Courses -Aug 21</figcaption>
+            <figcaption>Browse Courses - Grid View</figcaption>
           </div>
 
-          <!-- Design image 8: Browse Courses -Aug 21 -->
           <div class="design-img">
             <img src="img/browse courses 3 aug, 2025.png" alt="Browse Courses" loading="lazy" decoding="async">
-            <figcaption>Browse Courses -Aug 21</figcaption>
+            <figcaption>Browse Courses - Filtered</figcaption>
           </div>
 
-          <!-- Design image 9: Profile Page -Aug 21 -->
           <div class="design-img">
-            <img src="img/Profile Page CF.png" alt="Browse Courses" loading="lazy" decoding="async">
-            <figcaption>Profile Page -Aug 21</figcaption>
+            <img src="img/Profile Page CF.png" alt="Profile Page" loading="lazy" decoding="async">
+            <figcaption>User Profile Page</figcaption>
           </div>
-
         </div>
       </div>
     </section>
 
+    <!-- PROJECT NAVIGATION -->
+    <nav class="project-nav-footer" aria-label="Project navigation">
+      <a href="work-browse-page.html" class="project-nav-link">
+        <i class="fa-solid fa-grid-2" aria-hidden="true"></i>
+        All Projects
+      </a>
+      <a href="gamejam.html" class="project-nav-link">
+        Next Project
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </nav>
 
   </div>
-  <!-- <p> add footer</p> -->
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <img class="footer-logo" src="../img/CF_Box_Logo.png" alt="CF logo" fetchpriority="high" decoding="async">
+      </div>
+
+      <div class="footer-tagline">
+        <p class="tagline">
+          Designer crafting intuitive,<br>
+          human-centered experiences.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="https://www.linkedin.com/in/chloe-feierabend/" target="_blank"><i class="fa-brands fa-linkedin"></i>
+            LinkedIn</a>
+          <a href="mailto:chloe.feierabend@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i> E-Mail</a>
+          <a href="https://bento.me/chloefeierabend" target="_blank"><i>🍱</i> Bento</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
   <script src="carousel.js" defer></script>
+  <script src="sectionNav.js" defer></script>
+  <script src="lightbox.js" defer></script>
 </body>
 
 </html>

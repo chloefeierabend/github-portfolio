@@ -1,111 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with Chloe Feierabend — UX/UI Designer based in Waterloo, ON.">
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="contact.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Outline&family=Londrina+Solid:wght@100;300;400;900&display=swap"
+    rel="stylesheet">
+
+  <title>Contact | Chloe Feierabend</title>
+  <script src="https://kit.fontawesome.com/5973f658b0.js" crossorigin="anonymous"></script>
+  <script src="hamburger.js" defer></script>
+</head>
+
 <body>
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio of Chloe Feierabend — UX/UI & Software Developer. Contact information.">
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="contact.css">
-
-    <!-- New font links -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Outline&family=Londrina+Solid:wght@100;300;400;900&display=swap"
-      rel="stylesheet">
-
-    <title>Contact</title>
-    <script src="https://kit.fontawesome.com/5973f658b0.js" crossorigin="anonymous"></script>
-    <script src="hamburger.js" defer></script>
-    <script src="index.js"></script>
-  </head>
-
-  <body>
-    <!-- Navigation bar -->
-    <nav class="navbar">
-      <div class="container">
-        <!-- Logo -->
-        <div class="logo-left">
-          <a href="index.html" class="logo">CF</a>
-        </div>
-
-        <!-- Hamburger button -->
-        <button class="nav-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
-          <!-- your SVG icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" class="menu-icon">
-            <path fill="currentColor"
-              d="M22 13c0 1.11-.89 2-2 2H4a2 2 0 1 1 0-4h9l2.5 2l2.5-2h2a2 2 0 0 1 2 2M12 3C3 3 3 9 3 9h18s0-6-9-6M3 18c0 1.66 1.34 3 3 3h12c1.66 0 3-1.34 3-3v-1H3z" />
-          </svg>
-        </button>
-
-        <!-- Navigation links -->
-        <ul id="site-menu" class="nav">
-          <li><a href="work-browse-page.html">Work</a></li>
-          <li><a href="contact.html" class="nav-active">Contact</a></li>
-        </ul>
+  <!-- Navigation bar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo-left">
+        <a href="index.html" class="logo">CF</a>
       </div>
-    </nav>
 
-    <main>
-      <div class="content">
-        <div class="container">
-          <section class="hero">
-            <!-- Content of the page -->
-            <div class="hero-container">
-              <div class="hero-content">
-                <!-- Hero section -->
-                <h1 class="hero-name border-1 border-black">
-                  <span class="londrina-shadow-regular hero-name leading-tight">Chloe </span>
-                  <span class="londrina-shadow-regular hero-name mt-0 leading-[2px]">Feierabend</span>
-                  <!-- Title of the website -->
-                </h1>
-                <div class="hero-description">
-                  <p>Designer crafting intuitive, human-</br>centered experiences. </p>
-                </div>
-                <!-- Description of the website -->
-                <div class="hero-buttons">
-                  <button class="hero-button work-button">
-                    <a href="work-browse-page.html">Work</a>
-                    <!-- Buttons for the hero section -->
-                  </button>
-                </div>
-              </div>
-              <div class="hero-logo">
-                <img src="img/Logo_sept21.png" alt="Logo" fetchpriority="high" decoding="async">
-              </div>
-              <!-- Logo of the website -->
+      <button class="nav-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" class="menu-icon">
+          <path fill="currentColor"
+            d="M22 13c0 1.11-.89 2-2 2H4a2 2 0 1 1 0-4h9l2.5 2l2.5-2h2a2 2 0 0 1 2 2M12 3C3 3 3 9 3 9h18s0-6-9-6M3 18c0 1.66 1.34 3 3 3h12c1.66 0 3-1.34 3-3v-1H3z" />
+        </svg>
+      </button>
+
+      <ul id="site-menu" class="nav">
+        <li><a href="work-browse-page.html">Work</a></li>
+        <li><a href="contact.html" class="nav-active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="contact-page">
+
+      <!-- Header -->
+      <header class="contact-header">
+        <h1 class="londrina-shadow-regular">Get in Touch</h1>
+        <p class="contact-intro">
+          I'm always open to discussing new projects, creative ideas, or opportunities to be part of something great.
+          Let's chat!
+        </p>
+        <div class="contact-location">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Based in Waterloo, ON</span>
+        </div>
+      </header>
+
+      <!-- Contact Methods -->
+      <section class="contact-methods">
+        <div class="contact-grid">
+
+          <!-- LinkedIn -->
+          <a class="contact-card" href="https://linkedin.com/in/chloe-feierabend" target="_blank"
+            rel="noopener noreferrer">
+            <div class="contact-icon contact-icon-linkedin">
+              <img src="img/linkedin.png" alt="">
             </div>
-          </section>
-
-          <section class="contact">
-            <h2 class="contact-title">Let's Connect :)</h2>
-
-            <div class="contact-container">
-              <div class="contact-buttons">
-                <a class="contact-button linkedin-button" href="https://linkedin.com/in/your-handle" target="_blank"
-                  rel="noopener noreferrer" aria-label="Open LinkedIn profile">
-                  <img src="img/linkedin.png" alt="">
-                </a>
-
-                <a class="contact-button email-button" href="mailto:you@example.com" aria-label="Send me an email">
-                  <img src="img/mail.png" alt="">
-                </a>
-
-                <a class="contact-button bento-button" href="https://bento.me/yourprofile" target="_blank"
-                  rel="noopener noreferrer" aria-label="Visit my Bento page">
-                  <img src="img/bento.png" alt="">
-                </a>
-              </div>
+            <div class="contact-info">
+              <h2>LinkedIn</h2>
+              <p>Let's connect</p>
             </div>
-          </section>
+          </a>
+
+          <!-- Email -->
+          <a class="contact-card" href="mailto:chloe.feierabend@gmail.com">
+            <div class="contact-icon contact-icon-email">
+              <img src="img/mail.png" alt="">
+            </div>
+            <div class="contact-info">
+              <h2>Email</h2>
+              <p>For project inquiries</p>
+            </div>
+          </a>
+
+          <!-- Bento -->
+          <a class="contact-card" href="https://bento.me/chloefeierabend" target="_blank" rel="noopener noreferrer">
+            <div class="contact-icon contact-icon-bento">
+              <img src="img/bento.png" alt="">
+            </div>
+            <div class="contact-info">
+              <h2>Bento</h2>
+              <p>See all my links</p>
+            </div>
+          </a>
 
         </div>
-      </div>
-    </main>
+      </section>
 
-  </body>
+      <!-- Response Note -->
+      <div class="contact-note">
+        <i class="fa-regular fa-clock" aria-hidden="true"></i>
+        <p>I typically respond within 48 hours</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <img class="footer-logo" src="img/CF_Box_Logo.png" alt="CF logo" fetchpriority="high" decoding="async">
+      </div>
+
+      <div class="footer-tagline">
+        <p class="tagline">
+          Designer crafting intuitive,<br>
+          human-centered experiences.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="https://www.linkedin.com/in/chloe-feierabend/" target="_blank"><i class="fa-brands fa-linkedin"></i>
+            LinkedIn</a>
+          <a href="mailto:chloe.feierabend@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i> E-Mail</a>
+          <a href="https://bento.me/chloefeierabend" target="_blank"><i>🍱</i> Bento</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+</body>
 
 </html>

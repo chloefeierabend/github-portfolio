@@ -34,6 +34,10 @@
   <script src="hamburger.js" defer></script>
 
   <style>
+    .navbar a:hover {
+      transition: font-family 1s;
+    }
+
     .skip-to-content {
       position: absolute;
       top: -40px;
@@ -88,8 +92,7 @@
 
       <!-- Navigation links -->
       <ul id="site-menu" class="nav">
-        <li><a href="./work-browse-page.html">Work</a></li>
-        <li><a href="#">Resume</a></li>
+        <li><a href="work-browse-page.html">Work</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -109,7 +112,7 @@
             <div class="hero-content">
               <!-- Title for the hero section -->
               <h1 class="hero-name border-1 border-black">
-                <!-- Name with a fancy font -->
+                <!-- Name with a londria font -->
                 <span class="londrina-shadow-regular hero-name leading-tight">Chloe </span>
                 <span class="londrina-shadow-regular hero-name mt-0 leading-[2px]">Feierabend</span>
               </h1>
@@ -123,9 +126,9 @@
                 <button class="hero-button work-button">
                   <a href="./work-browse-page.html">Work</a>
                 </button>
-                <!-- Button for the resume section -->
-                <button class="hero-button resume-button">
-                  <a href="#">Resume</a>
+                <!-- Button to navigate to contact page -->
+                <button class="lets-connect-button">
+                  <a href="contact.html">Let's connect</a>
                 </button>
               </div>
             </div>
@@ -154,10 +157,12 @@
               <p class="about-profile-description">I’m a UX/UI designer with a passion for creating beautiful and
                 engaging
                 experiences that are intuitive to people.</p>
-              <!-- Button to navigate to contact page -->
-              <button class="lets-connect-button">
-                <a href="contact.html">Let's connect</a>
-              </button>
+              <p class="about-profile-description">With a background in software development, I bring a unique
+                perspective to my design work, ensuring that my designs are not only visually appealing but also
+                technically
+                feasible.</p>
+              <p class="about-profile-description">I’m always eager to learn and grow as a designer, and I’m excited to
+                take on new challenges that push me to think outside the box.</p>
             </div>
           </div>
         </section>
@@ -167,22 +172,22 @@
           <h2>Featured Projects</h2>
           <div class="featured-projects-container">
             <!-- Case Study project -->
-            <button class="featured-project">
-              <a href="caseStudy.html">
-                <img class="featured-project-placeholder" src="img/Home page Logged In Aug 21, 2025.png"
-                  alt="Case Study Thumbnail Image" loading="lazy" decoding="async">
-                <h3>Case Study</h3>
-                <p>Financial literacy tool built for international students and newcomers to Canada.</p>
-              </a>
-            </button>
+
+            <a href="caseStudy.html" class="featured-project">
+              <img class="featured-project-placeholder" src="img/Home page Logged In Aug 21, 2025.png"
+                alt="Case Study Thumbnail Image" loading="lazy" decoding="async">
+              <h3>Case Study</h3>
+              <p>Financial literacy tool built for international students and newcomers to Canada.</p>
+            </a>
+
 
             <!-- Project 2 -->
-            <div class="featured-project">
+            <a href="gamejam.html" class="featured-project">
               <img class="featured-project-placeholder" src="img/Screenshot 2025-10-17 230947.png"
                 alt="Indie Game Jam Poster Thumbnail Image" loading="lazy" decoding="async">
               <h3>Indie Game Jam Poster</h3>
               <p>October 2024, February 2025</p>
-            </div>
+            </a>
 
             <!-- Project 3 -->
             <!-- <div class="featured-project">

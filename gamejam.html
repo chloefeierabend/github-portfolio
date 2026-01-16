@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="description"
+    content="Main home page that showcases Chloe Feierabend's work and includes information about her."> -->
+    <meta name="description"
+        content="Portfolio of Chloe Feierabend — UX/UI & Software Developer. Selected work, case studies, and contact information.">
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="gamejam.css">
+
+    <!-- <link rel="stylesheet" href="skip-button.css"> -->
+    <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin>
+
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Non-blocking load: preload as style, then swap rel on load -->
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- No-JS fallback -->
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&display=swap">
+    </noscript>
+
+    <title>Indie Game Jam | Chloe Feierabend</title>
+
+    <script src="hamburger.js" defer></script>
+
+    <style>
+        .navbar a:hover {
+            transition: font-family 1s;
+        }
+
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: rgb(251, 250, 246);
+            color: rgb(0, 0, 0);
+            padding: 10px 16px;
+            border-radius: 0 0 6px 0;
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 100;
+            transition: top 0.3s ease;
+            font-family: "Inter", sans-serif;
+        }
+
+        /* Reveal on focus */
+        .skip-to-content:focus {
+            top: 0;
+            background: rgba(251, 250, 246, 0.772);
+            outline: 3px solid #1e40af;
+        }
+
+        /* Focus accessibility */
+        .skip-to-content:focus-visible {
+            outline: 3px solid #1e40af;
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+<script src="https://kit.fontawesome.com/5973f658b0.js" crossorigin="anonymous" defer></script>
+
+<body>
+    <!-- Skip link -->
+    <a href="#main" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-left">
+                <a href="../index.html" class="logo">CF</a>
+            </div>
+
+            <!-- Hamburger button -->
+            <button class="nav-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
+                <!-- your SVG icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" class="menu-icon">
+                    <path fill="currentColor"
+                        d="M22 13c0 1.11-.89 2-2 2H4a2 2 0 1 1 0-4h9l2.5 2l2.5-2h2a2 2 0 0 1 2 2M12 3C3 3 3 9 3 9h18s0-6-9-6M3 18c0 1.66 1.34 3 3 3h12c1.66 0 3-1.34 3-3v-1H3z" />
+                </svg>
+            </button>
+
+            <!-- Navigation links -->
+            <ul id="site-menu" class="nav">
+                <li><a href="work-browse-page.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main">
+        <article class="project-page">
+
+            <!-- Project Header -->
+            <header class="project-header">
+                <a href="javascript:window.history.back()" class="back-link">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    Back
+                </a>
+                <h1 class="londrina-shadow-regular">Indie Game Jam</h1>
+                <p class="project-tagline">Promotional materials for Conestoga College's bi-termly indie game jam event.
+                </p>
+
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Designer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">October 2024, February 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tools</span>
+                        <span class="meta-value">Illustrator, Photoshop</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Deliverables</span>
+                        <span class="meta-value">Posters, TV Graphic, Masthead</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Overview -->
+            <section class="project-section">
+                <p class="project-intro">
+                    The Indie Game Jam is a recurring event hosted at Conestoga College's Waterloo campus, bringing
+                    students together to design and develop games over a five day period. I designed promotional
+                    materials
+                    for two separate jams, working within quick turnarounds and specific dimension requirements for
+                    print and digital displays.
+                </p>
+            </section>
+
+            <!-- Posters Section -->
+            <section class="project-section">
+                <h2>Event Posters</h2>
+                <div class="showcase-grid showcase-grid--2col">
+                    <figure class="showcase-item">
+                        <img src="img/gamejam/GameJamPosterOfficial_Approved-01.png"
+                            alt="Indie Game Jam poster for October 2024" loading="lazy">
+                        <figcaption>Fall 2024</figcaption>
+                    </figure>
+                    <figure class="showcase-item">
+                        <img src="img/gamejam/GameJamPosterOfficialW25_CodeFlakes-01.png"
+                            alt="Indie Game Jam poster for Winter 2025" loading="lazy">
+                        <figcaption>Winter 2025</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- TV & Digital Section -->
+            <section class="project-section">
+                <h2>Digital Displays</h2>
+                <p>Alongside the print posters, I created graphics for Conestoga's digital television network and
+                    promotional mastheads.</p>
+                <div class="showcase-grid showcase-grid--2col">
+                    <figure class="showcase-item">
+                        <img src="img/gamejam/CCDTVPleaseBCentred_graphic-01.png"
+                            alt="Indie Game Jam TV display graphic" loading="lazy">
+                        <figcaption>TV Graphic</figcaption>
+                    </figure>
+                    <figure class="showcase-item">
+                        <img src="img/gamejam/mastheadSquished3_graphic-01.png"
+                            alt="Indie Game Jam promotional masthead" loading="lazy">
+                        <figcaption>Masthead</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <nav class="project-nav" aria-label="Project navigation">
+                <a href="work-browse-page.html" class="project-nav-link">
+                    <i class="fa-solid fa-grid-2" aria-hidden="true"></i>
+                    All Projects
+                </a>
+                <a href="caseStudy.html" class="project-nav-link">
+                    Next Project
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </nav>
+
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <img class="footer-logo" src="img/CF_Box_Logo.png" alt="CF logo" fetchpriority="high" decoding="async">
+            </div>
+
+            <div class="footer-tagline">
+                <p class="tagline">
+                    Designer crafting intuitive,<br>
+                    human-centered experiences.
+                </p>
+            </div>
+
+            <div class="footer-right">
+                <nav class="footer-nav" aria-label="Footer">
+                    <a href="https://www.linkedin.com/in/chloe-feierabend/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i>
+                        LinkedIn</a>
+                    <a href="mailto:chloe.feierabend@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i>
+                        E-Mail</a>
+                    <a href="https://bento.me/chloefeierabend" target="_blank"><i>🍱</i> Bento</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

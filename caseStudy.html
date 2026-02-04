@@ -51,7 +51,7 @@
       <li><a href="#overview" class="nav-dot active" data-section="overview"><span>Overview</span></a></li>
       <li><a href="#solution" class="nav-dot" data-section="solution"><span>Solution</span></a></li>
       <li><a href="#testing" class="nav-dot" data-section="testing"><span>Testing</span></a></li>
-      <li><a href="#development" class="nav-dot" data-section="development"><span>Development</span></a></li>
+      <li><a href="#development" class="nav-dot" data-section="development"><span>Design & Development</span></a></li>
       <li><a href="#design" class="nav-dot" data-section="design"><span>Design</span></a></li>
     </ul>
   </aside>
@@ -68,7 +68,8 @@
             Back to Work
           </a>
           <h1 class="londrina-solid-regular">Karla Learn</h1>
-          <p class="hero-tagline">Making Canadian finance less intimidating for newcomers.</p>
+          <p class="hero-tagline"><strong>What if Financial
+              Literacy Was Actually Fun? </strong> </br> Making Canadian finance less intimidating for newcomers.</p>
 
           <div class="hero-meta">
             <div class="meta-item">
@@ -86,6 +87,17 @@
             <div class="meta-item">
               <span class="meta-label">Team</span>
               <span class="meta-value">4 Members</span>
+            </div>
+          </div>
+          <!-- Results Hook -->
+          <div class="hero-results">
+            <div class="result-item">
+              <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+              <span>Shipped MVP in 3 months</span>
+            </div>
+            <div class="result-item">
+              <i class="fa-solid fa-users" aria-hidden="true"></i>
+              <span>Tested with 5 international students with positive feedback</span>
             </div>
           </div>
         </div>
@@ -176,21 +188,19 @@
           <!-- Survey & Mascots -->
           <article class="fs-card card-accent-purple">
             <div class="fs-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M9 3h6a2 2 0 0 1 2 2h1a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h1a2 2 0 0 1 2-2Z"
-                  fill="none" stroke="currentColor" stroke-width="1.8" />
-                <path d="M9 3h6v2H9zM8 13l3 3 5-5" fill="none" stroke="currentColor" stroke-width="1.8"
-                  stroke-linecap="round" stroke-linejoin="round" />
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 26 26">
+                <path fill="currentColor"
+                  d="M8.813 0A1 1 0 0 0 8 1v1H4.406C3.606 2 3 2.606 3 3.406V24.5c0 .9.606 1.5 1.406 1.5H21.5c.8 0 1.406-.606 1.406-1.406V3.406c.1-.8-.512-1.406-1.312-1.406H18V1a1 1 0 0 0-1-1H9a1 1 0 0 0-.094 0a1 1 0 0 0-.094 0zM10 2h6v2h-6zM5 4h3v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4h3v20H5zm2 5v4h4V9zm1 1h2v2H8zm5 0v2h6v-2zm-6 5v4h4v-4zm6 1v2h6v-2z" />
               </svg>
             </div>
             <h3>Personality Survey</h3>
-            <p>Playful mascots guide the experience and match users to learning styles.</p>
-            <ul class="chip-row" aria-label="Mascots">
-              <li class="chip">🐯 Tiger</li>
-              <li class="chip">🐃 Ox</li>
-              <li class="chip">🦅 Eagle</li>
-              <li class="chip">🐉 Dragon</li>
+            <p class="mascot-teaser">Four mascots. Four countries. Which one are you?</p>
+            <ul class="mascot-list">
+              <li><span class="mascot-emoji">🐯</span> <strong>Tiger</strong></li>
+              <li><span class="mascot-emoji">🐃</span> <strong>Ox</strong></li>
+              <li><span class="mascot-emoji">🦅</span> <strong>Eagle</strong></li>
+              <li><span class="mascot-emoji">🐉</span> <strong>Dragon</strong></li>
             </ul>
           </article>
 
@@ -252,6 +262,22 @@
               <li class="flow">Learn <span aria-hidden="true">→</span> Apply <span aria-hidden="true">→</span> Grow</li>
             </ul>
           </article>
+        </div>
+      </div>
+
+      <!-- Feature Highlight -->
+      <div class="solution-highlight">
+        <div class="solution-highlight-image">
+          <img src="img/Survey Complete Aug 21, 2025.png" alt="Survey completion screen showing Quilong mascot result"
+            loading="lazy">
+        </div>
+        <div class="solution-highlight-content">
+          <h3>Meet the Mascots</h3>
+          <p>After completing a short personality survey, users discover which financial mascot matches their spending
+            style. Are they a planner or a spender? Or something else entirely?</p>
+          <p class="highlight-note">It's the kind of thing you'd actually send to a friend — "wait, which one are you?"
+          </p>
+
         </div>
       </div>
     </section>
@@ -325,31 +351,31 @@
       </div>
     </section>
 
-    <!-- DEVELOPMENT SECTION -->
+    <!-- DESIGN & DEVELOPMENT SECTION -->
     <section class="development" id="development" aria-labelledby="dev-title">
       <div class="dev-container">
         <div class="section-header">
           <span class="section-label">04</span>
-          <h2 id="dev-title">Development</h2>
+          <h2 id="dev-title">Design & Development</h2>
         </div>
 
         <p class="dev-built"><strong>Built with:</strong> SvelteKit + Tailwind CSS</p>
 
         <ul class="tech-chips" aria-label="Tech stack">
+          <li class="chip chip-tech">Figma</li>
           <li class="chip chip-tech">SvelteKit</li>
           <li class="chip chip-tech">Tailwind CSS</li>
-          <li class="chip chip-tech">MongoDB</li>
           <li class="chip chip-tech">TypeScript</li>
         </ul>
 
         <article class="dev-card">
-          <h3>Challenges & Solutions</h3>
+          <h3>My Contributions</h3>
           <ul class="dev-list">
-            <li><strong>Cross-browser responsiveness</strong> — Shifted from desktop-first to mobile-first approach
-              mid-project.</li>
-            <li><strong>Tailwind v4 setup</strong> — Resolved configuration issues with updated PostCSS config.</li>
-            <li><strong>Quiz data persistence</strong> — Designed MongoDB schema for storing user progress and results.
+            <li><strong>Design system</strong> — Created component library and style guide in Figma for consistent UI.
             </li>
+            <li><strong>Front-end development</strong> — Built interactive pages and components in SvelteKit.</li>
+            <li><strong>Responsive groundwork</strong> — Began implementing mobile-first approach towards the end of the
+              project timeline.</li>
           </ul>
         </article>
       </div>

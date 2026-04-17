@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Add active class to corresponding dot
         const activeDot = document.querySelector(
-          `.nav-dot[data-section="${sectionId}"]`
+          `.nav-dot[data-section="${sectionId}"]`,
         );
         if (activeDot) {
           activeDot.classList.add("active");

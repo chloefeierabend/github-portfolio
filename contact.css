@@ -57,9 +57,9 @@
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(140px, 200px));
   gap: clamp(16px, 3vw, 24px);
-  justify-items: center;
+  justify-content: center;
 }
 
 /* Square Contact Card */
@@ -131,6 +131,13 @@
   background: #ede9fe;
 }
 
+/* purple option: background: #ede9fe; color: #6d28d9; */
+.contact-icon-resume {
+  background: #f2e7df;
+  font-size: 1.75rem;
+  color: #8b5e47;
+}
+
 /* Text Container */
 .contact-info {
   display: flex;
@@ -186,7 +193,7 @@
 
 @media (max-width: 768px) {
   .contact-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 160px));
     gap: 12px;
   }
 

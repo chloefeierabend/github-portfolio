@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="GATORE Case Study — Full-stack board game café reservation and game library platform. UX/UI design and frontend development by Chloe Feierabend.">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="caseStudy.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Outline&family=Londrina+Solid:wght@100;300;400;900&display=swap"
+    rel="stylesheet">
+
+  <script src="carousel.js" defer></script>
+  <script src="caseStudy.js" defer></script>
+  <script src="hamburger.js" defer></script>
+  <script src="https://kit.fontawesome.com/5973f658b0.js" crossorigin="anonymous"></script>
+  <title>GATORE | Case Study</title>
+
+  <style>
+    /* GATORE palette — overrides caseStudy.css purple with teal + warm brown */
+    :root {
+      --gt-teal: #1B9A8F;
+      --gt-teal-mid: #2A8A80;
+      --gt-brown: #7C5C3E;
+      --gt-brown-mid: #9E7B55;
+    }
+
+    .section-nav .nav-dot.active::before {
+      background: var(--gt-teal);
+      border-color: var(--gt-teal);
+    }
+
+    .section-label {
+      color: var(--gt-teal);
+    }
+
+    .context-card {
+      border-left-color: var(--gt-teal);
+    }
+
+    .context-card h4 {
+      color: var(--gt-teal);
+    }
+
+    .fs-icon {
+      color: var(--gt-teal);
+    }
+
+    .card-accent-purple {
+      border-left-color: var(--gt-brown);
+    }
+
+    .card-accent-teal {
+      border-left-color: var(--gt-teal);
+    }
+
+    .card-accent-green {
+      border-left-color: var(--gt-teal-mid);
+    }
+
+    .card-accent-orange {
+      border-left-color: var(--gt-brown-mid);
+    }
+
+    .lesson-card--purple {
+      border-top-color: var(--gt-brown);
+    }
+
+    .lesson-card--teal {
+      border-top-color: var(--gt-teal);
+    }
+
+    .lesson-card--green {
+      border-top-color: var(--gt-teal-mid);
+    }
+
+    .solution-highlight-content .highlight-note {
+      border-left-color: var(--gt-teal);
+    }
+
+    .dev-card {
+      border-left-color: var(--gt-teal);
+    }
+
+    .chip-tech {
+      background: #e6f4f3;
+      border-color: #b8dbd8;
+      color: var(--gt-teal);
+    }
+
+    /* Hero image: no box, follow SVG silhouette */
+    .hero-image-casestudy::before {
+      display: none;
+    }
+
+    .hero-image-casestudy img {
+      border-radius: 0;
+      box-shadow: none !important;
+      background: transparent;
+      filter: drop-shadow(10px 10px 4px rgba(76, 99, 97, 0.35));
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo-left">
+        <a href="index.html" class="logo">CF</a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" class="menu-icon">
+          <path fill="currentColor"
+            d="M22 13c0 1.11-.89 2-2 2H4a2 2 0 1 1 0-4h9l2.5 2l2.5-2h2a2 2 0 0 1 2 2M12 3C3 3 3 9 3 9h18s0-6-9-6M3 18c0 1.66 1.34 3 3 3h12c1.66 0 3-1.34 3-3v-1H3z" />
+        </svg>
+      </button>
+
+      <ul id="site-menu" class="nav">
+        <li><a href="work-browse-page.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sticky Section Navigation -->
+  <aside class="section-nav" aria-label="Case study sections">
+    <ul>
+      <li><a href="#overview" class="nav-dot active" data-section="overview"><span>Overview</span></a></li>
+      <li><a href="#platform" class="nav-dot" data-section="platform"><span>The Platform</span></a></li>
+      <li><a href="#design-system" class="nav-dot" data-section="design-system"><span>Design System</span></a></li>
+      <li><a href="#development" class="nav-dot" data-section="development"><span>Design & Development</span></a></li>
+      <li><a href="#outcome" class="nav-dot" data-section="outcome"><span>Outcome</span></a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="content-casestudy">
+
+    <!-- HERO SECTION -->
+    <section class="hero-casestudy">
+      <div class="hero-container-casestudy">
+        <div class="hero-content-casestudy">
+          <a href="work-browse-page.html" class="back-link">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            Back to Work
+          </a>
+          <h1 class="londrina-solid-regular">GATORE</h1>
+          <p class="hero-tagline"><strong>The reservation and game library platform built for board game
+              cafés.</strong><br>
+            Filling a gap that off-the-shelf software couldn't.</p>
+
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-label">Role</span>
+              <span class="meta-value">UX/UI Design Lead & Frontend Developer</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Timeline</span>
+              <span class="meta-value">Jan – Apr 2026</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Tools</span>
+              <span class="meta-value">Figma, React, TypeScript, Tailwind v4, Node.js</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Context</span>
+              <span class="meta-value">Conestoga College Capstone</span>
+            </div>
+          </div>
+
+          <!-- Results Hook -->
+          <div class="hero-results">
+            <div class="result-item">
+              <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+              <span>2nd place at Capstone Demo Day</span>
+            </div>
+            <div class="result-item">
+              <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+              <span>Full-stack platform — marketing site + business portal</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image-casestudy">
+          <!-- TODO: replace with GATORE hero screenshot -->
+          <img src="img/gatore/hero.svg"
+            alt="GATORE platform interface showing the board game café reservation and discovery experience">
+        </div>
+      </div>
+    </section>
+
+    <!-- Jump to designs button -->
+    <section class="top-button">
+      <button onclick="scrollToDesignImages()">Jump to Designs
+        <span>
+          <img src="img/arrows.svg" alt="down arrows" fetchpriority="high" decoding="async">
+        </span>
+      </button>
+    </section>
+
+    <!-- OVERVIEW SECTION -->
+    <section class="project-overview" id="overview">
+      <div class="section-header">
+        <span class="section-label">01</span>
+        <h2>Project Overview</h2>
+      </div>
+
+      <div class="overview-grid">
+        <div class="overview-main">
+          <h3>The Challenge</h3>
+          <p>Board game cafés are a growing category of hospitality business — but no dedicated software exists for how
+            they actually operate. Generic reservation tools don't account for game libraries. Generic library tools
+            don't
+            handle table bookings. Café owners were cobbling together mismatched systems, and customers had no unified
+            way to discover venues, check game availability, or connect with others to play.</p>
+
+          <h3>The Goal</h3>
+          <p>Design and build a purpose-built platform for board game cafés: one product that handles everything on the
+            customer side (discovery, reservations, social matchmaking, personalized recommendations) and everything on
+            the business side (café management, game catalog, reservations dashboard).</p>
+        </div>
+
+        <div class="overview-sidebar">
+          <div class="context-card">
+            <h4>How the Gap Was Found</h4>
+            <p>A competitive analysis of existing reservation and venue management tools confirmed there was nothing
+              purpose-built for board game cafés — the niche GATORE was designed to fill.</p>
+          </div>
+          <div class="context-card">
+            <h4>My Role</h4>
+            <p>UX/UI Design Lead. I owned the design system and led design across both sides of the platform — the
+              customer-facing marketing site and the business portal — while also handling frontend build work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE PLATFORM SECTION -->
+    <section class="final-solution" id="platform" aria-labelledby="platform-title">
+      <div class="final-container">
+        <div class="section-header">
+          <span class="section-label">02</span>
+          <h2 id="platform-title">The Platform</h2>
+        </div>
+
+        <p class="section-intro">GATORE is a two-sided platform — one product serving two distinct audiences with
+          different needs, different mental models, and different success metrics.</p>
+
+        <div class="final-grid">
+
+          <!-- Customer Side: Reservations -->
+          <article class="fs-card card-accent-teal">
+            <div class="fs-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3>Reservations</h3>
+            <p>Customers can browse café listings, check availability, and book a table — with game preferences built
+              into the booking flow.</p>
+          </article>
+
+          <!-- Customer Side: Discovery & Social -->
+          <article class="fs-card card-accent-green">
+            <div class="fs-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3>Discovery & Social Matchmaking</h3>
+            <p>Discover new cafés and connect with other players looking for a group. GATORE helps you find people to
+              play with, not just a place to play.</p>
+          </article>
+
+          <!-- Customer Side: Profile & Recommendations -->
+          <article class="fs-card card-accent-purple">
+            <div class="fs-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h3>Profiles & Recommendations</h3>
+            <p>Customers build a profile, track their play history across visits, and receive personalized game
+              recommendations based on what they've played and enjoyed.</p>
+          </article>
+
+          <!-- Business Side: Portal -->
+          <article class="fs-card card-accent-orange">
+            <div class="fs-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3>Business Portal</h3>
+            <p>Café owners get a dedicated dashboard to manage their venue — reservations, game library catalog, and
+              café-side operations — all in one place.</p>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Feature Highlight: Two Audiences -->
+      <div class="solution-highlight">
+        <div class="solution-highlight-image">
+          <!-- TODO: replace with GATORE portal/dashboard screenshot -->
+          <img src="img/gatore/business-portal.png"
+            alt="GATORE business portal dashboard showing café management interface" loading="lazy">
+        </div>
+        <div class="solution-highlight-content">
+          <h3>Designing for Two Distinct Users</h3>
+          <p>The hardest design challenge on GATORE was serving two very different audiences within a single product. A
+            customer discovering a new café thinks nothing like an owner managing a Saturday night rush.</p>
+          <p class="highlight-note">That meant two separate design contexts — different information architecture,
+            different
+            interaction patterns, and different definitions of success for each side.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESIGN SYSTEM SECTION -->
+    <section class="design-brief" id="design-system" aria-labelledby="ds-title">
+      <div class="brief-container">
+        <div class="section-header">
+          <span class="section-label">03</span>
+          <h2 id="ds-title">Design System</h2>
+        </div>
+
+        <div class="brief-grid">
+
+          <!-- Brand Rationale -->
+          <article class="brief-card">
+            <h3>Brand Rationale</h3>
+            <p>GATORE's name is a play on "alligator," which made green the obvious starting point — but a literal
+              reptile green would have felt cold and corporate. Teal was chosen instead: it carries the green
+              association
+              while feeling approachable and modern. Warm beige and browns pair it to the board game café setting,
+              giving the brand a cozy, welcoming feel over a sterile one.</p>
+          </article>
+
+          <!-- Target Audiences -->
+          <article class="brief-card">
+            <h3>Two Audiences, One System</h3>
+            <p>The design system had to flex across both sides of the product. Customer-facing screens prioritize
+              warmth,
+              discovery, and delight. Business-facing screens prioritize clarity, density, and efficiency. The same
+              tokens
+              — color, type, spacing — served both contexts.</p>
+          </article>
+
+          <!-- UI Rationale -->
+          <article class="brief-card brief-rationale">
+            <h3>System Specs</h3>
+            <dl class="brief-dl">
+              <div class="row">
+                <dt>Typography</dt>
+                <dd>DM Sans — clean, friendly, and highly legible at both display and body sizes.</dd>
+              </div>
+              <div class="row">
+                <dt>Border Radius</dt>
+                <dd>8px — rounded enough to feel approachable, structured enough for a business tool.</dd>
+              </div>
+              <div class="row">
+                <dt>Grid</dt>
+                <dd>4px base grid for consistent spacing throughout.</dd>
+              </div>
+              <div class="row">
+                <dt>Color</dt>
+                <dd>
+                  Teal, warm beige, and warm brown.
+                  <ul class="palette" aria-label="Brand palette">
+                    <li style="--sw:#1A9A8F" title="Teal"></li>
+                    <li style="--sw:#F5EBD4" title="Warm Beige"></li>
+                    <li style="--sw:#7C5C3E" title="Warm Brown"></li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </article>
+
+          <!-- Accessibility -->
+          <article class="brief-card">
+            <h3>Accessibility (AODA)</h3>
+            <ul class="brief-list">
+              <li>Color contrast ratios audited and compliant throughout</li>
+              <li>Keyboard navigation fully supported</li>
+              <li>Screen reader support — semantic HTML, ARIA labels, alt text</li>
+              <li>AODA compliance checks applied across both customer and business surfaces</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DESIGN & DEVELOPMENT SECTION -->
+    <section class="development" id="development" aria-labelledby="dev-title">
+      <div class="dev-container">
+        <div class="section-header">
+          <span class="section-label">04</span>
+          <h2 id="dev-title">Design & Development</h2>
+        </div>
+
+        <p class="dev-built"><strong>Built with:</strong> React + TypeScript + Tailwind v4 + Node.js</p>
+
+        <ul class="tech-chips" aria-label="Tech stack">
+          <li class="chip chip-tech">Figma</li>
+          <li class="chip chip-tech">React</li>
+          <li class="chip chip-tech">TypeScript</li>
+          <li class="chip chip-tech">Tailwind v4</li>
+          <li class="chip chip-tech">Node.js</li>
+        </ul>
+
+        <article class="dev-card">
+          <h3>My Contributions</h3>
+          <ul class="dev-list">
+            <li><strong>Design system ownership</strong> — Built the full design system in Figma: tokens, components,
+              patterns, and documentation used across the entire product.</li>
+            <li><strong>Design lead across both surfaces</strong> — Owned UX and UI design for the customer-facing
+              marketing site and the business-facing management portal.</li>
+            <li><strong>Frontend build</strong> — Translated designs into production-ready components in React and
+              TypeScript, using Tailwind v4 for styling.</li>
+            <li><strong>AODA compliance</strong> — Audited and implemented accessibility standards throughout, including
+              contrast ratios, keyboard navigation, and screen reader support.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- OUTCOME SECTION -->
+    <section class="lessons" id="outcome" aria-labelledby="outcome-title">
+      <div class="lessons-container">
+        <div class="section-header">
+          <span class="section-label">05</span>
+          <h2 id="outcome-title">Outcome</h2>
+        </div>
+
+        <ol class="lesson-grid">
+          <li class="lesson-card lesson-card--teal">
+            <div class="lesson-num" aria-hidden="true">🏆</div>
+            <h3>2nd Place, Demo Day</h3>
+            <p>GATORE placed second in the Conestoga College capstone program at the final demo day — validating the
+              design and product direction in front of an external audience.</p>
+          </li>
+
+          <li class="lesson-card lesson-card--purple">
+            <div class="lesson-num" aria-hidden="true">2</div>
+            <h3>End-to-End Ownership</h3>
+            <p>Leading design from competitive research through full-stack build — across two distinct user surfaces —
+              reinforced how design decisions ripple into development, and vice versa.</p>
+          </li>
+
+          <li class="lesson-card lesson-card--green">
+            <div class="lesson-num" aria-hidden="true">3</div>
+            <h3>Two Audiences, One Codebase</h3>
+            <p>Building a shared design system that served both a customer discovery experience and a business
+              management tool was a meaningful systems design challenge at real product scale.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- GRAPHICS CAROUSEL -->
+    <section class="design-graphics">
+      <div class="section-header">
+        <span class="section-label">Research</span>
+        <h2>Research & Process</h2>
+      </div>
+
+      <section class="carousel" aria-label="GATORE design process carousel">
+        <div class="carousel-inner">
+          <div class="carousel-panel">
+            <div class="arrow-col">
+              <button class="carousel-arrow prev" aria-label="Previous slide">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="viewport-col">
+              <div class="carousel-viewport" tabindex="0">
+                <ul class="carousel-track">
+                  <!-- TODO: add competitive analysis, design system doc, demo day poster, brochure -->
+                  <li class="slide is-active"
+                    data-caption="Competitive analysis identifying the gap in board game café software">
+                    <div class="graphic">
+                      <img src="img/gatore/competitive-analysis.png"
+                        alt="Competitive analysis of reservation and venue management tools" loading="lazy"
+                        decoding="async">
+                    </div>
+                  </li>
+                  <li class="slide" data-caption="GATORE design system — tokens, components, and documentation">
+                    <div class="graphic">
+                      <img src="img/gatore/design-system.png"
+                        alt="GATORE Figma design system showing color tokens, typography, and component library"
+                        loading="lazy" decoding="async">
+                    </div>
+                  </li>
+                  <li class="slide" data-caption="GATORE capstone demo day poster">
+                    <div class="graphic">
+                      <img src="img/gatore/demo-poster.png" alt="GATORE capstone demo day poster" loading="lazy"
+                        decoding="async">
+                    </div>
+                  </li>
+                  <li class="slide" data-caption="GATORE capstone brochure">
+                    <div class="graphic">
+                      <img src="img/gatore/brochure.png" alt="GATORE capstone project brochure" loading="lazy"
+                        decoding="async">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="arrow-col">
+              <button class="carousel-arrow next" aria-label="Next slide">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <p class="carousel-caption" aria-live="polite">Competitive analysis identifying the gap in board game café
+          software</p>
+      </section>
+    </section>
+
+    <!-- FINAL DESIGNS -->
+    <section class="design" id="design">
+      <div class="design-container">
+        <div class="section-header">
+          <span class="section-label">06</span>
+          <h2>Final Designs</h2>
+        </div>
+
+        <div class="design-imgs">
+          <!-- TODO: replace with GATORE final screenshots -->
+          <div class="design-img">
+            <img src="img/gatore/marketing-home.png" alt="GATORE customer-facing home page" loading="lazy"
+              decoding="async">
+            <figcaption>Customer Site — Home / Landing</figcaption>
+          </div>
+
+          <div class="design-img">
+            <img src="img/gatore/cafe-discovery.png" alt="GATORE café discovery and browse page" loading="lazy"
+              decoding="async">
+            <figcaption>Customer Site — Café Discovery</figcaption>
+          </div>
+
+          <div class="design-img">
+            <img src="img/gatore/reservation-flow.png" alt="GATORE reservation booking flow" loading="lazy"
+              decoding="async">
+            <figcaption>Customer Site — Reservation Flow</figcaption>
+          </div>
+
+          <div class="design-img">
+            <img src="img/gatore/social-matchmaking.png" alt="GATORE social matchmaking to find players" loading="lazy"
+              decoding="async">
+            <figcaption>Customer Site — Social Matchmaking</figcaption>
+          </div>
+
+          <div class="design-img">
+            <img src="img/gatore/customer-profile.png"
+              alt="GATORE customer profile with game history and recommendations" loading="lazy" decoding="async">
+            <figcaption>Customer Site — Profile & Recommendations</figcaption>
+          </div>
+
+          <div class="design-img">
+            <img src="img/gatore/business-dashboard.png" alt="GATORE business portal dashboard" loading="lazy"
+              decoding="async">
+            <figcaption>Business Portal — Dashboard</figcaption>
+          </div>
+
+          <div class="design-img">
+            <img src="img/gatore/game-library.png" alt="GATORE business portal game library management" loading="lazy"
+              decoding="async">
+            <figcaption>Business Portal — Game Library</figcaption>
+          </div>
+
+          <div class="design-img">
+            <img src="img/gatore/reservations-mgmt.png" alt="GATORE business portal reservations management view"
+              loading="lazy" decoding="async">
+            <figcaption>Business Portal — Reservations Management</figcaption>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT NAVIGATION -->
+    <nav class="project-nav-footer" aria-label="Project navigation">
+      <a href="work-browse-page.html" class="project-nav-link">
+        <i class="fa-solid fa-grid-2" aria-hidden="true"></i>
+        All Projects
+      </a>
+      <a href="caseStudy.html" class="project-nav-link">
+        Next Project
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </nav>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <img class="footer-logo" src="img/CF_Box_Logo.png" alt="CF logo" fetchpriority="high" decoding="async">
+      </div>
+
+      <div class="footer-tagline">
+        <p class="tagline">
+          Designer crafting intuitive,<br>
+          human-centered experiences.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="https://www.linkedin.com/in/chloe-feierabend/" target="_blank"><img src="img/linkedin.png" alt=""
+              width="16" height="16" style="display:inline;vertical-align:middle;margin-right:4px"> LinkedIn</a>
+          <a href="mailto:chloe.feierabend@gmail.com" target="_blank"><img src="img/mail.png" alt="" width="16"
+              height="16" style="display:inline;vertical-align:middle;margin-right:4px"> E-Mail</a>
+          <a href="Chloe_Feierabend_Resume.pdf" target="_blank" rel="noopener noreferrer"><svg
+              xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true"
+              style="display:inline;vertical-align:middle;margin-right:4px">
+              <path fill="currentColor"
+                d="M11.702 15.195q-.136-.053-.267-.184l-2.62-2.619q-.146-.146-.152-.344t.152-.363q.166-.166.357-.169q.192-.003.357.163L11.5 13.65V5.5q0-.213.143-.357T12 5t.357.143t.143.357v8.15l1.971-1.971q.146-.146.347-.153t.366.159q.16.165.163.354t-.162.353l-2.62 2.62q-.13.13-.267.183q-.136.053-.298.053t-.298-.053M6.616 19q-.691 0-1.153-.462T5 17.384v-1.923q0-.213.143-.356t.357-.144t.357.144t.143.356v1.923q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-1.923q0-.213.143-.356t.357-.144t.357.144t.143.356v1.923q0 .691-.462 1.153T17.384 19z"
+                stroke-width="0.4" stroke="currentColor" />
+            </svg> Resume</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="carousel.js" defer></script>
+  <script src="sectionNav.js" defer></script>
+</body>
+
+</html>

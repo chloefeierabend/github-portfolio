@@ -9,6 +9,7 @@
     content="GATORE Case Study — Full-stack board game café reservation and game library platform. UX/UI design and frontend development by Chloe Feierabend.">
   <link rel="stylesheet" href="../main.css">
   <link rel="stylesheet" href="../caseStudy.css">
+  <link rel="stylesheet" href="../lightbox.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Outline&family=Londrina+Solid:wght@100;300;400;900&display=swap"
@@ -17,6 +18,7 @@
   <script src="../carousel.js" defer></script>
   <script src="../caseStudy.js" defer></script>
   <script src="../hamburger.js" defer></script>
+  <script src="../lightbox.js" defer></script>
   <script src="https://kit.fontawesome.com/5973f658b0.js" crossorigin="anonymous"></script>
   <title>GATORE | Case Study</title>
 
@@ -188,9 +190,7 @@
         </div>
 
         <div class="hero-image-casestudy">
-          <!-- TODO: replace with GATORE hero screenshot -->
-          <img src="../img/gatore/hero.svg"
-            alt="GATORE platform interface showing the board game café reservation and discovery experience">
+          <img src="../img/gatore/hero.svg" alt="GATORE logo">
         </div>
       </div>
     </section>
@@ -322,8 +322,8 @@
       <div class="solution-highlight">
         <div class="solution-highlight-image">
           <!-- TODO: replace with GATORE portal/dashboard screenshot -->
-          <img src="../img/gatore/business-portal.png"
-            alt="GATORE business portal dashboard showing café management interface" loading="lazy">
+          <img src="../img/gatore/business-portal-dashboard-reservations.png"
+            alt="GATORE business portal dashboard showing reservations" loading="lazy">
         </div>
         <div class="solution-highlight-content">
           <h3>Designing for Two Distinct Users</h3>
@@ -516,18 +516,37 @@
                         loading="lazy" decoding="async">
                     </div>
                   </li>
-                  <li class="slide" data-caption="GATORE capstone demo day poster">
+                  <li class="slide" data-caption="GATORE user flow diagram showing customer and business portal flows">
                     <div class="graphic">
-                      <img src="../img/gatore/demo-poster.png" alt="GATORE capstone demo day poster" loading="lazy"
+                      <img src="../img/gatore/User Flow - Combined Overview.png"
+                        alt="GATORE user flow diagram showing customer and business portal flows" loading="lazy"
                         decoding="async">
                     </div>
                   </li>
-                  <li class="slide" data-caption="GATORE capstone brochure">
+                  <li class="slide" data-caption="GATORE user flow diagram showing customer and business portal flows">
+                    <div class="graphic">
+                      <img src="../img/gatore/User Flow - Daily Operations, Management & Inventory.png"
+                        alt="GATORE user flow diagram showing daily operations flows" loading="lazy" decoding="async">
+                    </div>
+                  </li>
+                  <li class="slide" data-caption="GATORE capstone demo day poster">
+                    <div class="graphic">
+                      <img src="../img/gatore/GATORE-POSTERS-01.png" alt="GATORE capstone demo day poster"
+                        loading="lazy" decoding="async">
+                    </div>
+                  </li>
+                  <li class="slide" data-caption="GATORE capstone demo day poster 2">
+                    <div class="graphic">
+                      <img src="../img/gatore/GATORE-POSTERS-04.png" alt="GATORE capstone demo day poster"
+                        loading="lazy" decoding="async">
+                    </div>
+                  </li>
+                  <!-- <li class="slide" data-caption="GATORE capstone brochure">
                     <div class="graphic">
                       <img src="../img/gatore/brochure.png" alt="GATORE capstone project brochure" loading="lazy"
                         decoding="async">
                     </div>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -559,33 +578,40 @@
         <div class="design-imgs">
           <!-- TODO: replace with GATORE final screenshots -->
           <div class="design-img">
-            <img src="../img/gatore/marketing-home.png" alt="GATORE customer-facing home page" loading="lazy"
+            <!-- TODO: replace with GATORE real screenshot -->
+            <img src="../img/gatore/Desktop-Client-Hero.png" alt="GATORE customer-facing home page" loading="lazy"
               decoding="async">
             <figcaption>Customer Site — Home / Landing</figcaption>
           </div>
 
           <div class="design-img">
-            <img src="../img/gatore/cafe-discovery.png" alt="GATORE café discovery and browse page" loading="lazy"
+            <img src="../img/gatore/find-by-name.png" alt="GATORE café discovery and browse page" loading="lazy"
               decoding="async">
             <figcaption>Customer Site — Café Discovery</figcaption>
           </div>
 
           <div class="design-img">
-            <img src="../img/gatore/reservation-flow.png" alt="GATORE reservation booking flow" loading="lazy"
+            <img src="../img/gatore/find-by-game.png" alt="GATORE discovery and browse by game page" loading="lazy"
               decoding="async">
+            <figcaption>Customer Site — Café Discovery</figcaption>
+          </div>
+
+          <div class="design-img">
+            <img src="../img/gatore/reserve-a-game-reservation-flow.png" alt="GATORE reservation booking flow"
+              loading="lazy" decoding="async">
             <figcaption>Customer Site — Reservation Flow</figcaption>
           </div>
 
-          <div class="design-img">
-            <img src="../img/gatore/social-matchmaking.png" alt="GATORE social matchmaking to find players" loading="lazy"
-              decoding="async">
+          <!-- <div class="design-img">
+            <img src="../img/gatore/social-matchmaking.png" alt="GATORE social matchmaking to find players"
+              loading="lazy" decoding="async">
             <figcaption>Customer Site — Social Matchmaking</figcaption>
-          </div>
+          </div> -->
 
           <div class="design-img">
-            <img src="../img/gatore/customer-profile.png"
-              alt="GATORE customer profile with game history and recommendations" loading="lazy" decoding="async">
-            <figcaption>Customer Site — Profile & Recommendations</figcaption>
+            <img src="../img/gatore/customer-profile.png" alt="GATORE customer profile page" loading="lazy"
+              decoding="async">
+            <figcaption>Customer Site — Profile</figcaption>
           </div>
 
           <div class="design-img">
@@ -595,14 +621,14 @@
           </div>
 
           <div class="design-img">
-            <img src="../img/gatore/game-library.png" alt="GATORE business portal game library management" loading="lazy"
-              decoding="async">
+            <img src="../img/gatore/business-portal-game-library.png"
+              alt="GATORE business portal game library management" loading="lazy" decoding="async">
             <figcaption>Business Portal — Game Library</figcaption>
           </div>
 
           <div class="design-img">
-            <img src="../img/gatore/reservations-mgmt.png" alt="GATORE business portal reservations management view"
-              loading="lazy" decoding="async">
+            <img src="../img/gatore/reservation-management.png"
+              alt="GATORE business portal reservations management view" loading="lazy" decoding="async">
             <figcaption>Business Portal — Reservations Management</figcaption>
           </div>
         </div>

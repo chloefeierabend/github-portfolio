@@ -80,6 +80,15 @@
       border-top-color: var(--gt-teal-mid);
     }
 
+    .lesson-card--teal .lesson-num {
+      font-size: 1.6rem;
+      color: var(--gt-teal);
+    }
+
+    .result-item i {
+      color: var(--gt-teal);
+    }
+
     .solution-highlight-content .highlight-note {
       border-left-color: var(--gt-teal);
     }
@@ -334,6 +343,34 @@
             interaction patterns, and different definitions of success for each side.</p>
         </div>
       </div>
+
+      <!-- Feature Highlight: Shared Sign In / Get Started -->
+      <div class="solution-highlight">
+        <div class="solution-highlight-image">
+          <!-- TODO: add sign-in/get-started screenshots -->
+          <img src="../img/gatore/sign-in.png"
+            alt="GATORE sign in page with Customer and Business tabs, and Get Started dropdown" loading="lazy">
+        </div>
+        <div class="solution-highlight-content">
+          <h3>One Front Door: Sign In & Get Started</h3>
+          <p>Customers and café owners needed to authenticate through the same product, but a single generic login
+            form would have underserved both. I considered two alternatives first: separate sign-in buttons routed
+            from different parts of the site, or hosting the business portal on a completely separate site with its
+            own login. Both would have made it easy to land in the wrong place with no easy way back — a customer
+            following a stale link into the business flow, or vice versa, would hit a dead end.</p>
+          <p>I settled on a single shared page with tabs at the top to switch between <strong>Customer</strong> and
+            <strong>Business</strong>, defaulting to Customer sign-in since that's the majority of traffic. Get
+            Started (account creation) uses a dropdown instead of tabs, since creating an account is a more
+            deliberate action — but even if someone picks Customer there, the tab at the top still lets them reach
+            the business portal from that same page.
+          </p>
+          <p class="highlight-note">Tabs also won because they kept sign-in as one page to build, style, and host —
+            but the bigger reason was recoverability: if someone lands on the wrong side, they self-correct in one
+            click instead of hitting a dead end. It also meant one URL and one mental model for users who span both
+            roles, like a café owner who's also a customer elsewhere — reinforcing GATORE's core pitch of one
+            platform for both sides, instead of two disconnected products.</p>
+        </div>
+      </div>
     </section>
 
     <!-- DESIGN SYSTEM SECTION -->
@@ -455,7 +492,13 @@
 
         <ol class="lesson-grid">
           <li class="lesson-card lesson-card--teal">
-            <div class="lesson-num" aria-hidden="true">🏆</div>
+            <div class="lesson-num" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path fill="currentColor"
+                  d="M8.385 20v-1H11.5v-3.754q-1.283-.102-2.36-1.047q-1.079-.945-1.317-2.21q-1.586-.187-2.705-1.301T4 8V6h3.654V4h8.692v2H20v2q0 1.573-1.118 2.688t-2.705 1.3q-.238 1.266-1.316 2.211T12.5 15.246V19h3.116v1zm-.731-9.084V7H5v1q0 1.142.762 1.963t1.892.953m8.692 0q1.131-.133 1.893-.954T19 8V7h-2.654z" />
+              </svg>
+            </div>
             <h3>2nd Place, Demo Day</h3>
             <p>GATORE placed second in the Conestoga College capstone program at the final demo day — validating the
               design and product direction in front of an external audience.</p>

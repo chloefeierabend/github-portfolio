@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = lightbox.querySelector(".lightbox-prev");
   const nextBtn = lightbox.querySelector(".lightbox-next");
 
-  // Get all design images
-  const designImages = document.querySelectorAll(".design-img");
+  // Get all lightbox-enabled images
+  const designImages = document.querySelectorAll(".design-img, .lightbox-img");
   let currentIndex = 0;
 
   // Add click handlers to each image
@@ -86,10 +86,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const item = designImages[currentIndex];
     const img = item.querySelector("img");
     const caption = item.querySelector("figcaption");
+    const dataCaption = item.closest("[data-caption]")?.dataset.caption;
 
     lightboxImg.src = img.src;
     lightboxImg.alt = img.alt;
-    lightboxCaption.textContent = caption?.textContent || "";
+    lightboxCaption.textContent = caption?.textContent || dataCaption || "";
 
     // Update nav button visibility
     prevBtn.style.display = currentIndex > 0 ? "flex" : "none";

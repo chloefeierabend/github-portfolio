@@ -329,8 +329,7 @@
 
       <!-- Feature Highlight: Two Audiences -->
       <div class="solution-highlight">
-        <div class="solution-highlight-image">
-          <!-- TODO: replace with GATORE portal/dashboard screenshot -->
+        <div class="solution-highlight-image lightbox-img">
           <img src="../img/gatore/business-portal-dashboard-reservations.png"
             alt="GATORE business portal dashboard showing reservations" loading="lazy">
         </div>
@@ -346,29 +345,70 @@
 
       <!-- Feature Highlight: Shared Sign In / Get Started -->
       <div class="solution-highlight">
-        <div class="solution-highlight-image">
-          <!-- TODO: add sign-in/get-started screenshots -->
-          <img src="../img/gatore/sign-in.png"
+        <div class="solution-highlight-image lightbox-img">
+          <img src="../img/gatore/sign-in-cropped.png"
             alt="GATORE sign in page with Customer and Business tabs, and Get Started dropdown" loading="lazy">
         </div>
         <div class="solution-highlight-content">
           <h3>One Front Door: Sign In & Get Started</h3>
-          <p>Customers and café owners needed to authenticate through the same product, but a single generic login
-            form would have underserved both. I considered two alternatives first: separate sign-in buttons routed
-            from different parts of the site, or hosting the business portal on a completely separate site with its
-            own login. Both would have made it easy to land in the wrong place with no easy way back — a customer
-            following a stale link into the business flow, or vice versa, would hit a dead end.</p>
-          <p>I settled on a single shared page with tabs at the top to switch between <strong>Customer</strong> and
-            <strong>Business</strong>, defaulting to Customer sign-in since that's the majority of traffic. Get
-            Started (account creation) uses a dropdown instead of tabs, since creating an account is a more
-            deliberate action — but even if someone picks Customer there, the tab at the top still lets them reach
-            the business portal from that same page.
+          <p>Customers and café owners both need to sign in, but a single generic login form wasn't going to cut it
+            for either of them. Before landing on tabs, I played with a couple other options — separate sign-in
+            buttons in different parts of the site, or just putting the business portal on its own site entirely.
+            Neither
+            felt right; both could leave someone stuck on the wrong side with no quick way back.</p>
+          <p>So I went with one shared page and put tabs at the top to switch between <strong>Customer</strong> and
+            <strong>Business</strong>, defaulting to Customer since that's most of the traffic. Get Started (creating
+            an account) uses a dropdown instead, since that's a bigger commitment — but even if someone picks
+            Customer there, they can still hop over to the business portal with the tab on that same page.
           </p>
-          <p class="highlight-note">Tabs also won because they kept sign-in as one page to build, style, and host —
-            but the bigger reason was recoverability: if someone lands on the wrong side, they self-correct in one
-            click instead of hitting a dead end. It also meant one URL and one mental model for users who span both
-            roles, like a café owner who's also a customer elsewhere — reinforcing GATORE's core pitch of one
-            platform for both sides, instead of two disconnected products.</p>
+          <p class="highlight-note">Tabs also just made the page easier to build and host, but that's not the real
+            reason I picked them. What sold me was the recoverability — land on the wrong side, and you're one click
+            from fixing it instead of hitting a dead end. It's also one URL to remember, which matters for people who
+            wear both hats, like a café owner who's also a customer somewhere else. And honestly, it just fits GATORE
+            better: one platform for both sides.</p>
+        </div>
+      </div>
+
+      <!-- Feature Highlight: Account Creation -->
+      <div class="solution-highlight">
+        <div class="solution-highlight-image lightbox-img">
+          <img src="../img/gatore/account-creation-game-preferences.png"
+            alt="GATORE account creation step 5 of 5, game preferences, showing colorful icon tiles for game genres and a group size question"
+            loading="lazy">
+        </div>
+        <div class="solution-highlight-content">
+          <h3>Making Signup Feel Less Like a Form</h3>
+          <p>Account creation had to ask for a lot — profile info, game preferences, group size — and cramming all
+            of it onto one page felt like the fastest way to lose people. I split it into a five-step wizard with a
+            progress bar up top, so it's always clear how much is left instead of one long, dread-inducing scroll.</p>
+          <p>For game preferences specifically, I skipped the standard checkbox list and used colorful icon tiles
+            instead — Strategy, Party, Card Games, Co-op, and so on, each with its own color and icon. That was
+            mostly about making the step feel more playful than a form, though it doubles as a faster visual scan
+            than reading a list of labels.</p>
+          <p class="highlight-note">This step is also marked Optional. Preferences feed the recommendation engine,
+            but I didn't want them gatekeeping account creation — someone can skip straight through and add
+            preferences later instead of stalling out on step 5 of 5.</p>
+        </div>
+      </div>
+
+      <!-- Feature Highlight: Guest Checkout -->
+      <div class="solution-highlight">
+        <div class="solution-highlight-image lightbox-img">
+          <img src="../img/gatore/reservation-guest-checkout.png"
+            alt="GATORE reservation flow, Your Details step, offering Sign in to my account or Continue as guest with just name and email"
+            loading="lazy">
+        </div>
+        <div class="solution-highlight-content">
+          <h3>Not Every Reservation Needs an Account</h3>
+          <p>Competitive research on other booking tools made this one pretty clear: almost none of them make you
+            create an account just to book a single table. So on the "Your details" step of a reservation, I gave
+            people a choice — sign in, or continue as a guest with just a name and email.</p>
+          <p>An account still has real upside. It's the only way to see your booking history, set game preferences,
+            get recommendations, and track what you've actually played. But someone booking a table for the first
+            time shouldn't have to buy into all of that just to sit down and play.</p>
+          <p class="highlight-note">Guest checkout keeps the reservation flow itself lightweight, while the account
+            benefits are pitched right there in the "Sign in" option — so people can see what they'd be getting
+            without it being a requirement.</p>
         </div>
       </div>
     </section>
@@ -543,43 +583,43 @@
             <div class="viewport-col">
               <div class="carousel-viewport" tabindex="0">
                 <ul class="carousel-track">
-                  <!-- TODO: add competitive analysis, design system doc, demo day poster, brochure -->
+                  <!-- TODO: add competitive analysis, design system doc, brochure -->
                   <li class="slide is-active"
                     data-caption="Competitive analysis identifying the gap in board game café software">
-                    <div class="graphic">
+                    <div class="graphic lightbox-img">
                       <img src="../img/gatore/competitive-analysis.png"
                         alt="Competitive analysis of reservation and venue management tools" loading="lazy"
                         decoding="async">
                     </div>
                   </li>
                   <li class="slide" data-caption="GATORE design system — tokens, components, and documentation">
-                    <div class="graphic">
+                    <div class="graphic lightbox-img">
                       <img src="../img/gatore/design-system.png"
                         alt="GATORE Figma design system showing color tokens, typography, and component library"
                         loading="lazy" decoding="async">
                     </div>
                   </li>
                   <li class="slide" data-caption="GATORE user flow diagram showing customer and business portal flows">
-                    <div class="graphic">
+                    <div class="graphic lightbox-img">
                       <img src="../img/gatore/User Flow - Combined Overview.png"
                         alt="GATORE user flow diagram showing customer and business portal flows" loading="lazy"
                         decoding="async">
                     </div>
                   </li>
                   <li class="slide" data-caption="GATORE user flow diagram showing customer and business portal flows">
-                    <div class="graphic">
+                    <div class="graphic lightbox-img">
                       <img src="../img/gatore/User Flow - Daily Operations, Management & Inventory.png"
                         alt="GATORE user flow diagram showing daily operations flows" loading="lazy" decoding="async">
                     </div>
                   </li>
                   <li class="slide" data-caption="GATORE capstone demo day poster">
-                    <div class="graphic">
+                    <div class="graphic lightbox-img">
                       <img src="../img/gatore/GATORE-POSTERS-01.png" alt="GATORE capstone demo day poster"
                         loading="lazy" decoding="async">
                     </div>
                   </li>
                   <li class="slide" data-caption="GATORE capstone demo day poster 2">
-                    <div class="graphic">
+                    <div class="graphic lightbox-img">
                       <img src="../img/gatore/GATORE-POSTERS-04.png" alt="GATORE capstone demo day poster"
                         loading="lazy" decoding="async">
                     </div>
@@ -621,7 +661,6 @@
         <div class="design-imgs">
           <!-- TODO: replace with GATORE final screenshots -->
           <div class="design-img">
-            <!-- TODO: replace with GATORE real screenshot -->
             <img src="../img/gatore/Desktop-Client-Hero.png" alt="GATORE customer-facing home page" loading="lazy"
               decoding="async">
             <figcaption>Customer Site — Home / Landing</figcaption>

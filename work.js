@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     projectCards.forEach((card, index) => {
       const category = card.dataset.category;
+      const categories = category.split(",").map((c) => c.trim());
       const tags = card.dataset.tags?.toLowerCase() || "";
       const title =
         card.querySelector(".project-title")?.textContent.toLowerCase() || "";
@@ -79,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Check category filter
       const matchesFilter =
-        currentFilter === "all" || category === currentFilter;
+        currentFilter === "all" || categories.includes(currentFilter);
 
       // Check search query
       const searchableText = `${title} ${description} ${tags} ${category}`;
@@ -124,10 +125,12 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     projectCards.forEach((card) => {
-      const category = card.dataset.category;
-      if (counts.hasOwnProperty(category)) {
-        counts[category]++;
-      }
+      const categories = card.dataset.category.split(",").map((c) => c.trim());
+      categories.forEach((category) => {
+        if (counts.hasOwnProperty(category)) {
+          counts[category]++;
+        }
+      });
     });
 
     // Update count badges

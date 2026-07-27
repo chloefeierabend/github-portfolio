@@ -5,22 +5,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <meta name="description"
-    content="Main home page that showcases Chloe Feierabend's work and includes information about me."> -->
     <meta name="description"
-        content="Portfolio of Chloe Feierabend — UX/UI & Software Developer. Selected work, case studies, and contact information.">
+        content="Pure Essence — a minimalist skincare brand website designed and hand-coded by Chloe Feierabend.">
     <link rel="stylesheet" href="../main.css" />
     <link rel="stylesheet" href="../gamejam.css">
-
-    <!-- <link rel="stylesheet" href="skip-button.css"> -->
     <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin>
-
 
     <!-- Preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Non-blocking load: preload as style, then swap rel on load -->
+    <!-- Non-blocking load -->
     <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&display=swap"
         onload="this.onload=null;this.rel='stylesheet'">
@@ -31,15 +26,11 @@
             href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&display=swap">
     </noscript>
 
-    <title>Indie Game Jam | Chloe Feierabend</title>
+    <title>Pure Essence | Chloe Feierabend</title>
 
     <script src="../hamburger.js" defer></script>
 
     <style>
-        .navbar a:hover {
-            transition: font-family 1s;
-        }
-
         .skip-to-content {
             position: absolute;
             top: -40px;
@@ -55,14 +46,12 @@
             font-family: "Inter", sans-serif;
         }
 
-        /* Reveal on focus */
         .skip-to-content:focus {
             top: 0;
             background: rgba(251, 250, 246, 0.772);
             outline: 3px solid #1e40af;
         }
 
-        /* Focus accessibility */
         .skip-to-content:focus-visible {
             outline: 3px solid #1e40af;
             outline-offset: 3px;
@@ -78,21 +67,17 @@
     <!-- Navigation bar -->
     <nav class="navbar">
         <div class="container">
-            <!-- Logo -->
             <div class="logo-left">
                 <a href="../" class="logo">CF</a>
             </div>
 
-            <!-- Hamburger button -->
             <button class="nav-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
-                <!-- your SVG icon -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" class="menu-icon">
                     <path fill="currentColor"
                         d="M22 13c0 1.11-.89 2-2 2H4a2 2 0 1 1 0-4h9l2.5 2l2.5-2h2a2 2 0 0 1 2 2M12 3C3 3 3 9 3 9h18s0-6-9-6M3 18c0 1.66 1.34 3 3 3h12c1.66 0 3-1.34 3-3v-1H3z" />
                 </svg>
             </button>
 
-            <!-- Navigation links -->
             <ul id="site-menu" class="nav">
                 <li><a href="../work/">Work</a></li>
                 <li><a href="../contact/">Contact</a></li>
@@ -109,26 +94,26 @@
                     <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                     Back
                 </a>
-                <h1 class="londrina-shadow-regular">Indie Game Jam</h1>
-                <p class="project-tagline">Promotional materials for Conestoga College's bi-termly indie game jam event.
-                </p>
+                <h1 class="londrina-shadow-regular">Pure Essence</h1>
+                <p class="project-tagline">A minimalist skincare brand website, designed in Figma and hand-coded in
+                    HTML & CSS for a UI/UX course project.</p>
 
                 <div class="project-meta-grid">
                     <div class="meta-item">
                         <span class="meta-label">Role</span>
-                        <span class="meta-value">Designer</span>
+                        <span class="meta-value">Designer & Developer</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Timeline</span>
-                        <span class="meta-value">October 2024, February 2025</span>
+                        <span class="meta-value">2025</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Tools</span>
-                        <span class="meta-value">Illustrator, Photoshop</span>
+                        <span class="meta-value">Figma, HTML, CSS, Word</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Deliverables</span>
-                        <span class="meta-value">Posters, TV Graphic, Masthead</span>
+                        <span class="meta-value">Responsive Website, Design Spec</span>
                     </div>
                 </div>
             </header>
@@ -136,46 +121,69 @@
             <!-- Overview -->
             <section class="project-section">
                 <p class="project-intro">
-                    The Indie Game Jam is a recurring event hosted at Conestoga College's Waterloo campus, bringing
-                    students together to design and develop games over a five day period. I designed promotional
-                    materials
-                    for two separate jams, working within quick turnarounds and specific dimension requirements for
-                    print and digital displays.
+                    Pure Essence is a concept e-commerce site for a minimalist skincare brand, built for a UI/UX
+                    course. I designed the visual system in Figma — layout, typography, color, and product card
+                    patterns — then hand-coded the site in HTML and CSS, and wrote up the design specification and
+                    rationale in a companion Word document.
                 </p>
             </section>
 
-            <!-- Posters Section -->
+            <!-- Home Page -->
             <section class="project-section">
-                <h2>Event Posters</h2>
-                <div class="showcase-grid showcase-grid--2col">
+                <h2>Home Page</h2>
+                <div class="showcase-grid showcase-grid--1col">
                     <figure class="showcase-item">
-                        <img src="../img/gamejam/GameJamPosterOfficial_Approved-01.png"
-                            alt="Indie Game Jam poster for October 2024" loading="lazy">
-                        <figcaption>Fall 2024</figcaption>
-                    </figure>
-                    <figure class="showcase-item">
-                        <img src="../img/gamejam/GameJamPosterOfficialW25_CodeFlakes-01.png"
-                            alt="Indie Game Jam poster for Winter 2025" loading="lazy">
-                        <figcaption>Winter 2025</figcaption>
+                        <img src="../img/pure-essence/Home.png"
+                            alt="Pure Essence home page with hero image and shop collection call to action"
+                            loading="lazy">
+                        <figcaption>Home / Landing</figcaption>
                     </figure>
                 </div>
             </section>
 
-            <!-- TV & Digital Section -->
+            <!-- Product Highlights -->
             <section class="project-section">
-                <h2>Digital Displays</h2>
-                <p>Alongside the print posters, I created graphics for Conestoga's digital television network and
-                    promotional mastheads.</p>
+                <h2>Product Highlights</h2>
                 <div class="showcase-grid showcase-grid--2col">
                     <figure class="showcase-item">
-                        <img src="../img/gamejam/CCDTVPleaseBCentred_graphic-01.png"
-                            alt="Indie Game Jam TV display graphic" loading="lazy">
-                        <figcaption>TV Graphic</figcaption>
+                        <img src="../img/pure-essence/Best-Sellers.png"
+                            alt="Pure Essence best sellers product grid" loading="lazy">
+                        <figcaption>Best Sellers</figcaption>
                     </figure>
                     <figure class="showcase-item">
-                        <img src="../img/gamejam/mastheadSquished3_graphic-01.png"
-                            alt="Indie Game Jam promotional masthead" loading="lazy">
-                        <figcaption>Masthead</figcaption>
+                        <img src="../img/pure-essence/Products.png" alt="Pure Essence additional product grid"
+                            loading="lazy">
+                        <figcaption>Shop</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Skin Quiz -->
+            <section class="project-section">
+                <h2>Skin Quiz</h2>
+                <p>An interactive quiz that recommends products based on skin type and concerns.</p>
+                <div class="showcase-grid showcase-grid--1col">
+                    <figure class="showcase-item">
+                        <img src="../img/pure-essence/Skin-Quiz.png"
+                            alt="Pure Essence skin quiz asking about skin type and concerns" loading="lazy">
+                        <figcaption>Find Your Perfect Match</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Responsive Views -->
+            <section class="project-section">
+                <h2>Responsive Views</h2>
+                <div class="showcase-grid showcase-grid--2col">
+                    <figure class="showcase-item">
+                        <img src="../img/pure-essence/Home-Tablet.png" alt="Pure Essence home page on tablet"
+                            loading="lazy">
+                        <figcaption>Tablet</figcaption>
+                    </figure>
+                    <figure class="showcase-item">
+                        <img src="../img/pure-essence/Home-Mobile.png" alt="Pure Essence home page on mobile"
+                            loading="lazy">
+                        <figcaption>Mobile</figcaption>
                     </figure>
                 </div>
             </section>
@@ -186,7 +194,7 @@
                     <i class="fa-solid fa-grid-2" aria-hidden="true"></i>
                     All Projects
                 </a>
-                <a href="../pure-essence/" class="project-nav-link">
+                <a href="../gatore/" class="project-nav-link">
                     Next Project
                     <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 </a>

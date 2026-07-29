@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Pure Essence — a minimalist skincare brand website designed and hand-coded by Chloe Feierabend.">
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="../gamejam.css">
+    <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin>
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Non-blocking load -->
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- No-JS fallback -->
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&display=swap">
+    </noscript>
+
+    <title>Pure Essence | Chloe Feierabend</title>
+
+    <script src="../hamburger.js" defer></script>
+
+    <style>
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: rgb(251, 250, 246);
+            color: rgb(0, 0, 0);
+            padding: 10px 16px;
+            border-radius: 0 0 6px 0;
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 100;
+            transition: top 0.3s ease;
+            font-family: "Inter", sans-serif;
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+            background: rgba(251, 250, 246, 0.772);
+            outline: 3px solid #1e40af;
+        }
+
+        .skip-to-content:focus-visible {
+            outline: 3px solid #1e40af;
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+<script src="https://kit.fontawesome.com/5973f658b0.js" crossorigin="anonymous" defer></script>
+
+<body>
+    <!-- Skip link -->
+    <a href="#main" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-left">
+                <a href="../" class="logo">CF</a>
+            </div>
+
+            <button class="nav-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" class="menu-icon">
+                    <path fill="currentColor"
+                        d="M22 13c0 1.11-.89 2-2 2H4a2 2 0 1 1 0-4h9l2.5 2l2.5-2h2a2 2 0 0 1 2 2M12 3C3 3 3 9 3 9h18s0-6-9-6M3 18c0 1.66 1.34 3 3 3h12c1.66 0 3-1.34 3-3v-1H3z" />
+                </svg>
+            </button>
+
+            <ul id="site-menu" class="nav">
+                <li><a href="../work/">Work</a></li>
+                <li><a href="../contact/">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main">
+        <article class="project-page">
+
+            <!-- Project Header -->
+            <header class="project-header">
+                <a href="javascript:window.history.back()" class="back-link">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    Back
+                </a>
+                <h1 class="londrina-shadow-regular">Pure Essence</h1>
+                <p class="project-tagline">A minimalist skincare brand website, designed in Figma and hand-coded in
+                    HTML & CSS for a UI/UX course project.</p>
+
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Designer & Developer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tools</span>
+                        <span class="meta-value">Figma, HTML, CSS, Word</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Deliverables</span>
+                        <span class="meta-value">Responsive Website, Design Spec</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Overview -->
+            <section class="project-section">
+                <p class="project-intro">
+                    Pure Essence is a concept e-commerce site for a minimalist skincare brand, built for a UI/UX
+                    course. I designed the visual system in Figma — layout, typography, color, and product card
+                    patterns — then hand-coded the site in HTML and CSS, and wrote up the design specification and
+                    rationale in a companion Word document.
+                </p>
+            </section>
+
+            <!-- Home Page -->
+            <section class="project-section">
+                <h2>Home Page</h2>
+                <div class="showcase-grid showcase-grid--1col">
+                    <figure class="showcase-item">
+                        <img src="../img/pure-essence/Home.png"
+                            alt="Pure Essence home page with hero image and shop collection call to action"
+                            loading="lazy">
+                        <figcaption>Home / Landing</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Product Highlights -->
+            <section class="project-section">
+                <h2>Product Highlights</h2>
+                <div class="showcase-grid showcase-grid--2col">
+                    <figure class="showcase-item">
+                        <img src="../img/pure-essence/Best-Sellers.png"
+                            alt="Pure Essence best sellers product grid" loading="lazy">
+                        <figcaption>Best Sellers</figcaption>
+                    </figure>
+                    <figure class="showcase-item">
+                        <img src="../img/pure-essence/Products.png" alt="Pure Essence additional product grid"
+                            loading="lazy">
+                        <figcaption>Shop</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Skin Quiz -->
+            <section class="project-section">
+                <h2>Skin Quiz</h2>
+                <p>An interactive quiz that recommends products based on skin type and concerns.</p>
+                <div class="showcase-grid showcase-grid--1col">
+                    <figure class="showcase-item">
+                        <img src="../img/pure-essence/Skin-Quiz.png"
+                            alt="Pure Essence skin quiz asking about skin type and concerns" loading="lazy">
+                        <figcaption>Find Your Perfect Match</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Responsive Views -->
+            <section class="project-section">
+                <h2>Responsive Views</h2>
+                <div class="showcase-grid showcase-grid--2col">
+                    <figure class="showcase-item">
+                        <img src="../img/pure-essence/Home-Tablet.png" alt="Pure Essence home page on tablet"
+                            loading="lazy">
+                        <figcaption>Tablet</figcaption>
+                    </figure>
+                    <figure class="showcase-item">
+                        <img src="../img/pure-essence/Home-Mobile.png" alt="Pure Essence home page on mobile"
+                            loading="lazy">
+                        <figcaption>Mobile</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <nav class="project-nav" aria-label="Project navigation">
+                <a href="../work/" class="project-nav-link">
+                    <i class="fa-solid fa-grid-2" aria-hidden="true"></i>
+                    All Projects
+                </a>
+                <a href="../gatore/" class="project-nav-link">
+                    Next Project
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </nav>
+
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <img class="footer-logo" src="../img/CF_Box_Logo.png" alt="CF logo" fetchpriority="high"
+                    decoding="async">
+            </div>
+
+            <div class="footer-tagline">
+                <p class="tagline">
+                    Designer crafting intuitive,<br>
+                    human-centered experiences.
+                </p>
+            </div>
+
+            <div class="footer-right">
+                <nav class="footer-nav" aria-label="Footer">
+                    <a href="https://www.linkedin.com/in/chloe-feierabend/" target="_blank"><img
+                            src="../img/linkedin.png" alt="" width="16" height="16"
+                            style="display:inline;vertical-align:middle;margin-right:4px"> LinkedIn</a>
+                    <a href="mailto:chloe.feierabend@gmail.com" target="_blank"><img src="../img/mail.png" alt=""
+                            width="16" height="16" style="display:inline;vertical-align:middle;margin-right:4px">
+                        E-Mail</a>
+                    <a href="../Chloe_Feierabend_Resume.pdf" target="_blank" rel="noopener noreferrer"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
+                            aria-hidden="true" style="display:inline;vertical-align:middle;margin-right:4px">
+                            <path fill="currentColor"
+                                d="M11.702 15.195q-.136-.053-.267-.184l-2.62-2.619q-.146-.146-.152-.344t.152-.363q.166-.166.357-.169q.192-.003.357.163L11.5 13.65V5.5q0-.213.143-.357T12 5t.357.143t.143.357v8.15l1.971-1.971q.146-.146.347-.153t.366.159q.16.165.163.354t-.162.353l-2.62 2.62q-.13.13-.267.183q-.136.053-.298.053t-.298-.053M6.616 19q-.691 0-1.153-.462T5 17.384v-1.923q0-.213.143-.356t.357-.144t.357.144t.143.356v1.923q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-1.923q0-.213.143-.356t.357-.144t.357.144t.143.356v1.923q0 .691-.462 1.153T17.384 19z"
+                                stroke-width="0.4" stroke="currentColor" />
+                        </svg> Resume</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

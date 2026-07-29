@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Create lightbox elements
   const lightbox = document.createElement("div");
   lightbox.className = "lightbox";
+  lightbox.setAttribute("role", "dialog");
+  lightbox.setAttribute("aria-modal", "true");
+  lightbox.setAttribute("aria-label", "Image viewer");
   lightbox.innerHTML = `
     <button class="lightbox-close" aria-label="Close lightbox">
       <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -35,16 +38,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = lightbox.querySelector(".lightbox-prev");
   const nextBtn = lightbox.querySelector(".lightbox-next");
 
-  // Get all lightbox-enabled images
-  const designImages = document.querySelectorAll(".design-img, .lightbox-img");
+  // Get all lightbox-enabled images, grouped by their nearest <section> so
+  // Prev/Next only cycle through images that actually belong together
+  // (e.g. a feature highlight shouldn't jump into the unrelated final-designs gallery).
+  const designImages = Array.from(document.querySelectorAll(".design-img, .lightbox-img"));
+  const groups = new Map();
+
+  function groupKeyFor(item) {
+    return item.closest("section") || document.body;
+  }
+
+  let currentGroup = [];
   let currentIndex = 0;
 
-  // Add click handlers to each image
-  designImages.forEach((item, index) => {
-    const img = item.querySelector("img");
+  // Add click/keyboard handlers to each image
+  designImages.forEach((item) => {
     const caption = item.querySelector("figcaption");
+    const key = groupKeyFor(item);
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(item);
 
-    // Add cursor pointer and aria role
     item.style.cursor = "pointer";
     item.setAttribute("role", "button");
     item.setAttribute("tabindex", "0");
@@ -53,37 +66,74 @@ document.addEventListener("DOMContentLoaded", () => {
       `View ${caption?.textContent || "image"} full size`
     );
 
-    // Click handler
-    item.addEventListener("click", () => {
-      openLightbox(index);
-    });
+    item.addEventListener("click", () => openLightbox(item));
 
-    // Keyboard handler
     item.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        openLightbox(index);
+        openLightbox(item);
       }
     });
   });
 
-  function openLightbox(index) {
-    currentIndex = index;
+  function getFocusableInLightbox() {
+    return [closeBtn, prevBtn, nextBtn].filter(
+      (btn) => btn.style.display !== "none"
+    );
+  }
+
+  function trapFocus(e) {
+    const focusable = getFocusableInLightbox();
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (!focusable.includes(document.activeElement)) {
+      e.preventDefault();
+      first.focus();
+    } else if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
+
+  // Keep the rest of the page out of the accessibility tree while the
+  // lightbox is open, so Tab and screen-reader virtual cursors can't
+  // reach hidden background content.
+  function setBackgroundInert(isInert) {
+    Array.from(document.body.children).forEach((el) => {
+      if (el === lightbox) return;
+      if (isInert) {
+        el.setAttribute("inert", "");
+      } else {
+        el.removeAttribute("inert");
+      }
+    });
+  }
+
+  function openLightbox(item) {
+    currentGroup = groups.get(groupKeyFor(item));
+    currentIndex = currentGroup.indexOf(item);
     updateLightboxContent();
     lightbox.classList.add("is-open");
     document.body.style.overflow = "hidden";
+    setBackgroundInert(true);
     closeBtn.focus();
   }
 
   function closeLightbox() {
     lightbox.classList.remove("is-open");
     document.body.style.overflow = "";
+    setBackgroundInert(false);
     // Return focus to the image that was clicked
-    designImages[currentIndex]?.focus();
+    currentGroup[currentIndex]?.focus();
   }
 
   function updateLightboxContent() {
-    const item = designImages[currentIndex];
+    const item = currentGroup[currentIndex];
     const img = item.querySelector("img");
     const caption = item.querySelector("figcaption");
     const dataCaption = item.closest("[data-caption]")?.dataset.caption;
@@ -95,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Update nav button visibility
     prevBtn.style.display = currentIndex > 0 ? "flex" : "none";
     nextBtn.style.display =
-      currentIndex < designImages.length - 1 ? "flex" : "none";
+      currentIndex < currentGroup.length - 1 ? "flex" : "none";
   }
 
   function showPrev() {
@@ -106,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function showNext() {
-    if (currentIndex < designImages.length - 1) {
+    if (currentIndex < currentGroup.length - 1) {
       currentIndex++;
       updateLightboxContent();
     }
@@ -137,6 +187,9 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
       case "ArrowRight":
         showNext();
+        break;
+      case "Tab":
+        trapFocus(e);
         break;
     }
   });

@@ -29,6 +29,31 @@
       --gt-teal-mid: #2A8A80;
       --gt-brown: #7C5C3E;
       --gt-brown-mid: #9E7B55;
+
+      /* --gt-teal is ~3.5:1 on white — fine for large/decorative use (icons, borders,
+         dots) but fails WCAG AA (4.5:1) as text. Use this darker value for any text. */
+      --gt-teal-text: #0F766E;
+
+      /* Extracted from existing, already-applied values elsewhere on this page/stylesheet —
+         not new colours, just naming what was already hardcoded. */
+      --gt-teal-tint: #e6f4f3;
+      /* .chip-tech background */
+      --gt-beige: #F5EBD4;
+      /* "Warm Beige" swatch value, already named in the System Specs copy */
+      --gt-surface: #f8f7f5;
+      /* .solution-highlight / .context-card / .carousel background */
+      --gt-border: #e8e7e3;
+      /* sitewide card hairline border */
+      --gt-text: #141414;
+      /* primary heading/text colour */
+      --gt-text-secondary: #555;
+      /* body copy colour */
+      --gt-text-muted: #888;
+      /* .meta-label colour, this page */
+      --gt-radius: 12px;
+      /* matches caseStudy.css's sitewide card radius — kept unified across the whole
+         site rather than overridden per page. Used here for .comp-map, which has no
+         sitewide equivalent. */
     }
 
     .section-nav .nav-dot.active::before {
@@ -37,7 +62,7 @@
     }
 
     .section-label {
-      color: var(--gt-teal);
+      color: var(--gt-teal-text);
     }
 
     .context-card {
@@ -45,7 +70,7 @@
     }
 
     .context-card h4 {
-      color: var(--gt-teal);
+      color: var(--gt-teal-text);
     }
 
     .fs-icon {
@@ -100,7 +125,141 @@
     .chip-tech {
       background: #e6f4f3;
       border-color: #b8dbd8;
-      color: var(--gt-teal);
+      color: var(--gt-teal-text);
+    }
+
+    /* COMPETITIVE ANALYSIS — inserted before .final-grid inside #platform */
+    .comp-analysis {
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid var(--gt-border);
+    }
+
+    .comp-analysis h3 {
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gt-text);
+      margin: 0 0 12px;
+    }
+
+    .comp-analysis-lead {
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--gt-text);
+      border-left: 3px solid var(--gt-teal);
+      padding-left: 16px;
+      margin: 0 0 20px;
+    }
+
+    .comp-analysis-body {
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--gt-text-secondary);
+      max-width: 720px;
+      margin: 0 0 16px;
+    }
+
+    .comp-findings {
+      margin: 24px 0;
+      padding-left: 20px;
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--gt-text-secondary);
+      max-width: 720px;
+    }
+
+    .comp-findings li {
+      margin-bottom: 8px;
+    }
+
+    .comp-findings strong {
+      color: var(--gt-text);
+    }
+
+    .comp-map {
+      margin: 24px 0 40px;
+      padding: 20px;
+      background: var(--gt-surface);
+      border-radius: var(--gt-radius);
+    }
+
+    .comp-map-wrap {
+      container-type: inline-size;
+      container-name: comp-map;
+    }
+
+    .comp-map-svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .comp-map-textalt dl,
+    .comp-map-textalt {
+      margin: 0;
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 0.9rem;
+      color: var(--gt-text-secondary);
+    }
+
+    .comp-map-textalt-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--gt-border);
+    }
+
+    .comp-map-textalt-row:last-child {
+      border-bottom: 0;
+    }
+
+    .comp-map-textalt dt {
+      font-weight: 600;
+      color: var(--gt-text);
+    }
+
+    .comp-map-textalt dd {
+      margin: 0;
+    }
+
+    /* Below 600px (measured against the map's own container, not the viewport):
+       swap the SVG for the semantic text alternative. */
+    @container comp-map (max-width: 599px) {
+      .comp-map-svg {
+        display: none;
+      }
+
+      .comp-map-textalt {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+        border: 0;
+      }
+    }
+
+    .comp-map figcaption {
+      margin-top: 12px;
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--gt-text-secondary);
+    }
+
+    /* Design system carousel slide — inline specimen SVG, sized like .graphic img */
+    .graphic svg {
+      width: 100%;
+      height: 100%;
     }
 
     /* Hero image: no box, follow SVG silhouette */
@@ -114,10 +273,39 @@
       background: transparent;
       filter: drop-shadow(10px 10px 4px rgba(76, 99, 97, 0.35));
     }
+
+    .skip-to-content {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: rgb(251, 250, 246);
+      color: rgb(0, 0, 0);
+      padding: 10px 16px;
+      border-radius: 0 0 6px 0;
+      text-decoration: none;
+      font-weight: 600;
+      z-index: 100;
+      transition: top 0.3s ease;
+      font-family: "Inter", sans-serif;
+    }
+
+    .skip-to-content:focus {
+      top: 0;
+      background: rgba(251, 250, 246, 0.772);
+      outline: 3px solid #1e40af;
+    }
+
+    .skip-to-content:focus-visible {
+      outline: 3px solid #1e40af;
+      outline-offset: 3px;
+    }
   </style>
 </head>
 
 <body>
+  <!-- Skip link -->
+  <a href="#main" class="skip-to-content">Skip to main content</a>
+
   <!-- Navigation bar -->
   <nav class="navbar">
     <div class="container">
@@ -147,11 +335,12 @@
       <li><a href="#design-system" class="nav-dot" data-section="design-system"><span>Design System</span></a></li>
       <li><a href="#development" class="nav-dot" data-section="development"><span>Design & Development</span></a></li>
       <li><a href="#outcome" class="nav-dot" data-section="outcome"><span>Outcome</span></a></li>
+      <li><a href="#design" class="nav-dot" data-section="design"><span>Final Designs</span></a></li>
     </ul>
   </aside>
 
   <!-- Main Content -->
-  <div class="content-casestudy">
+  <main id="main" class="content-casestudy">
 
     <!-- HERO SECTION -->
     <section class="hero-casestudy">
@@ -208,7 +397,7 @@
     <section class="top-button">
       <button onclick="scrollToDesignImages()">Jump to Designs
         <span>
-          <img src="../img/arrows.svg" alt="down arrows" fetchpriority="high" decoding="async">
+          <img src="../img/arrows.svg" alt="" fetchpriority="high" decoding="async">
         </span>
       </button>
     </section>
@@ -260,6 +449,112 @@
 
         <p class="section-intro">GATORE is a two-sided platform — one product serving two distinct audiences with
           different needs, different mental models, and different success metrics.</p>
+
+        <!-- Competitive Analysis: sets up the unified booking + game selection decision below -->
+        <div class="comp-analysis">
+          <h3>Competitive analysis</h3>
+          <p class="comp-analysis-lead">Every existing tool treats the table and the game as two separate decisions.
+          </p>
+
+          <p class="comp-analysis-body">Before committing to an information architecture, I evaluated 9 products
+            across four categories: board-game-café-native platforms (GameLedger, GameShelf, BookingNinja, TWICE),
+            general hospitality reservation systems (OpenTable, Resy, SevenRooms), game discovery tools
+            (BoardGameGeek), and the status quo — what cafés actually run today.</p>
+
+          <p class="comp-analysis-body">The status quo was the most revealing. At Snakes &amp; Lattes, the category's
+            reference chain, a browsable library of 3,000+ games sits on a page with no connection to booking. Groups
+            larger than eight are routed to a different booking tool entirely. Reservations just get turned off after 4
+            PM on weekends. And once you're inside, finding a game comes down to coloured stickers on the shelves, a
+            low-tech workaround nobody's replaced yet.</p>
+
+          <p class="comp-analysis-body">That research turned up three recurring gaps. Below, each gap is paired with
+            how GATORE addresses it:</p>
+
+          <ol class="comp-findings">
+            <li><strong>Booking and game selection are disconnected everywhere</strong> → unified reservation flow,
+              with game availability surfaced against the chosen time slot</li>
+            <li><strong>Guests are groups with constraints, not collectors with wishlists</strong> → constraint-first
+              game finder built on party size, time available, and complexity</li>
+            <li><strong>No competitor markets an accessibility posture</strong> → AODA / WCAG 2.1 AA as a design
+              system constraint, not a compliance pass</li>
+          </ol>
+
+          <figure class="comp-map">
+            <div class="comp-map-wrap">
+              <svg class="comp-map-svg" viewBox="0 30 680 410" role="img" aria-labelledby="cmap-title cmap-desc"
+                xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-family:'Inter',sans-serif">
+                <title id="cmap-title">GATORE competitive positioning map</title>
+                <desc id="cmap-desc">A two-by-two positioning map. The horizontal axis runs from separate booking and
+                  library systems on the left to one connected flow on the right. The vertical axis runs from
+                  operator-first at the bottom to guest-first at the top. BoardGameGeek sits in the upper left, with a
+                  typical cafe's current ad-hoc stack nearby, just above the midline. General hospitality platforms
+                  OpenTable, Resy and SevenRooms sit in the lower left. The vertical board game cafe tools
+                  BookingNinja, TWICE, GameShelf and GameLedger cluster along the right side, mostly below the
+                  midline. GATORE sits furthest right, centred on the midline — connected, without favouring guests
+                  over operators or the other way around.</desc>
+
+                <rect x="375" y="60" width="245" height="330" rx="8" fill="var(--gt-teal-tint, #e6f4f3)" />
+                <rect x="130" y="60" width="490" height="330" rx="8" fill="none" stroke="var(--gt-border, #e8e7e3)"
+                  stroke-width="1" />
+                <line x1="375" y1="60" x2="375" y2="390" stroke="var(--gt-border, #e8e7e3)" stroke-width="1"
+                  stroke-dasharray="4 4" />
+                <line x1="130" y1="225" x2="620" y2="225" stroke="var(--gt-border, #e8e7e3)" stroke-width="1"
+                  stroke-dasharray="4 4" />
+
+                <g fill="var(--gt-text-secondary, #555)" font-size="13">
+                  <circle cx="190" cy="105" r="5" fill="var(--gt-text-muted, #888)" />
+                  <text x="190" y="128" text-anchor="middle">BoardGameGeek</text>
+                  <circle cx="255" cy="195" r="5" fill="var(--gt-text-muted, #888)" />
+                  <text x="255" y="218" text-anchor="middle">Café's current stack</text>
+                  <circle cx="200" cy="300" r="5" fill="var(--gt-text-muted, #888)" />
+                  <text x="200" y="323" text-anchor="middle">OpenTable / Resy</text>
+                  <circle cx="295" cy="358" r="5" fill="var(--gt-text-muted, #888)" />
+                  <text x="295" y="381" text-anchor="middle">SevenRooms</text>
+                  <circle cx="415" cy="328" r="5" fill="var(--gt-text-muted, #888)" />
+                  <text x="415" y="351" text-anchor="middle">BookingNinja</text>
+                  <circle cx="505" cy="350" r="5" fill="var(--gt-text-muted, #888)" />
+                  <text x="505" y="373" text-anchor="middle">TWICE</text>
+                  <circle cx="515" cy="262" r="5" fill="var(--gt-text-muted, #888)" />
+                  <text x="515" y="285" text-anchor="middle">GameShelf</text>
+                  <circle cx="545" cy="197" r="5" fill="var(--gt-text-muted, #888)" />
+                  <text x="545" y="220" text-anchor="middle">GameLedger</text>
+                </g>
+
+                <circle cx="610" cy="225" r="7" fill="var(--gt-teal, #1B9A8F)" />
+                <text x="610" y="250" text-anchor="middle" font-size="15" font-weight="500"
+                  fill="var(--gt-text, #141414)">GATORE</text>
+
+                <g fill="var(--gt-text-secondary, #555)" font-size="13">
+                  <text x="120" y="100" text-anchor="end">Guest-first</text>
+                  <text x="120" y="355" text-anchor="end">Operator-first</text>
+                  <text x="250" y="412" text-anchor="middle">Separate systems</text>
+                  <text x="500" y="412" text-anchor="middle">One connected flow</text>
+                </g>
+              </svg>
+
+              <dl class="comp-map-textalt visually-hidden">
+                <div class="comp-map-textalt-row">
+                  <dt>Guest-first, separate systems</dt>
+                  <dd>BoardGameGeek, café's current ad-hoc stack</dd>
+                </div>
+                <div class="comp-map-textalt-row">
+                  <dt>Operator-first, separate systems</dt>
+                  <dd>OpenTable, Resy, SevenRooms</dd>
+                </div>
+                <div class="comp-map-textalt-row">
+                  <dt>Operator-first, connected</dt>
+                  <dd>BookingNinja, TWICE, GameShelf, GameLedger</dd>
+                </div>
+                <div class="comp-map-textalt-row">
+                  <dt>Connected, balanced between guest and operator</dt>
+                  <dd>GATORE</dd>
+                </div>
+              </dl>
+            </div>
+            <figcaption>Vertical competitors sell to operators; the guest-facing layer is thin. BoardGameGeek serves
+              guests but knows nothing about venues.</figcaption>
+          </figure>
+        </div>
 
         <div class="final-grid">
 
@@ -464,7 +759,7 @@
                 <dd>
                   Teal, warm beige, and warm brown.
                   <ul class="palette" aria-label="Brand palette">
-                    <li style="--sw:#1A9A8F" title="Teal"></li>
+                    <li style="--sw:#1B9A8F" title="Teal"></li>
                     <li style="--sw:#F5EBD4" title="Warm Beige"></li>
                     <li style="--sw:#7C5C3E" title="Warm Brown"></li>
                   </ul>
@@ -583,20 +878,77 @@
             <div class="viewport-col">
               <div class="carousel-viewport" tabindex="0">
                 <ul class="carousel-track">
-                  <!-- TODO: add competitive analysis, design system doc, brochure -->
                   <li class="slide is-active"
-                    data-caption="Competitive analysis identifying the gap in board game café software">
-                    <div class="graphic lightbox-img">
-                      <img src="../img/gatore/competitive-analysis.png"
-                        alt="Competitive analysis of reservation and venue management tools" loading="lazy"
-                        decoding="async">
-                    </div>
-                  </li>
-                  <li class="slide" data-caption="GATORE design system — tokens, components, and documentation">
-                    <div class="graphic lightbox-img">
-                      <img src="../img/gatore/design-system.png"
-                        alt="GATORE Figma design system showing color tokens, typography, and component library"
-                        loading="lazy" decoding="async">
+                    data-caption="GATORE design system — tokens, components, and documentation">
+                    <div class="graphic">
+                      <svg viewBox="0 0 680 400" role="img" aria-labelledby="dstoken-title dstoken-desc"
+                        xmlns="http://www.w3.org/2000/svg" style="font-family:'Inter',sans-serif">
+                        <title id="dstoken-title">GATORE design system specimen</title>
+                        <desc id="dstoken-desc">A specimen sheet showing the GATORE design system: three brand
+                          colours — teal, warm beige, and warm brown — each with its hex value; a four-step type
+                          scale labelled Display, Heading, Body, and Caption; an eight pixel corner radius sample;
+                          and a four pixel spacing grid sample.</desc>
+
+                        <rect x="0" y="0" width="680" height="400" fill="var(--gt-surface, #f8f7f5)" />
+
+                        <text x="20" y="34" font-size="11" font-weight="700" letter-spacing="1.5"
+                          fill="var(--gt-text-secondary, #555)">COLOR</text>
+
+                        <rect x="20" y="48" width="72" height="72" rx="8" fill="var(--gt-teal, #1B9A8F)"
+                          stroke="var(--gt-border, #e8e7e3)" />
+                        <text x="20" y="138" font-size="13" font-weight="600" fill="var(--gt-text, #141414)">Teal</text>
+                        <text x="20" y="154" font-size="12" fill="var(--gt-text-secondary, #555)">#1B9A8F</text>
+
+                        <rect x="132" y="48" width="72" height="72" rx="8" fill="var(--gt-beige, #F5EBD4)"
+                          stroke="var(--gt-border, #e8e7e3)" />
+                        <text x="132" y="138" font-size="13" font-weight="600" fill="var(--gt-text, #141414)">Warm
+                          Beige</text>
+                        <text x="132" y="154" font-size="12" fill="var(--gt-text-secondary, #555)">#F5EBD4</text>
+
+                        <rect x="244" y="48" width="72" height="72" rx="8" fill="var(--gt-brown, #7C5C3E)"
+                          stroke="var(--gt-border, #e8e7e3)" />
+                        <text x="244" y="138" font-size="13" font-weight="600" fill="var(--gt-text, #141414)">Warm
+                          Brown</text>
+                        <text x="244" y="154" font-size="12" fill="var(--gt-text-secondary, #555)">#7C5C3E</text>
+
+                        <line x1="20" y1="182" x2="660" y2="182" stroke="var(--gt-border, #e8e7e3)" stroke-width="1" />
+
+                        <text x="20" y="204" font-size="11" font-weight="700" letter-spacing="1.5"
+                          fill="var(--gt-text-secondary, #555)">TYPE SCALE</text>
+
+                        <text x="20" y="262" font-size="40" font-weight="700" fill="var(--gt-text, #141414)">Aa</text>
+                        <text x="20" y="282" font-size="12" fill="var(--gt-text-secondary, #555)">Display</text>
+
+                        <text x="150" y="262" font-size="28" font-weight="700" fill="var(--gt-text, #141414)">Aa</text>
+                        <text x="150" y="282" font-size="12" fill="var(--gt-text-secondary, #555)">Heading</text>
+
+                        <text x="260" y="262" font-size="20" font-weight="400" fill="var(--gt-text, #141414)">Aa</text>
+                        <text x="260" y="282" font-size="12" fill="var(--gt-text-secondary, #555)">Body</text>
+
+                        <text x="360" y="262" font-size="14" font-weight="400" fill="var(--gt-text, #141414)">Aa</text>
+                        <text x="360" y="282" font-size="12" fill="var(--gt-text-secondary, #555)">Caption</text>
+
+                        <line x1="20" y1="310" x2="660" y2="310" stroke="var(--gt-border, #e8e7e3)" stroke-width="1" />
+
+                        <text x="20" y="332" font-size="11" font-weight="700" letter-spacing="1.5"
+                          fill="var(--gt-text-secondary, #555)">RADIUS</text>
+                        <rect x="20" y="344" width="120" height="48" rx="8" fill="none"
+                          stroke="var(--gt-text, #141414)" stroke-width="2" />
+                        <text x="152" y="374" font-size="13" fill="var(--gt-text-secondary, #555)">8px corner
+                          radius</text>
+
+                        <text x="380" y="332" font-size="11" font-weight="700" letter-spacing="1.5"
+                          fill="var(--gt-text-secondary, #555)">GRID</text>
+                        <g fill="var(--gt-teal, #1B9A8F)">
+                          <circle cx="380" cy="368" r="3" />
+                          <circle cx="392" cy="368" r="3" />
+                          <circle cx="404" cy="368" r="3" />
+                          <circle cx="416" cy="368" r="3" />
+                          <circle cx="428" cy="368" r="3" />
+                        </g>
+                        <text x="440" y="373" font-size="13" fill="var(--gt-text-secondary, #555)">4px baseline
+                          grid</text>
+                      </svg>
                     </div>
                   </li>
                   <li class="slide" data-caption="GATORE user flow diagram showing customer and business portal flows">
@@ -624,12 +976,6 @@
                         loading="lazy" decoding="async">
                     </div>
                   </li>
-                  <!-- <li class="slide" data-caption="GATORE capstone brochure">
-                    <div class="graphic">
-                      <img src="../img/gatore/brochure.png" alt="GATORE capstone project brochure" loading="lazy"
-                        decoding="async">
-                    </div>
-                  </li> -->
                 </ul>
               </div>
             </div>
@@ -645,8 +991,8 @@
           </div>
         </div>
 
-        <p class="carousel-caption" aria-live="polite">Competitive analysis identifying the gap in board game café
-          software</p>
+        <p class="carousel-caption" aria-live="polite">GATORE design system — tokens, components, and documentation
+        </p>
       </section>
     </section>
 
@@ -659,60 +1005,53 @@
         </div>
 
         <div class="design-imgs">
-          <!-- TODO: replace with GATORE final screenshots -->
-          <div class="design-img">
-            <img src="../img/gatore/Desktop-Client-Hero.png" alt="GATORE customer-facing home page" loading="lazy"
+          <figure class="design-img">
+            <img src="../img/gatore/Desktop-Client-Hero.png" alt="Customer-facing home page" loading="lazy"
               decoding="async">
             <figcaption>Customer Site — Home / Landing</figcaption>
-          </div>
+          </figure>
 
-          <div class="design-img">
-            <img src="../img/gatore/find-by-name.png" alt="GATORE café discovery and browse page" loading="lazy"
+          <figure class="design-img">
+            <img src="../img/gatore/find-by-name.png" alt="Café discovery and browse page" loading="lazy"
               decoding="async">
-            <figcaption>Customer Site — Café Discovery</figcaption>
-          </div>
+            <figcaption>Customer Site — Café Discovery (By Name)</figcaption>
+          </figure>
 
-          <div class="design-img">
-            <img src="../img/gatore/find-by-game.png" alt="GATORE discovery and browse by game page" loading="lazy"
+          <figure class="design-img">
+            <img src="../img/gatore/find-by-game.png" alt="Discovery and browse by game page" loading="lazy"
               decoding="async">
-            <figcaption>Customer Site — Café Discovery</figcaption>
-          </div>
+            <figcaption>Customer Site — Café Discovery (By Game)</figcaption>
+          </figure>
 
-          <div class="design-img">
-            <img src="../img/gatore/reserve-a-game-reservation-flow.png" alt="GATORE reservation booking flow"
+          <figure class="design-img">
+            <img src="../img/gatore/reserve-a-game-reservation-flow.png" alt="Reservation booking flow"
               loading="lazy" decoding="async">
             <figcaption>Customer Site — Reservation Flow</figcaption>
-          </div>
+          </figure>
 
-          <!-- <div class="design-img">
-            <img src="../img/gatore/social-matchmaking.png" alt="GATORE social matchmaking to find players"
-              loading="lazy" decoding="async">
-            <figcaption>Customer Site — Social Matchmaking</figcaption>
-          </div> -->
-
-          <div class="design-img">
-            <img src="../img/gatore/customer-profile.png" alt="GATORE customer profile page" loading="lazy"
+          <figure class="design-img">
+            <img src="../img/gatore/customer-profile.png" alt="Customer profile page" loading="lazy"
               decoding="async">
             <figcaption>Customer Site — Profile</figcaption>
-          </div>
+          </figure>
 
-          <div class="design-img">
-            <img src="../img/gatore/business-dashboard.png" alt="GATORE business portal dashboard" loading="lazy"
+          <figure class="design-img">
+            <img src="../img/gatore/business-dashboard.png" alt="Business portal dashboard" loading="lazy"
               decoding="async">
             <figcaption>Business Portal — Dashboard</figcaption>
-          </div>
+          </figure>
 
-          <div class="design-img">
+          <figure class="design-img">
             <img src="../img/gatore/business-portal-game-library.png"
-              alt="GATORE business portal game library management" loading="lazy" decoding="async">
+              alt="Business portal game library management" loading="lazy" decoding="async">
             <figcaption>Business Portal — Game Library</figcaption>
-          </div>
+          </figure>
 
-          <div class="design-img">
+          <figure class="design-img">
             <img src="../img/gatore/reservation-management.png"
-              alt="GATORE business portal reservations management view" loading="lazy" decoding="async">
+              alt="Business portal reservations management view" loading="lazy" decoding="async">
             <figcaption>Business Portal — Reservations Management</figcaption>
-          </div>
+          </figure>
         </div>
       </div>
     </section>
@@ -729,7 +1068,7 @@
       </a>
     </nav>
 
-  </div>
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -763,7 +1102,6 @@
     </div>
   </footer>
 
-  <script src="../carousel.js" defer></script>
   <script src="../sectionNav.js" defer></script>
 </body>
 

@@ -664,8 +664,27 @@ a.featured-project {
 }
 
 .decision-card--karla {
-  --decision-accent: #6b46c1;
-  --decision-accent-text: #5b3aa8;
+  --decision-accent: #8f4bb1;
+  --decision-accent-text: #6f3590;
+}
+
+.decision-media {
+  margin: 0 0 16px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid #e0dfda;
+  background: #fff;
+}
+
+.decision-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  /* Per-image zoom for full-page screenshots: set --zoom and --origin inline */
+  transform: scale(var(--zoom, 1));
+  transform-origin: var(--origin, center);
 }
 
 .decision-project {
@@ -848,4 +867,79 @@ a.featured-project {
   .footer-nav a {
     padding: 6px 0;
   }
+}
+
+/* ===== Home page type scale =====
+   Name (Londrina, hero) > section titles (Inter 600) >
+   hero role / card titles > body (16px) > labels (14px).
+   Scoped to home page sections so case studies are unaffected. */
+
+.decisions h2,
+.featured-projects h2,
+h2.about-profile-name {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.25rem, 1.8vw, 1.375rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.75rem;
+}
+
+.hero-description {
+  gap: 0.5rem;
+}
+
+.hero-description p {
+  margin: 0;
+}
+
+.hero-description .hero-role {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: #262626;
+}
+
+.hero-description .hero-tagline {
+  max-width: 46ch;
+  margin-bottom: 1rem;
+  font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+  line-height: 1.5;
+  color: #3d3d3d;
+}
+
+.decision-card h3,
+.featured-project h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.decisions-header p,
+.about-profile-description,
+.decision-card p.decision-context,
+.decision-card p.decision-body,
+.featured-project p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.decision-project {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 800px) {
+  .hero-description .hero-tagline {
+    margin-inline: auto;
+  }
+}
+
+/* Line "About me" and "Featured Projects" up with the other sections */
+h2.about-profile-name,
+.featured-projects > h2 {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: clamp(12px, 3vw, 24px);
 }

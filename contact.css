@@ -18,19 +18,19 @@
 }
 
 .contact-header h1 {
-  font-family: "Londrina Shadow", sans-serif;
-  font-weight: 400;
+  font-family: var(--font-display);
+  font-weight: var(--weight-regular);
   font-size: clamp(2.5rem, 8vw, 4rem);
   line-height: 1;
   margin: 0 0 1rem;
-  color: #141414;
+  color: var(--color-text);
 }
 
 .contact-intro {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: clamp(1rem, 1.3vw, 1.15rem);
   line-height: 1.6;
-  color: #555;
+  color: var(--color-text-muted);
   max-width: 500px;
   margin: 0 auto 1.5rem;
 }
@@ -39,10 +39,10 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #888;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
 }
 
 .contact-location i {
@@ -76,9 +76,9 @@
   aspect-ratio: 1 / 1;
   padding: 24px 16px;
 
-  background: #fff;
-  border: 2px solid #e8e7e3;
-  border-radius: 16px;
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-xl);
   text-decoration: none;
   color: inherit;
 
@@ -88,12 +88,12 @@
 
 .contact-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
   border-color: #ddd;
 }
 
 .contact-card:focus-visible {
-  outline: 3px solid #1e40af;
+  outline: 3px solid var(--color-focus);
   outline-offset: 3px;
 }
 
@@ -104,7 +104,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   transition: transform 0.25s ease;
 }
 
@@ -148,18 +148,18 @@
 
 /* Text */
 .contact-card h2 {
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #141414;
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
   margin: 0;
 }
 
 .contact-card p {
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.85rem;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
   line-height: 1.4;
-  color: #666;
+  color: var(--color-text-muted);
   margin: 0;
 }
 
@@ -171,21 +171,21 @@
   justify-content: center;
   gap: 10px;
   padding: 16px 24px;
-  background: #f8f7f5;
-  border-radius: 10px;
+  background: var(--color-surface-subtle);
+  border-radius: var(--radius-lg);
   text-align: center;
 }
 
 .contact-note i {
-  color: #888;
-  font-size: 1rem;
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
 }
 
 .contact-note p {
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #666;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
   margin: 0;
 }
 
@@ -205,7 +205,7 @@
   .contact-icon {
     width: 56px;
     height: 56px;
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
   }
 
   .contact-icon img {
@@ -214,11 +214,11 @@
   }
 
   .contact-card h2 {
-    font-size: 0.95rem;
+    font-size: var(--text-base);
   }
 
   .contact-card p {
-    font-size: 0.75rem;
+    font-size: var(--text-xs);
   }
 }
 
@@ -255,11 +255,11 @@
   }
 
   .contact-card h2 {
-    font-size: 1rem;
+    font-size: var(--text-base);
   }
 
   .contact-card p {
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
   }
 }
 

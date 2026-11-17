@@ -50,7 +50,7 @@
 }
 
 .lightbox-caption {
-  margin-top: 16px;
+  margin-top: var(--space-4);
   color: var(--color-white);
   font-family: var(--font-body);
   font-size: var(--text-base);
@@ -163,7 +163,7 @@
 
   .lightbox-caption {
     font-size: var(--text-sm);
-    padding-inline: 1rem;
+    padding-inline: var(--space-4);
   }
 }
 

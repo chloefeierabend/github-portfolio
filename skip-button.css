@@ -4,7 +4,7 @@
   left: 0;
   background: rgb(251, 250, 246);
   color: rgb(0, 0, 0);
-  padding: 10px 16px;
+  padding: var(--space-3) var(--space-4);
   border-radius: 0 0 6px 0;
   text-decoration: none;
   font-weight: 600;

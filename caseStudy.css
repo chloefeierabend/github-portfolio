@@ -1472,3 +1472,11 @@ body {
     transform: none;
   }
 }
+
+/* Anchor targets linked from the home page's decisions section */
+[id="competitive-analysis"],
+[id="sign-in"],
+[id="guest-booking"],
+[id="mascots"] {
+  scroll-margin-top: 100px;
+}

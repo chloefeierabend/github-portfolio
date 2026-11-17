@@ -23,13 +23,13 @@
 
   <!-- Non-blocking load: preload as style, then swap rel on load -->
   <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&family=Inter:wght@400;500;600;700&display=swap"
     onload="this.onload=null;this.rel='stylesheet'">
 
   <!-- No-JS fallback -->
   <noscript>
     <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&display=swap">
+      href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&family=Inter:wght@400;500;600;700&display=swap">
   </noscript>
 
   <title>Portfolio</title>
@@ -146,6 +146,48 @@
           </div>
         </section>
 
+        <!-- Decisions section: favourite design calls from case studies -->
+        <section class="decisions" id="decisions" aria-labelledby="decisions-title">
+          <div class="decisions-header">
+            <h2 id="decisions-title">Decisions I'm proud of</h2>
+            <p>A few calls I made in my projects, and why I made them.</p>
+          </div>
+
+          <ol class="decisions-list">
+            <li class="decision-card decision-card--gatore">
+              <p class="decision-project">GATORE</p>
+              <h3>Letting groups search by what they're working with</h3>
+              <p class="decision-context">Café game libraries can run past 3,000 titles, and a group with two hours to spare has no easy way to narrow that down.</p>
+              <p class="decision-body">I built the finder around party size, time available, and complexity. Every tool I researched treated booking a table and picking a game as separate steps, but groups decide both at once.</p>
+              <a class="decision-link" href="gatore/#competitive-analysis"><span class="decision-link-text">See the research<span class="visually-hidden"> behind the GATORE game finder</span></span><span class="decision-link-arrow" aria-hidden="true">&rarr;</span></a>
+            </li>
+
+            <li class="decision-card decision-card--gatore">
+              <p class="decision-project">GATORE</p>
+              <h3>One sign-in page with Customer and Business tabs</h3>
+              <p class="decision-context">Customers and café owners both sign in, but they're headed to completely different places.</p>
+              <p class="decision-body">I tried separate buttons and a separate business site first. Tabs on one shared page won out: land on the wrong side and it's a one-click fix, and owners who are also customers only need one URL.</p>
+              <a class="decision-link" href="gatore/#sign-in"><span class="decision-link-text">See the sign-in page<span class="visually-hidden"> in the GATORE case study</span></span><span class="decision-link-arrow" aria-hidden="true">&rarr;</span></a>
+            </li>
+
+            <li class="decision-card decision-card--gatore">
+              <p class="decision-project">GATORE</p>
+              <h3>Booking a table without making an account</h3>
+              <p class="decision-context">Accounts unlock booking history and recommendations, but asking for one up front slows down a first booking.</p>
+              <p class="decision-body">Almost none of the booking tools I researched force an account for one table. Guests only need a name and email, and the account perks sit right beside the guest option for anyone who wants them.</p>
+              <a class="decision-link" href="gatore/#guest-booking"><span class="decision-link-text">See guest booking<span class="visually-hidden"> in the GATORE case study</span></span><span class="decision-link-arrow" aria-hidden="true">&rarr;</span></a>
+            </li>
+
+            <li class="decision-card decision-card--karla">
+              <p class="decision-project">Karla Learn</p>
+              <h3>A mascot quiz to make money feel less scary</h3>
+              <p class="decision-context">Credit and budgeting are intimidating when you're new to Canada, and most resources are full of jargon.</p>
+              <p class="decision-body">So people start with a short personality quiz that matches them to one of four mascots. It's the kind of thing you'd send a friend, and usability testing backed up the playful approach.</p>
+              <a class="decision-link" href="financial-literacy/#mascots"><span class="decision-link-text">Meet the mascots<span class="visually-hidden"> in the Karla Learn case study</span></span><span class="decision-link-arrow" aria-hidden="true">&rarr;</span></a>
+            </li>
+          </ol>
+        </section>
+
         <!-- Section for about me -->
         <section class="about">
           <!-- Title for the about section -->
@@ -195,22 +237,6 @@
               <h3>GATORE</h3>
               <p>Reservation and game library platform for board game cafés. 2nd place, Capstone Demo Day.</p>
             </a>
-
-            <!-- Project 3 -->
-            <!-- <div class="featured-project">
-              <img class="featured-project-placeholder" src="img/Logo_sept21.png" alt="Placeholder image" loading="lazy"
-                decoding="async">
-              <h3>Project 3</h3>
-              <p>Description of project 3</p>
-            </div> -->
-
-            <!-- Project 4 -->
-            <!-- <div class="featured-project">
-              <img class="featured-project-placeholder" src="img/Logo_sept21.png" alt="Placeholder image" loading="lazy"
-                decoding="async">
-              <h3>Project 4</h3>
-              <p>Description of project 4</p>
-            </div> -->
           </div>
         </section>
       </div>

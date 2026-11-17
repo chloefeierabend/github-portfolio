@@ -15,6 +15,7 @@ html {
 
 body {
   margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   background-color: #fbfaf6;
   color: #141414;
   -webkit-text-size-adjust: 100%;
@@ -622,6 +623,132 @@ a.featured-project {
   height: 180px;
   border-radius: 6px;
   background: #e7e6df;
+}
+
+/* Decisions I'm proud of */
+.decisions {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto clamp(80px, 14vh, 250px);
+  padding-inline: clamp(12px, 3vw, 24px);
+}
+
+.decisions-header {
+  max-width: 60ch;
+  margin-bottom: clamp(16px, 3vw, 28px);
+}
+
+.decisions-header p {
+  margin: 0;
+  color: #444;
+}
+
+.decisions-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(12px, 2.2vw, 20px);
+}
+
+.decision-card {
+  --decision-accent: #1b9a8f;
+  --decision-accent-text: #12716a;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(18px, 2.5vw, 26px);
+  border-radius: 8px;
+  background: #f1f0eb;
+  border-top: 4px solid var(--decision-accent);
+}
+
+.decision-card--karla {
+  --decision-accent: #6b46c1;
+  --decision-accent-text: #5b3aa8;
+}
+
+.decision-project {
+  margin: 0 0 4px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--decision-accent-text);
+}
+
+.decision-card h3 {
+  margin: 0 0 14px;
+}
+
+.decision-card p.decision-context,
+.decision-card p.decision-body {
+  margin: 0;
+  font-size: clamp(0.95rem, 1.3vw, 1rem);
+  line-height: 1.55;
+}
+
+.decision-card p.decision-context {
+  margin-bottom: 10px;
+  color: #5a5a5a;
+}
+
+.decision-card p.decision-body {
+  margin-bottom: 18px;
+  flex: 1;
+  color: #262626;
+}
+
+.decision-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.decision-link-text {
+  text-decoration: underline;
+  text-decoration-color: var(--decision-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.decision-link-arrow {
+  transition: transform 0.2s ease;
+}
+
+.decision-link:hover .decision-link-text {
+  text-decoration-thickness: 3px;
+}
+
+.decision-link:hover .decision-link-arrow,
+.decision-link:focus-visible .decision-link-arrow {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .decision-link-arrow {
+    transition: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .decisions-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Footer */

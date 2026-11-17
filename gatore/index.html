@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../lightbox.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Outline&family=Londrina+Solid:wght@100;300;400;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Outline&family=Londrina+Solid:wght@100;300;400;900&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
   <script src="../carousel.js" defer></script>
@@ -353,7 +353,7 @@
           <h1 class="londrina-solid-regular">GATORE</h1>
           <p class="hero-tagline"><strong>The reservation and game library platform built for board game
               cafés.</strong><br>
-            Filling a gap that off-the-shelf software couldn't.</p>
+            Nothing on the market was made for how they actually work.</p>
 
           <div class="hero-meta">
             <div class="meta-item">
@@ -412,28 +412,27 @@
       <div class="overview-grid">
         <div class="overview-main">
           <h3>The Challenge</h3>
-          <p>Board game cafés are a growing category of hospitality business — but no dedicated software exists for how
-            they actually operate. Generic reservation tools don't account for game libraries. Generic library tools
-            don't
-            handle table bookings. Café owners were cobbling together mismatched systems, and customers had no unified
-            way to discover venues, check game availability, or connect with others to play.</p>
+          <p>Board game cafés keep popping up, but there's no software built for how they actually run. Reservation
+            tools don't know about game libraries, and library tools don't handle table bookings. So owners end up
+            stitching together systems that don't talk to each other, and customers have no single place to find a
+            café, see what games it has, or find people to play with.</p>
 
           <h3>The Goal</h3>
-          <p>Design and build a purpose-built platform for board game cafés: one product that handles everything on the
-            customer side (discovery, reservations, social matchmaking, personalized recommendations) and everything on
-            the business side (café management, game catalog, reservations dashboard).</p>
+          <p>Design and build one platform that covers both sides. For customers: discovery, reservations, social
+            matchmaking, and personalized recommendations. For café owners: venue management, the game catalog, and a
+            reservations dashboard.</p>
         </div>
 
         <div class="overview-sidebar">
           <div class="context-card">
             <h4>How the Gap Was Found</h4>
-            <p>A competitive analysis of existing reservation and venue management tools confirmed there was nothing
-              purpose-built for board game cafés — the niche GATORE was designed to fill.</p>
+            <p>I went through the existing reservation and venue management tools and couldn't find anything made
+              specifically for board game cafés. That's the gap GATORE fills.</p>
           </div>
           <div class="context-card">
             <h4>My Role</h4>
-            <p>UX/UI Design Lead. I owned the design system and led design across both sides of the platform — the
-              customer-facing marketing site and the business portal — while also handling frontend build work.</p>
+            <p>I was the UX/UI design lead. I owned the design system, led design for both the customer site and the
+              business portal, and worked on the frontend build too.</p>
           </div>
         </div>
       </div>
@@ -447,11 +446,11 @@
           <h2 id="platform-title">The Platform</h2>
         </div>
 
-        <p class="section-intro">GATORE is a two-sided platform — one product serving two distinct audiences with
-          different needs, different mental models, and different success metrics.</p>
+        <p class="section-intro">GATORE has two sides: one for customers and one for café owners. They want
+          different things, think about the product differently, and measure success differently.</p>
 
         <!-- Competitive Analysis: sets up the unified booking + game selection decision below -->
-        <div class="comp-analysis">
+        <div class="comp-analysis" id="competitive-analysis">
           <h3>Competitive analysis</h3>
           <p class="comp-analysis-lead">Every existing tool treats the table and the game as two separate decisions.
           </p>
@@ -467,16 +466,15 @@
             PM on weekends. And once you're inside, finding a game comes down to coloured stickers on the shelves, a
             low-tech workaround nobody's replaced yet.</p>
 
-          <p class="comp-analysis-body">That research turned up three recurring gaps. Below, each gap is paired with
-            how GATORE addresses it:</p>
+          <p class="comp-analysis-body">Three gaps kept showing up, and each one shaped a part of GATORE:</p>
 
           <ol class="comp-findings">
-            <li><strong>Booking and game selection are disconnected everywhere</strong> → unified reservation flow,
-              with game availability surfaced against the chosen time slot</li>
-            <li><strong>Guests are groups with constraints, not collectors with wishlists</strong> → constraint-first
-              game finder built on party size, time available, and complexity</li>
-            <li><strong>No competitor markets an accessibility posture</strong> → AODA / WCAG 2.1 AA as a design
-              system constraint, not a compliance pass</li>
+            <li><strong>Booking and game selection are disconnected everywhere</strong> → one reservation flow that
+              shows which games are available for the time you pick</li>
+            <li><strong>Groups pick games around practical limits</strong> → a game finder
+              that starts with party size, time available, and complexity</li>
+            <li><strong>None of the competitors talk about accessibility</strong> → AODA / WCAG 2.1 AA built into
+              the design system from the start instead of checked at the end</li>
           </ol>
 
           <figure class="comp-map">
@@ -551,8 +549,8 @@
                 </div>
               </dl>
             </div>
-            <figcaption>Vertical competitors sell to operators; the guest-facing layer is thin. BoardGameGeek serves
-              guests but knows nothing about venues.</figcaption>
+            <figcaption>The café-specific tools are built for owners and barely think about guests. BoardGameGeek is
+              great for players but doesn't know anything about cafés.</figcaption>
           </figure>
         </div>
 
@@ -570,8 +568,8 @@
               </svg>
             </div>
             <h3>Reservations</h3>
-            <p>Customers can browse café listings, check availability, and book a table — with game preferences built
-              into the booking flow.</p>
+            <p>Customers can browse cafés, check availability, and book a table, with their game preferences built
+              right into the booking.</p>
           </article>
 
           <!-- Customer Side: Discovery & Social -->
@@ -586,8 +584,8 @@
               </svg>
             </div>
             <h3>Discovery & Social Matchmaking</h3>
-            <p>Discover new cafés and connect with other players looking for a group. GATORE helps you find people to
-              play with, not just a place to play.</p>
+            <p>Find new cafés and other players looking for a group. GATORE helps you find people to play with as well
+              as a place to play.</p>
           </article>
 
           <!-- Customer Side: Profile & Recommendations -->
@@ -615,8 +613,8 @@
               </svg>
             </div>
             <h3>Business Portal</h3>
-            <p>Café owners get a dedicated dashboard to manage their venue — reservations, game library catalog, and
-              café-side operations — all in one place.</p>
+            <p>Café owners get one dashboard for their reservations, their game library, and the day-to-day running of
+              the café.</p>
           </article>
 
         </div>
@@ -630,16 +628,15 @@
         </div>
         <div class="solution-highlight-content">
           <h3>Designing for Two Distinct Users</h3>
-          <p>The hardest design challenge on GATORE was serving two very different audiences within a single product. A
-            customer discovering a new café thinks nothing like an owner managing a Saturday night rush.</p>
-          <p class="highlight-note">That meant two separate design contexts — different information architecture,
-            different
-            interaction patterns, and different definitions of success for each side.</p>
+          <p>The hardest part of GATORE was designing for two very different groups in one product. Someone looking
+            for a new café thinks nothing like an owner getting through a Saturday night rush.</p>
+          <p class="highlight-note">So each side got its own information architecture, its own interaction
+            patterns, and its own idea of what success looks like.</p>
         </div>
       </div>
 
       <!-- Feature Highlight: Shared Sign In / Get Started -->
-      <div class="solution-highlight">
+      <div class="solution-highlight" id="sign-in">
         <div class="solution-highlight-image lightbox-img">
           <img src="../img/gatore/sign-in-cropped.png"
             alt="GATORE sign in page with Customer and Business tabs, and Get Started dropdown" loading="lazy">
@@ -687,7 +684,7 @@
       </div>
 
       <!-- Feature Highlight: Guest Checkout -->
-      <div class="solution-highlight">
+      <div class="solution-highlight" id="guest-booking">
         <div class="solution-highlight-image lightbox-img">
           <img src="../img/gatore/reservation-guest-checkout.png"
             alt="GATORE reservation flow, Your Details step, offering Sign in to my account or Continue as guest with just name and email"
@@ -721,21 +718,18 @@
           <!-- Brand Rationale -->
           <article class="brief-card">
             <h3>Brand Rationale</h3>
-            <p>GATORE's name is a play on "alligator," which made green the obvious starting point — but a literal
-              reptile green would have felt cold and corporate. Teal was chosen instead: it carries the green
-              association
-              while feeling approachable and modern. Warm beige and browns pair it to the board game café setting,
-              giving the brand a cozy, welcoming feel over a sterile one.</p>
+            <p>GATORE is a play on "alligator," so green was the obvious place to start. A literal reptile green felt
+              cold and corporate, though, so I went with teal. It still reads as green but feels friendlier and more
+              modern. Warm beige and brown tie it back to the board game café setting and keep it cozy instead of
+              sterile.</p>
           </article>
 
           <!-- Target Audiences -->
           <article class="brief-card">
             <h3>Two Audiences, One System</h3>
-            <p>The design system had to flex across both sides of the product. Customer-facing screens prioritize
-              warmth,
-              discovery, and delight. Business-facing screens prioritize clarity, density, and efficiency. The same
-              tokens
-              — color, type, spacing — served both contexts.</p>
+            <p>The design system had to work for both sides. Customer screens lean into warmth and discovery. Business
+              screens need to be clear, dense, and quick to use. Both are built from the same color, type, and spacing
+              tokens.</p>
           </article>
 
           <!-- UI Rationale -->
@@ -744,7 +738,7 @@
             <dl class="brief-dl">
               <div class="row">
                 <dt>Typography</dt>
-                <dd>DM Sans — clean, friendly, and highly legible at both display and body sizes.</dd>
+                <dd>DM Sans. Friendly and easy to read at both headline and body sizes.</dd>
               </div>
               <div class="row">
                 <dt>Border Radius</dt>
@@ -804,12 +798,12 @@
         <article class="dev-card">
           <h3>My Contributions</h3>
           <ul class="dev-list">
-            <li><strong>Design system ownership</strong> — Built the full design system in Figma: tokens, components,
-              patterns, and documentation used across the entire product.</li>
-            <li><strong>Design lead across both surfaces</strong> — Owned UX and UI design for the customer-facing
-              marketing site and the business-facing management portal.</li>
-            <li><strong>Frontend build</strong> — Translated designs into production-ready components in React and
-              TypeScript, using Tailwind v4 for styling.</li>
+            <li><strong>Design system</strong> — Built the full design system in Figma (tokens, components, patterns,
+              and documentation) that the whole product uses.</li>
+            <li><strong>Design lead for both sides</strong> — Owned UX and UI design for the customer site and the
+              business portal.</li>
+            <li><strong>Frontend build</strong> — Built the designs as React and TypeScript components, styled with
+              Tailwind v4.</li>
             <li><strong>AODA compliance</strong> — Audited and implemented accessibility standards throughout, including
               contrast ratios, keyboard navigation, and screen reader support.</li>
           </ul>
@@ -835,22 +829,22 @@
               </svg>
             </div>
             <h3>2nd Place, Demo Day</h3>
-            <p>GATORE placed second in the Conestoga College capstone program at the final demo day — validating the
-              design and product direction in front of an external audience.</p>
+            <p>GATORE took second place at Conestoga College's capstone demo day. It was a great sign that the
+              design and product direction landed with people outside our team.</p>
           </li>
 
           <li class="lesson-card lesson-card--purple">
             <div class="lesson-num" aria-hidden="true">2</div>
             <h3>End-to-End Ownership</h3>
-            <p>Leading design from competitive research through full-stack build — across two distinct user surfaces —
-              reinforced how design decisions ripple into development, and vice versa.</p>
+            <p>Taking GATORE from competitive research all the way to a working full-stack build showed me how much
+              design and development decisions shape each other.</p>
           </li>
 
           <li class="lesson-card lesson-card--green">
             <div class="lesson-num" aria-hidden="true">3</div>
             <h3>Two Audiences, One Codebase</h3>
-            <p>Building a shared design system that served both a customer discovery experience and a business
-              management tool was a meaningful systems design challenge at real product scale.</p>
+            <p>Getting one design system to work for both a customer discovery experience and a business management
+              tool taught me a lot about designing systems that have to flex.</p>
           </li>
         </ol>
       </div>

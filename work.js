@@ -13,9 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const noResults = document.querySelector(".no-results");
   const resultsCount = document.querySelector(".results-count");
   const resetFiltersBtn = document.querySelector(".reset-filters-btn");
-  const activeFiltersContainer = document.querySelector(".active-filters");
-  const activeFiltersTags = document.querySelector(".active-filters-tags");
-  const clearAllFiltersBtn = document.querySelector(".clear-all-filters");
 
   // State
   let currentFilter = "all";
@@ -60,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
   resetFiltersBtn?.addEventListener("click", resetAllFilters);
 
   // Clear all filters button
-  clearAllFiltersBtn?.addEventListener("click", resetAllFilters);
 
   /**
    * Filter projects based on current filter and search
@@ -109,7 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateResultsDisplay(visibleCount);
 
     // Update active filters display
-    updateActiveFilters();
   }
 
   /**
@@ -157,75 +152,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       resultsCount.textContent = `${count} ${projectWord}`;
     }
-  }
-
-  /**
-   * Update active filters display
-   */
-  function updateActiveFilters() {
-    const hasActiveFilters = currentFilter !== "all" || currentSearch;
-    activeFiltersContainer.hidden = !hasActiveFilters;
-
-    // Clear existing tags
-    activeFiltersTags.innerHTML = "";
-
-    if (!hasActiveFilters) return;
-
-    // Add category filter tag
-    if (currentFilter !== "all") {
-      const filterName = getFilterName(currentFilter);
-      const tag = createFilterTag(filterName, "category");
-      activeFiltersTags.appendChild(tag);
-    }
-
-    // Add search filter tag
-    if (currentSearch) {
-      const tag = createFilterTag(`"${currentSearch}"`, "search");
-      activeFiltersTags.appendChild(tag);
-    }
-  }
-
-  /**
-   * Create a filter tag element
-   */
-  function createFilterTag(text, type) {
-    const tag = document.createElement("span");
-    tag.className = "active-filter-tag";
-    tag.innerHTML = `
-      ${text}
-      <button type="button" aria-label="Remove filter: ${text}">
-        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-      </button>
-    `;
-
-    tag.querySelector("button").addEventListener("click", () => {
-      if (type === "category") {
-        // Reset to "All" filter
-        filterButtons.forEach((b) => b.classList.remove("active"));
-        document.querySelector('[data-filter="all"]').classList.add("active");
-        currentFilter = "all";
-      } else if (type === "search") {
-        searchInput.value = "";
-        currentSearch = "";
-        searchClear.hidden = true;
-      }
-      filterProjects();
-    });
-
-    return tag;
-  }
-
-  /**
-   * Get human-readable filter name
-   */
-  function getFilterName(filter) {
-    const names = {
-      "ux-ui": "UX/UI",
-      "web-dev": "Web Dev",
-      graphic: "Graphic",
-      other: "Other",
-    };
-    return names[filter] || filter;
   }
 
   /**

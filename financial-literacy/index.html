@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="apple-touch-icon" href="../img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
@@ -13,7 +15,7 @@
   <link rel="stylesheet" href="../lightbox.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Outline&family=Londrina+Solid:wght@100;300;400;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Outline&family=Londrina+Solid:wght@100;300;400;900&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
   <script src="../carousel.js" defer></script>
@@ -49,6 +51,7 @@
   <aside class="section-nav" aria-label="Case study sections">
     <ul>
       <li><a href="#overview" class="nav-dot active" data-section="overview"><span>Overview</span></a></li>
+      <li><a href="#research" class="nav-dot" data-section="research"><span>Research</span></a></li>
       <li><a href="#solution" class="nav-dot" data-section="solution"><span>Solution</span></a></li>
       <li><a href="#testing" class="nav-dot" data-section="testing"><span>Testing</span></a></li>
       <li><a href="#development" class="nav-dot" data-section="development"><span>Design & Development</span></a></li>
@@ -68,8 +71,7 @@
             Back to Work
           </a>
           <h1 class="londrina-solid-regular">Karla Learn</h1>
-          <p class="hero-tagline"><strong>What if Financial
-              Literacy Was Actually Fun? </strong> </br> Making Canadian finance less intimidating for newcomers.</p>
+          <p class="hero-tagline"><strong>What if Financial Literacy Was Actually Fun?</strong><br> Making Canadian finance less intimidating for newcomers.</p>
 
           <div class="hero-meta">
             <div class="meta-item">
@@ -97,14 +99,14 @@
             </div>
             <div class="result-item">
               <i class="fa-solid fa-users" aria-hidden="true"></i>
-              <span>Tested with 5 international students with positive feedback</span>
+              <span>Usability tested with 5 international students</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-image-casestudy">
-          <img src="../img/Home page Logged In Aug 21, 2025.png"
-            alt="Karla Learn app interface showing the home dashboard">
+        <div class="hero-image-casestudy lightbox-img">
+          <img src="../img/browse courses 3 aug, 2025.png"
+            alt="Karla Learn Browse Courses page showing illustrated courses on credit, loans, debt, home buying, taxes, and travel rewards">
         </div>
       </div>
     </section>
@@ -128,24 +130,24 @@
       <div class="overview-grid">
         <div class="overview-main">
           <h3>The Challenge</h3>
-          <p>International students and newcomers to Canada often struggle with understanding the Canadian financial
-            system, from credit scores to budgeting to renting. Existing resources are scattered,
-            jargon-heavy, and
-            don't address the unique challenges faced by people new to the country.</p>
+          <p>International students and newcomers often have a hard time figuring out how money works in Canada, from
+            credit scores to budgeting to renting. The information that exists is scattered and full of jargon, and
+            most of it isn't written for people who are new to the country.</p>
 
           <h3>The Goal</h3>
-          <p>Create an interactive, engaging tool that makes financial literacy accessible, culturally relevant, and
-            even fun for newcomers navigating money in Canada for the first time.</p>
+          <p>Build a tool that makes Canadian finance easier to understand, and even a little fun, for people dealing
+            with money here for the first time.</p>
         </div>
 
         <div class="overview-sidebar">
           <div class="context-card">
             <h4>Scope</h4>
-            <p>Website with interactive modules, quizzes, and personality-based financial learning.</p>
+            <p>A website with interactive modules, quizzes, and lessons shaped by your spending personality.</p>
           </div>
           <div class="context-card">
             <h4>My Role</h4>
-            <p>Lead UX/UI Designer & Front-End Developer. Owned the design process from research through dev handoff.
+            <p>I was the lead UX/UI designer and a front-end developer on a team of four. I owned the design from
+              research and the persona through handoff to development.
             </p>
           </div>
         </div>
@@ -157,326 +159,34 @@
       <div class="stat-callout-inner">
         <div class="stat-item">
           <span class="stat-number">997K+</span>
-          <span class="stat-label">International students in Canada (2024)</span>
+          <span class="stat-label">Study permit holders in Canada at the end of 2024</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <span class="stat-number">80%</span>
-          <span class="stat-label">Report concern about paying for their education</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-number">3 mo</span>
-          <span class="stat-label">Design & development timeline</span>
+          <span class="stat-number">38%</span>
+          <span class="stat-label">Of newcomers have little to no understanding of Canadian banking or managing money</span>
         </div>
       </div>
+      <p class="stat-source">Sources: 997K+ from
+        <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/transparency/committees/cow-jun-9-2025/international-students.html"
+          target="_blank" rel="noopener noreferrer">IRCC<span class="visually-hidden"> (opens in a new tab)</span></a>
+        (June 2025), as of December 31, 2024. 38% from a
+        <a href="https://www.wealthprofessional.ca/news/industry-news/newcomers-to-canada-face-financial-knowledge-gap-td-survey-finds/389834"
+          target="_blank" rel="noopener noreferrer">TD survey<span class="visually-hidden"> (opens in a new tab)</span></a>
+        reported July 2025 (compared to 25% of the general population).</p>
     </section>
 
-    <!-- SOLUTION SECTION -->
-    <section class="final-solution" id="solution" aria-labelledby="final-title">
-      <div class="final-container">
-        <div class="section-header">
-          <span class="section-label">02</span>
-          <h2 id="final-title">The Solution</h2>
-        </div>
-
-        <p class="section-intro">We created a web application that personalizes the learning experience through playful
-          mascots, gamified progress tracking, and bite-sized modules focused on the most pressing topics for newcomers.
-        </p>
-
-        <div class="final-grid">
-          <!-- Survey & Mascots -->
-          <article class="fs-card card-accent-purple">
-            <div class="fs-icon" aria-hidden="true">
-
-              <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 26 26">
-                <path fill="currentColor"
-                  d="M8.813 0A1 1 0 0 0 8 1v1H4.406C3.606 2 3 2.606 3 3.406V24.5c0 .9.606 1.5 1.406 1.5H21.5c.8 0 1.406-.606 1.406-1.406V3.406c.1-.8-.512-1.406-1.312-1.406H18V1a1 1 0 0 0-1-1H9a1 1 0 0 0-.094 0a1 1 0 0 0-.094 0zM10 2h6v2h-6zM5 4h3v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4h3v20H5zm2 5v4h4V9zm1 1h2v2H8zm5 0v2h6v-2zm-6 5v4h4v-4zm6 1v2h6v-2z" />
-              </svg>
-            </div>
-            <h3>Personality Survey</h3>
-            <p class="mascot-teaser">Four mascots. Four countries. Which one are you?</p>
-            <ul class="mascot-list">
-              <li><span class="mascot-emoji">🐯</span> <strong>Tiger</strong></li>
-              <li><span class="mascot-emoji">🐃</span> <strong>Ox</strong></li>
-              <li><span class="mascot-emoji">🦅</span> <strong>Eagle</strong></li>
-              <li><span class="mascot-emoji">🐉</span> <strong>Dragon</strong></li>
-            </ul>
-          </article>
-
-          <!-- Course Modules -->
-          <article class="fs-card card-accent-teal">
-            <div class="fs-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
-                <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
-                <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
-              </svg>
-            </div>
-            <h3>Course Modules</h3>
-            <p>Targeted learning paths focused on the most pressing topics.</p>
-            <ul class="chip-row" aria-label="Modules">
-              <li class="chip">Understanding Credit</li>
-              <li class="chip">Learning to Budget</li>
-            </ul>
-          </article>
-
-          <!-- Accessibility -->
-          <article class="fs-card card-accent-green">
-            <div class="fs-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8" />
-                <path d="M3 12h18M12 3a16 16 0 0 1 0 18M12 3a16 16 0 0 0 0 18" fill="none" stroke="currentColor"
-                  stroke-width="1.6" stroke-linecap="round" />
-              </svg>
-            </div>
-            <h3>Multi-Browser Support</h3>
-            <p>Accessible and reliable across all modern browsers.</p>
-            <ul class="chip-row" aria-label="Browsers">
-              <li class="chip">Chrome</li>
-              <li class="chip">Edge</li>
-              <li class="chip">Firefox</li>
-              <li class="chip">Brave</li>
-            </ul>
-          </article>
-
-          <!-- Gamification -->
-          <article class="fs-card card-accent-orange">
-            <div class="fs-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="6" x2="10" y1="11" y2="11" />
-                <line x1="8" x2="8" y1="9" y2="13" />
-                <line x1="15" x2="15.01" y1="12" y2="12" />
-                <line x1="18" x2="18.01" y1="10" y2="10" />
-                <path
-                  d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z" />
-              </svg>
-            </div>
-            <h3>Gamified Learning</h3>
-            <p>Motivation built into every step of the journey.</p>
-            <ul class="bullet-list">
-              <li>Progress bar & quiz feedback</li>
-              <li class="flow">Learn <span aria-hidden="true">→</span> Apply <span aria-hidden="true">→</span> Grow</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-
-      <!-- Feature Highlight -->
-      <div class="solution-highlight">
-        <div class="solution-highlight-image">
-          <img src="../img/Survey Complete Aug 21, 2025.png"
-            alt="Survey completion screen showing Quilong mascot result" loading="lazy">
-        </div>
-        <div class="solution-highlight-content">
-          <h3>Meet the Mascots</h3>
-          <p>After completing a short personality survey, users discover which financial mascot matches their spending
-            style. Are they a planner or a spender? Or something else entirely?</p>
-          <p class="highlight-note">It's the kind of thing you'd actually send to a friend — "wait, which one are you?"
-          </p>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- USABILITY TESTING SECTION -->
-    <section class="usability" id="testing" aria-labelledby="usability-title">
-      <div class="usa-container">
-        <div class="section-header">
-          <span class="section-label">03</span>
-          <h2 id="usability-title">Usability Testing</h2>
-        </div>
-
-        <div class="usa-grid">
-          <!-- Testing summary -->
-          <article class="usa-card usa-testing">
-            <h3>Testing Approach</h3>
-            <p class="usa-participants">
-              <span class="usa-badge" aria-hidden="true">5</span>
-              <strong>Participants:</strong> international students
-            </p>
-            <h4>Tasks Performed</h4>
-            <ul class="usa-tasks" aria-label="Tasks">
-              <li>Completing a personality quiz</li>
-              <li>Checking learning progress</li>
-              <li>Reading module content</li>
-            </ul>
-          </article>
-
-          <!-- Findings -->
-          <article class="usa-card usa-findings">
-            <h3>Key Findings</h3>
-            <ul class="usa-list">
-              <li>
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-                <span>Progress bar and quiz feedback were highly motivating.</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-                <span>Users appreciated plain language + visual icons.</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M4 12h10M14 8l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <span>Navigation needed simplification—added breadcrumbs + clearer CTAs.</span>
-              </li>
-            </ul>
-          </article>
-        </div>
-
-        <!-- Pull Quote -->
-        <blockquote class="pull-quote">
-          <p>"I wish I had had a tool like this when I first moved here. Finding out information was difficult and this
-            makes it more fun."
-          </p>
-          <cite>— Usability test participant</cite>
-        </blockquote>
-
-        <!-- Outcome -->
-        <aside class="usa-outcome" role="status" aria-live="polite">
-          <strong>Outcome:</strong> Improved navigation flow, increased user satisfaction, and validated the gamified
-          approach.
-        </aside>
-      </div>
-    </section>
-
-    <!-- DESIGN & DEVELOPMENT SECTION -->
-    <section class="development" id="development" aria-labelledby="dev-title">
-      <div class="dev-container">
-        <div class="section-header">
-          <span class="section-label">04</span>
-          <h2 id="dev-title">Design & Development</h2>
-        </div>
-
-        <p class="dev-built"><strong>Built with:</strong> SvelteKit + Tailwind CSS</p>
-
-        <ul class="tech-chips" aria-label="Tech stack">
-          <li class="chip chip-tech">Figma</li>
-          <li class="chip chip-tech">SvelteKit</li>
-          <li class="chip chip-tech">Tailwind CSS</li>
-          <li class="chip chip-tech">TypeScript</li>
-        </ul>
-
-        <article class="dev-card">
-          <h3>My Contributions</h3>
-          <ul class="dev-list">
-            <li><strong>Design system</strong> — Created component library and style guide in Figma for consistent UI.
-            </li>
-            <li><strong>Front-end development</strong> — Built interactive pages and components in SvelteKit.</li>
-            <li><strong>Responsive groundwork</strong> — Began implementing mobile-first approach towards the end of the
-              project timeline.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- LESSONS LEARNED -->
-    <section class="lessons" aria-labelledby="lessons-title">
-      <div class="lessons-container">
-        <div class="section-header">
-          <span class="section-label">05</span>
-          <h2 id="lessons-title">Lessons Learned</h2>
-        </div>
-
-        <ol class="lesson-grid">
-          <li class="lesson-card lesson-card--purple">
-            <div class="lesson-num" aria-hidden="true">1</div>
-            <h3>Simplicity Wins</h3>
-            <p>Users valued clarity and playfulness over feature overload. Serious topics can still be approachable.</p>
-          </li>
-
-          <li class="lesson-card lesson-card--teal">
-            <div class="lesson-num" aria-hidden="true">2</div>
-            <h3>Accessibility Matters</h3>
-            <p>Proper contrast, alt text, and screen-reader labels made the tool more inclusive for everyone.</p>
-          </li>
-
-          <li class="lesson-card lesson-card--green">
-            <div class="lesson-num" aria-hidden="true">3</div>
-            <h3>End-to-End Ownership</h3>
-            <p>Leading from research → testing → dev handoff built confidence in managing full UX cycles.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- DESIGN BRIEF -->
-    <section class="design-brief" aria-labelledby="brief-title">
-      <div class="brief-container">
-        <div class="section-header">
-          <span class="section-label">06</span>
-          <h2 id="brief-title">Design Brief</h2>
-        </div>
-
-        <div class="brief-grid">
-          <!-- Goals -->
-          <article class="brief-card">
-            <h3>Goals</h3>
-            <p>Make financial literacy accessible, engaging, and culturally relevant for newcomers.</p>
-          </article>
-
-          <!-- Target Audience -->
-          <article class="brief-card">
-            <h3>Target Audience</h3>
-            <p>International students and first-time Canadian residents navigating a new financial system.</p>
-          </article>
-
-          <!-- UI Rationale -->
-          <article class="brief-card brief-rationale">
-            <h3>UI Rationale</h3>
-            <dl class="brief-dl">
-              <div class="row">
-                <dt>Layout</dt>
-                <dd>Clear card-based modules with breadcrumbs for navigation.</dd>
-              </div>
-              <div class="row">
-                <dt>Typography</dt>
-                <dd>Large, legible sans-serif—friendly yet professional.</dd>
-              </div>
-              <div class="row">
-                <dt>Color</dt>
-                <dd>
-                  Purple / Green / Teal for trust + playfulness.
-                  <ul class="palette" aria-label="Brand palette">
-                    <li style="--sw:#8F4BB1" title="Purple"></li>
-                    <li style="--sw:#2FF29E" title="Green"></li>
-                    <li style="--sw:#00739D" title="Dark Teal"></li>
-                  </ul>
-                </dd>
-              </div>
-            </dl>
-          </article>
-
-          <!-- Accessibility -->
-          <article class="brief-card">
-            <h3>Accessibility</h3>
-            <ul class="brief-list">
-              <li>Alt text & ARIA labels throughout</li>
-              <li>AODA color-contrast compliance</li>
-              <li>Tested across Chrome, Edge, Firefox, Brave</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- GRAPHICS CAROUSEL -->
-    <section class="design-graphics">
+    <!-- RESEARCH -->
+    <section class="design-graphics" id="research" aria-labelledby="research-title">
       <div class="section-header">
-        <span class="section-label">07</span>
-        <h2>Research & Graphics</h2>
+        <span class="section-label">02</span>
+        <h2 id="research-title">Research</h2>
       </div>
+      <p class="section-intro">I started by building the persona below from the research that had already been
+        done. From there, I looked at competitors like Duolingo to see what keeps people coming back to learn, and
+        compared how money works in the countries most international students come from. Later in the project, we
+        ran surveys and tested the app with international students.</p>
+
 
       <section class="carousel" aria-label="Case Study Carousel">
         <div class="carousel-inner">
@@ -518,7 +228,7 @@
                       </a>
                     </div>
                   </li>
-                  <li class="slide" data-caption="International student origins worldwide. Source: CBIE.ca">
+                  <li class="slide" data-caption="International student origins worldwide. Source: CBIE, March 2025">
                     <div class="graphic">
                       <a href="https://cbie.ca/media/facts-and-figures/international-students/" target="_blank"
                         rel="noopener noreferrer">
@@ -545,13 +255,136 @@
 
         <p class="carousel-caption" aria-live="polite">User Persona for the financial literacy tool</p>
       </section>
+
+      <div class="research-banking">
+        <h3>How banking works back home</h3>
+        <p>Most international students in Canada come from India, China, Nigeria, and the Philippines, so I looked
+          at how people handle money in each. I found that having a credit card isn't necessarily the norm in
+          those countries. In Canada, your credit history affects things like renting an apartment, so that gap
+          matters.</p>
+        <ul class="country-money" aria-label="How people handle everyday money in each country">
+          <li><strong>India</strong> Most everyday payments happen on a phone, straight from a bank account.</li>
+          <li><strong>China</strong> People pay for almost everything through apps like Alipay and WeChat Pay.</li>
+          <li><strong>Philippines</strong> Phone wallets like GCash and Maya are a common way to pay and send money.</li>
+          <li><strong>Nigeria</strong> Cash is still used for a lot of everyday buying, though paying by phone and bank
+            transfer is growing fast.</li>
+        </ul>
+        <p class="research-outcome">This research shaped the Understanding Credit course and helped us decide which
+          other courses newcomers would need most.</p>
+        <p class="research-method">I compared banking systems, banking culture, financial education, and digital
+          banking in each country.</p>
+      </div>
     </section>
 
+
+    <!-- SOLUTION SECTION -->
+    <section class="final-solution" id="solution" aria-labelledby="final-title">
+      <div class="final-container">
+        <div class="section-header">
+          <span class="section-label">03</span>
+          <h2 id="final-title">The Solution</h2>
+        </div>
+
+        <p class="section-intro">We built a web app that tailors learning to each person, with playful mascots,
+          progress tracking, and short modules on the money topics newcomers need first. The whole app is built
+          around Learn, Apply, Grow.</p>
+
+        <ol class="lag-steps" aria-label="Learn, Apply, Grow">
+          <li class="lag-step lag-step--learn">
+            <span class="lag-name">Learn</span>
+            <p class="lag-tagline">Learn tips on your finances based on your profile.</p>
+            <p>Take the spending personality quiz to meet your mascot, then get courses picked for you, like
+              Understanding Credit and Learning to Budget.</p>
+          </li>
+          <li class="lag-step lag-step--apply">
+            <span class="lag-name">Apply</span>
+            <p class="lag-tagline">Practice finance in short, fun games.</p>
+            <p>Short modules end in quizzes and games, with feedback as you go.</p>
+          </li>
+          <li class="lag-step lag-step--grow">
+            <span class="lag-name">Grow</span>
+            <p class="lag-tagline">Watch your wealth flourish as you become more financially confident.</p>
+            <p>A progress bar shows how far you've come, and finishing courses unlocks harder ones.</p>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Feature Highlight -->
+      <div class="solution-highlight solution-highlight--flip" id="mascots">
+        <div class="solution-highlight-image lightbox-img">
+          <img src="../img/Survey Complete Aug 21, 2025.png"
+            alt="Survey completion screen showing Quilong mascot result" loading="lazy">
+        </div>
+        <div class="solution-highlight-content">
+          <h3>Meet the Mascots</h3>
+          <p>After a short personality quiz, people find out which mascot matches their spending style. Are they a
+            planner, a spender, or something else?</p>
+          <p>The quiz was planned from the start, but labels for spending types can be full of jargon, and some of
+            them make a result sound like the wrong one to get. So I worked with my manager to give each personality
+            an animal instead. "You're a Quilong" is easier to say than a financial label, and it makes money feel
+            friendlier.</p>
+          <p>We picked animals from the four countries most international students in Canada come from: a tiger for
+            India, a dragon for China, an eagle for Nigeria, and an ox for the Philippines, after the carabao water
+            buffalo. That way every result feels familiar, and nobody feels judged by their result.</p>
+          <ul class="mascot-list">
+              <li><span class="mascot-emoji">🐯</span> <strong>Tiger</strong> <span class="mascot-country">India</span></li>
+              <li><span class="mascot-emoji">🐃</span> <strong>Ox</strong> <span class="mascot-country">Philippines</span></li>
+              <li><span class="mascot-emoji">🦅</span> <strong>Eagle</strong> <span class="mascot-country">Nigeria</span></li>
+              <li><span class="mascot-emoji">🐉</span> <strong>Dragon</strong> <span class="mascot-country">China</span></li>
+            </ul>
+          <p class="highlight-note">It's the kind of thing you'd actually send to a friend: "wait, which one are you?"
+          </p>
+
+        </div>
+      </div>
+
+      <!-- Feature Highlight: Courses Picked for You -->
+      <div class="solution-highlight" id="recommendations">
+        <div class="solution-highlight-image lightbox-img">
+          <img src="../img/Home page Logged In Aug 21, 2025.png"
+            alt="Karla Learn home dashboard with a Discover Courses You'll Love carousel" loading="lazy">
+        </div>
+        <div class="solution-highlight-content">
+          <h3>Courses Picked for You</h3>
+          <p>Once someone has a quiz result, the app recommends the courses they'd get the most out of first. I
+            wanted it to work almost like an algorithm, matched to each spending personality, instead of
+            showing everyone the same list in the same order.</p>
+        </div>
+      </div>
+
+      <!-- Feature Highlight: Levels You Unlock -->
+      <div class="solution-highlight solution-highlight--flip" id="levels">
+        <div class="solution-highlight-image lightbox-img">
+          <img src="../img/browse courses aug 21, 2025.png"
+            alt="Karla Learn Browse Courses page with Beginner, Intermediate, and Advanced tabs" loading="lazy">
+        </div>
+        <div class="solution-highlight-content">
+          <h3>Levels You Unlock</h3>
+          <p>Courses are split into beginner, intermediate, and advanced levels, and you unlock the harder ones by
+            finishing the simpler ones first. Looking at apps like Duolingo showed how much a clear next
+            step and a small reward for finishing can keep people learning.</p>
+        </div>
+      </div>
+
+      <!-- Feature Highlight: The Quiz Is Optional -->
+      <div class="solution-highlight" id="optional-quiz">
+        <div class="solution-highlight-image lightbox-img">
+          <img src="../img/cta survey july 24.png"
+            alt="Karla Learn landing page with a What's Your Personality button" loading="lazy">
+        </div>
+        <div class="solution-highlight-content">
+          <h3>The Quiz Is Optional</h3>
+          <p>New visitors can take the personality quiz or skip straight to browsing courses. Making someone
+            finish a quiz before they see anything is an easy way to lose them, so we left that choice up
+            to them.</p>
+        </div>
+      </div>
+    </section>
 
     <!-- USER FLOW SECTION -->
     <section class="user-flow-section" aria-labelledby="flow-title">
       <div class="section-header">
-        <span class="section-label">Research</span>
+        <span class="section-label">04</span>
         <h2 id="flow-title">User Flow</h2>
       </div>
       <p class="section-intro">How users navigate through Karla Learn from first visit to core features.</p>
@@ -606,7 +439,7 @@
                 <span class="flow-arrow-down">↓</span>
                 <div class="flow-node flow-action">Sign Up</div>
                 <span class="flow-arrow-down">↓</span>
-                <div class="flow-node flow-endpoint">Home (Logged In)</div>
+                <div class="flow-node flow-endpoint">Home with Recommended Courses</div>
               </div>
             </div>
 
@@ -618,28 +451,17 @@
                 <div class="flow-node flow-screen">Course Page</div>
                 <span class="flow-arrow-down">↓</span>
                 <div class="flow-node flow-action">View Content</div>
+                <span class="flow-arrow-down">↓</span>
+                <div class="flow-node flow-decision">Take Quiz Later</div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Returning User -->
-        <div class="flow-block">
-          <h3 class="flow-block-title">Returning User</h3>
-          <div class="flow-path flow-path-center">
-            <div class="flow-node flow-entry">Returning User</div>
-            <span class="flow-arrow">→</span>
-            <div class="flow-node flow-screen">Login</div>
-            <span class="flow-arrow">→</span>
-            <div class="flow-node flow-action">Authenticate</div>
-            <span class="flow-arrow">→</span>
-            <div class="flow-node flow-endpoint">Home (Logged In)</div>
-          </div>
-        </div>
 
         <!-- Core Features Grid -->
         <div class="flow-block">
-          <h3 class="flow-block-title">Core Features</h3>
+          <h3 class="flow-block-title">Inside the App</h3>
           <div class="flow-features-grid">
 
             <!-- Learning -->
@@ -667,15 +489,13 @@
                 <span class="flow-node-mini flow-action">View Mascot</span>
                 <span class="mini-arrow">↓</span>
                 <span class="flow-node-mini flow-action">Track Progress</span>
-                <span class="mini-arrow">↓</span>
-                <span class="flow-node-mini flow-action">Edit Settings</span>
               </div>
             </div>
 
             <!-- Social -->
             <div class="flow-feature-card">
               <div class="feature-icon">👥</div>
-              <h4>Social</h4>
+              <h4>Social <span class="flow-planned">Planned</span></h4>
               <div class="feature-flow">
                 <span class="flow-node-mini flow-screen">Friends Page</span>
                 <span class="mini-arrow">↓</span>
@@ -708,74 +528,272 @@
       </div>
     </section>
 
+    <!-- USABILITY TESTING SECTION -->
+    <section class="usability" id="testing" aria-labelledby="usability-title">
+      <div class="usa-container">
+        <div class="section-header">
+          <span class="section-label">05</span>
+          <h2 id="usability-title">Usability Testing</h2>
+        </div>
+
+        <div class="usa-grid">
+          <!-- Testing summary -->
+          <article class="usa-card usa-testing">
+            <h3>Testing Approach</h3>
+            <p class="usa-participants">
+              <span class="usa-badge" aria-hidden="true">5</span>
+              <strong>Participants:</strong> international students
+            </p>
+            <h4>Tasks Performed</h4>
+            <ul class="usa-tasks" aria-label="Tasks">
+              <li>Completing a personality quiz</li>
+              <li>Checking learning progress</li>
+              <li>Reading module content</li>
+            </ul>
+          </article>
+
+          <!-- Findings -->
+          <article class="usa-card usa-findings">
+            <h3>Key Findings</h3>
+            <ul class="usa-list">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <span>The progress bar and quiz feedback kept people motivated.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <span>People liked the plain language and visual icons.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 12h10M14 8l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>Navigation was confusing, so we added breadcrumbs and clearer buttons.</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Pull Quote -->
+        <blockquote class="pull-quote">
+          <p>"I wish I had had a tool like this when I first moved here. Finding out information was difficult and this
+            makes it more fun."
+          </p>
+          <cite>— Usability test participant</cite>
+        </blockquote>
+
+        <!-- Outcome -->
+        <aside class="usa-outcome" role="status" aria-live="polite">
+          <strong>Outcome:</strong> We simplified the navigation, and testing showed the game-like approach was
+          working.
+        </aside>
+      </div>
+    </section>
+
+    <!-- DESIGN & DEVELOPMENT SECTION -->
+    <section class="development" id="development" aria-labelledby="dev-title">
+      <div class="dev-container">
+        <div class="section-header">
+          <span class="section-label">06</span>
+          <h2 id="dev-title">Design & Development</h2>
+        </div>
+
+        <p class="dev-built"><strong>Built with:</strong> SvelteKit + Tailwind CSS</p>
+
+        <ul class="tech-chips" aria-label="Tech stack">
+          <li class="chip chip-tech">Figma</li>
+          <li class="chip chip-tech">SvelteKit</li>
+          <li class="chip chip-tech">Tailwind CSS</li>
+          <li class="chip chip-tech">TypeScript</li>
+        </ul>
+
+        <article class="dev-card">
+          <h3>My Contributions</h3>
+          <ul class="dev-list">
+            <li><strong>Design system</strong> — Built my first design system on my own in Figma, with the core
+              components and their interaction states, like the selected answers in the personality quiz.</li>
+            <li><strong>Front-end development</strong> — Turned my Figma designs into working pages and components in
+              SvelteKit.</li>
+            <li><strong>Accessibility</strong> — Checked colour contrast against AODA, added alt text and ARIA labels, and
+              tested across Chrome, Edge, Firefox, and Brave.</li>
+          </ul>
+        </article>
+
+        <article class="brief-card brief-rationale">
+          <h3>Visual Choices</h3>
+          <dl class="brief-dl">
+            <div class="row">
+              <dt>Layout</dt>
+              <dd>Clear card-based modules with breadcrumbs for navigation.</dd>
+            </div>
+            <div class="row">
+              <dt>Typography</dt>
+              <dd>A large, readable sans-serif that feels friendly but still professional.</dd>
+            </div>
+            <div class="row">
+              <dt>Color</dt>
+              <dd>
+                Purple, green, and teal to feel trustworthy and playful.
+                <ul class="palette" aria-label="Brand palette">
+                  <li style="--sw:#8F4BB1" title="Purple"></li>
+                  <li style="--sw:#2FF29E" title="Green"></li>
+                  <li style="--sw:#00739D" title="Dark Teal"></li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
     <!-- DESIGN IMAGES -->
     <section class="design" id="design">
       <div class="design-container">
         <div class="section-header">
-          <span class="section-label">08</span>
+          <span class="section-label">07</span>
           <h2>Final Designs</h2>
         </div>
 
-        <div class="design-imgs">
+        <div class="design-imgs design-imgs--left">
           <div class="design-img">
-            <img src="../img/cta survey july 24.png" alt="CTA Survey" loading="lazy" decoding="async">
+            <img src="../img/cta survey july 24.png" alt="Karla Learn landing page with a What's Your Personality button" loading="lazy" decoding="async">
             <figcaption>CTA Survey - Logged Out State</figcaption>
           </div>
 
           <div class="design-img">
-            <img src="../img/Home page Logged In Aug 21, 2025.png" alt="Home page of a logged in user" loading="lazy"
+            <img src="../img/Home page Logged In Aug 21, 2025.png" alt="Karla Learn home dashboard with recommended courses" loading="lazy"
               decoding="async">
             <figcaption>Home Dashboard - Logged In</figcaption>
           </div>
 
           <div class="design-img">
-            <img src="../img/Survey 3 Aug 21, 2025.png" alt="CTA Survey" loading="lazy" decoding="async">
+            <img src="../img/Survey 3 Aug 21, 2025.png" alt="Spending personality quiz, question 4 of 5" loading="lazy" decoding="async">
             <figcaption>Personality Survey - In Progress</figcaption>
           </div>
 
           <div class="design-img">
-            <img src="../img/Survey Complete Aug 21, 2025.png" alt="CTA Survey Complete" loading="lazy"
+            <img src="../img/Survey Complete Aug 21, 2025.png" alt="Quiz result reading You're a Quilong, with a dragon mascot" loading="lazy"
               decoding="async">
             <figcaption>Survey Complete - Mascot Result</figcaption>
           </div>
 
           <div class="design-img">
-            <img src="../img/future courses carousel aug 21, 2025.png" alt="Future Courses" loading="lazy"
+            <img src="../img/future courses carousel aug 21, 2025.png" alt="Carousel of upcoming courses" loading="lazy"
               decoding="async">
             <figcaption>Future Courses Carousel</figcaption>
           </div>
 
           <div class="design-img">
-            <img src="../img/join us today km aug 21, 2025.png" alt="Join us today" loading="lazy" decoding="async">
+            <img src="../img/join us today km aug 21, 2025.png" alt="Join Us Today sign-up section" style="object-position: 42% center;" loading="lazy" decoding="async">
             <figcaption>Join Us CTA Section</figcaption>
           </div>
 
           <div class="design-img">
-            <img src="../img/browse courses aug 21, 2025.png" alt="Browse Courses" loading="lazy" decoding="async">
+            <img src="../img/browse courses aug 21, 2025.png" alt="Browse Courses page showing beginner courses" loading="lazy" decoding="async">
             <figcaption>Browse Courses - Grid View</figcaption>
           </div>
 
           <div class="design-img">
-            <img src="../img/browse courses 3 aug, 2025.png" alt="Browse Courses" loading="lazy" decoding="async">
+            <img src="../img/browse courses 3 aug, 2025.png" alt="Browse Courses page filtered to more topics" loading="lazy" decoding="async">
             <figcaption>Browse Courses - Filtered</figcaption>
           </div>
 
           <div class="design-img">
-            <img src="../img/Profile Page CF.png" alt="Profile Page" loading="lazy" decoding="async">
+            <img src="../img/Profile Page CF.png" alt="User profile page with spending personality and personal information" loading="lazy" decoding="async">
             <figcaption>User Profile Page</figcaption>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- LESSONS LEARNED -->
+    <section class="lessons" aria-labelledby="lessons-title">
+      <div class="lessons-container">
+        <div class="section-header">
+          <span class="section-label">08</span>
+          <h2 id="lessons-title">Lessons Learned</h2>
+        </div>
+
+        <ol class="lesson-grid">
+          <li class="lesson-card lesson-card--purple">
+            <div class="lesson-num" aria-hidden="true">1</div>
+            <h3>Plan for mobile from the start</h3>
+            <p>Starting mobile late, without a full design system behind it, made it harder than it needed to be.
+              Now I design for small screens and build out the system early, so the rest of the product has something
+              solid to stand on.</p>
+          </li>
+
+          <li class="lesson-card lesson-card--teal">
+            <div class="lesson-num" aria-hidden="true">2</div>
+            <h3>Look at where people are coming from</h3>
+            <p>Learning that credit cards aren't the norm in students' home countries changed which courses we built.
+              I wouldn't have found that by only looking at how money works in Canada.</p>
+          </li>
+
+          <li class="lesson-card lesson-card--green">
+            <div class="lesson-num" aria-hidden="true">3</div>
+            <h3>Test sooner</h3>
+            <p>Testing showed the navigation was confusing, and adding breadcrumbs fixed it. Next time I'd test
+              rough versions earlier, so we catch problems like that sooner.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- REFERENCES -->
+    <section class="references" aria-labelledby="references-title">
+      <h2 id="references-title">References</h2>
+      <div class="references-grid">
+        <div>
+          <h3>Students and newcomers</h3>
+          <ul>
+          <li>Canadian Bureau for International Education. (2025, March 21). <a href="https://cbie.ca/media/facts-and-figures/international-students/" target="_blank" rel="noopener noreferrer">International students in Canada infographic<span
+                class="visually-hidden"> (opens in a new tab)</span></a>. CBIE.</li>
+          <li>Canadian Immigrant. (2025, July 23). <a href="https://canadianimmigrant.ca/settlement/money-and-business/financial-stress-is-the-top-challenge-for-newcomers-in-canada-report" target="_blank" rel="noopener noreferrer">Financial stress is the top challenge for newcomers in Canada: report<span
+                class="visually-hidden"> (opens in a new tab)</span></a>.</li>
+          <li>Immigration, Refugees and Citizenship Canada. (2025, June 9). <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/transparency/committees/cow-jun-9-2025/international-students.html" target="_blank" rel="noopener noreferrer">International students: Committee of the Whole briefing<span
+                class="visually-hidden"> (opens in a new tab)</span></a>. Government of Canada.</li>
+          <li>Randall, S. (2025, July 28). <a href="https://www.wealthprofessional.ca/news/industry-news/newcomers-to-canada-face-financial-knowledge-gap-td-survey-finds/389834" target="_blank" rel="noopener noreferrer">Newcomers to Canada face financial knowledge gap, TD survey finds<span
+                class="visually-hidden"> (opens in a new tab)</span></a>. Wealth Professional.</li>
+          <li>Stacey, V. (2022, January 28). <a href="https://thepienews.com/survey-points-psychological-academic-and-financial-stress-in-canada/" target="_blank" rel="noopener noreferrer">Canada: survey points to psychological, academic and financial stress<span
+                class="visually-hidden"> (opens in a new tab)</span></a>. The PIE News.</li>
+          <li>Taylor, S. (2024, March 15). <a href="https://globalnews.ca/news/10362545/international-students-financial-challenges-canada/" target="_blank" rel="noopener noreferrer">Financial stress taking a toll on international students, advocates say<span
+                class="visually-hidden"> (opens in a new tab)</span></a>. Global News.</li>
+          <li>Varughese, A., &amp; Schwartz, S. (2022, April). <a href="https://universityaffairs.ca/opinion/the-pandemic-exposed-the-vulnerability-of-international-students-in-canada/" target="_blank" rel="noopener noreferrer">The pandemic exposed the vulnerability of international students in Canada<span
+                class="visually-hidden"> (opens in a new tab)</span></a>. University Affairs.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Banking in India, China, Nigeria, and the Philippines</h3>
+          <ul>
+          <li>Bangko Sentral ng Pilipinas. (2022). <a href="https://www.bsp.gov.ph/Pages/InclusiveFinance/NSFI-2022-2028.pdf" target="_blank" rel="noopener noreferrer">National strategy for financial inclusion 2022–2028<span
+                class="visually-hidden"> (opens in a new tab)</span></a>.</li>
+          <li>Central Bank of Nigeria. <a href="https://www.cbn.gov.ng/out/2019/ccd/national%20financial%20inclusion%20strategy.pdf" target="_blank" rel="noopener noreferrer">National financial inclusion strategy (revised)<span
+                class="visually-hidden"> (opens in a new tab)</span></a>.</li>
+          <li>CGAP. (2020, December). <a href="https://www.cgap.org/research/publication/china-digital-payments-revolution" target="_blank" rel="noopener noreferrer">China: A digital payments revolution<span
+                class="visually-hidden"> (opens in a new tab)</span></a>.</li>
+          <li>Reserve Bank of India. (2020). <a href="https://www.rbi.org.in/commonman/upload/english/content/pdfs/english_16042021.pdf" target="_blank" rel="noopener noreferrer">National strategy for financial inclusion 2019–2024<span
+                class="visually-hidden"> (opens in a new tab)</span></a>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!-- PROJECT NAVIGATION -->
     <nav class="project-nav-footer" aria-label="Project navigation">
-      <a href="../work/" class="project-nav-link">
-        <i class="fa-solid fa-grid-2" aria-hidden="true"></i>
-        All Projects
+      <a href="../gatore/" class="project-nav-link">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        Previous: GATORE
       </a>
-      <a href="../indie-game-jam/" class="project-nav-link">
-        Next Project
+      <a href="../indie-game-jam/" class="project-nav-link project-nav-next">
+        Next: Indie Game Jam
         <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
       </a>
     </nav>
@@ -791,8 +809,7 @@
 
       <div class="footer-tagline">
         <p class="tagline">
-          Designer crafting intuitive,<br>
-          human-centered experiences.
+          Currently looking for UX/UI and product design roles.
         </p>
       </div>
 

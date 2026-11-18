@@ -1015,7 +1015,7 @@ h2.about-profile-name,
 }
 
 .featured-project.featured-project--karla .featured-project-media img {
-  object-position: left top;
+  object-position: center top;
 }
 
 .featured-project:hover {

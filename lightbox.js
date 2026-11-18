@@ -66,15 +66,40 @@ document.addEventListener("DOMContentLoaded", () => {
       `View ${caption?.textContent || "image"} full size`
     );
 
-    item.addEventListener("click", () => openLightbox(item));
+    item.addEventListener("click", () => openFromItem(item));
 
     item.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        openLightbox(item);
+        openFromItem(item);
       }
     });
   });
+
+  // A screenshot outside the gallery (hero, feature highlights) that also
+  // appears in the Final Designs gallery opens the whole gallery at that image,
+  // so people can keep browsing instead of getting stuck on one picture.
+  function galleryMatchFor(item) {
+    if (!item.classList.contains("lightbox-img")) return null;
+    const src = item.querySelector("img")?.src;
+    if (!src) return null;
+    return (
+      designImages.find(
+        (other) =>
+          other !== item &&
+          other.classList.contains("design-img") &&
+          other.querySelector("img")?.src === src
+      ) || null
+    );
+  }
+
+  let returnFocusTo = null;
+
+  function openFromItem(item) {
+    const match = galleryMatchFor(item);
+    returnFocusTo = item;
+    openLightbox(match || item);
+  }
 
   function getFocusableInLightbox() {
     return [closeBtn, prevBtn, nextBtn].filter(
@@ -129,7 +154,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = "";
     setBackgroundInert(false);
     // Return focus to the image that was clicked
-    currentGroup[currentIndex]?.focus();
+    (returnFocusTo || currentGroup[currentIndex])?.focus();
+    returnFocusTo = null;
   }
 
   function updateLightboxContent() {
@@ -142,24 +168,22 @@ document.addEventListener("DOMContentLoaded", () => {
     lightboxImg.alt = img.alt;
     lightboxCaption.textContent = caption?.textContent || dataCaption || "";
 
-    // Update nav button visibility
-    prevBtn.style.display = currentIndex > 0 ? "flex" : "none";
-    nextBtn.style.display =
-      currentIndex < currentGroup.length - 1 ? "flex" : "none";
+    // The gallery loops, so arrows show whenever there's more than one image
+    const hasMany = currentGroup.length > 1;
+    prevBtn.style.display = hasMany ? "flex" : "none";
+    nextBtn.style.display = hasMany ? "flex" : "none";
   }
 
   function showPrev() {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateLightboxContent();
-    }
+    if (currentGroup.length < 2) return;
+    currentIndex = (currentIndex - 1 + currentGroup.length) % currentGroup.length;
+    updateLightboxContent();
   }
 
   function showNext() {
-    if (currentIndex < currentGroup.length - 1) {
-      currentIndex++;
-      updateLightboxContent();
-    }
+    if (currentGroup.length < 2) return;
+    currentIndex = (currentIndex + 1) % currentGroup.length;
+    updateLightboxContent();
   }
 
   // Event listeners

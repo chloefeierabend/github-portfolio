@@ -1,0 +1,18 @@
+# Chloe Feierabend
+
+> UX/UI and product designer based in Waterloo, Ontario. I design friendly products that respect people's time, from the first sketch to the final build. Currently looking for UX/UI and product design roles.
+
+I've always been interested in design and learned to code to support it, so I design products and help build them (React, SvelteKit). My work focuses on respecting people's time, research that shapes real design decisions, design systems, and accessibility.
+
+## Case studies
+
+- [GATORE](https://chloefeierabend.com/gatore/): Reservation and game library platform for board game cafés, with a customer site and a business portal. UX/UI design lead and front-end developer. 2nd place at Conestoga College's capstone demo day (2026).
+- [Karla Learn](https://chloefeierabend.com/financial-literacy/): Financial literacy web app for international students and newcomers to Canada. Lead UX/UI and product designer on a team of four (2025).
+- [Indie Game Jam](https://chloefeierabend.com/indie-game-jam/): Posters and screen graphics for two indie game jams at Conestoga College.
+
+## More
+
+- [All work](https://chloefeierabend.com/work/)
+- [Contact](https://chloefeierabend.com/contact/)
+- [Resume](https://chloefeierabend.com/Chloe_Feierabend_Resume.pdf)
+- [LinkedIn](https://www.linkedin.com/in/chloe-feierabend/)

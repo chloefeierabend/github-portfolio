@@ -6,6 +6,7 @@ I've always been interested in design and learned to code to support it, so I de
 
 ## Case studies
 
+- [Fyzz](https://chloefeierabend.com/fyzz/): Trip planner for casual plans (a group, a date, or solo). People vote on places and the day is built around weather, opening hours and travel time. Product designer. Built in React and Supabase over 20 milestones (2026).
 - [GATORE](https://chloefeierabend.com/gatore/): Reservation and game library platform for board game cafés, with a customer site and a business portal. UX/UI design lead and front-end developer. 2nd place at Conestoga College's capstone demo day (2026).
 - [Karla Learn](https://chloefeierabend.com/financial-literacy/): Financial literacy web app for international students and newcomers to Canada. Lead UX/UI and product designer on a team of four (2025).
 - [Indie Game Jam](https://chloefeierabend.com/indie-game-jam/): Posters and screen graphics for two indie game jams at Conestoga College.

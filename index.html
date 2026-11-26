@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Mono:wght@400&family=DM+Sans:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="css/site.css">
   <script src="js/menu.js" defer></script>
+  <script src="js/bird.js" defer></script>
 </head>
 
 <body class="cf" id="top">
@@ -51,7 +52,7 @@
         <div class="bird-hero-text">
           <h1 class="h-hero">Chloe<br>Feierabend</h1>
           <p class="label hero-role">UX/UI + product designer · Waterloo, ON</p>
-          <p class="hero-lede">I design warm, playful products, from the first sketch to a <span class="squiggle">working app.<svg aria-hidden="true" viewBox="0 0 300 24" preserveAspectRatio="none"><path d="M4 14 C 40 4, 70 22, 110 12 S 180 4, 220 14 S 280 18, 296 8" fill="none" stroke="#1B9A8F" stroke-width="7" stroke-linecap="round" /></svg></span></p>
+          <p class="hero-lede">I design warm, playful products, from the first sketch to a <span class="squiggle">working app.<svg aria-hidden="true" viewBox="0 0 300 24" preserveAspectRatio="none"><path d="M4 14 C 40 4, 70 22, 110 12 S 180 4, 220 14 S 280 18, 296 8" pathLength="1" fill="none" stroke="#1B9A8F" stroke-width="7" stroke-linecap="round" /></svg></span></p>
           <div class="btn-row hero-btns">
             <a class="btn btn--solid" href="contact/">Let's connect</a>
             <a class="btn btn--outline" href="Chloe_Feierabend_Resume.pdf" target="_blank" rel="noopener">Resume</a>
@@ -60,7 +61,7 @@
           <p class="status">open to UX/UI + product roles</p>
         </div>
         <div class="bird-hero-art">
-          <img src="img/site/bird-creature.min.svg" width="371" height="742" alt="Chloe's illustrated character: a fluffy little bird with an orange beak and watercolour fish-fin legs, standing with its hands on its hips">
+          <img class="js-bird" src="img/site/bird-creature.min.svg" width="371" height="742" alt="Chloe's illustrated character: a fluffy little bird with an orange beak and watercolour fish-fin legs, standing with its hands on its hips">
         </div>
       </section>
 
@@ -79,42 +80,42 @@
         </div>
         <div class="cards">
           <article class="card">
-            <img class="card-img shot--gatore" src="img/gatore/Desktop-Client-Hero.png" alt="GATORE board game café reservation platform interface" loading="lazy" decoding="async">
+            <img class="card-img shot--gatore pan vt-shot-gatore" src="img/gatore/Desktop-Client-Hero.png" alt="GATORE board game café reservation platform interface" loading="lazy" decoding="async">
             <div class="card-body">
               <ul class="tags" aria-label="Project details">
                 <li class="tag">capstone</li>
                 <li class="tag">design + dev</li>
                 <li class="tag">2nd place</li>
               </ul>
-              <h3 class="h-card">GATORE</h3>
+              <h3 class="h-card vt-title vt-title-gatore">GATORE</h3>
               <p>Reservations and a game library for board game cafés, with guest checkout built in.</p>
               <a class="text-link" href="gatore/">Read the case study →</a>
             </div>
           </article>
 
           <article class="card">
-            <img class="card-img shot--karla" src="img/karla/browse-courses-3.png" alt="Karla Learn Browse Courses page with illustrated money courses" loading="lazy" decoding="async">
+            <img class="card-img shot--karla vt-shot-karla" src="img/karla/browse-courses-3.png" alt="Karla Learn Browse Courses page with illustrated money courses" loading="lazy" decoding="async">
             <div class="card-body">
               <ul class="tags" aria-label="Project details">
                 <li class="tag">co-op</li>
                 <li class="tag">team of 4</li>
                 <li class="tag">5 user tests</li>
               </ul>
-              <h3 class="h-card">Karla Learn</h3>
+              <h3 class="h-card vt-title vt-title-karla">Karla Learn</h3>
               <p>Financial literacy for international students and newcomers, with animal mascots.</p>
               <a class="text-link" href="financial-literacy/">Read the case study →</a>
             </div>
           </article>
 
           <article class="card">
-            <img class="card-img shot--fyzz" src="img/fyzz/card.png" alt="Fyzz itinerary with ticket-style stop cards" loading="lazy" decoding="async">
+            <img class="card-img shot--fyzz pan" src="img/fyzz/card.png" alt="Fyzz itinerary with ticket-style stop cards" loading="lazy" decoding="async">
             <div class="card-body">
               <ul class="tags" aria-label="Project details">
                 <li class="tag">personal</li>
                 <li class="tag">React app</li>
                 <li class="tag tag--progress">in progress</li>
               </ul>
-              <h3 class="h-card">Fyzz</h3>
+              <h3 class="h-card vt-title vt-title-fyzz">Fyzz</h3>
               <p>A trip planner where everyone votes on places and the day gets built around the weather and opening hours.</p>
               <a class="text-link" href="fyzz/">Read the case study →</a>
             </div>
@@ -167,7 +168,7 @@
           <p class="cf-footer-title">Let's make something.</p>
           <p class="cf-footer-status">open to UX/UI + product roles · Waterloo, ON</p>
         </div>
-        <img class="cf-footer-bird" src="img/site/bird-creature-light.min.svg" alt="" width="329" height="706" loading="lazy">
+        <div class="cf-footer-perch"><img class="cf-footer-bird" src="img/site/bird-creature-light.min.svg" alt="" width="329" height="706" loading="lazy"></div>
       </div>
       <div class="cf-footer-links">
         <nav aria-label="Get in touch">

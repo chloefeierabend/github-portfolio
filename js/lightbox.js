@@ -1,6 +1,4 @@
-/**
- * Lightbox - Click to view images full size
- */
+/* Lightbox */
 
 document.addEventListener("DOMContentLoaded", () => {
   // Create lightbox elements
@@ -38,9 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = lightbox.querySelector(".lightbox-prev");
   const nextBtn = lightbox.querySelector(".lightbox-next");
 
-  // Get all lightbox-enabled images, grouped by their nearest <section> so
-  // Prev/Next only cycle through images that actually belong together
-  // (e.g. a feature highlight shouldn't jump into the unrelated final-designs gallery).
+  // Images, grouped by section
   const designImages = Array.from(document.querySelectorAll(".design-img, .lightbox-img"));
   const groups = new Map();
 
@@ -76,9 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // A screenshot outside the gallery (hero, feature highlights) that also
-  // appears in the Final Designs gallery opens the whole gallery at that image,
-  // so people can keep browsing instead of getting stuck on one picture.
+  // Open the matching gallery image
   function galleryMatchFor(item) {
     if (!item.classList.contains("lightbox-img")) return null;
     const src = item.querySelector("img")?.src;
@@ -125,9 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Keep the rest of the page out of the accessibility tree while the
-  // lightbox is open, so Tab and screen-reader virtual cursors can't
-  // reach hidden background content.
+  // Make the page behind the lightbox inert
   function setBackgroundInert(isInert) {
     Array.from(document.body.children).forEach((el) => {
       if (el === lightbox) return;
@@ -168,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lightboxImg.alt = img.alt;
     lightboxCaption.textContent = caption?.textContent || dataCaption || "";
 
-    // The gallery loops, so arrows show whenever there's more than one image
+    // Arrows
     const hasMany = currentGroup.length > 1;
     prevBtn.style.display = hasMany ? "flex" : "none";
     nextBtn.style.display = hasMany ? "flex" : "none";

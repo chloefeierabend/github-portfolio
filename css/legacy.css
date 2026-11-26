@@ -110,7 +110,7 @@
 
 .legacy .cf-footer a:hover {
   color: #8FD6CB;
-  background: transparent;
+  background-color: transparent;
 }
 
 .legacy .cf-footer p {
@@ -150,7 +150,7 @@
   color: var(--ink);
   line-height: 1.5;
   border-radius: 4px;
-  background: transparent;
+  background-color: transparent;
 }
 
 .legacy .cf-nav a {
@@ -159,7 +159,7 @@
 
 .legacy .cf-nav a:hover {
   color: var(--teal-text);
-  background: transparent;
+  background-color: transparent;
 }
 
 .legacy .cf-nav li,

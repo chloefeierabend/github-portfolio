@@ -347,8 +347,8 @@ body.cf {
 }
 
 .cf .btn--outline:hover {
-  background: var(--ink);
-  color: var(--cream);
+  background: var(--white);
+  color: var(--ink);
 }
 
 .tags {
@@ -1813,4 +1813,217 @@ body.cf {
 /* Fyzz sign-off crop */
 .decision-img--signoff {
   object-position: 50% 37%;
+}
+
+/* ---------- Interactions ---------- */
+
+/* Hero squiggle */
+.squiggle path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  animation: squiggle-draw 0.9s cubic-bezier(0.65, 0, 0.35, 1) 0.35s both;
+}
+
+@keyframes squiggle-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+}
+
+/* Nav and footer links */
+.cf .cf-nav a,
+.cf .cf-footer a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-size: 0% 2px;
+  background-position: 0 calc(100% + 6px);
+  transition: background-size 0.25s ease, color 0.2s ease;
+}
+
+.cf .cf-nav a {
+  background-image: linear-gradient(var(--teal), var(--teal));
+  background-size: 0% 3px;
+  text-decoration: none;
+}
+
+.cf .cf-footer a {
+  background-position: 0 calc(100% + 2px);
+}
+
+.cf .cf-nav a:hover,
+.cf .cf-nav a:focus-visible,
+.cf .cf-nav a[aria-current="page"],
+.cf .cf-footer a:hover,
+.cf .cf-footer a:focus-visible {
+  background-size: 100% 3px;
+  text-decoration: none;
+}
+
+.cf .cf-footer a:hover,
+.cf .cf-footer a:focus-visible {
+  background-size: 100% 2px;
+}
+
+/* Case study links */
+.cf .text-link {
+  text-underline-offset: 4px;
+}
+
+/* Buttons */
+.cf .btn {
+  box-shadow: 0 0 0 var(--ink);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.cf .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 0 var(--ink);
+}
+
+.cf .btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 0 var(--ink);
+}
+
+/* Screenshot pan */
+.pan {
+  object-position: 50% 0;
+  transition: object-position 0.8s ease, transform 0.25s ease;
+}
+
+.card:hover .pan,
+.cs-row:hover .pan {
+  object-position: 50% 100%;
+  transition: object-position 4s ease-in-out, transform 0.25s ease;
+}
+
+/* Page transitions */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
+::view-transition-group(*) {
+  animation-duration: 0.45s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cf-header { view-transition-name: site-header; }
+.vt-title { width: fit-content; }
+.vt-title-gatore { view-transition-name: title-gatore; }
+.vt-title-karla { view-transition-name: title-karla; }
+.vt-title-fyzz { view-transition-name: title-fyzz; }
+.vt-shot-gatore { view-transition-name: shot-gatore; }
+.vt-shot-karla { view-transition-name: shot-karla; }
+
+@media (prefers-reduced-motion: reduce) {
+  .squiggle path {
+    stroke-dashoffset: 0;
+  }
+
+  .card:hover .pan,
+  .cs-row:hover .pan {
+    object-position: 50% 0;
+  }
+
+  .cf .btn:hover,
+  .cf .btn:active {
+    transform: none;
+  }
+}
+
+/* Stat count-ups */
+.stat-number {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Bird ---------- */
+
+.bird-hero-art {
+  --bird-h: 380px;
+  --bird-drop: -12px;
+}
+
+.bird-hero--contact .bird-hero-art {
+  --bird-h: 340px;
+  --bird-drop: -11px;
+}
+
+.outside .bird-hero-art {
+  --bird-h: 320px;
+  --bird-drop: -10px;
+}
+
+.bird-hero-art > .bird-svg,
+.bird-hero-art > img.js-bird {
+  display: block;
+  width: auto;
+  height: var(--bird-h);
+  margin-bottom: var(--bird-drop);
+}
+
+/* Header logo wiggle */
+.cf-logo:hover img {
+  animation: logo-wiggle 0.6s ease;
+}
+
+@keyframes logo-wiggle {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-10deg); }
+  50% { transform: rotate(8deg); }
+  75% { transform: rotate(-4deg); }
+}
+
+/* Footer bird peek */
+.cf-footer-perch {
+  flex: 0 0 auto;
+  overflow: hidden;
+  margin-bottom: -2px;
+  padding-top: 10px;
+}
+
+.cf-footer-perch .cf-footer-bird {
+  margin-bottom: 0;
+}
+
+.has-js .cf-footer-perch .cf-footer-bird {
+  transform: translateY(105%);
+  transition: transform 0.8s cubic-bezier(0.3, 1.35, 0.5, 1) 0.15s;
+}
+
+.has-js .cf-footer.is-seen .cf-footer-perch .cf-footer-bird {
+  transform: none;
+}
+
+@media (max-width: 720px) {
+  .bird-hero-art,
+  .bird-hero--contact .bird-hero-art,
+  .outside .bird-hero-art {
+    --bird-h: 250px;
+    --bird-drop: -8px;
+  }
+
+  .cf-footer-perch {
+    margin-left: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .has-js .cf-footer-perch .cf-footer-bird {
+    transform: none;
+  }
 }

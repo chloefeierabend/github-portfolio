@@ -2,19 +2,14 @@
 <html lang="en">
 
 <head>
-
-
-
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="img/site/favicon.png">
-  <link rel="apple-touch-icon" href="img/site/favicon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chloe Feierabend: UX/UI &amp; Product Designer</title>
   <meta name="description" content="Chloe Feierabend, UX/UI and product designer in Waterloo, Ontario. I design friendly products that respect people&#x27;s time, from the first sketch to the final build.">
   <link rel="canonical" href="https://chloefeierabend.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Chloe Feierabend">
-  <meta property="og:title" content="Chloe Feierabend | UX/UI &amp; Product Designer">
+  <meta property="og:title" content="Chloe Feierabend: UX/UI &amp; Product Designer">
   <meta property="og:description" content="Chloe Feierabend, UX/UI and product designer in Waterloo, Ontario. I design friendly products that respect people&#x27;s time, from the first sketch to the final build.">
   <meta property="og:url" content="https://chloefeierabend.com/">
   <meta property="og:image" content="https://chloefeierabend.com/img/site/og-image.png">
@@ -22,324 +17,181 @@
   <meta property="og:image:height" content="1260">
   <meta property="og:image:alt" content="Chloe Feierabend, UX/UI and product designer">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Chloe Feierabend | UX/UI &amp; Product Designer">
+  <meta name="twitter:title" content="Chloe Feierabend: UX/UI &amp; Product Designer">
   <meta name="twitter:description" content="Chloe Feierabend, UX/UI and product designer in Waterloo, Ontario. I design friendly products that respect people&#x27;s time, from the first sketch to the final build.">
   <meta name="twitter:image" content="https://chloefeierabend.com/img/site/og-image.png">
-  <link rel="stylesheet" href="css/main.css" />
-  <!-- <link rel="stylesheet" href="css/skip-button.css"> -->
-  <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin>
-
-
-  <!-- Preconnects -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/site/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="img/site/favicon-64.png">
+  <link rel="apple-touch-icon" href="img/site/bird-head-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Non-blocking load: preload as style, then swap rel on load -->
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&family=Inter:wght@400;500;600;700&display=swap"
-    onload="this.onload=null;this.rel='stylesheet'">
-
-  <!-- No-JS fallback -->
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&family=Inter:wght@400;500;600;700&display=swap">
-  </noscript>
-
-  <title>Chloe Feierabend | UX/UI &amp; Product Designer</title>
-
-  <script src="js/hamburger.js" defer></script>
-
-  <style>
-    .navbar a:hover {
-      transition: font-family 1s;
-    }
-
-    .skip-to-content {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: rgb(251, 250, 246);
-      color: rgb(0, 0, 0);
-      padding: 10px 16px;
-      border-radius: 0 0 6px 0;
-      text-decoration: none;
-      font-weight: 600;
-      z-index: 100;
-      transition: top 0.3s ease;
-      font-family: "Inter", sans-serif;
-    }
-
-    /* Reveal on focus */
-    .skip-to-content:focus {
-      top: 0;
-      background: rgba(251, 250, 246, 0.772);
-      outline: 3px solid #1e40af;
-    }
-
-    /* Focus accessibility */
-    .skip-to-content:focus-visible {
-      outline: 3px solid #1e40af;
-      outline-offset: 3px;
-    }
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://chloefeierabend.com/#chloe",
-        "name": "Chloe Feierabend",
-        "url": "https://chloefeierabend.com/",
-        "image": "https://chloefeierabend.com/img/site/pfp.jpg",
-        "jobTitle": "UX/UI and Product Designer",
-        "description": "UX/UI and product designer who designs friendly products that respect people's time, from the first sketch to the final build.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Waterloo",
-          "addressRegion": "ON",
-          "addressCountry": "CA"
-        },
-        "knowsAbout": [
-          "Product design",
-          "UX design",
-          "UI design",
-          "Design systems",
-          "Front-end development",
-          "Accessibility",
-          "Figma",
-          "React",
-          "SvelteKit"
-        ],
-        "sameAs": [
-          "https://www.linkedin.com/in/chloe-feierabend/"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://chloefeierabend.com/#website",
-        "url": "https://chloefeierabend.com/",
-        "name": "Chloe Feierabend",
-        "author": {
-          "@id": "https://chloefeierabend.com/#chloe"
-        }
-      }
-    ]
-  }
-  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Mono:wght@400&family=DM+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/menu.js" defer></script>
 </head>
-<script src="https://kit.fontawesome.com/5973f658b0.js" crossorigin="anonymous" defer></script>
 
-<body>
-  <!-- Skip link for screen reader and keyboard users -->
-  <a href="#main" class="skip-to-content">Skip to main content</a>
+<body class="cf" id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- Navigation bar -->
-  <nav class="navbar">
-    <div class="container">
-      <!-- Logo -->
-      <div class="logo-left">
-        <a href="index.html" class="logo">CF</a>
-      </div>
+  <div class="wrap">
+    <header class="cf-header">
+      <a class="cf-logo" href="./" aria-label="Chloe Feierabend, home"><img src="img/site/bird-head-logo.min.svg" alt="" width="56" height="56"></a>
+      <button class="cf-menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span>menu</span><svg aria-hidden="true" viewBox="0 0 20 14"><path d="M1 1h18M1 7h18M1 13h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg></button>
+      <nav class="cf-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="work/">./work</a></li>
+          <li><a href="about/">./about</a></li>
+          <li><a href="contact/">./contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <!-- Hamburger button -->
-      <button class="nav-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
-        <!-- your SVG icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" class="menu-icon">
-          <path fill="currentColor"
-            d="M22 13c0 1.11-.89 2-2 2H4a2 2 0 1 1 0-4h9l2.5 2l2.5-2h2a2 2 0 0 1 2 2M12 3C3 3 3 9 3 9h18s0-6-9-6M3 18c0 1.66 1.34 3 3 3h12c1.66 0 3-1.34 3-3v-1H3z" />
-        </svg>
-      </button>
-
-      <!-- Navigation links -->
-      <ul id="site-menu" class="nav">
-        <li><a href="work/">Work</a></li>
-        <li><a href="contact/">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main id="main">
-
-    <!-- Container for the content -->
-    <div class="content">
-      <div class="container">
-
-        <!-- Hero section for the homepage -->
-        <section class="hero">
-          <!-- Container for the hero section -->
-          <div class="hero-container">
-            <!-- Container for hero content -->
-            <div class="hero-content">
-              <!-- Title for the hero section -->
-              <h1 class="hero-name border-1 border-black">
-                <!-- Name with a londria font -->
-                <span class="londrina-shadow-regular hero-name leading-tight">Chloe </span>
-                <span class="londrina-shadow-regular hero-name mt-0 leading-[2px]">Feierabend</span>
-              </h1>
-              <!-- Description for the hero section -->
-              <div class="hero-description">
-                <p class="hero-role">UX/UI and product designer</p>
-                <p class="hero-tagline">I design friendly products that respect people's time, from the first sketch
-                  to the final build.</p>
-              </div>
-              <!-- Buttons for the hero section -->
-              <div class="hero-buttons">
-                <!-- Link to contact page -->
-                <a class="hero-button lets-connect-button" href="contact/">Let's connect</a>
-                <!-- Link to resume PDF -->
-                <a class="hero-button resume-button" href="Chloe_Feierabend_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-              </div>
-            </div>
-            <!-- Logo for the hero section -->
-            <div class="hero-logo">
-              <img src="img/site/logo-sept21.png" alt="Logo" loading="eager" fetchpriority="high" decoding="async">
-            </div>
+    <main id="main">
+      <section class="bird-hero">
+        <div class="bird-hero-text">
+          <h1 class="h-hero">Chloe<br>Feierabend</h1>
+          <p class="label hero-role">UX/UI + product designer · Waterloo, ON</p>
+          <p class="hero-lede">I design warm, playful products, from the first sketch to a <span class="squiggle">working app.<svg aria-hidden="true" viewBox="0 0 300 24" preserveAspectRatio="none"><path d="M4 14 C 40 4, 70 22, 110 12 S 180 4, 220 14 S 280 18, 296 8" fill="none" stroke="#1B9A8F" stroke-width="7" stroke-linecap="round" /></svg></span></p>
+          <div class="btn-row hero-btns">
+            <a class="btn btn--solid" href="contact/">Let's connect</a>
+            <a class="btn btn--outline" href="Chloe_Feierabend_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+            <a class="btn btn--outline" href="https://www.linkedin.com/in/chloe-feierabend/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
-        </section>
+          <p class="status">open to UX/UI + product roles</p>
+        </div>
+        <div class="bird-hero-art">
+          <img src="img/site/bird-creature.min.svg" width="371" height="742" alt="Chloe's illustrated character: a fluffy little bird with an orange beak and watercolour fish-fin legs, standing with its hands on its hips">
+        </div>
+      </section>
 
-        <!-- Featured Projects section -->
-        <section class="featured-projects" id="featured-projects">
-          <h2>Featured Projects</h2>
-          <div class="featured-projects-container">
-            <a href="gatore/" class="featured-project featured-project--gatore">
-              <div class="featured-project-media">
-                <img src="img/gatore/Desktop-Client-Hero.png" alt="GATORE customer site home page" loading="lazy"
-                  decoding="async">
-              </div>
-              <h3>GATORE</h3>
-              <p class="featured-project-desc">A reservation and game library platform for board game cafés, with a
-                customer site and a business portal. It took 2nd place at Conestoga's capstone demo day.</p>
-              <span class="featured-project-cta"><span class="decision-link-text">Read the case study</span><span
-                  class="decision-link-arrow" aria-hidden="true">&rarr;</span></span>
-            </a>
+      <section aria-label="Highlights">
+        <ul class="highlights">
+          <li><strong>Web + digital design</strong><span>Currently Web &amp; Digital Marketing Coordinator at The Food Bank of Waterloo Region</span></li>
+          <li><strong>Accessibility</strong><span>Checking my pages against AODA and WCAG at work</span></li>
+          <li><strong>Figma workshop</strong><span>Taught to a college class during my co-op</span></li>
+        </ul>
+      </section>
 
-            <a href="financial-literacy/" class="featured-project featured-project--karla">
-              <div class="featured-project-media">
-                <img src="img/karla/browse-courses-3.png" alt="Karla Learn Browse Courses page with illustrated money courses" loading="lazy"
-                  decoding="async">
-              </div>
-              <h3>Karla Learn</h3>
-              <p class="featured-project-desc">A financial literacy web app that helps international students and
-                newcomers make sense of money in Canada. Built with a team of four in three months.</p>
-              <span class="featured-project-cta"><span class="decision-link-text">Read the case study</span><span
-                  class="decision-link-arrow" aria-hidden="true">&rarr;</span></span>
-            </a>
-          </div>
-        </section>
-
-        <!-- Decisions section: favourite design calls from case studies -->
-        <section class="decisions" id="decisions" aria-labelledby="decisions-title">
-          <div class="decisions-header">
-            <h2 id="decisions-title">Decisions I'm proud of</h2>
-            <p>A few calls I made in my projects, and why I made them.</p>
-          </div>
-
-          <ol class="decisions-list">
-            <li class="decision-card decision-card--gatore">
-              <div class="decision-media">
-                <img src="img/gatore/find-by-game.png" alt="GATORE Find by game page listing games with player count, play time, and difficulty" loading="lazy" decoding="async" style="--zoom: 1.6; --origin: 50% 40%;">
-              </div>
-              <h3>Letting groups search by what they're working with</h3>
-              <p class="decision-context">Café game libraries can run past 3,000 titles, and a group with two hours to spare has no easy way to narrow that down.</p>
-              <p class="decision-body">I built the finder around party size, time available, and complexity. The tools I researched all treated booking a table and picking a game as separate steps, even though groups usually decide both together.</p>
-              <a class="decision-link" href="gatore/#competitive-analysis"><span class="decision-link-text">See the research in GATORE</span><span class="decision-link-arrow" aria-hidden="true">&rarr;</span></a>
-            </li>
-            <li class="decision-card decision-card--karla">
-              <div class="decision-media">
-                <img src="img/karla/home-logged-in.png" alt="Karla Learn home dashboard with a Discover Courses You'll Love carousel" loading="lazy" decoding="async">
-              </div>
-              <h3>Courses picked for each person</h3>
-              <p class="decision-context">Showing everyone the same list of courses in the same order ignores what each person
-                actually needs to learn.</p>
-              <p class="decision-body">I wanted recommendations to work almost like an algorithm. Once someone has a quiz result,
-                the app picks the courses they'd get the most out of first, matched to their spending personality.</p>
-              <a class="decision-link" href="financial-literacy/#recommendations"><span class="decision-link-text">See recommendations in Karla Learn</span><span class="decision-link-arrow" aria-hidden="true">&rarr;</span></a>
-            </li>
-            <li class="decision-card decision-card--gatore">
-              <div class="decision-media">
-                <img src="img/gatore/sign-in-cropped.png" alt="GATORE sign-in window with Customer and Café Owner tabs" loading="lazy" decoding="async" style="object-position: top;">
-              </div>
-              <h3>One sign-in page with Customer and Business tabs</h3>
-              <p class="decision-context">Customers and café owners both sign in, but they're headed to completely different places.</p>
-              <p class="decision-body">I explored separate buttons and a separate business site first. I went with tabs on one shared page, so if someone lands on the wrong side, switching only takes one click.</p>
-              <a class="decision-link" href="gatore/#sign-in"><span class="decision-link-text">See the sign-in page in GATORE</span><span class="decision-link-arrow" aria-hidden="true">&rarr;</span></a>
-            </li>
-            <li class="decision-card decision-card--karla">
-              <div class="decision-media">
-                <img src="img/karla/survey-complete.png" alt="Karla Learn quiz result reading You're a Quilong, with a dragon mascot illustration" loading="lazy" decoding="async" style="object-position: top;">
-              </div>
-              <h3>Animal mascots from students' home countries</h3>
-              <p class="decision-context">We knew from the start that we wanted a spending personality quiz, but labels for
-                spending types can be full of jargon and can make some results sound worse than others.</p>
-              <p class="decision-body">I worked with my manager to give each personality an animal. "You're a Quilong" is easier to
-                say than a financial label, and it makes the topic feel friendlier. Using animals from the four countries
-                most international students come from made every result feel familiar, and nobody feels judged by
-                their result.</p>
-              <a class="decision-link" href="financial-literacy/#mascots"><span class="decision-link-text">Meet the mascots in Karla Learn</span><span class="decision-link-arrow" aria-hidden="true">&rarr;</span></a>
-            </li>
-          </ol>
-        </section>
-
-        <!-- Section for about me -->
-        <section class="about">
-          <!-- Title for the about section -->
-          <h2 class="about-profile-name">About me</h2>
-          <!-- Container for the about section -->
-          <div class="about-container">
-            <!-- Container for the profile picture -->
-            <div class="about-profile-img">
-              <!-- Profile picture -->
-              <!-- <img src="profile.jpg" alt="Chloe Feierabend"> -->
-              <img src="img/site/pfp.jpg" alt="Chloe Feierabend" style="border-radius:50%; object-fit:cover;" />
+      <section class="section section--flush" id="work" aria-labelledby="work-h">
+        <div class="section-head">
+          <p class="label">[featured work]</p>
+          <h2 class="h-section" id="work-h">From sketch to working app</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <img class="card-img shot--gatore" src="img/gatore/Desktop-Client-Hero.png" alt="GATORE board game café reservation platform interface" loading="lazy" decoding="async">
+            <div class="card-body">
+              <ul class="tags" aria-label="Project details">
+                <li class="tag">capstone</li>
+                <li class="tag">design + dev</li>
+                <li class="tag">2nd place</li>
+              </ul>
+              <h3 class="h-card">GATORE</h3>
+              <p>Reservations and a game library for board game cafés, with guest checkout built in.</p>
+              <a class="text-link" href="gatore/">Read the case study →</a>
             </div>
-            <!-- Container for the profile -->
-            <div class="about-profile">
-              <!-- Description for the profile -->
-              <p class="about-profile-description">I've always been interested in design, and I learned to code to support that. Now I get to do both. On GATORE and Karla Learn, I led the design and helped build it in React and SvelteKit.</p>
-              <p class="about-profile-description">A lot of my work comes back to respecting people's time. On GATORE, that meant letting people book a table without making an account. On Karla Learn, it meant making Canadian finance feel approachable with a quiz people actually wanted to share.</p>
-              <p class="about-profile-description">I'm looking for UX/UI and product design roles, and over time I'd like to move toward product management and strategy.</p>
-              <p class="about-profile-description">Away from the screen I'm usually rock climbing or making art. I
-                just like to build and create.</p>
+          </article>
+
+          <article class="card">
+            <img class="card-img shot--karla" src="img/karla/browse-courses-3.png" alt="Karla Learn Browse Courses page with illustrated money courses" loading="lazy" decoding="async">
+            <div class="card-body">
+              <ul class="tags" aria-label="Project details">
+                <li class="tag">co-op</li>
+                <li class="tag">team of 4</li>
+                <li class="tag">5 user tests</li>
+              </ul>
+              <h3 class="h-card">Karla Learn</h3>
+              <p>Financial literacy for international students and newcomers, with animal mascots.</p>
+              <a class="text-link" href="financial-literacy/">Read the case study →</a>
             </div>
-          </div>
-        </section>
-      </div>
-  </main>
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <!-- Left: logo/image -->
-      <div class="footer-left">
-        <img class="footer-logo" src="img/site/cf-box-logo.png" alt="CF logo" fetchpriority="high" decoding="async">
-      </div>
+          </article>
 
-      <!-- Middle: tagline text -->
-      <div class="footer-tagline">
-        <p class="tagline">
-          Currently looking for UX/UI and product design roles.
-        </p>
-      </div>
+          <article class="card">
+            <img class="card-img shot--fyzz" src="img/fyzz/card.png" alt="Fyzz itinerary with ticket-style stop cards" loading="lazy" decoding="async">
+            <div class="card-body">
+              <ul class="tags" aria-label="Project details">
+                <li class="tag">personal</li>
+                <li class="tag">React app</li>
+                <li class="tag tag--progress">in progress</li>
+              </ul>
+              <h3 class="h-card">Fyzz</h3>
+              <p>A trip planner where everyone votes on places and the day gets built around the weather and opening hours.</p>
+              <a class="text-link" href="fyzz/">Read the case study →</a>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <!-- Right: portrait/image + links -->
-      <div class="footer-right">
-        <!-- <img class="footer-portrait" src="portrait-placeholder.png" alt="Portrait"> -->
-        <nav class="footer-nav" aria-label="Footer">
-          <a href="https://www.linkedin.com/in/chloe-feierabend/" target="_blank"><img src="img/site/linkedin.png" alt=""
-              width="16" height="16" style="display:inline;vertical-align:middle;margin-right:4px"> LinkedIn</a>
-          <a href="mailto:chloe.feierabend@gmail.com" target="_blank"><img src="img/site/mail.png" alt="" width="16"
-              height="16" style="display:inline;vertical-align:middle;margin-right:4px"> E-Mail</a>
-          <a href="Chloe_Feierabend_Resume.pdf" target="_blank" rel="noopener noreferrer"><svg
-              xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true"
-              style="display:inline;vertical-align:middle;margin-right:4px">
-              <path fill="currentColor"
-                d="M11.702 15.195q-.136-.053-.267-.184l-2.62-2.619q-.146-.146-.152-.344t.152-.363q.166-.166.357-.169q.192-.003.357.163L11.5 13.65V5.5q0-.213.143-.357T12 5t.357.143t.143.357v8.15l1.971-1.971q.146-.146.347-.153t.366.159q.16.165.163.354t-.162.353l-2.62 2.62q-.13.13-.267.183q-.136.053-.298.053t-.298-.053M6.616 19q-.691 0-1.153-.462T5 17.384v-1.923q0-.213.143-.356t.357-.144t.357.144t.143.356v1.923q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-1.923q0-.213.143-.356t.357-.144t.357.144t.143.356v1.923q0 .691-.462 1.153T17.384 19z"
-                stroke-width="0.4" stroke="currentColor" />
-            </svg> Resume</a>
+      <section class="section section--flush section--far" aria-labelledby="decisions-h">
+        <div class="section-head">
+          <p class="label">[how I think]</p>
+          <h2 class="h-section" id="decisions-h">Decisions I'm proud of</h2>
+        </div>
+        <ol class="decisions">
+          <li>
+            <span class="decision-num" aria-hidden="true">01</span>
+            <div class="decision-text">
+              <h3 class="h-card">Search by group, not by game</h3>
+              <p>Groups pick a table and a game together, so the game finder starts with party size, time available and complexity instead of a list of titles.</p>
+              <p class="from">from GATORE</p>
+            </div>
+            <img class="decision-img shot shot--gatore" src="img/gatore/find-by-game.png" alt="GATORE Find by game page listing board games with player count, play time, and difficulty" loading="lazy" decoding="async">
+          </li>
+          <li>
+            <span class="decision-num" aria-hidden="true">02</span>
+            <div class="decision-text">
+              <h3 class="h-card">Ask before changing the plan</h3>
+              <p>My first version let only the host approve changes, which made them a bottleneck. Going back over it, I realized the problem was never people editing. It was the plan they'd agreed to changing under them. Now changes to a locked plan go to everyone for sign-off.</p>
+              <p class="from">from Fyzz</p>
+            </div>
+            <img class="decision-img decision-img--signoff shot shot--fyzz" src="img/fyzz/sign-off.png" alt="Fyzz itinerary with a sign-off card: two of three people have said Looks good, with an option to go ahead without Sam" loading="lazy" decoding="async">
+          </li>
+          <li>
+            <span class="decision-num" aria-hidden="true">03</span>
+            <div class="decision-text">
+              <h3 class="h-card">Animals, not labels</h3>
+              <p>Spending personalities are shown as animals from students' home countries, so quiz results feel friendly and shareable, not like a bad grade.</p>
+              <p class="from">from Karla Learn</p>
+            </div>
+            <img class="decision-img shot shot--karla" src="img/karla/survey-complete.png" alt="Karla Learn quiz result reading You're a Quilong!, with an illustrated dragon mascot and spending tips" loading="lazy" decoding="async">
+          </li>
+        </ol>
+      </section>
+    </main>
+  </div>
+
+  <footer class="cf-footer">
+    <div class="wrap">
+      <div class="cf-footer-top">
+        <div class="cf-footer-cta">
+          <p class="cf-footer-title">Let's make something.</p>
+          <p class="cf-footer-status">open to UX/UI + product roles · Waterloo, ON</p>
+        </div>
+        <img class="cf-footer-bird" src="img/site/bird-creature-light.min.svg" alt="" width="329" height="706" loading="lazy">
+      </div>
+      <div class="cf-footer-links">
+        <nav aria-label="Get in touch">
+          <ul>
+            <li><a href="mailto:chloe.feierabend@gmail.com">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/chloe-feierabend/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/chloefeierabend" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="Chloe_Feierabend_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+          </ul>
         </nav>
+        <nav class="cf-footer-site" aria-label="Footer">
+          <ul>
+            <li><a href="work/">./work</a></li>
+            <li><a href="about/">./about</a></li>
+            <li><a href="contact/">./contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="cf-footer-bottom">
+        <p><img src="img/site/bird-head-logo.min.svg" alt="" width="28" height="28"><span>© 2026 Chloe Feierabend · designed by me</span></p>
+        <a href="#top">back to top ↑</a>
       </div>
     </div>
   </footer>
-
 </body>
 
 </html>

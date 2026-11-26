@@ -82,7 +82,10 @@
           <div><dt>timeline</dt><dd>Jan – Apr 2026, Conestoga capstone</dd></div>
           <div><dt>result</dt><dd>2nd place at demo day</dd></div>
         </dl>
-        <img class="shot shot--gatore cs-img cs-img--wide vt-shot-gatore" src="../img/gatore/Desktop-Client-Hero.png" alt="GATORE customer home page">
+        <div class="hero-pair">
+          <figure class="lightbox-img"><img class="shot shot--gatore" src="../img/gatore/reserve-a-game-reservation-flow.png" alt="GATORE customer booking flow, reserving a table and a game"><figcaption>For players</figcaption></figure>
+          <figure class="lightbox-img"><img class="shot shot--gatore" src="../img/gatore/business-dashboard.png" alt="GATORE owner dashboard in the business portal"><figcaption>For café owners</figcaption></figure>
+        </div>
       </section>
 
       <section class="section cs-section" id="problem" aria-labelledby="s1">
@@ -134,7 +137,7 @@
               <dl>
                 <div><dt>options</dt><dd class="soft">Require an account to book, which most booking tools do, or let guests book with a name and email.</dd></div>
                 <div><dt>I chose</dt><dd>Guest checkout, with accounts offered for booking history and recommendations.</dd></div>
-                <div><dt>why</dt><dd class="soft">Competitors rarely force an account to book a table. Making it optional removes the biggest drop-off point and still gives regulars a reason to sign up.</dd></div>
+                <div><dt>why</dt><dd class="soft">Competitors rarely force an account to book a table. Making it optional removes a big drop-off point and still gives regulars a reason to sign up.</dd></div>
               </dl>
             </div>
             <div class="choice-img lightbox-img">
@@ -166,9 +169,10 @@
         </div>
         <p class="body-lg">Players and café owners want different things. Players want to find a game and a table quickly. Owners want to see the whole day at a glance and keep the library accurate. So each side got its own information architecture and interaction patterns, built on the same design system.</p>
         <p class="body-lg">The business portal brings reservations, the game library and daily operations into one dashboard. Like the rest of the business side, it follows patterns staff already know from restaurant tools.</p>
-        <div class="lightbox-img cs-img-wrap">
-          <img class="shot shot--gatore cs-img" src="../img/gatore/business-dashboard.png" alt="GATORE business portal dashboard" loading="lazy" decoding="async">
-        </div>
+        <figure class="cs-figure lightbox-img">
+          <img class="shot shot--gatore cs-img" src="../img/gatore/User%20Flow%20-%20Daily%20Operations,%20Management%20&amp;%20Inventory.png" alt="GATORE user flow diagram showing daily operations flows" loading="lazy" decoding="async">
+          <figcaption>User flows for daily operations, management and inventory</figcaption>
+        </figure>
       </section>
 
       <section class="section cs-section" id="design-system" aria-labelledby="s3">
@@ -180,7 +184,7 @@
         <p class="body-lg">The name plays on “alligator,” but a literal reptile green felt cold, so I went with teal. Warm beige and brown bring in the cozy feel of a café.</p>
         <p class="body-lg">Accessibility was built into the system from the start: colour contrast, readable text sizes and screen reader support. The main teal works for buttons and icons, and where small text needed more contrast, I used a darker teal.</p>
         <p class="body-lg">Both sides share one set of tokens: teal, warm beige and warm brown, DM Sans, an 8px corner radius and a 4px grid. Customer screens use them warmly, with room for discovery. Business screens use the same tokens more densely, so staff can scan and act quickly.</p>
-        <p class="body-lg">The system came together near the end. With about three months for the whole project, there wasn't much room to experiment, so I built it from the patterns already in my screens. Once it was finished, I implemented it myself as React and Tailwind components, so the build used the same parts I designed with.</p>
+        <p class="body-lg">The system came together near the end. I meant to start it earlier this time, but there wasn't room for it. With about three months for the whole project, there wasn't much room to experiment, so I built it from the patterns already in my screens. Once it was finished, I implemented it myself as React and Tailwind components, so the build used the same parts I designed with.</p>
         <div class="lightbox-img cs-img-wrap">
           <img class="shot shot--gatore cs-img" src="../img/gatore/find-by-name.png" alt="GATORE café discovery and browse page" loading="lazy" decoding="async">
         </div>
@@ -218,10 +222,31 @@
         <ul class="cs-list cs-list--ink">
           <li>Placed 2nd at Conestoga's capstone demo day. The judges said it felt complete and well thought through, and were impressed by how much we built.</li>
           <li>They were most excited about the idea behind it: bringing people together to meet and play games.</li>
-          <li>Taking it from research to a working build showed me how design and development decisions shape each other.</li>
           <li>Delivered a high-fidelity React prototype covering booking, the game library, and the owner dashboard.</li>
         </ul>
+        <div class="poster-pair">
+          <figure class="lightbox-img"><img class="shot" src="../img/gatore/GATORE-POSTERS-01.png" alt="GATORE capstone demo day poster" loading="lazy" decoding="async"></figure>
+          <figure class="lightbox-img"><img class="shot" src="../img/gatore/GATORE-POSTERS-04.png" alt="GATORE capstone demo day poster" loading="lazy" decoding="async"></figure>
+        </div>
+        <p class="fine-print">Our demo day posters</p>
         <p class="body-lg">We didn't have time for usability testing, so before launch I'd test the booking flow with real players and café staff. Then I'd build the recommendation system for real. It was one of my favourite ideas and I want to see it work. After that, the social side: connecting players with similar tastes so they can meet and play together, which is the part the judges were most excited about.</p>
+        <ol class="lessons">
+          <li>
+            <span class="lesson-num" aria-hidden="true">1</span>
+            <h3>Build the system out first</h3>
+            <p>With three months for everything, the system came together near the end. GATORE is what convinced me to build it out early.</p>
+          </li>
+          <li>
+            <span class="lesson-num" aria-hidden="true">2</span>
+            <h3>Design and development shape each other</h3>
+            <p>Taking it from research to a working build showed me how design and development decisions shape each other.</p>
+          </li>
+          <li>
+            <span class="lesson-num" aria-hidden="true">3</span>
+            <h3>Test before you launch</h3>
+            <p>We didn't have time for usability testing. Next time I'd make room for it before launch.</p>
+          </li>
+        </ol>
       </section>
 
       <section class="section cs-section" id="final-designs" aria-labelledby="sg">

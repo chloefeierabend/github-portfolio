@@ -3,11 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" sizes="32x32" href="../img/site/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="../img/site/favicon-64.png">
-  <link rel="apple-touch-icon" href="../img/site/bird-head-logo.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fyzz case study · Chloe Feierabend</title>
   <meta name="description" content="How Chloe Feierabend designed Fyzz, a trip planner where people vote on places and the day gets built around weather, opening hours and travel time.">
   <link rel="canonical" href="https://chloefeierabend.com/fyzz/">
   <meta property="og:type" content="article">
@@ -23,355 +20,104 @@
   <meta name="twitter:title" content="Fyzz case study · Chloe Feierabend">
   <meta name="twitter:description" content="How Chloe Feierabend designed Fyzz, a trip planner where people vote on places and the day gets built around weather, opening hours and travel time.">
   <meta name="twitter:image" content="https://chloefeierabend.com/img/site/og-image.png">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/caseStudy.css">
-  <link rel="stylesheet" href="../css/lightbox.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/site/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="../img/site/favicon-64.png">
+  <link rel="apple-touch-icon" href="../img/site/bird-head-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Mono:wght@400&family=DM+Sans:wght@400;500;600&display=swap"
-    rel="stylesheet">
-
-  <script src="../js/caseStudy.js" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Mono:wght@400&family=DM+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../css/lightbox.css">
   <script src="../js/menu.js" defer></script>
   <script src="../js/bird.js" defer></script>
-  <script src="../js/countup.js" defer></script>
   <script src="../js/lightbox.js" defer></script>
-  <script src="https://kit.fontawesome.com/5973f658b0.js" crossorigin="anonymous"></script>
-  <title>Fyzz case study · Chloe Feierabend</title>
+  <script src="../js/sectionNav.js" defer></script>
+  <script src="../js/countup.js" defer></script>
 
   <style>
-    /* Fyzz palette: overrides caseStudy.css purple */
-    :root {
+    .theme-fyzz {
       --fz-coral: #B8330F;
       --fz-teal: #0E7A86;
-      --fz-coral-tint: #fbece7;
-      --fz-teal-tint: #e4f1f2;
-
       --fz-indigo: #5D5FBF;
       --fz-blue: #2F5FD1;
       --fz-grey: #8A9099;
     }
 
-    .section-nav .nav-dot.active::before {
-      background: var(--fz-coral);
-      border-color: var(--fz-coral);
-    }
-
-    .section-label {
-      color: var(--fz-coral);
-    }
-
-    .context-card {
-      border-left-color: var(--fz-coral);
-    }
-
-    .context-card h4 {
-      color: var(--fz-coral);
-    }
-
-    .fs-icon {
-      color: var(--fz-coral);
-    }
-
-    .card-accent-purple,
-    .card-accent-orange {
-      border-left-color: var(--fz-coral);
-    }
-
-    .card-accent-teal,
-    .card-accent-green {
-      border-left-color: var(--fz-teal);
-    }
-
-    .lesson-card--purple {
-      border-top-color: var(--fz-coral);
-    }
-
-    .lesson-card--teal {
-      border-top-color: var(--fz-teal);
-    }
-
-    .lesson-card--green {
-      border-top-color: var(--fz-indigo);
-    }
-
-    .result-item i {
-      color: var(--fz-coral);
-    }
-
-    .solution-highlight-content .highlight-note,
-    .pull-quote {
-      border-left-color: var(--fz-coral);
-    }
-
-    .pull-quote {
-      background: var(--fz-coral-tint);
-    }
-
-    .dev-card {
-      border-left-color: var(--fz-coral);
-    }
-
-    .chip-tech {
-      background: var(--fz-teal-tint);
-      border-color: #b5d6d9;
-      color: var(--fz-teal);
-    }
-
-    .stat-callout {
-      background: linear-gradient(135deg, var(--fz-coral) 0%, #8a260b 100%);
-    }
-
-    .overview-main p + p {
-      margin-top: var(--space-3);
-    }
-
-    /* Three stats on one row on desktop */
-    .stat-callout-inner {
-      gap: clamp(1.5rem, 3vw, 2.5rem);
-    }
-
-    .stat-intro {
-      margin: 0 auto var(--space-6);
-      text-align: center;
-      font: 600 var(--text-base)/1.4 var(--font-body);
-      color: var(--color-white);
-      opacity: 0.9;
-    }
-
-    .stat-callout .stat-label {
-      max-width: 250px;
-    }
-
-    .brief-card p + p {
-      margin-top: var(--space-3);
-    }
-
     /* Phone screenshots */
-    .phone-shot img {
-      display: block;
-      max-width: 300px;
-      margin: 0 auto;
-    }
-
-    .design-imgs--phones {
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    }
-
-    .design-imgs--phones .design-img img {
-      height: 440px;
-      object-position: top;
-    }
-
-    .fz-body {
-      font-family: var(--font-body);
-      font-size: var(--text-base);
-      line-height: 1.7;
-      color: var(--color-text-secondary);
-      max-width: 720px;
-      margin: 0 0 var(--space-4);
-    }
-
-    .fz-subhead {
-      font-family: var(--font-body);
-      font-size: var(--text-lg);
-      font-weight: var(--weight-bold);
-      color: var(--color-text);
-      margin: var(--space-10) 0 var(--space-4);
-    }
-
-    /* RESEARCH FINDINGS */
-    .findings {
-      list-style: none;
-      margin: var(--space-6) 0;
-      padding: 0;
+    .phone-row {
       display: grid;
-      gap: var(--space-4);
+      grid-template-columns: repeat(3, minmax(0, 240px));
+      gap: 24px;
+    }
+
+    .phone-row figure {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .phone-row figcaption {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+
+    .phone-shot {
+      height: auto;
+      border-radius: 24px;
+      background: var(--tint-fyzz);
+    }
+
+    .choice-img--phone {
+      flex: 0 1 260px;
+    }
+
+    .choice-img--phone .shot {
+      aspect-ratio: 3 / 4;
+      object-position: top;
+      max-width: 260px;
+    }
+
+    /* Findings */
+    .findings {
       max-width: 760px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      list-style: none;
+      padding: 0;
     }
 
     .findings li {
-      font-family: var(--font-body);
-      font-size: var(--text-base);
-      line-height: 1.7;
-      color: var(--color-text-secondary);
-      padding-left: var(--space-4);
-      border-left: 3px solid var(--color-border);
+      padding-left: 18px;
+      border-left: 3px solid var(--fz-coral);
+      font-size: 18px;
+      line-height: 1.55;
+      color: var(--ink-soft);
     }
 
     .findings strong {
-      color: var(--color-text);
+      color: var(--ink);
     }
 
-    .caveat {
-      font-family: var(--font-body);
-      font-size: var(--text-sm);
-      line-height: 1.6;
-      color: var(--color-text-muted);
-      max-width: 720px;
-      margin: var(--space-6) 0 0;
-    }
-
-    /* PLAN FLOW */
-    .plan-flow {
-      list-style: none;
-      margin: var(--space-8) 0;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: var(--space-8);
-      counter-reset: step;
-    }
-
-    .plan-flow li {
-      position: relative;
-      background: var(--color-white);
-      border: 1px solid var(--color-border);
-      border-top: 4px solid var(--fz-teal);
-      border-radius: var(--radius-lg);
-      padding: var(--space-5);
-    }
-
-    .plan-flow li:nth-child(2) {
-      border-top-color: var(--fz-indigo);
-    }
-
-    .plan-flow li:nth-child(3) {
-      border-top-color: var(--fz-coral);
-    }
-
-    .plan-flow li:not(:last-child)::after {
-      content: "→";
-      position: absolute;
-      right: calc(-1 * var(--space-8) + 6px);
-      top: 50%;
-      transform: translateY(-50%);
-      font: 700 1.25rem/1 var(--font-body);
-      color: var(--color-text-muted);
-    }
-
-    .plan-flow h3 {
-      margin: 0 0 var(--space-2);
-      font: 700 1.05rem/1.3 var(--font-body);
-      color: var(--color-text);
-    }
-
-    .plan-flow p {
-      margin: 0;
-      font: 400 0.95rem/1.55 var(--font-body);
-      color: var(--color-text-secondary);
-    }
-
-    .trip-day {
-      max-width: 760px;
-      background: var(--color-surface-subtle);
-      border-radius: var(--radius-lg);
-      padding: var(--space-4) var(--space-5);
-      font: 400 0.95rem/1.6 var(--font-body);
-      color: var(--color-text-secondary);
-      margin: 0 0 var(--space-8);
-    }
-
-    .trip-day strong {
-      color: var(--color-text);
-    }
-
-    @media (max-width: 820px) {
-      .plan-flow {
-        grid-template-columns: 1fr;
-        gap: var(--space-6);
-      }
-
-      .plan-flow li:not(:last-child)::after {
-        content: "↓";
-        right: auto;
-        left: 50%;
-        top: auto;
-        bottom: calc(-1 * var(--space-6) + 2px);
-        transform: translateX(-50%);
-      }
-    }
-
-    /* COMPARE */
-    .compare-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-4);
-      margin: var(--space-6) 0;
-    }
-
-    .compare-card {
-      background: var(--color-white);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-lg);
-      padding: var(--space-5);
-    }
-
-    .compare-card h3 {
-      margin: 0 0 var(--space-1);
-      font: 700 1.05rem/1.3 var(--font-body);
-      color: var(--color-text);
-    }
-
-    .compare-card .when {
-      display: block;
-      margin-bottom: var(--space-3);
-      font: 500 0.85rem/1.4 var(--font-body);
-      color: var(--color-text-muted);
-    }
-
-    .compare-card p {
-      margin: 0;
-      font: 400 0.95rem/1.6 var(--font-body);
-      color: var(--color-text-secondary);
-    }
-
-    .compare-card--old {
-      background: var(--color-surface-subtle);
-    }
-
-    .compare-card--new {
-      border-left: 4px solid var(--fz-teal);
-    }
-
-    @media (max-width: 768px) {
-      .compare-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .cost-list {
-      margin: var(--space-4) 0 0;
-      padding-left: 20px;
-      max-width: 760px;
-      font: 400 var(--text-base)/1.7 var(--font-body);
-      color: var(--color-text-secondary);
-    }
-
-    .cost-list li {
-      margin-bottom: var(--space-2);
-    }
-
-    .cost-list strong {
-      color: var(--color-text);
-    }
-
-    /* COLOUR ROLES */
+    /* Colour roles */
     .role-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
       list-style: none;
-      margin: var(--space-3) 0 0;
       padding: 0;
-      display: grid;
-      gap: var(--space-3);
+      max-width: 720px;
     }
 
     .role-list li {
       display: grid;
       grid-template-columns: 28px 1fr;
-      gap: var(--space-3);
+      gap: 14px;
       align-items: start;
-      font: 400 0.95rem/1.5 var(--font-body);
-      color: var(--color-text-secondary);
+      font-size: 17px;
+      line-height: 1.5;
+      color: var(--ink-soft);
     }
 
     .role-list .sw {
@@ -379,173 +125,231 @@
       height: 28px;
       border-radius: 50%;
       background: var(--sw);
-      border: 1px solid var(--color-border);
     }
 
     .role-list strong {
-      color: var(--color-text);
+      color: var(--ink);
     }
 
-    /* VOICE PAIRS */
-    .voice-pairs {
-      list-style: none;
-      margin: var(--space-6) 0 0;
-      padding: 0;
+    .system-grid {
       display: grid;
-      gap: var(--space-4);
+      grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+      gap: 32px 48px;
+    }
+
+    .system-grid > div {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .system-grid p {
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--ink-soft);
+    }
+
+    /* Voice pairs */
+    .voice-pairs {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
     }
 
     .voice-pair {
       display: grid;
-      grid-template-columns: 160px 1fr 1fr;
-      gap: var(--space-4);
-      align-items: start;
-      background: var(--color-white);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-lg);
-      padding: var(--space-4) var(--space-5);
-      font-family: var(--font-body);
+      grid-template-columns: 180px 1fr 1fr;
+      gap: 8px 32px;
+      padding: 20px 0;
+    }
+
+    .voice-pair + .voice-pair {
+      border-top: var(--rule-inner);
     }
 
     .voice-moment {
-      font-size: var(--text-sm);
-      font-weight: var(--weight-semibold);
-      color: var(--color-text);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 1.3;
     }
 
-    .voice-before,
-    .voice-after {
-      margin: 0;
-      font-size: 0.95rem;
-      line-height: 1.55;
+    .voice-pair p {
+      font-size: 16px;
+      line-height: 1.5;
     }
 
     .voice-before {
-      color: var(--color-text-muted);
-    }
-
-    .voice-after {
-      color: var(--color-text);
-      font-weight: var(--weight-medium);
+      color: var(--ink-soft);
     }
 
     .voice-tag {
       display: block;
-      font-size: var(--text-xs);
-      font-weight: var(--weight-semibold);
-      color: var(--color-text-muted);
-      margin-bottom: var(--space-1);
+      margin-bottom: 4px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--teal-text);
     }
 
     .voice-pair .voice-why {
       grid-column: 2 / -1;
-      margin: 0;
-      font-size: var(--text-sm);
-      line-height: 1.55;
-      color: var(--color-text-muted);
+      font-size: 15px;
+      color: var(--ink-soft);
     }
 
-    @media (max-width: 768px) {
+    /* Plan comparison and flow */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 900px;
+    }
+
+    .compare-card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 24px;
+      border: var(--rule);
+      border-radius: var(--radius-card);
+      background: var(--white);
+    }
+
+    .compare-card--new {
+      border-color: var(--fz-coral);
+    }
+
+    .compare-card h3,
+    .plan-flow h3 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .compare-card .when {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--teal-text);
+    }
+
+    .compare-card p,
+    .plan-flow p {
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--ink-soft);
+    }
+
+    .plan-flow {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 40px;
+      list-style: none;
+      padding: 0;
+      max-width: 900px;
+    }
+
+    .plan-flow li {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .plan-flow .step {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--teal-text);
+    }
+
+    .plan-flow li:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -30px;
+      top: 0;
+      font-family: var(--font-mono);
+      color: var(--ink-soft);
+    }
+
+    .callout {
+      max-width: 760px;
+      padding: 18px 22px;
+      border-radius: var(--radius-card);
+      background: var(--tint-fyzz);
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--ink-soft);
+    }
+
+    .callout strong {
+      color: var(--ink);
+    }
+
+    .cost-block {
+      max-width: 760px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .cs-figure--phone {
+      max-width: 260px;
+    }
+
+    .gallery--phones {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .gallery--phones .shot {
+      aspect-ratio: 9 / 16;
+      object-position: top center;
+      border-radius: 20px;
+    }
+
+    @media (max-width: 720px) {
+      .phone-row {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .phone-shot {
+        border-radius: 14px;
+      }
+
       .voice-pair {
         grid-template-columns: 1fr;
-        gap: var(--space-2);
       }
 
       .voice-pair .voice-why {
         grid-column: auto;
       }
-    }
 
-    /* BUILD TIMELINE */
-    .build-timeline {
-      list-style: none;
-      margin: var(--space-6) 0 var(--space-8);
-      padding: 0 0 0 var(--space-6);
-      border-left: 2px dashed var(--color-border-strong);
-      max-width: 760px;
-    }
+      .compare-grid,
+      .plan-flow {
+        grid-template-columns: 1fr;
+      }
 
-    .build-timeline li {
-      position: relative;
-      margin-bottom: var(--space-6);
-      font: 400 0.95rem/1.6 var(--font-body);
-      color: var(--color-text-secondary);
-    }
+      .plan-flow {
+        gap: 32px;
+      }
 
-    .build-timeline li::before {
-      content: "";
-      position: absolute;
-      left: calc(-1 * var(--space-6) - 7px);
-      top: 6px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--color-white);
-      border: 2px solid var(--fz-coral);
-    }
+      .plan-flow li:not(:last-child)::after {
+        content: "↓";
+        right: auto;
+        top: auto;
+        left: 0;
+        bottom: -26px;
+      }
 
-    .build-timeline .dates {
-      display: block;
-      font: 600 0.85rem/1.4 var(--font-body);
-      color: var(--fz-coral);
-    }
-
-    .build-timeline h3 {
-      margin: 2px 0 var(--space-1);
-      font: 700 1rem/1.4 var(--font-body);
-      color: var(--color-text);
-    }
-
-    .build-timeline p {
-      margin: 0;
-    }
-
-    /* Hero image: no box */
-    .hero-image-casestudy::before {
-      display: none;
-    }
-
-    .hero-image-casestudy img {
-      display: block;
-      width: clamp(150px, 42vw, 260px);
-      margin: 0 auto;
-      border-radius: 0;
-      box-shadow: none !important;
-      background: transparent;
-      filter: drop-shadow(10px 10px 4px rgba(120, 45, 20, 0.28));
-    }
-
-    .skip-to-content {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: rgb(251, 250, 246);
-      color: rgb(0, 0, 0);
-      padding: 10px 16px;
-      border-radius: 0 0 6px 0;
-      text-decoration: none;
-      font-weight: 600;
-      z-index: 100;
-      transition: top 0.3s ease;
-      font-family: "Inter", sans-serif;
-    }
-
-    .skip-to-content:focus {
-      top: 0;
-      background: rgba(251, 250, 246, 0.772);
-      outline: 3px solid #1e40af;
-    }
-
-    .skip-to-content:focus-visible {
-      outline: 3px solid #1e40af;
-      outline-offset: 3px;
+      .gallery--phones {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
-  <link rel="stylesheet" href="../css/site.css">
-  <link rel="stylesheet" href="../css/legacy.css">
 </head>
 
-<body class="cf legacy" id="top">
+<body class="cf theme-fyzz" id="top">
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <div class="wrap">
@@ -560,677 +364,353 @@
         </ul>
       </nav>
     </header>
-  </div>
 
-  <!-- Sticky Section Navigation -->
-  <aside class="section-nav" aria-label="Case study sections">
-    <ul>
-      <li><a href="#overview" class="nav-dot active" data-section="overview"><span>Overview</span></a></li>
-      <li><a href="#research" class="nav-dot" data-section="research"><span>Research</span></a></li>
-      <li><a href="#product" class="nav-dot" data-section="product"><span>The Product</span></a></li>
-      <li><a href="#collaboration" class="nav-dot" data-section="collaboration"><span>Changing the Plan</span></a></li>
-      <li><a href="#design-system" class="nav-dot" data-section="design-system"><span>Design System</span></a></li>
-      <li><a href="#voice" class="nav-dot" data-section="voice"><span>Voice</span></a></li>
-      <li><a href="#development" class="nav-dot" data-section="development"><span>Building It</span></a></li>
-      <li><a href="#outcome" class="nav-dot" data-section="outcome"><span>What's Next</span></a></li>
-      <li><a href="#design" class="nav-dot" data-section="design"><span>Final Designs</span></a></li>
-    </ul>
-  </aside>
-
-  <!-- Main Content -->
-  <main id="main" class="content-casestudy">
-
-    <!-- HERO SECTION -->
-    <section class="hero-casestudy">
-      <div class="hero-container-casestudy">
-        <div class="hero-content-casestudy">
-          <a href="../work/" class="back-link">
-            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-            Back to Work
-          </a>
-          <h1 class="londrina-solid-regular vt-title vt-title-fyzz">Fyzz</h1>
-          <p class="hero-tagline"><strong>A trip planner for casual plans, whether that's a group, a date, or just
-              you.</strong><br>
-            Everyone votes on places, and Fyzz builds the day around the weather, opening hours and travel time.</p>
-
-          <div class="hero-meta">
-            <div class="meta-item">
-              <span class="meta-label">Role</span>
-              <span class="meta-value">Product Designer</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">Timeline</span>
-              <span class="meta-value">Aug 2026 – now</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">Tools</span>
-              <span class="meta-value">Figma, React, TypeScript, Tailwind, Supabase</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">Context</span>
-              <span class="meta-value">Personal project</span>
-            </div>
-          </div>
-
-          <div class="hero-results">
-            <div class="result-item">
-              <i class="fa-solid fa-flag-checkered" aria-hidden="true"></i>
-              <span>20 milestones in about 10 weeks</span>
-            </div>
-            <div class="result-item">
-              <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
-              <span>A working PWA with a real backend</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-image-casestudy">
-          <img src="../img/fyzz/FyzzLogoWordmark.svg" alt="Fyzz logo and wordmark">
-        </div>
-      </div>
-    </section>
-
-    <!-- Jump to designs button -->
-    <section class="top-button">
-      <button onclick="scrollToDesignImages()">Jump to Designs
-        <span>
-          <img src="../img/site/arrows.svg" alt="" fetchpriority="high" decoding="async">
-        </span>
-      </button>
-    </section>
-
-    <!-- OVERVIEW SECTION -->
-    <section class="project-overview" id="overview">
-      <div class="section-header">
-        <span class="section-label">01</span>
-        <h2>Project Overview</h2>
-      </div>
-
-      <div class="overview-grid">
-        <div class="overview-main">
-          <h3>The Challenge</h3>
-          <p>Most casual plans happen in a group chat. Someone drops a few pins, the plan ends up spread across
-            screenshots and old messages, and nobody checks whether it'll rain during the outdoor stop.</p>
-          <p>The tools that exist each cover one piece of it. Google Maps lists let you vote on places but don't
-            schedule anything. Wanderlog schedules things, but its own users call real-time co-editing chaotic. TripIt
-            organizes bookings you've already made, but it doesn't help you decide anything.</p>
-
-          <h3>The Goal</h3>
-          <p>Put those pieces together. Let people vote, build the day from the votes, check it against the weather and
-            opening hours, and ask before changing a plan people already agreed to. The line I kept coming back to was
-            "not a crazy commitment unless it wants to be."</p>
-        </div>
-
-        <div class="overview-sidebar">
-          <div class="context-card">
-            <h4>My Role</h4>
-            <p>I did all the design work: the design doc, the survey, the mockups and the design system.</p>
-          </div>
-          <div class="context-card">
-            <h4>How I Worked</h4>
-            <p>Every decision went into a log with the situation, what I considered, what I picked, and what it cost.
-              Most of this page comes straight from it.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESEARCH SECTION -->
-    <section class="final-solution" id="research" aria-labelledby="research-title">
-      <div class="final-container">
-        <div class="section-header">
-          <span class="section-label">02</span>
-          <h2 id="research-title">Research</h2>
-        </div>
-
-        <p class="section-intro">I didn't start with research. I wrote the design doc on September 4 and the
-          build started the same day. About a week and a half in, I ran a survey to check my assumptions against how people
-          actually plan, and it's been steering what Fyzz does since.</p>
-      </div>
-
-      <div class="stat-callout" role="region" aria-label="Survey highlights">
-        <p class="stat-intro">Out of 16 people I surveyed</p>
-        <div class="stat-callout-inner">
-          <div class="stat-item">
-            <span class="stat-number">12</span>
-            <span class="stat-label">like a rough plan with room to change things</span>
-          </div>
-          <div class="stat-divider" aria-hidden="true"></div>
-          <div class="stat-item">
-            <span class="stat-number">13</span>
-            <span class="stat-label">had a recent outing that was busier than they expected</span>
-          </div>
-          <div class="stat-divider" aria-hidden="true"></div>
-          <div class="stat-item">
-            <span class="stat-number">10</span>
-            <span class="stat-label">named someone flaking or running late, the most common friction</span>
-          </div>
-        </div>
-      </div>
-
-      <h3 class="fz-subhead">What lined up with what I was designing</h3>
-      <ul class="findings">
-        <li><strong>People want a loose plan.</strong> Only 2 of 16 like having everything planned out. That's the idea
-          behind "Pack my day" and "Keep it loose," and why a plan can still bend on the day.</li>
-        <li><strong>It isn't always a group.</strong> 14 go out with a small group of friends, but 11 go with a
-          partner or date, and 4 on their own. Fyzz never asks who the trip is for, and the copy is written for one
-          person reading it.</li>
-        <li><strong>Weather and hours come first.</strong> 15 check the weather and 14 check opening hours before they
-          head out. Those are the two things the schedule checks every stop against.</li>
+    <aside class="section-nav" aria-label="Case study sections">
+      <ul>
+        <li><a href="#problem" class="nav-dot active" data-section="problem"><span>Problem</span></a></li>
+        <li><a href="#decisions" class="nav-dot" data-section="decisions"><span>Decisions</span></a></li>
+        <li><a href="#the-day" class="nav-dot" data-section="the-day"><span>The day</span></a></li>
+        <li><a href="#design-system" class="nav-dot" data-section="design-system"><span>System + voice</span></a></li>
+        <li><a href="#changed" class="nav-dot" data-section="changed"><span>What I changed</span></a></li>
+        <li><a href="#results" class="nav-dot" data-section="results"><span>Results</span></a></li>
+        <li><a href="#final-designs" class="nav-dot" data-section="final-designs"><span>Final screens</span></a></li>
       </ul>
+    </aside>
 
-      <h3 class="fz-subhead">What I didn't expect</h3>
-      <ul class="findings">
-        <li><strong>The scattered group chat wasn't the big problem.</strong> I'd assumed it was, but only 4 of 16
-          picked "information gets lost across texts and apps." Someone flaking or running late came up far more (10 of
-          16). That's what the trip-day rules are for: the itinerary stays open until the day's over, and anyone can
-          change timing once you're out.</li>
-        <li><strong>Crowds disrupt plans, but people don't check for them.</strong> 13 of 16 hit a place busier than
-          they expected, yet only 7 look up how busy a place will be, probably because there's no good way to.
-          When I went looking, I couldn't find a public API for wait times either, so Fyzz will have to collect them
-          from the people using it.</li>
-        <li><strong>The best outings were about people and surprises.</strong> When I asked what made a great day,
-          most answers were about the company or finding something unexpected, like "a side quest into a gallery."
-          An app can't make the company good, so Fyzz handles the logistics and stays out of the way.</li>
-      </ul>
-
-      <blockquote class="pull-quote">
-        <p>"A really good plan that was flexible enough for spontaneity."</p>
-        <cite>Survey answer to "What made the best outing you can remember actually good?"</cite>
-      </blockquote>
-
-      <h3 class="fz-subhead">What Fyzz doesn't cover yet</h3>
-      <ul class="findings">
-        <li><strong>Budget.</strong> 7 of 16 said budget differences cause friction, tied for second. Fyzz doesn't
-          help with that at all yet.</li>
-        <li><strong>Getting there.</strong> Parking, traffic and washrooms all came up in the stories about days that
-          went wrong. None of them are in the plan yet.</li>
-      </ul>
-
-      <p class="caveat">16 responses, collected September 13–19, 2026, mostly from people I know, so I treat it as
-        directional, not statistical. Eight people offered to chat more, and those follow-ups are next.</p>
-    </section>
-
-    <!-- THE PRODUCT SECTION -->
-    <section class="final-solution" id="product" aria-labelledby="product-title">
-      <div class="final-container">
-        <div class="section-header">
-          <span class="section-label">03</span>
-          <h2 id="product-title">The Product</h2>
-        </div>
-
-        <p class="section-intro">Start a trip, share the link, and everyone hearts the places they want to go. Fyzz
-          turns the votes into a day that works with the weather, the opening hours and the time it takes to get
-          between stops.</p>
-      </div>
-
-      <!-- Highlight: votes become a schedule -->
-      <div class="solution-highlight">
-        <div class="solution-highlight-image lightbox-img phone-shot">
-          <img src="../img/fyzz/voting.png"
-            alt="Fyzz voting screen with places, heart votes, and a Fyzzing badge on the top pick" loading="lazy">
-        </div>
-        <div class="solution-highlight-content">
-          <h3>Votes Become the Day</h3>
-          <p>Each person taps a heart on the places they care about. The top pick gets a "Fyzzing" badge, and if two
-            places tie, they both get it. There's no tiebreaker in v1, so it just shows the tie.</p>
-          <p>When you're ready, Fyzz builds the day from the votes. "Pack my day" fits in as much as it can. "Keep it
-            loose" leaves room between stops and caps the day at about one thing every two hours. Reservations are
-            fixed in the data itself, so nothing ever moves them automatically.</p>
-          <p class="highlight-note">Testing it, I found a place with a vote (Casa Loma, opens at 9:30) losing its spot
-            to places nobody voted for. The schedule tried to start it at 9:00, couldn't, and skipped it. Now it waits
-            for a place to open, the way a real day works. I checked the fix against 2,000 random vote combinations.
-          </p>
-        </div>
-      </div>
-
-      <!-- Highlight: weather -->
-      <div class="solution-highlight solution-highlight--flip">
-        <div class="solution-highlight-image lightbox-img phone-shot">
-          <img src="../img/fyzz/plan-change.png"
-            alt="Fyzz plan change screen proposing a swap of two stops, with now and proposed times side by side and a note that Priya and Sam are seeing it too" loading="lazy">
-        </div>
-        <div class="solution-highlight-content">
-          <h3>A Heads-Up Before the Day Goes Sideways</h3>
-          <p>Each stop gets checked against the hourly forecast. If rain's coming, a note at the top of the itinerary
-            says when it starts and which stop it reaches, and Review offers a swap. The note and Review always point
-            at the same stop, so you never read about one problem and get offered a fix for another.</p>
-          <p>Timing conflicts work the same way, like a stop running past a reservation's start time (the one shown
-            here). A suggested change shows the before and after side by side, says why, and mentions that everyone
-            else on the trip can see it too. Whoever responds first decides. There's no countdown and no pressure.</p>
-          <p class="highlight-note">Rain 40 minutes out can't wait for the whole group to agree, so on the trip day a
-            weather swap skips sign-off. Fixed times still hold, and everyone's told what moved.</p>
-        </div>
-      </div>
-
-      <!-- Highlight: no account -->
-      <div class="solution-highlight">
-        <div class="solution-highlight-image lightbox-img phone-shot">
-          <img src="../img/fyzz/join.png" alt="Fyzz join screen: an invite to Toronto Day Trip asking for your name, with no account needed"
-            loading="lazy">
-        </div>
-        <div class="solution-highlight-content">
-          <h3>Nobody Needs an Account</h3>
-          <p>You can join a trip from a link, a QR code or a short code without signing up. Guests get an anonymous
-            account behind the scenes, and their trip list lives on their device. You shouldn't have to sign up just
-            to find your way back to something you already joined.</p>
-          <p>That one choice shapes a lot. Notifications work differently for guests. Sign-in has no passwords at
-            all, only a code. And the account screen leads with what you'd actually get (trips synced everywhere,
-            push or text reminders) before it asks for anything.</p>
-          <p class="highlight-note">The cost: a guest who opens a private window is a new person. So when someone
-            leaves, their votes go with them, and blocking someone who was removed isn't solved yet.</p>
-        </div>
-      </div>
-
-      <!-- Highlight: no fake data -->
-      <div class="solution-highlight solution-highlight--flip">
-        <div class="solution-highlight-image lightbox-img phone-shot">
-          <img src="../img/fyzz/void-ticket.png"
-            alt="Fyzz broken invite link screen, a greyed-out ticket stamped VOID" loading="lazy">
-        </div>
-        <div class="solution-highlight-content">
-          <h3>If the Data Isn't There, It Says So</h3>
-          <p>Ratings, hours and photos come from Google Places wherever they exist. When they don't, the screen says
-            so. No made-up rating, no stock photo, no Wikipedia blurb when nothing matched. Weekends aren't fully built
-            yet either, so "A weekend" shows as "coming soon" with an "I'd use this" button.</p>
-          <p>The recap only shows walking distance when it was really measured. I also cut a "reshuffles" count from
-            it. It was usually 0, which reads like a small failure on a screen that's meant to be a memory.</p>
-          <p class="highlight-note">A broken invite link gets the same ticket as a real one, greyed out and stamped
-            "VOID," instead of a generic error page.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- COLLABORATION / REVERSAL SECTION -->
-    <section class="final-solution" id="collaboration" aria-labelledby="collab-title">
-      <div class="final-container">
-        <div class="section-header">
-          <span class="section-label">04</span>
-          <h2 id="collab-title">Who Gets to Change the Plan</h2>
-        </div>
-
-        <p class="section-intro">This is the decision I changed my mind on, and the one I learned the most from.</p>
-
-        <p class="fz-body">Wanderlog's own users call its real-time co-editing chaotic, and I didn't want that. So in
-          Milestone 17 I made the host approve changes. If a guest wanted to reorder the day or remove a stop, they
-          sent it as a request, and the host tapped a check or an X.</p>
-
-        <p class="fz-body">It kept things calm, but it made the host a bottleneck right when people are still figuring
-          out what they want. Going back over it a week later, I realized the chaos was never about people editing.
-          What actually bothers people is the plan they agreed to changing under them. So I redesigned it around
-          that.</p>
-
-        <div class="compare-grid">
-          <div class="compare-card compare-card--old">
-            <h3>The host approves</h3>
-            <span class="when">Milestone 17, early November</span>
-            <p>Every change from someone other than the host waits for the host. One request at a time per trip. Calm,
-              but nothing moves while the host is busy.</p>
+    <main id="main">
+      <section class="cs-hero">
+        <a class="back-link" href="../work/">← all work</a>
+        <div class="cs-hero-row">
+          <div class="cs-hero-text">
+            <p class="label">[case study 03]</p>
+            <h1 class="cs-title vt-title vt-title-fyzz">Fyzz</h1>
+            <ul class="tags" aria-label="Status"><li class="tag tag--progress">in progress</li></ul>
+            <p>A trip planner for casual plans, whether that's a group, a date, or just you. Everyone votes on places, and Fyzz builds the day around the weather, opening hours and travel time.</p>
           </div>
-          <div class="compare-card compare-card--new">
-            <h3>Sign-off is the gate</h3>
-            <span class="when">Milestone 18, mid November</span>
-            <p>Anyone edits a draft. Once everyone signs off, the plan's locked, and it only changes through a new
-              version everyone signs off on again.</p>
+          <div class="cs-logo">
+            <img src="../img/fyzz/FyzzLogoWordmark.svg" alt="Fyzz logo and wordmark">
+          </div>
+        </div>
+      </section>
+
+      <section class="summary" aria-label="Summary">
+        <dl>
+          <div><dt>role</dt><dd>Product designer</dd></div>
+          <div><dt>timeline</dt><dd>Aug 2026 – now</dd></div>
+          <div><dt>context</dt><dd>Personal project</dd></div>
+          <div><dt>status</dt><dd>In progress · not tested with groups yet</dd></div>
+        </dl>
+        <div class="phone-row">
+          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/my-trips.png" alt="My Trips home screen"><figcaption>My Trips</figcaption></figure>
+          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/voting.png" alt="Voting screen with hearts"><figcaption>Voting</figcaption></figure>
+          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/itinerary.png" alt="Itinerary with ticket-style stop cards on a dashed line"><figcaption>Itinerary</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="section cs-section" id="problem" aria-labelledby="s1">
+        <div class="section-head">
+          <p class="label">01 · problem + constraints</p>
+          <h2 class="h-section" id="s1">Not a crazy commitment unless it wants to be</h2>
+        </div>
+        <p class="lede lede--wide">Most casual plans happen in a group chat. Someone drops a few pins, the plan ends up spread across screenshots and old messages, and nobody checks whether it'll rain during the outdoor stop.</p>
+        <p class="body-lg">The tools that exist each cover one piece of it. Google Maps lists let you vote on places but don't schedule anything. Wanderlog schedules things. TripIt organizes bookings you've already made, but it doesn't help you decide anything.</p>
+        <p class="body-lg">Put those pieces together. Let people vote, build the day from the votes, check it against the weather and opening hours, and ask before changing a plan people already agreed to. The line I kept coming back to was "not a crazy commitment unless it wants to be."</p>
+        <dl class="detail-grid">
+          <div><dt>my role</dt><dd>I did all the design work: the design doc, the survey, the mockups and the design system.</dd></div>
+          <div><dt>how I worked</dt><dd>Every decision went into a log with the situation, what I considered, what I picked, and what it cost. Most of this page comes straight from it.</dd></div>
+        </dl>
+
+        <h3 class="h-sub">Research</h3>
+        <p class="body-lg">I didn't start with research. I wrote the design doc on September 4 and the build started the same day. About a week and a half in, I ran a survey to check my assumptions against how people actually plan, and it's been steering what Fyzz does since.</p>
+
+        <div class="stat-band">
+          <div class="stat-band-inner">
+            <p class="stat-band-intro">Out of 16 people I surveyed</p>
+            <div class="stat">
+              <span class="stat-number">12</span>
+              <span class="stat-label">like a rough plan with room to change things</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">13</span>
+              <span class="stat-label">had a recent outing that was busier than they expected</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">10</span>
+              <span class="stat-label">named someone flaking or running late, the most common friction</span>
+            </div>
           </div>
         </div>
 
-        <ol class="plan-flow" aria-label="How a plan moves from draft to locked in">
+        <ul class="findings">
+          <li><strong>People want a loose plan.</strong> Only 2 of 16 like having everything planned out. That's the idea behind "Pack my day" and "Keep it loose," and why a plan can still bend on the day.</li>
+          <li><strong>The scattered group chat wasn't the big problem.</strong> I'd assumed it was, but only 4 of 16 picked "information gets lost across texts and apps." Someone flaking or running late came up far more (10 of 16). That's what the trip-day rules are for: the itinerary stays open until the day's over, and anyone can change timing once you're out.</li>
+          <li><strong>Crowds disrupt plans, but people don't check for them.</strong> 13 of 16 hit a place busier than they expected, yet only 7 look up how busy a place will be, probably because there's no good way to. When I went looking, I couldn't find a public API for wait times either, so Fyzz will have to collect them from the people using it.</li>
+        </ul>
+        <blockquote class="pull-quote">
+          <p>"A really good plan that was flexible enough for spontaneity."</p>
+          <footer>Survey answer to "What made the best outing you can remember actually good?"</footer>
+        </blockquote>
+        <p class="fine-print">16 responses, collected September 13–19, 2026, mostly from people I know, so I treat it as directional, not statistical. Eight people offered to chat more, and those follow-ups are next.</p>
+      </section>
+
+      <section class="section cs-section" id="decisions" aria-labelledby="s2">
+        <div class="section-head">
+          <p class="label">02 · key decisions</p>
+          <h2 class="h-section" id="s2">Three choices that shaped it</h2>
+        </div>
+        <ol class="choices">
           <li>
-            <h3>Draft</h3>
-            <p>Anyone can add, remove or move stops. The activity feed shows who did what, with Undo.</p>
+            <div class="choice-text">
+              <span class="choice-num" aria-hidden="true">01</span>
+              <h3>Nobody needs an account</h3>
+              <dl>
+                <div><dt>options</dt><dd class="soft">Require an account to join, or let anyone join from a link, a QR code or a short code.</dd></div>
+                <div><dt>I chose</dt><dd>No sign-up. Guests get an anonymous account behind the scenes, and their trip list lives on their device.</dd></div>
+                <div><dt>why</dt><dd class="soft">You shouldn't have to sign up just to find your way back to something you already joined.</dd></div>
+                <div><dt>cost</dt><dd class="soft">A guest who opens a private window is a new person. So when someone leaves, their votes go with them, and blocking someone who was removed isn't solved yet.</dd></div>
+              </dl>
+              <p class="fine-print">It's the same call I made on Karla Learn and GATORE: don't make people commit before they see anything. Here it cost the most.</p>
+            </div>
+            <div class="choice-img choice-img--phone lightbox-img">
+              <img class="shot phone-shot" src="../img/fyzz/join.png" alt="Fyzz join screen: an invite to Toronto Day Trip asking for your name, with no account needed" loading="lazy" decoding="async">
+            </div>
           </li>
           <li>
-            <h3>Sign-off</h3>
-            <p>The host asks everyone. That version is frozen, and each person answers "Looks good" or "Request
-              changes."</p>
+            <div class="choice-text">
+              <span class="choice-num" aria-hidden="true">02</span>
+              <h3>Hearts and sign-off are different votes</h3>
+              <dl>
+                <div><dt>options</dt><dd class="soft">Call both "voting," like the brief did, or give them different words.</dd></div>
+                <div><dt>I chose</dt><dd>Hearts for places, sign-off for the whole day. The app never calls sign-off a vote.</dd></div>
+                <div><dt>why</dt><dd class="soft">Hearts say how much a place matters to you, and they shape the draft. Sign-off is a yes on the whole day. Two meanings for one word would have confused people.</dd></div>
+              </dl>
+              <p class="fine-print">People joining or leaving doesn't reset sign-off. The version didn't change, so starting over would just punish the people who already answered.</p>
+            </div>
+            <div class="choice-img choice-img--phone lightbox-img">
+              <img class="shot phone-shot" src="../img/fyzz/voting.png" alt="Fyzz voting screen with places, heart votes, and a Fyzzing badge on the top pick" loading="lazy" decoding="async">
+            </div>
           </li>
           <li>
-            <h3>Locked in</h3>
-            <p>Changing it opens a revision. The agreed plan stays put until everyone signs off on the new one.</p>
+            <div class="choice-text">
+              <span class="choice-num" aria-hidden="true">03</span>
+              <h3>If the data isn't there, it says so</h3>
+              <dl>
+                <div><dt>options</dt><dd class="soft">Fill gaps with placeholder ratings, stock photos and blurbs, or show what's missing.</dd></div>
+                <div><dt>I chose</dt><dd>Real Google Places data where it exists, and a plain "no photo" or "coming soon" where it doesn't.</dd></div>
+                <div><dt>why</dt><dd class="soft">People can trust everything else on the screen.</dd></div>
+                <div><dt>cost</dt><dd class="soft">It's less impressive than a made-up rating.</dd></div>
+              </dl>
+              <p class="fine-print">A broken invite link gets the same ticket as a real one, greyed out and stamped "VOID," instead of a generic error page.</p>
+            </div>
+            <div class="choice-img choice-img--phone lightbox-img">
+              <img class="shot phone-shot" src="../img/fyzz/void-ticket.png" alt="Fyzz broken invite link screen, a greyed-out ticket stamped VOID" loading="lazy" decoding="async">
+            </div>
           </li>
         </ol>
+      </section>
 
-        <p class="trip-day"><strong>On the trip day,</strong> timing can bend. Anyone can stay longer somewhere, skip
-          a stop or change travel time without asking, because by then it's describing what's actually happening.
-          Everyone's told, and there's Undo.</p>
+      <section class="section cs-section" id="the-day" aria-labelledby="s3">
+        <div class="section-head">
+          <p class="label">03 · how the day gets built</p>
+          <h2 class="h-section" id="s3">Votes become the day</h2>
+        </div>
+        <p class="lede lede--wide">Start a trip, share the link, and everyone hearts the places they want to go. Fyzz turns the votes into a day that works with the weather, the opening hours and the time it takes to get between stops.</p>
+        <p class="body-lg">Each person taps a heart on the places they care about. The top pick gets a "Fyzzing" badge, and if two places tie, they both get it. There's no tiebreaker in v1, so it just shows the tie.</p>
+        <p class="body-lg">When you're ready, Fyzz builds the day from the votes. "Pack my day" fits in as much as it can. "Keep it loose" leaves room between stops and caps the day at about one thing every two hours. Reservations are fixed in the data itself, so nothing ever moves them automatically.</p>
+        <p class="callout">While using it, I noticed a place with a vote (Casa Loma, opens at 9:30) losing its spot to places nobody voted for. The schedule tried to start it at 9:00, couldn't, and skipped it. Now it waits for a place to open, the way a real day works.</p>
 
-        <h3 class="fz-subhead">What it cost</h3>
-        <ul class="cost-list">
-          <li><strong>A week of work, partly undone.</strong> I'd shipped host approval about a week before I decided
-            to replace it.</li>
-          <li><strong>More work for the host.</strong> "Request changes" is a note, so the host makes the change by
-            hand instead of accepting it with one tap. I picked that over a second set of rules for suggestions.</li>
-          <li><strong>Revisions can drift.</strong> A revision can end up far from the agreed plan, so sign-off shows
-            "What changed," and you can always see which version you're looking at.</li>
-          <li><strong>One person can stall everything.</strong> Locked in means everyone agreed, and silence never
-            counts as a yes. So the host can tap "Go ahead without [name]," and that person shows as "didn't sign
-            off," never as agreeing.</li>
-          <li><strong>Undo might be too easy.</strong> Anyone can undo anyone's change in a draft. I'm not sure yet
-            if that's too easy, so I'll decide after the first real group test.</li>
+        <h3 class="h-sub">A heads-up before the day goes sideways</h3>
+        <p class="body-lg">Each stop gets checked against the hourly forecast. If rain's coming, a note at the top of the itinerary says when it starts and which stop it reaches, and Review offers a swap. The note and Review always point at the same stop, so you never read about one problem and get offered a fix for another.</p>
+        <p class="body-lg">Timing conflicts work the same way, like a stop running past a reservation's start time (the one shown here). A suggested change shows the before and after side by side, says why, and mentions that everyone else on the trip can see it too. Whoever responds first decides. There's no countdown and no pressure.</p>
+        <div class="phone-row">
+          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/itinerary.png" alt="Itinerary with ticket-style stop cards on a dashed line" loading="lazy" decoding="async"><figcaption>Itinerary</figcaption></figure>
+          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/plan-change.png" alt="Fyzz plan change screen proposing a swap of two stops, with now and proposed times side by side and a note that Priya and Sam are seeing it too" loading="lazy" decoding="async"><figcaption>Plan change</figcaption></figure>
+          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/reorder.png" alt="Reorder mode with up and down arrow buttons" loading="lazy" decoding="async"><figcaption>Reorder mode</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="section cs-section" id="design-system" aria-labelledby="s4">
+        <div class="section-head">
+          <p class="label">04 · design system + voice</p>
+          <h2 class="h-section" id="s4">Everything means something</h2>
+        </div>
+        <p class="body-lg">I wanted everything in Fyzz to mean something. Each colour has one job, and the ticket look only shows up on stops that are actually scheduled. The system did drift while the build moved fast. By early November there were 23 text sizes, five greys and four font families, so I pulled it all back into one system.</p>
+
+        <h3 class="h-sub">One job per colour</h3>
+        <ul class="role-list">
+          <li><span class="sw" style="--sw: var(--fz-coral)" aria-hidden="true"></span><span><strong>Coral</strong> is the main colour, and it means "go look at something."</span></li>
+          <li><span class="sw" style="--sw: var(--fz-teal)" aria-hidden="true"></span><span><strong>Teal</strong> only ever means add, create or edit.</span></li>
+          <li><span class="sw" style="--sw: var(--fz-indigo)" aria-hidden="true"></span><span><strong>Indigo</strong> is social: notes, requests, someone nudging you.</span></li>
+          <li><span class="sw" style="--sw: var(--fz-blue)" aria-hidden="true"></span><span><strong>Blue</strong> is "happening now," like the you-are-here dot on a map. I tried red first and it got mixed up with warnings.</span></li>
+          <li><span class="sw" style="--sw: var(--fz-grey)" aria-hidden="true"></span><span><strong>Grey</strong> means fine, nothing to flag. Navigation like "Open in maps" is neutral too, since it doesn't change the plan.</span></li>
         </ul>
-      </div>
 
-      <div class="solution-highlight">
-        <div class="solution-highlight-image lightbox-img phone-shot">
-          <img src="../img/fyzz/sign-off.png"
-            alt="Fyzz itinerary with a sign-off card: two of three people have said Looks good, with an option to go ahead without Sam" loading="lazy">
-        </div>
-        <div class="solution-highlight-content">
-          <h3>Hearts and Sign-Off Are Different Votes</h3>
-          <p>Hearts say how much a place matters to you, and they shape the draft. Sign-off is a yes on the whole day.
-            The brief I was working from called both of them voting, and two meanings for one word would have
-            confused people, so the app never calls sign-off a vote.</p>
-          <p class="highlight-note">People joining or leaving doesn't reset sign-off. The version didn't change, so
-            starting over would just punish the people who already answered.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- DESIGN SYSTEM SECTION -->
-    <section class="design-brief" id="design-system" aria-labelledby="ds-title">
-      <div class="brief-container">
-        <div class="section-header">
-          <span class="section-label">05</span>
-          <h2 id="ds-title">Design System</h2>
-        </div>
-
-        <p class="section-intro">I wanted everything in Fyzz to mean something. Each colour has one job, and the
-          ticket look only shows up on stops that are actually scheduled. The system did drift while the build moved
-          fast. By Milestone 17 there were 23 text sizes, five greys and four font families, so I pulled it all back
-          into one system.</p>
-
-        <div class="brief-grid">
-
-          <article class="brief-card brief-rationale">
-            <h3>One Job per Colour</h3>
-            <ul class="role-list">
-              <li><span class="sw" style="--sw:var(--fz-coral)" aria-hidden="true"></span><span><strong>Coral</strong>
-                  is the main colour, and it means "go look at something."</span></li>
-              <li><span class="sw" style="--sw:var(--fz-teal)" aria-hidden="true"></span><span><strong>Teal</strong>
-                  only ever means add, create or edit.</span></li>
-              <li><span class="sw" style="--sw:var(--fz-indigo)" aria-hidden="true"></span><span><strong>Indigo</strong>
-                  is social: notes, requests, someone nudging you.</span></li>
-              <li><span class="sw" style="--sw:var(--fz-blue)" aria-hidden="true"></span><span><strong>Blue</strong>
-                  is "happening now," like the you-are-here dot on a map. I tried red first and it got mixed up with
-                  warnings.</span></li>
-              <li><span class="sw" style="--sw:var(--fz-grey)" aria-hidden="true"></span><span><strong>Grey</strong>
-                  means fine, nothing to flag. Navigation like "Open in maps" is neutral too, since it doesn't change
-                  the plan.</span></li>
-            </ul>
-          </article>
-
-          <article class="brief-card">
-            <h3>The Ticket</h3>
-            <p>Scheduled stops get die-cut, perforated edges, like they've been punched out of a sheet. Places you're
-              still voting on are plain cards. Giving them a ticket would suggest more certainty than there is.</p>
-            <p>On the trip hub, the itinerary tile is a sealed ticket stub until there's something to see, and then the
-              tear line breaks open. It shows the real state of the trip.</p>
-          </article>
-
-          <article class="brief-card">
-            <h3>Type and Shape</h3>
-            <p>Bricolage Grotesque for headings, DM Sans for everything else, and nine named text styles. Nothing gets
-              a hand-picked size.</p>
-            <p>Shape follows one rule, based on what something is. Anything you tap or that holds content is a rounded
-              rectangle. Status labels you only read are pills. Icon buttons and avatars are circles.</p>
-          </article>
-
-          <article class="brief-card">
-            <h3>Accessibility</h3>
-            <ul class="brief-list">
+        <div class="system-grid">
+          <div>
+            <h3 class="h-sub h-sub--sm">The ticket</h3>
+            <p>Scheduled stops get die-cut, perforated edges, like they've been punched out of a sheet. Places you're still voting on are plain cards. Giving them a ticket would suggest more certainty than there is.</p>
+            <p>On the trip hub, the itinerary tile is a sealed ticket stub until there's something to see, and then the tear line breaks open. It shows the real state of the trip.</p>
+          </div>
+          <div>
+            <h3 class="h-sub h-sub--sm">Type and shape</h3>
+            <p>Bricolage Grotesque for headings, DM Sans for everything else, and nine named text styles. Nothing gets a hand-picked size.</p>
+            <p>Shape follows one rule, based on what something is. Anything you tap or that holds content is a rounded rectangle. Status labels you only read are pills. Icon buttons and avatars are circles.</p>
+          </div>
+          <div>
+            <h3 class="h-sub h-sub--sm">Accessibility</h3>
+            <ul class="cs-list">
               <li>Every control is a real button or link</li>
               <li>Reorder has up and down arrows that work just as well as dragging</li>
               <li>44px tap targets for anything you reach for mid-trip</li>
               <li>16px fields, so iPhones don't zoom in when you tap one</li>
               <li>Nothing animates when reduced motion is on</li>
-              <li>Contrast checked on every pairing. I caught real failures (the heart icon, the wordmark, some recap
-                text at 4.0:1) and fixed each with a safer shade</li>
+              <li>Contrast checked on every pairing. I caught real failures (the heart icon, the wordmark, some recap text at 4.0:1) and fixed each with a safer shade</li>
             </ul>
-          </article>
-
-          <article class="brief-card">
-            <h3>Tried and Dropped</h3>
-            <ul class="brief-list">
+          </div>
+          <div>
+            <h3 class="h-sub h-sub--sm">Tried and dropped</h3>
+            <ul class="cs-list">
               <li>A timeline line that faded rose to gold to plum like the sky. It's one neutral dashed line now</li>
               <li>Teal or violet for "fine." They sat too close to green, so grey won</li>
-              <li>"OK" and "Good" labels under stop times. Too much</li>
               <li>A floating pill for the bottom bar. A pill means status, so it read wrong as a button</li>
-              <li>A settings icon in the bottom bar, which mostly caused mis-taps</li>
-              <li>Dark outlines on every card. Too harsh</li>
             </ul>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- VOICE SECTION -->
-    <section class="final-solution" id="voice" aria-labelledby="voice-title">
-      <div class="final-container">
-        <div class="section-header">
-          <span class="section-label">06</span>
-          <h2 id="voice-title">Voice and Tone</h2>
+          </div>
         </div>
 
-        <p class="section-intro">Fyzz is a playful friend with a bit of an edge, but it saves the jokes for places
-          they can land, like empty states and confirmations. Weather and plan changes stay plain and calm. And
-          there's no fake urgency anywhere, because pushy copy would work against the whole idea.</p>
-
+        <h3 class="h-sub">Voice and tone</h3>
+        <p class="body-lg">Fyzz is a playful friend with a bit of an edge, but it saves the jokes for places they can land, like empty states and confirmations. Weather and plan changes stay plain and calm. And there's no fake urgency anywhere, because pushy copy would work against the whole idea.</p>
         <ul class="voice-pairs">
           <li class="voice-pair">
-            <span class="voice-moment">Empty trip invite</span>
-            <p class="voice-before"><span class="voice-tag">Generic</span>"This trip has no itinerary yet"</p>
-            <p class="voice-after"><span class="voice-tag">Fyzz</span>"Nothing planned yet — help pick where to go."
-            </p>
-          </li>
-          <li class="voice-pair">
             <span class="voice-moment">Someone wants a change</span>
-            <p class="voice-before"><span class="voice-tag">Generic</span>"User requested a schedule change"</p>
+            <p class="voice-before"><span class="voice-tag">generic</span>"User requested a schedule change"</p>
             <p class="voice-after"><span class="voice-tag">Fyzz</span>"Priya wants this earlier"</p>
           </li>
           <li class="voice-pair">
-            <span class="voice-moment">Guest note</span>
-            <p class="voice-before"><span class="voice-tag">Generic</span>"Account creation is optional"</p>
-            <p class="voice-after"><span class="voice-tag">Fyzz</span>"No account needed to join — you can add one
-              later if you'd like push or text alerts when the plan changes."</p>
-          </li>
-          <li class="voice-pair">
             <span class="voice-moment">A loose day is full</span>
-            <p class="voice-before"><span class="voice-tag">Before</span>"3 of 6 places probably won't fit" (an orange
-              warning)</p>
-            <p class="voice-after"><span class="voice-tag">After</span>"Your 3 most-voted here make it, 3 others stay
-              as suggestions" (neutral info)</p>
-            <p class="voice-why">The setting was doing exactly what it's for. If the warning colour shows up for
-              expected behaviour, people learn to ignore it, including when it matters.</p>
+            <p class="voice-before"><span class="voice-tag">before</span>"3 of 6 places probably won't fit" (an orange warning)</p>
+            <p class="voice-after"><span class="voice-tag">after</span>"Your 3 most-voted here make it, 3 others stay as suggestions" (neutral info)</p>
+            <p class="voice-why">The setting was doing exactly what it's for. If the warning colour shows up for expected behaviour, people learn to ignore it, including when it matters.</p>
           </li>
           <li class="voice-pair">
             <span class="voice-moment">Rain on the way</span>
-            <p class="voice-before"><span class="voice-tag">Before</span>"Rain expected at 2pm"</p>
-            <p class="voice-after"><span class="voice-tag">After</span>"Rain expected at 1pm. Affects Toronto Islands
-              ferry at 2pm. Should you replan outdoor stops?"</p>
+            <p class="voice-before"><span class="voice-tag">before</span>"Rain expected at 2pm"</p>
+            <p class="voice-after"><span class="voice-tag">after</span>"Rain expected at 1pm. Affects Toronto Islands ferry at 2pm. Should you replan outdoor stops?"</p>
             <p class="voice-why">2pm was the stop's start time, not when the rain began. Now it says both.</p>
           </li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <!-- BUILDING IT SECTION -->
-    <section class="development" id="development" aria-labelledby="dev-title">
-      <div class="dev-container">
-        <div class="section-header">
-          <span class="section-label">07</span>
-          <h2 id="dev-title">Building It</h2>
+      <section class="section cs-section" id="changed" aria-labelledby="s5">
+        <div class="section-head">
+          <p class="label">05 · what I changed</p>
+          <h2 class="h-section" id="s5">Who gets to change the plan</h2>
+        </div>
+        <p class="lede lede--wide">This is the decision I changed my mind on, and the one I learned the most from.</p>
+        <p class="body-lg">When a whole group edits a plan live, it can get chaotic, and I didn't want that. So in early November I made the host approve changes. If a guest wanted to reorder the day or remove a stop, they sent it as a request, and the host tapped a check or an X.</p>
+        <p class="body-lg">It kept things calm, but it made the host a bottleneck right when people are still figuring out what they want. Going back over it a week later, I realized the chaos was never about people editing. What actually bothers people is the plan they agreed to changing under them. So I redesigned it around that.</p>
+
+        <div class="compare-grid">
+          <div class="compare-card">
+            <span class="when">early November</span>
+            <h3>The host approves</h3>
+            <p>Every change from someone other than the host waits for the host. One request at a time per trip. Calm, but nothing moves while the host is busy.</p>
+          </div>
+          <div class="compare-card compare-card--new">
+            <span class="when">mid November</span>
+            <h3>Sign-off is the gate</h3>
+            <p>Anyone edits a draft. Once everyone signs off, the plan's locked, and it only changes through a new version everyone signs off on again.</p>
+          </div>
         </div>
 
-        <p class="dev-built"><strong>Built with:</strong> React 19 + TypeScript + Vite + Tailwind + Supabase</p>
+        <ol class="plan-flow" aria-label="How a plan moves from draft to locked in">
+          <li><span class="step">step 1</span><h3>Draft</h3><p>Anyone can add, remove or move stops. The activity feed shows who did what, with Undo.</p></li>
+          <li><span class="step">step 2</span><h3>Sign-off</h3><p>The host asks everyone. That version is frozen, and each person answers "Looks good" or "Request changes."</p></li>
+          <li><span class="step">step 3</span><h3>Locked in</h3><p>Changing it opens a revision. The agreed plan stays put until everyone signs off on the new one.</p></li>
+        </ol>
 
-        <ul class="tech-chips" aria-label="Tech stack">
-          <li class="chip chip-tech">React 19</li>
-          <li class="chip chip-tech">TypeScript</li>
-          <li class="chip chip-tech">Vite</li>
-          <li class="chip chip-tech">Tailwind</li>
-          <li class="chip chip-tech">Supabase</li>
-          <li class="chip chip-tech">Google Places</li>
-          <li class="chip chip-tech">PWA + Push</li>
+        <p class="callout"><strong>On the trip day,</strong> timing can bend. Anyone can stay longer somewhere, skip a stop or change travel time without asking, because by then it's describing what's actually happening. Everyone's told, and there's Undo. Rain 40 minutes out can't wait for the whole group to agree, so on the trip day a weather swap skips sign-off. Fixed times still hold, and everyone's told what moved.</p>
+
+        <div class="cost-block">
+          <h3 class="h-sub h-sub--sm">What it cost</h3>
+            <ul class="cs-list">
+              <li><strong>A week of work, partly undone.</strong> Host approval had been live for about a week before I replaced it.</li>
+              <li><strong>More work for the host.</strong> "Request changes" is a note, so the host makes the change by hand instead of accepting it with one tap. I picked that over a second set of rules for suggestions.</li>
+              <li><strong>One person can stall everything.</strong> Locked in means everyone agreed, and silence never counts as a yes. So the host can tap "Go ahead without [name]," and that person shows as "didn't sign off," never as agreeing.</li>
+              <li><strong>Undo might be too easy.</strong> Anyone can undo anyone's change in a draft. I'm not sure yet if that's too easy, so I'll decide after the first real group test.</li>
+            </ul>
+          </div>
+
+        <figure class="cs-figure cs-figure--phone lightbox-img">
+          <img class="shot phone-shot" src="../img/fyzz/sign-off.png" alt="Fyzz itinerary with a sign-off card: two of three people have said Looks good, with an option to go ahead without Sam" loading="lazy" decoding="async">
+          <figcaption>Sign-off, waiting on Sam</figcaption>
+        </figure>
+      </section>
+
+      <section class="section cs-section" id="results" aria-labelledby="s6">
+        <div class="section-head">
+          <p class="label">06 · results + next</p>
+          <h2 class="h-section" id="s6">What I learned, and what's next</h2>
+        </div>
+        <p class="body-lg">Fyzz was built from September 4 to November 16. So far it's only been tested by me and one other person.</p>
+
+        <h3 class="h-sub">What using it taught me</h3>
+        <ul class="cs-list cs-list--roomy">
+          <li><strong>Back kept going home.</strong> Reaching for back kept hitting the wordmark, which went to My Trips. Now back is always in the header with where it goes next to it, and only the logo itself is a button.</li>
+          <li><strong>Push looked on but wasn't.</strong> Settings said "push" even when the browser wasn't set up, so nothing could arrive. Now it checks the device and says so, with "Turn it on."</li>
+          <li><strong>An old trip came back.</strong> Reusing a trip name quietly opened an old trip that had already ended. Now every new trip is its own, and if creating one fails, you stay on the form and see what went wrong.</li>
         </ul>
 
-        <p class="fz-body">Fyzz was built in 20 milestones, each one a pull request, from September 4 to November 16.
-        </p>
-
-        <ol class="build-timeline">
+        <ol class="lessons">
           <li>
-            <span class="dates">Sept 4 – 11</span>
-            <h3>Just me, then bringing others in</h3>
-            <p>Search, vote and schedule working for one person first, then trip members, per-person voting, the
-              trip hub and invites.</p>
+            <span class="lesson-num" aria-hidden="true">1</span>
+            <h3>Look past the first answer</h3>
+            <p>Host approval solved the problem as I'd first described it. Sign-off solved the problem people actually have. I only got there by going back to why it felt chaotic.</p>
           </li>
           <li>
-            <span class="dates">Sept 11 – 20</span>
-            <h3>Accounts, live sync and guests</h3>
-            <p>Supabase accounts, live routing, push, the join flow and recap, the weather-aware schedule, and
-              anonymous accounts so guests never have to sign up.</p>
+            <span class="lesson-num" aria-hidden="true">2</span>
+            <h3>Write down the cost</h3>
+            <p>Every decision has its cost written next to it, so when I replaced host approval, I knew exactly what I was undoing and why.</p>
           </li>
           <li>
-            <span class="dates">Sept 21 – Oct 14</span>
-            <h3>Real days, real reservations</h3>
-            <p>A start and end time for each day, locked-in reservations, QR and short-code invites, and a server
-              check so nobody can act as someone else on a trip.</p>
-          </li>
-          <li>
-            <span class="dates">Oct 18 – Nov 9</span>
-            <h3>Activity, context and polish</h3>
-            <p>The activity feed with Undo, screens that say why you're there, host approval, and pulling the type,
-              colour and shape back into one system.</p>
-          </li>
-          <li>
-            <span class="dates">Nov 16</span>
-            <h3>Collaboration</h3>
-            <p>Drafts, sign-off, revisions, and timing changes on the trip day.</p>
+            <span class="lesson-num" aria-hidden="true">3</span>
+            <h3>The truth matters more than looking impressive</h3>
+            <p>"No photo" or "coming soon" is less impressive than a made-up rating, but people can trust everything else on the screen.</p>
           </li>
         </ol>
 
-        <article class="dev-card">
-          <h3>Testing Fed Back Into the Design</h3>
-          <ul class="dev-list">
-            <li><strong>Back kept going home.</strong> Reaching for back kept hitting the wordmark, which went to My
-              Trips. Now back is always in the header with where it goes next to it, and only the logo itself is a
-              button.</li>
-            <li><strong>An old trip came back.</strong> Reusing a trip name quietly opened an old trip that had
-              already ended. Trips now get unique ids, and creating one waits for the server, so a failure stays on
-              the form with an error.</li>
-            <li><strong>Push looked on but wasn't.</strong> Settings said "push" even when the browser wasn't set up,
-              so nothing could arrive. Now it checks the device and says so, with "Turn it on."</li>
-            <li><strong>A voted place lost its slot.</strong> The Casa Loma bug from earlier, fixed in the shared
-              schedule code every screen uses.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- OUTCOME / NEXT SECTION -->
-    <section class="lessons" id="outcome" aria-labelledby="outcome-title">
-      <div class="lessons-container">
-        <div class="section-header">
-          <span class="section-label">08</span>
-          <h2 id="outcome-title">What I Learned and What's Next</h2>
-        </div>
-
-        <ol class="lesson-grid">
-          <li class="lesson-card lesson-card--purple">
-            <div class="lesson-num" aria-hidden="true">1</div>
-            <h3>Look Past the First Answer</h3>
-            <p>Host approval solved the problem as I'd first described it. Sign-off solved the problem people
-              actually have. I only got there by going back to why it felt chaotic.</p>
-          </li>
-
-          <li class="lesson-card lesson-card--teal">
-            <div class="lesson-num" aria-hidden="true">2</div>
-            <h3>Write Down the Cost</h3>
-            <p>Every decision has its cost written next to it, so when I replaced host approval, I knew exactly what
-              I was undoing and why.</p>
-          </li>
-
-          <li class="lesson-card lesson-card--green">
-            <div class="lesson-num" aria-hidden="true">3</div>
-            <h3>Say So</h3>
-            <p>"No photo" or "coming soon" is less impressive than a made-up rating, but people can trust everything
-              else on the screen.</p>
-          </li>
-        </ol>
-
-        <h3 class="fz-subhead">Next up</h3>
-        <ul class="cost-list">
-          <li><strong>A real group test.</strong> It decides the open questions: whether Undo is too easy, and whether
-            "Go ahead without" and "Request changes" work for real groups.</li>
-          <li><strong>Follow-up chats</strong> with the eight people from the survey who offered.</li>
-          <li><strong>Crowd data.</strong> A quick "How long was the wait?" on the recap is the first step toward
-            crowdsourced wait times.</li>
-          <li><strong>Day two</strong> for weekend trips, and something for budget.</li>
+        <h3 class="h-sub">Next up</h3>
+        <ul class="cs-list cs-list--roomy">
+          <li><strong>A real group test.</strong> It decides the open questions: whether Undo is too easy, and whether "Go ahead without" and "Request changes" work for real groups.</li>
+          <li>Follow-up chats with the eight people from the survey who offered.</li>
+          <li><strong>Crowd data.</strong> A quick "How long was the wait?" on the recap is the first step toward crowdsourced wait times.</li>
+          <li>Day two for weekend trips, something for budget, and the getting-there problems people mentioned: parking, traffic and washrooms.</li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <!-- FINAL DESIGNS -->
-    <section class="design" id="design">
-      <div class="design-container">
-        <div class="section-header">
-          <span class="section-label">09</span>
-          <h2>Final Designs</h2>
+      <section class="section cs-section" id="final-designs" aria-labelledby="s7">
+        <div class="section-head">
+          <p class="label">07 · final designs</p>
+          <h2 class="h-section" id="s7">The finished screens</h2>
         </div>
-
-        <div class="design-imgs design-imgs--phones">
-          <figure class="design-img">
-            <img src="../img/fyzz/my-trips.png" alt="My Trips home screen" loading="lazy" decoding="async">
-            <figcaption>My Trips</figcaption>
-          </figure>
-          <figure class="design-img">
-            <img src="../img/fyzz/trip-hub.png" alt="Trip hub with tiles, members, invite card and activity"
-              loading="lazy" decoding="async">
-            <figcaption>Trip Hub</figcaption>
-          </figure>
-          <figure class="design-img">
-            <img src="../img/fyzz/place-search.png" alt="Place search with category filters" loading="lazy"
-              decoding="async">
-            <figcaption>Place Search</figcaption>
-          </figure>
-          <figure class="design-img">
-            <img src="../img/fyzz/voting.png" alt="Voting screen with hearts" loading="lazy" decoding="async">
-            <figcaption>Voting</figcaption>
-          </figure>
-          <figure class="design-img">
-            <img src="../img/fyzz/itinerary.png" alt="Itinerary with ticket-style stop cards on a dashed line"
-              loading="lazy" decoding="async">
-            <figcaption>Itinerary</figcaption>
-          </figure>
-          <figure class="design-img">
-            <img src="../img/fyzz/reorder.png" alt="Reorder mode with up and down arrow buttons" loading="lazy"
-              decoding="async">
-            <figcaption>Reorder Mode</figcaption>
-          </figure>
-          <figure class="design-img">
-            <img src="../img/fyzz/plan-change.png" alt="Plan change approval showing before and after"
-              loading="lazy" decoding="async">
-            <figcaption>Plan Change</figcaption>
-          </figure>
-          <figure class="design-img">
-            <img src="../img/fyzz/recap.png" alt="Trip recap with stats and the memory trail" loading="lazy"
-              decoding="async">
-            <figcaption>Trip Recap</figcaption>
-          </figure>
+        <div class="gallery gallery--phones">
+          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/my-trips.png" alt="My Trips home screen" loading="lazy" decoding="async"><figcaption>My Trips</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/trip-hub.png" alt="Trip hub with tiles, members, invite card and activity" loading="lazy" decoding="async"><figcaption>Trip Hub</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/place-search.png" alt="Place search with category filters" loading="lazy" decoding="async"><figcaption>Place Search</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/voting.png" alt="Voting screen with hearts" loading="lazy" decoding="async"><figcaption>Voting</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/itinerary.png" alt="Itinerary with ticket-style stop cards on a dashed line" loading="lazy" decoding="async"><figcaption>Itinerary</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/reorder.png" alt="Reorder mode with up and down arrow buttons" loading="lazy" decoding="async"><figcaption>Reorder Mode</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/plan-change.png" alt="Plan change approval showing before and after" loading="lazy" decoding="async"><figcaption>Plan Change</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/recap.png" alt="Trip recap with stats and the memory trail" loading="lazy" decoding="async"><figcaption>Trip Recap</figcaption></figure>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- PROJECT NAVIGATION -->
-    <nav class="project-nav-footer" aria-label="Project navigation">
-      <a href="../gatore/" class="project-nav-link project-nav-next">
-        Next: GATORE
-        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-      </a>
-    </nav>
+      <nav class="next-project" aria-label="Next project">
+        <a class="back-link" href="../work/">← all work</a>
+        <a class="next" href="../gatore/">Next: GATORE →</a>
+      </nav>
+    </main>
+  </div>
 
-  </main>
   <footer class="cf-footer">
     <div class="wrap">
       <div class="cf-footer-top">
@@ -1263,8 +743,6 @@
       </div>
     </div>
   </footer>
-
-  <script src="../js/sectionNav.js" defer></script>
 </body>
 
 </html>

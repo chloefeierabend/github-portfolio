@@ -39,6 +39,7 @@ html {
 
 body.cf {
   margin: 0;
+  overflow-x: clip;
   background-color: var(--cream);
   background-image: url("../img/site/grain.svg");
   background-blend-mode: multiply;
@@ -2025,5 +2026,351 @@ body.cf {
 @media (prefers-reduced-motion: reduce) {
   .has-js .cf-footer-perch .cf-footer-bird {
     transform: none;
+  }
+}
+
+/* ---------- Case study components ---------- */
+
+.theme-karla {
+  --accent: #8F4BB1;
+}
+
+.theme-fyzz {
+  --accent: #B8330F;
+}
+
+/* Stat band */
+.stat-band {
+  margin: 8px calc(50% - 50vw) 0;
+  padding: clamp(40px, 6vw, 64px) var(--gutter);
+  background: var(--accent, var(--ink));
+  color: var(--cream);
+}
+
+.stat-band-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px 64px;
+}
+
+.stat-band-intro {
+  flex: 1 1 100%;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.stat-band .stat {
+  flex: 0 1 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.stat-band .stat-number {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(48px, 6vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.stat-band .stat-label {
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.stat-band-sources {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* Figures with captions */
+.cs-figure {
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cs-figure figcaption {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.cs-figure .shot {
+  height: auto;
+}
+
+/* Country cards */
+.country-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+.country-cards li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+  border: var(--rule);
+  border-radius: var(--radius-card);
+  background: var(--white);
+}
+
+.country-cards strong {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.country-cards span {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+/* Pull quote */
+.pull-quote {
+  max-width: 720px;
+  margin: 0;
+  padding-left: 24px;
+  border-left: 3px solid var(--accent, var(--teal));
+}
+
+.pull-quote p {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(22px, 2.4vw, 28px);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.pull-quote footer {
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+/* Detail grid */
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px 40px;
+  max-width: 900px;
+}
+
+.detail-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-grid dt {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--teal-text);
+}
+
+.detail-grid dd {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+/* Lessons */
+.lessons {
+  list-style: none;
+  padding: 0;
+  max-width: 820px;
+}
+
+.lessons li {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 4px 16px;
+  padding: 24px 0;
+}
+
+.lessons li + li {
+  border-top: var(--rule-inner);
+}
+
+.lessons .lesson-num {
+  grid-row: span 2;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1;
+  color: var(--teal-text);
+}
+
+.lessons h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.lessons p {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+/* Sources */
+.cs-sources {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: var(--rule);
+}
+
+.cs-sources summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  color: var(--teal-text);
+  cursor: pointer;
+}
+
+.cs-sources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px 48px;
+  padding-top: 16px;
+}
+
+.cs-sources h3 {
+  margin-bottom: 10px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.cs-sources ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.cs-section .shot--karla { background: var(--tint-karla); }
+
+.choice-img .crop-left {
+  object-position: left top;
+}
+
+.cs-figure--narrow {
+  max-width: 560px;
+}
+
+.gallery--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 720px) {
+  .gallery--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.shot--karla {
+  object-position: left top;
+}
+
+/* GATORE hero and posters */
+.hero-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.hero-pair figure,
+.poster-pair figure {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hero-pair .shot {
+  aspect-ratio: 16 / 10;
+}
+
+.hero-pair figcaption {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.poster-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 220px));
+  gap: 20px;
+}
+
+.poster-pair .shot {
+  height: auto;
+}
+
+@media (max-width: 720px) {
+  .hero-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .poster-pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Artwork pairs */
+.art-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+}
+
+.art-pair figure {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.art-pair .shot {
+  height: auto;
+  border: 0;
+}
+
+.art-pair figcaption {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 720px) {
+  .art-pair {
+    grid-template-columns: 1fr;
   }
 }

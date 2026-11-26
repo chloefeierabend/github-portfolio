@@ -2,92 +2,38 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/site/favicon-32.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indie Game Jam · Chloe Feierabend</title>
+  <meta name="description" content="Posters and screen graphics Chloe Feierabend designed for two indie game jams at Conestoga College, for both print and digital displays.">
+  <link rel="canonical" href="https://chloefeierabend.com/indie-game-jam/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Chloe Feierabend">
+  <meta property="og:title" content="Indie Game Jam · Chloe Feierabend">
+  <meta property="og:description" content="Posters and screen graphics Chloe Feierabend designed for two indie game jams at Conestoga College, for both print and digital displays.">
+  <meta property="og:url" content="https://chloefeierabend.com/indie-game-jam/">
+  <meta property="og:image" content="https://chloefeierabend.com/img/site/og-image.png">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1260">
+  <meta property="og:image:alt" content="Chloe Feierabend, UX/UI and product designer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Indie Game Jam · Chloe Feierabend">
+  <meta name="twitter:description" content="Posters and screen graphics Chloe Feierabend designed for two indie game jams at Conestoga College, for both print and digital displays.">
+  <meta name="twitter:image" content="https://chloefeierabend.com/img/site/og-image.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/site/favicon-32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="../img/site/favicon-64.png">
-    <link rel="apple-touch-icon" href="../img/site/bird-head-logo.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Posters and screen graphics Chloe Feierabend designed for two indie game jams at Conestoga College, for both print and digital displays.">
-    <link rel="canonical" href="https://chloefeierabend.com/indie-game-jam/">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="Chloe Feierabend">
-    <meta property="og:title" content="Indie Game Jam · Chloe Feierabend">
-    <meta property="og:description" content="Posters and screen graphics Chloe Feierabend designed for two indie game jams at Conestoga College, for both print and digital displays.">
-    <meta property="og:url" content="https://chloefeierabend.com/indie-game-jam/">
-    <meta property="og:image" content="https://chloefeierabend.com/img/site/og-image.png">
-    <meta property="og:image:width" content="2400">
-    <meta property="og:image:height" content="1260">
-    <meta property="og:image:alt" content="Chloe Feierabend, UX/UI and product designer">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Indie Game Jam · Chloe Feierabend">
-    <meta name="twitter:description" content="Posters and screen graphics Chloe Feierabend designed for two indie game jams at Conestoga College, for both print and digital displays.">
-    <meta name="twitter:image" content="https://chloefeierabend.com/img/site/og-image.png">
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/gamejam.css">
-
-    <!-- <link rel="stylesheet" href="css/skip-button.css"> -->
-    <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin>
-
-
-    <!-- Preconnects -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Non-blocking load: preload as style, then swap rel on load -->
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Mono:wght@400&family=DM+Sans:wght@400;500;600&display=swap"
-        onload="this.onload=null;this.rel='stylesheet'">
-
-    <!-- No-JS fallback -->
-    <noscript>
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Mono:wght@400&family=DM+Sans:wght@400;500;600&display=swap">
-    </noscript>
-
-    <title>Indie Game Jam · Chloe Feierabend</title>
+  <link rel="apple-touch-icon" href="../img/site/bird-head-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Mono:wght@400&family=DM+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../css/lightbox.css">
   <script src="../js/menu.js" defer></script>
   <script src="../js/bird.js" defer></script>
-
-    <style>
-        .navbar a:hover {
-            transition: font-family 1s;
-        }
-
-        .skip-to-content {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: rgb(251, 250, 246);
-            color: rgb(0, 0, 0);
-            padding: 10px 16px;
-            border-radius: 0 0 6px 0;
-            text-decoration: none;
-            font-weight: 600;
-            z-index: 100;
-            transition: top 0.3s ease;
-            font-family: "Inter", sans-serif;
-        }
-
-        /* Reveal on focus */
-        .skip-to-content:focus {
-            top: 0;
-            background: rgba(251, 250, 246, 0.772);
-            outline: 3px solid #1e40af;
-        }
-
-        /* Focus accessibility */
-        .skip-to-content:focus-visible {
-            outline: 3px solid #1e40af;
-            outline-offset: 3px;
-        }
-    </style>
-  <link rel="stylesheet" href="../css/site.css">
-  <link rel="stylesheet" href="../css/legacy.css">
+  <script src="../js/lightbox.js" defer></script>
 </head>
-<script src="https://kit.fontawesome.com/5973f658b0.js" crossorigin="anonymous" defer></script>
 
-<body class="cf legacy" id="top">
+<body class="cf" id="top">
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <div class="wrap">
@@ -102,98 +48,57 @@
         </ul>
       </nav>
     </header>
-  </div>
 
     <main id="main">
-        <article class="project-page">
+      <section class="cs-hero">
+        <a class="back-link" href="../work/">← all work</a>
+        <div class="cs-hero-row">
+          <div class="cs-hero-text">
+            <p class="label">[graphic design]</p>
+            <h1 class="cs-title">Indie Game Jam</h1>
+            <p>Promotional materials for Conestoga College's indie game jam, held every fall and winter term.</p>
+          </div>
+        </div>
+      </section>
 
-            <!-- Project Header -->
-            <header class="project-header">
-                <a href="../work/" class="back-link">
-                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-                    Back to Work
-                </a>
-                <h1 class="londrina-shadow-regular">Indie Game Jam</h1>
-                <p class="project-tagline">Promotional materials for Conestoga College's bi-termly indie game jam event.
-                </p>
+      <section class="summary" aria-label="Summary">
+        <dl>
+          <div><dt>role</dt><dd>Designer</dd></div>
+          <div><dt>timeline</dt><dd>October 2024, February 2025</dd></div>
+          <div><dt>tools</dt><dd>Illustrator, Photoshop</dd></div>
+          <div><dt>deliverables</dt><dd>Posters, TV Graphic, Masthead</dd></div>
+        </dl>
+        <p class="body-lg">The Indie Game Jam was a recurring event hosted at Conestoga College's Waterloo campus, bringing students together to design and develop games over a five day period. I designed promotional materials for two separate jams, working within quick turnarounds and specific dimension requirements for print and digital displays.</p>
+      </section>
 
-                <div class="project-meta-grid">
-                    <div class="meta-item">
-                        <span class="meta-label">Role</span>
-                        <span class="meta-value">Designer</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Timeline</span>
-                        <span class="meta-value">October 2024, February 2025</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Tools</span>
-                        <span class="meta-value">Illustrator, Photoshop</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Deliverables</span>
-                        <span class="meta-value">Posters, TV Graphic, Masthead</span>
-                    </div>
-                </div>
-            </header>
+      <section class="section cs-section" aria-labelledby="s1">
+        <div class="section-head">
+          <p class="label">[print]</p>
+          <h2 class="h-section" id="s1">Event posters</h2>
+        </div>
+        <div class="art-pair">
+          <figure class="design-img"><img class="shot" src="../img/gamejam/GameJamPosterOfficial_Approved-01.png" alt="Indie Game Jam poster for October 2024" loading="lazy" decoding="async"><figcaption>Fall 2024</figcaption></figure>
+          <figure class="design-img"><img class="shot" src="../img/gamejam/GameJamPosterOfficialW25_CodeFlakes-01.png" alt="Indie Game Jam poster for Winter 2025" loading="lazy" decoding="async"><figcaption>Winter 2025</figcaption></figure>
+        </div>
+      </section>
 
-            <!-- Overview -->
-            <section class="project-section">
-                <p class="project-intro">
-                    The Indie Game Jam is a recurring event hosted at Conestoga College's Waterloo campus, bringing
-                    students together to design and develop games over a five day period. I designed promotional
-                    materials
-                    for two separate jams, working within quick turnarounds and specific dimension requirements for
-                    print and digital displays.
-                </p>
-            </section>
+      <section class="section cs-section" aria-labelledby="s2">
+        <div class="section-head">
+          <p class="label">[screens]</p>
+          <h2 class="h-section" id="s2">Digital displays</h2>
+        </div>
+        <p class="body-lg">Alongside the print posters, I created graphics for Conestoga's digital television network and promotional mastheads.</p>
+        <div class="art-pair">
+          <figure class="design-img"><img class="shot" src="../img/gamejam/CCDTVPleaseBCentred_graphic-01.png" alt="Indie Game Jam TV display graphic" loading="lazy" decoding="async"><figcaption>TV Graphic</figcaption></figure>
+          <figure class="design-img"><img class="shot" src="../img/gamejam/mastheadSquished3_graphic-01.png" alt="Indie Game Jam promotional masthead" loading="lazy" decoding="async"><figcaption>Masthead</figcaption></figure>
+        </div>
+      </section>
 
-            <!-- Posters Section -->
-            <section class="project-section">
-                <h2>Event Posters</h2>
-                <div class="showcase-grid showcase-grid--2col">
-                    <figure class="showcase-item">
-                        <img src="../img/gamejam/GameJamPosterOfficial_Approved-01.png"
-                            alt="Indie Game Jam poster for October 2024" loading="lazy">
-                        <figcaption>Fall 2024</figcaption>
-                    </figure>
-                    <figure class="showcase-item">
-                        <img src="../img/gamejam/GameJamPosterOfficialW25_CodeFlakes-01.png"
-                            alt="Indie Game Jam poster for Winter 2025" loading="lazy">
-                        <figcaption>Winter 2025</figcaption>
-                    </figure>
-                </div>
-            </section>
-
-            <!-- TV & Digital Section -->
-            <section class="project-section">
-                <h2>Digital Displays</h2>
-                <p>Alongside the print posters, I created graphics for Conestoga's digital television network and
-                    promotional mastheads.</p>
-                <div class="showcase-grid showcase-grid--2col">
-                    <figure class="showcase-item">
-                        <img src="../img/gamejam/CCDTVPleaseBCentred_graphic-01.png"
-                            alt="Indie Game Jam TV display graphic" loading="lazy">
-                        <figcaption>TV Graphic</figcaption>
-                    </figure>
-                    <figure class="showcase-item">
-                        <img src="../img/gamejam/mastheadSquished3_graphic-01.png"
-                            alt="Indie Game Jam promotional masthead" loading="lazy">
-                        <figcaption>Masthead</figcaption>
-                    </figure>
-                </div>
-            </section>
-
-            <!-- Navigation -->
-            <nav class="project-nav" aria-label="Project navigation">
-              <a href="../financial-literacy/" class="project-nav-link">
-                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-                Previous: Karla Learn
-              </a>
-            </nav>
-
-        </article>
+      <nav class="next-project" aria-label="Back to work">
+        <a class="back-link" href="../work/">← all work</a>
+      </nav>
     </main>
+  </div>
 
   <footer class="cf-footer">
     <div class="wrap">
@@ -227,7 +132,6 @@
       </div>
     </div>
   </footer>
-
 </body>
 
 </html>

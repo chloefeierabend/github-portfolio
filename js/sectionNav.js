@@ -1,6 +1,4 @@
-/**
- * Section Navigation - Highlights current section in sticky nav
- */
+/* Section nav */
 
 document.addEventListener("DOMContentLoaded", () => {
   const navDots = document.querySelectorAll(".section-nav .nav-dot");
@@ -8,10 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!navDots.length || !sections.length) return;
 
-  // Intersection Observer to track which section is visible
   const observerOptions = {
     root: null,
-    rootMargin: "-20% 0px -60% 0px", // Trigger when section is in upper-middle of viewport
+    rootMargin: "-20% 0px -60% 0px",
     threshold: 0,
   };
 
@@ -20,10 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (entry.isIntersecting) {
         const sectionId = entry.target.getAttribute("id");
 
-        // Remove active class from all dots
         navDots.forEach((dot) => dot.classList.remove("active"));
 
-        // Add active class to corresponding dot
         const activeDot = document.querySelector(
           `.nav-dot[data-section="${sectionId}"]`,
         );
@@ -36,12 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-  // Observe all sections with IDs
   sections.forEach((section) => {
     observer.observe(section);
   });
 
-  // Smooth scroll on nav dot click
+  // Smooth scroll
   navDots.forEach((dot) => {
     dot.addEventListener("click", (e) => {
       e.preventDefault();

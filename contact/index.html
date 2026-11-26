@@ -2,151 +2,123 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="../img/favicon.png">
-  <link rel="apple-touch-icon" href="../img/favicon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact · Chloe Feierabend</title>
   <meta name="description" content="Get in touch with Chloe Feierabend, a UX/UI and product designer based in Waterloo, Ontario. Currently looking for UX/UI and product design roles.">
   <link rel="canonical" href="https://chloefeierabend.com/contact/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Chloe Feierabend">
-  <meta property="og:title" content="Contact | Chloe Feierabend">
+  <meta property="og:title" content="Contact · Chloe Feierabend">
   <meta property="og:description" content="Get in touch with Chloe Feierabend, a UX/UI and product designer based in Waterloo, Ontario. Currently looking for UX/UI and product design roles.">
   <meta property="og:url" content="https://chloefeierabend.com/contact/">
-  <meta property="og:image" content="https://chloefeierabend.com/img/og-image.png">
+  <meta property="og:image" content="https://chloefeierabend.com/img/site/og-image.png">
   <meta property="og:image:width" content="2400">
   <meta property="og:image:height" content="1260">
   <meta property="og:image:alt" content="Chloe Feierabend, UX/UI and product designer">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact | Chloe Feierabend">
+  <meta name="twitter:title" content="Contact · Chloe Feierabend">
   <meta name="twitter:description" content="Get in touch with Chloe Feierabend, a UX/UI and product designer based in Waterloo, Ontario. Currently looking for UX/UI and product design roles.">
-  <meta name="twitter:image" content="https://chloefeierabend.com/img/og-image.png">
-  <link rel="stylesheet" href="../main.css" />
-  <link rel="stylesheet" href="../contact.css">
-
-  <!-- Fonts -->
+  <meta name="twitter:image" content="https://chloefeierabend.com/img/site/og-image.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/site/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="../img/site/favicon-64.png">
+  <link rel="apple-touch-icon" href="../img/site/bird-head-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Outline&family=Londrina+Solid:wght@100;300;400;900&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-
-  <title>Contact | Chloe Feierabend</title>
-  <script src="https://kit.fontawesome.com/5973f658b0.js" crossorigin="anonymous"></script>
-  <script src="../hamburger.js" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Mono:wght@400&family=DM+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../css/site.css">
+  <script src="../js/menu.js" defer></script>
+  <script src="../js/bird.js" defer></script>
 </head>
 
-<body>
-  <!-- Navigation bar -->
-  <nav class="navbar">
-    <div class="container">
-      <div class="logo-left">
-        <a href="../" class="logo">CF</a>
-      </div>
+<body class="cf" id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-      <button class="nav-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
-        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" class="menu-icon">
-          <path fill="currentColor"
-            d="M22 13c0 1.11-.89 2-2 2H4a2 2 0 1 1 0-4h9l2.5 2l2.5-2h2a2 2 0 0 1 2 2M12 3C3 3 3 9 3 9h18s0-6-9-6M3 18c0 1.66 1.34 3 3 3h12c1.66 0 3-1.34 3-3v-1H3z" />
-        </svg>
-      </button>
+  <div class="wrap">
+    <header class="cf-header">
+      <a class="cf-logo" href="../" aria-label="Chloe Feierabend, home"><img src="../img/site/bird-head-logo.min.svg" alt="" width="56" height="56"></a>
+      <button class="cf-menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span>menu</span><svg aria-hidden="true" viewBox="0 0 20 14"><path d="M1 1h18M1 7h18M1 13h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg></button>
+      <nav class="cf-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../work/">./work</a></li>
+          <li><a href="../about/">./about</a></li>
+          <li><a href="./" aria-current="page">./contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <ul id="site-menu" class="nav">
-        <li><a href="../work/">Work</a></li>
-        <li><a href="../contact/" class="nav-active">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main>
-    <div class="contact-page">
-
-      <!-- Header -->
-      <header class="contact-header">
-        <h1 class="londrina-shadow-regular">Get in Touch</h1>
-        <p class="contact-intro">
-          I'm always open to discussing new projects, creative ideas, or opportunities to be part of something great.
-          Let's chat!
-        </p>
-        <div class="contact-location">
-          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-          <span>Based in Waterloo, ON</span>
+    <main id="main">
+      <section class="bird-hero bird-hero--contact">
+        <div class="bird-hero-text bird-hero-text--roomy">
+          <p class="label">[contact]</p>
+          <h1 class="h-hero">Let's talk.</h1>
+          <p class="lede lede--narrow">I'm open to UX/UI and product design roles. I'm also always up for a coffee chat in Kitchener-Waterloo or a quick call about something on this site.</p>
+          <p class="status">open to UX/UI + product roles · Waterloo, ON</p>
         </div>
-      </header>
-
-      <!-- Contact Methods -->
-      <section class="contact-methods">
-        <div class="contact-grid">
-
-          <!-- LinkedIn -->
-          <a class="contact-card" href="https://linkedin.com/in/chloe-feierabend" target="_blank"
-            rel="noopener noreferrer">
-            <div class="contact-icon contact-icon-linkedin">
-              <img src="../img/linkedin.png" alt="">
-            </div>
-            <div class="contact-info">
-              <h2>LinkedIn</h2>
-              <p>Let's connect</p>
-            </div>
-          </a>
-
-          <!-- Email -->
-          <a class="contact-card" href="mailto:chloe.feierabend@gmail.com">
-            <div class="contact-icon contact-icon-email">
-              <img src="../img/mail.png" alt="">
-            </div>
-            <div class="contact-info">
-              <h2>Email</h2>
-              <p>For project inquiries</p>
-            </div>
-          </a>
-
-          <!-- Resume Download -->
-          <a class="contact-card" href="../Chloe_Feierabend_Resume.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="contact-icon contact-icon-resume">
-              <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.702 15.195q-.136-.053-.267-.184l-2.62-2.619q-.146-.146-.152-.344t.152-.363q.166-.166.357-.169q.192-.003.357.163L11.5 13.65V5.5q0-.213.143-.357T12 5t.357.143t.143.357v8.15l1.971-1.971q.146-.146.347-.153t.366.159q.16.165.163.354t-.162.353l-2.62 2.62q-.13.13-.267.183q-.136.053-.298.053t-.298-.053M6.616 19q-.691 0-1.153-.462T5 17.384v-1.923q0-.213.143-.356t.357-.144t.357.144t.143.356v1.923q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-1.923q0-.213.143-.356t.357-.144t.357.144t.143.356v1.923q0 .691-.462 1.153T17.384 19z" stroke-width="0.4" stroke="currentColor"/></svg>
-            </div>
-            <div class="contact-info">
-              <h2>Resume</h2>
-              <p>Download PDF</p>
-            </div>
-          </a>
-
+        <div class="bird-hero-art">
+          <img class="js-bird" src="../img/site/bird-creature.min.svg" width="371" height="742" alt="Chloe's illustrated character: a fluffy little bird with an orange beak and watercolour fish-fin legs, standing with its hands on its hips">
         </div>
       </section>
 
-      <!-- Response Note -->
-      <div class="contact-note">
-        <i class="fa-regular fa-clock" aria-hidden="true"></i>
-        <p>I typically respond within 48 hours</p>
+      <section aria-label="Ways to reach me">
+        <ul class="link-rows">
+          <li>
+            <span class="label">[email]</span>
+            <a href="mailto:chloe.feierabend@gmail.com"><span>chloe.feierabend@gmail.com</span><span aria-hidden="true">↗</span></a>
+            <span class="note">The best way to reach me. I read everything.</span>
+          </li>
+          <li>
+            <span class="label">[linkedin]</span>
+            <a href="https://www.linkedin.com/in/chloe-feierabend/" target="_blank" rel="noopener"><span>LinkedIn</span><span aria-hidden="true">↗</span></a>
+            <span class="note">Say hi, or send me a message about a role.</span>
+          </li>
+          <li>
+            <span class="label">[resume]</span>
+            <a href="../Chloe_Feierabend_Resume.pdf" target="_blank" rel="noopener"><span>Resume (PDF)</span><span aria-hidden="true">↗</span></a>
+            <span class="note">Everything on one page, ready to share with your team.</span>
+          </li>
+          <li>
+            <span class="label">[github]</span>
+            <a href="https://github.com/chloefeierabend" target="_blank" rel="noopener"><span>github.com/chloefeierabend</span><span aria-hidden="true">↗</span></a>
+            <span class="note">Where this site and my side projects live.</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <footer class="cf-footer">
+    <div class="wrap">
+      <div class="cf-footer-top">
+        <div class="cf-footer-cta">
+          <p class="cf-footer-title">Let's make something.</p>
+          <p class="cf-footer-status">open to UX/UI + product roles · Waterloo, ON</p>
+        </div>
+        <div class="cf-footer-perch"><img class="cf-footer-bird" src="../img/site/bird-creature-light.min.svg" alt="" width="329" height="706" loading="lazy"></div>
       </div>
-
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-left">
-        <img class="footer-logo" src="../img/CF_Box_Logo.png" alt="CF logo" fetchpriority="high" decoding="async">
-      </div>
-
-      <div class="footer-tagline">
-        <p class="tagline">
-          Currently looking for UX/UI and product design roles.
-        </p>
-      </div>
-
-      <div class="footer-right">
-        <nav class="footer-nav" aria-label="Footer">
-          <a href="https://www.linkedin.com/in/chloe-feierabend/" target="_blank"><img src="../img/linkedin.png" alt="" width="16" height="16" style="display:inline;vertical-align:middle;margin-right:4px"> LinkedIn</a>
-          <a href="mailto:chloe.feierabend@gmail.com" target="_blank"><img src="../img/mail.png" alt="" width="16" height="16" style="display:inline;vertical-align:middle;margin-right:4px"> E-Mail</a>
-          <a href="../Chloe_Feierabend_Resume.pdf" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true" style="display:inline;vertical-align:middle;margin-right:4px"><path fill="currentColor" d="M11.702 15.195q-.136-.053-.267-.184l-2.62-2.619q-.146-.146-.152-.344t.152-.363q.166-.166.357-.169q.192-.003.357.163L11.5 13.65V5.5q0-.213.143-.357T12 5t.357.143t.143.357v8.15l1.971-1.971q.146-.146.347-.153t.366.159q.16.165.163.354t-.162.353l-2.62 2.62q-.13.13-.267.183q-.136.053-.298.053t-.298-.053M6.616 19q-.691 0-1.153-.462T5 17.384v-1.923q0-.213.143-.356t.357-.144t.357.144t.143.356v1.923q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-1.923q0-.213.143-.356t.357-.144t.357.144t.143.356v1.923q0 .691-.462 1.153T17.384 19z" stroke-width="0.4" stroke="currentColor"/></svg> Resume</a>
+      <div class="cf-footer-links">
+        <nav aria-label="Get in touch">
+          <ul>
+            <li><a href="mailto:chloe.feierabend@gmail.com">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/chloe-feierabend/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/chloefeierabend" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="../Chloe_Feierabend_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+          </ul>
         </nav>
+        <nav class="cf-footer-site" aria-label="Footer">
+          <ul>
+            <li><a href="../work/">./work</a></li>
+            <li><a href="../about/">./about</a></li>
+            <li><a href="./">./contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="cf-footer-bottom">
+        <p><img src="../img/site/bird-head-logo.min.svg" alt="" width="28" height="28"><span>© 2026 Chloe Feierabend · designed by me</span></p>
+        <a href="#top">back to top ↑</a>
       </div>
     </div>
   </footer>
-
 </body>
 
 </html>

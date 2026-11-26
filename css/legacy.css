@@ -1,0 +1,175 @@
+/* Legacy case study pages */
+
+.legacy {
+  --color-bg: var(--cream);
+  --color-surface-subtle: #FBF7EF;
+  --color-surface: #EFE6D6;
+  --color-surface-hover: #E8DCC8;
+  --color-text: var(--ink);
+  --color-text-secondary: var(--ink-soft);
+  --color-text-muted: var(--ink-soft);
+  --color-border: #D9CDBA;
+  --color-border-strong: var(--ink);
+  --color-focus: var(--teal-text);
+  --color-gatore: var(--teal-text);
+  --font-body: var(--font-sans);
+  --font-display-solid: var(--font-display);
+  --content-max: 1200px;
+}
+
+.legacy main,
+.legacy .content-casestudy {
+  opacity: 1;
+}
+
+.legacy .content-casestudy {
+  max-width: 1200px;
+  padding-inline: var(--gutter);
+}
+
+/* Headings */
+.legacy .hero-casestudy h1,
+.legacy .project-header h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(48px, 6vw, 88px);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+
+.legacy .section-header h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(32px, 3.6vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.legacy .content-casestudy h3,
+.legacy .content-casestudy h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.legacy .section-label,
+.legacy .meta-label {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--teal-text);
+}
+
+.legacy .meta-label {
+  font-size: 13px;
+}
+
+/* Section lines */
+.legacy .content-casestudy > section:not(.hero-casestudy):not(.top-button) {
+  padding-top: 32px;
+  border-top: var(--rule);
+}
+
+/* Hero image */
+.legacy .hero-image-casestudy::before {
+  display: none;
+}
+
+/* Cards */
+.legacy .context-card,
+.legacy .solution-highlight,
+.legacy .dev-card,
+.legacy .pull-quote {
+  border: var(--line);
+  border-radius: var(--radius-card);
+  box-shadow: none;
+  background: var(--white);
+}
+
+.legacy .pull-quote {
+  border-left: var(--line);
+}
+
+/* Skip link */
+.legacy .skip-to-content {
+  display: none;
+}
+
+/* Footer links */
+.legacy .cf-footer a {
+  display: block;
+  padding: 12px 0;
+  border-radius: 4px;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--cream);
+}
+
+.legacy .cf-footer a:hover {
+  color: #8FD6CB;
+  background-color: transparent;
+}
+
+.legacy .cf-footer p {
+  font-size: inherit;
+  line-height: 1.5;
+}
+
+.legacy .cf-footer-title {
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1;
+}
+
+/* Header links */
+.legacy .cf-nav a {
+  font-family: var(--font-mono);
+  font-weight: 400;
+}
+
+.legacy .cf-nav a {
+  font-size: 15px;
+}
+
+/* Stat band links */
+.legacy .stat-callout a {
+  color: var(--cream);
+}
+
+/* Indie Game Jam headings */
+.legacy main h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.legacy .cf-nav a {
+  display: block;
+  color: var(--ink);
+  line-height: 1.5;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.legacy .cf-nav a {
+  padding: 13px 12px;
+}
+
+.legacy .cf-nav a:hover {
+  color: var(--teal-text);
+  background-color: transparent;
+}
+
+.legacy .cf-nav li,
+.legacy .cf-footer li {
+  display: block;
+}
+
+@media (max-width: 720px) {
+  .legacy .cf-nav a {
+    padding: 14px 12px;
+    font-size: 16px;
+  }
+}

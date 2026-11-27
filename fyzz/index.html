@@ -12,14 +12,14 @@
   <meta property="og:title" content="Fyzz case study · Chloe Feierabend">
   <meta property="og:description" content="How Chloe Feierabend designed Fyzz, a trip planner where people vote on places and the day gets built around weather, opening hours and travel time.">
   <meta property="og:url" content="https://chloefeierabend.com/fyzz/">
-  <meta property="og:image" content="https://chloefeierabend.com/img/site/og-image.png">
-  <meta property="og:image:width" content="2400">
-  <meta property="og:image:height" content="1260">
-  <meta property="og:image:alt" content="Chloe Feierabend, UX/UI and product designer">
+  <meta property="og:image" content="https://chloefeierabend.com/img/fyzz/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Fyzz case study: the Fyzz logo next to three app screens, My Trips, Voting and Itinerary">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Fyzz case study · Chloe Feierabend">
   <meta name="twitter:description" content="How Chloe Feierabend designed Fyzz, a trip planner where people vote on places and the day gets built around weather, opening hours and travel time.">
-  <meta name="twitter:image" content="https://chloefeierabend.com/img/site/og-image.png">
+  <meta name="twitter:image" content="https://chloefeierabend.com/img/fyzz/og.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../img/site/favicon-32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="../img/site/favicon-64.png">
   <link rel="apple-touch-icon" href="../img/site/bird-head-logo.png">
@@ -386,6 +386,9 @@
             <h1 class="cs-title vt-title vt-title-fyzz">Fyzz</h1>
             <ul class="tags" aria-label="Status"><li class="tag tag--progress">in progress</li></ul>
             <p>A trip planner for casual plans, whether that's a group, a date, or just you. Everyone votes on places, and Fyzz builds the day around the weather, opening hours and travel time.</p>
+            <div class="btn-row">
+              <a class="btn btn--outline" href="https://fyzz.ca" target="_blank" rel="noopener">Visit fyzz.ca ↗</a>
+            </div>
           </div>
           <div class="cs-logo">
             <img src="../img/fyzz/FyzzLogoWordmark.svg" alt="Fyzz logo and wordmark">
@@ -401,9 +404,9 @@
           <div><dt>status</dt><dd>In progress · not tested with groups yet</dd></div>
         </dl>
         <div class="phone-row">
-          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/my-trips.png" alt="My Trips home screen"><figcaption>My Trips</figcaption></figure>
-          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/voting.png" alt="Voting screen with hearts"><figcaption>Voting</figcaption></figure>
-          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/itinerary.png" alt="Itinerary with ticket-style stop cards on a dashed line"><figcaption>Itinerary</figcaption></figure>
+          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/my-trips.webp" alt="My Trips home screen"><figcaption>My Trips</figcaption></figure>
+          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/voting.webp" alt="Voting screen with hearts"><figcaption>Voting</figcaption></figure>
+          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/itinerary.webp" alt="Itinerary with ticket-style stop cards on a dashed line"><figcaption>Itinerary</figcaption></figure>
         </div>
       </section>
 
@@ -413,7 +416,7 @@
           <h2 class="h-section" id="s1">Not a crazy commitment unless it wants to be</h2>
         </div>
         <p class="lede lede--wide">Most casual plans happen in a group chat. Someone drops a few pins, the plan ends up spread across screenshots and old messages, and nobody checks whether it'll rain during the outdoor stop.</p>
-        <p class="body-lg">The tools that exist each cover one piece of it. Google Maps lists let you vote on places but don't schedule anything. Wanderlog schedules things. TripIt organizes bookings you've already made, but it doesn't help you decide anything.</p>
+        <p class="body-lg">The tools that exist each cover one piece of it. Google Maps lists let you vote on places but don't schedule anything. Wanderlog schedules trips and TripIt organizes bookings you've already made, but neither helps a group decide.</p>
         <p class="body-lg">Put those pieces together. Let people vote, build the day from the votes, check it against the weather and opening hours, and ask before changing a plan people already agreed to. The line I kept coming back to was "not a crazy commitment unless it wants to be."</p>
         <dl class="detail-grid">
           <div><dt>my role</dt><dd>I did all the design work: the design doc, the survey, the mockups and the design system.</dd></div>
@@ -472,13 +475,13 @@
               <p class="fine-print">It's the same call I made on Karla Learn and GATORE: don't make people commit before they see anything. Here it cost the most.</p>
             </div>
             <div class="choice-img choice-img--phone lightbox-img">
-              <img class="shot phone-shot" src="../img/fyzz/join.png" alt="Fyzz join screen: an invite to Toronto Day Trip asking for your name, with no account needed" loading="lazy" decoding="async">
+              <img class="shot phone-shot" src="../img/fyzz/join.webp" alt="Fyzz join screen: an invite to Toronto Day Trip asking for your name, with no account needed" loading="lazy" decoding="async">
             </div>
           </li>
           <li>
             <div class="choice-text">
               <span class="choice-num" aria-hidden="true">02</span>
-              <h3>Hearts and sign-off are different votes</h3>
+              <h3>Hearts vote on places, sign-off agrees to the day</h3>
               <dl>
                 <div><dt>options</dt><dd class="soft">Call both "voting," like the brief did, or give them different words.</dd></div>
                 <div><dt>I chose</dt><dd>Hearts for places, sign-off for the whole day. The app never calls sign-off a vote.</dd></div>
@@ -487,7 +490,7 @@
               <p class="fine-print">People joining or leaving doesn't reset sign-off. The version didn't change, so starting over would just punish the people who already answered.</p>
             </div>
             <div class="choice-img choice-img--phone lightbox-img">
-              <img class="shot phone-shot" src="../img/fyzz/voting.png" alt="Fyzz voting screen with places, heart votes, and a Fyzzing badge on the top pick" loading="lazy" decoding="async">
+              <img class="shot phone-shot" src="../img/fyzz/voting.webp" alt="Fyzz voting screen with places, heart votes, and a Fyzzing badge on the top pick" loading="lazy" decoding="async">
             </div>
           </li>
           <li>
@@ -503,7 +506,7 @@
               <p class="fine-print">A broken invite link gets the same ticket as a real one, greyed out and stamped "VOID," instead of a generic error page.</p>
             </div>
             <div class="choice-img choice-img--phone lightbox-img">
-              <img class="shot phone-shot" src="../img/fyzz/void-ticket.png" alt="Fyzz broken invite link screen, a greyed-out ticket stamped VOID" loading="lazy" decoding="async">
+              <img class="shot phone-shot" src="../img/fyzz/void-ticket.webp" alt="Fyzz broken invite link screen, a greyed-out ticket stamped VOID" loading="lazy" decoding="async">
             </div>
           </li>
         </ol>
@@ -523,9 +526,9 @@
         <p class="body-lg">Each stop gets checked against the hourly forecast. If rain's coming, a note at the top of the itinerary says when it starts and which stop it reaches, and Review offers a swap. The note and Review always point at the same stop, so you never read about one problem and get offered a fix for another.</p>
         <p class="body-lg">Timing conflicts work the same way, like a stop running past a reservation's start time (the one shown here). A suggested change shows the before and after side by side, says why, and mentions that everyone else on the trip can see it too. Whoever responds first decides. There's no countdown and no pressure.</p>
         <div class="phone-row">
-          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/itinerary.png" alt="Itinerary with ticket-style stop cards on a dashed line" loading="lazy" decoding="async"><figcaption>Itinerary</figcaption></figure>
-          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/plan-change.png" alt="Fyzz plan change screen proposing a swap of two stops, with now and proposed times side by side and a note that Priya and Sam are seeing it too" loading="lazy" decoding="async"><figcaption>Plan change</figcaption></figure>
-          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/reorder.png" alt="Reorder mode with up and down arrow buttons" loading="lazy" decoding="async"><figcaption>Reorder mode</figcaption></figure>
+          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/itinerary.webp" alt="Itinerary with ticket-style stop cards on a dashed line" loading="lazy" decoding="async"><figcaption>Itinerary</figcaption></figure>
+          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/plan-change.webp" alt="Fyzz plan change screen proposing a swap of two stops, with now and proposed times side by side and a note that Priya and Sam are seeing it too" loading="lazy" decoding="async"><figcaption>Plan change</figcaption></figure>
+          <figure class="lightbox-img"><img class="shot phone-shot" src="../img/fyzz/reorder.webp" alt="Reorder mode with up and down arrow buttons" loading="lazy" decoding="async"><figcaption>Reorder mode</figcaption></figure>
         </div>
       </section>
 
@@ -641,7 +644,7 @@
           </div>
 
         <figure class="cs-figure cs-figure--phone lightbox-img">
-          <img class="shot phone-shot" src="../img/fyzz/sign-off.png" alt="Fyzz itinerary with a sign-off card: two of three people have said Looks good, with an option to go ahead without Sam" loading="lazy" decoding="async">
+          <img class="shot phone-shot" src="../img/fyzz/sign-off.webp" alt="Fyzz itinerary with a sign-off card: two of three people have said Looks good, with an option to go ahead without Sam" loading="lazy" decoding="async">
           <figcaption>Sign-off, waiting on Sam</figcaption>
         </figure>
       </section>
@@ -651,7 +654,7 @@
           <p class="label">06 · results + next</p>
           <h2 class="h-section" id="s6">What I learned, and what's next</h2>
         </div>
-        <p class="body-lg">Fyzz was built from September 4 to November 16. So far it's only been tested by me and one other person.</p>
+        <p class="body-lg">So far it's only been tested by me and one other person.</p>
 
         <h3 class="h-sub">What using it taught me</h3>
         <ul class="cs-list cs-list--roomy">
@@ -663,12 +666,12 @@
         <ol class="lessons">
           <li>
             <span class="lesson-num" aria-hidden="true">1</span>
-            <h3>Look past the first answer</h3>
+            <h3>The real problem was the plan changing, not people editing</h3>
             <p>Host approval solved the problem as I'd first described it. Sign-off solved the problem people actually have. I only got there by going back to why it felt chaotic.</p>
           </li>
           <li>
             <span class="lesson-num" aria-hidden="true">2</span>
-            <h3>Write down the cost</h3>
+            <h3>Logging the cost of each decision made changes easier</h3>
             <p>Every decision has its cost written next to it, so when I replaced host approval, I knew exactly what I was undoing and why.</p>
           </li>
           <li>
@@ -693,14 +696,14 @@
           <h2 class="h-section" id="s7">The finished screens</h2>
         </div>
         <div class="gallery gallery--phones">
-          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/my-trips.png" alt="My Trips home screen" loading="lazy" decoding="async"><figcaption>My Trips</figcaption></figure>
-          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/trip-hub.png" alt="Trip hub with tiles, members, invite card and activity" loading="lazy" decoding="async"><figcaption>Trip Hub</figcaption></figure>
-          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/place-search.png" alt="Place search with category filters" loading="lazy" decoding="async"><figcaption>Place Search</figcaption></figure>
-          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/voting.png" alt="Voting screen with hearts" loading="lazy" decoding="async"><figcaption>Voting</figcaption></figure>
-          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/itinerary.png" alt="Itinerary with ticket-style stop cards on a dashed line" loading="lazy" decoding="async"><figcaption>Itinerary</figcaption></figure>
-          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/reorder.png" alt="Reorder mode with up and down arrow buttons" loading="lazy" decoding="async"><figcaption>Reorder Mode</figcaption></figure>
-          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/plan-change.png" alt="Plan change approval showing before and after" loading="lazy" decoding="async"><figcaption>Plan Change</figcaption></figure>
-          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/recap.png" alt="Trip recap with stats and the memory trail" loading="lazy" decoding="async"><figcaption>Trip Recap</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/my-trips.webp" alt="My Trips home screen" loading="lazy" decoding="async"><figcaption>My Trips</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/trip-hub.webp" alt="Trip hub with tiles, members, invite card and activity" loading="lazy" decoding="async"><figcaption>Trip Hub</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/place-search.webp" alt="Place search with category filters" loading="lazy" decoding="async"><figcaption>Place Search</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/voting.webp" alt="Voting screen with hearts" loading="lazy" decoding="async"><figcaption>Voting</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/itinerary.webp" alt="Itinerary with ticket-style stop cards on a dashed line" loading="lazy" decoding="async"><figcaption>Itinerary</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/reorder.webp" alt="Reorder mode with up and down arrow buttons" loading="lazy" decoding="async"><figcaption>Reorder Mode</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/plan-change.webp" alt="Plan change approval showing before and after" loading="lazy" decoding="async"><figcaption>Plan Change</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--fyzz" src="../img/fyzz/recap.webp" alt="Trip recap with stats and the memory trail" loading="lazy" decoding="async"><figcaption>Trip Recap</figcaption></figure>
         </div>
       </section>
 

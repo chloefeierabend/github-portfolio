@@ -734,7 +734,7 @@ body.cf {
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 56px;
-  padding: 72px 0 112px;
+  padding: 88px 0 112px;
 }
 
 .about-intro-text {
@@ -757,15 +757,6 @@ body.cf {
   object-position: center;
   background: var(--tint-gatore);
   border: var(--line);
-}
-
-.photo-frame .sticker {
-  position: absolute;
-  left: -6px;
-  top: -6px;
-  width: 84px;
-  height: 84px;
-  transform: rotate(-10deg);
 }
 
 .three-up {
@@ -1740,8 +1731,7 @@ body.cf {
 }
 
 /* Bird images */
-.cf-logo img,
-.photo-frame .sticker {
+.cf-logo img {
   object-fit: contain;
 }
 
@@ -1956,17 +1946,17 @@ body.cf {
 
 .bird-hero-art {
   --bird-h: 380px;
-  --bird-drop: -12px;
+  --bird-drop: -1px;
 }
 
 .bird-hero--contact .bird-hero-art {
   --bird-h: 340px;
-  --bird-drop: -11px;
+  --bird-drop: -1px;
 }
 
 .outside .bird-hero-art {
   --bird-h: 320px;
-  --bird-drop: -10px;
+  --bird-drop: -1px;
 }
 
 .bird-hero-art > .bird-svg,
@@ -2015,7 +2005,7 @@ body.cf {
   .bird-hero--contact .bird-hero-art,
   .outside .bird-hero-art {
     --bird-h: 250px;
-    --bird-drop: -8px;
+    --bird-drop: -1px;
   }
 
   .cf-footer-perch {
@@ -2373,4 +2363,89 @@ body.cf {
   .art-pair {
     grid-template-columns: 1fr;
   }
+}
+
+/* Feathers */
+.bird-hero-art {
+  position: relative;
+}
+
+.feather {
+  position: absolute;
+  z-index: 2;
+  height: auto;
+  margin: -20px 0 0 -20px;
+  pointer-events: none;
+}
+
+/* Photo feathers */
+.photo-feather {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+}
+
+.photo-feather--1 {
+  left: -8px;
+  top: -14px;
+  width: 58px;
+  transform: rotate(-32deg);
+}
+
+.photo-feather--2 {
+  right: -6px;
+  top: 34px;
+  width: 36px;
+  transform: rotate(18deg);
+}
+
+.photo-feather--3 {
+  right: -8px;
+  bottom: -16px;
+  width: 50px;
+  transform: rotate(34deg);
+}
+
+@media (max-width: 720px) {
+  .photo-feather--2 {
+    right: 2px;
+  }
+
+  .photo-feather--3 {
+    right: 6px;
+  }
+}
+
+/* Pencil and envelope on the line */
+.bird-hero-art img.hero-object {
+  display: block;
+  width: auto;
+  margin-bottom: -1px;
+}
+
+.bird-hero-art img.hero-object--pencil {
+  height: 220px;
+}
+
+.bird-hero-art img.hero-object--envelope {
+  height: auto;
+  width: clamp(200px, 22vw, 300px);
+}
+
+@media (max-width: 720px) {
+  .bird-hero-art img.hero-object--pencil {
+    height: 160px;
+  }
+
+  .bird-hero-art img.hero-object--envelope {
+    width: 190px;
+  }
+}
+
+.decision-img--prefs {
+  object-position: 50% 76%;
+}
+
+.choice-img .crop-prefs {
+  object-position: 50% 76%;
 }

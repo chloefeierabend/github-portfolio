@@ -83,8 +83,8 @@
           <div><dt>result</dt><dd>2nd place at demo day</dd></div>
         </dl>
         <div class="hero-pair">
-          <figure class="lightbox-img"><img class="shot shot--gatore" src="../img/gatore/reserve-a-game-reservation-flow.png" alt="GATORE customer booking flow, reserving a table and a game"><figcaption>For players</figcaption></figure>
-          <figure class="lightbox-img"><img class="shot shot--gatore" src="../img/gatore/business-dashboard.png" alt="GATORE owner dashboard in the business portal"><figcaption>For café owners</figcaption></figure>
+          <figure class="lightbox-img"><img class="shot shot--gatore" src="../img/gatore/reserve-a-game-reservation-flow.webp" alt="GATORE customer booking flow, reserving a table and a game"><figcaption>For players</figcaption></figure>
+          <figure class="lightbox-img"><img class="shot shot--gatore" src="../img/gatore/business-dashboard.webp" alt="GATORE owner dashboard in the business portal"><figcaption>For café owners</figcaption></figure>
         </div>
       </section>
 
@@ -119,15 +119,16 @@
           <li>
             <div class="choice-text">
               <span class="choice-num" aria-hidden="true">01</span>
-              <h3>Search by group, not by game</h3>
+              <h3>Recommend by group, not by title</h3>
               <dl>
-                <div><dt>options</dt><dd class="soft">A searchable list of titles, like most game libraries, or a finder built around who is playing.</dd></div>
-                <div><dt>I chose</dt><dd>A game finder that starts with party size, time available and complexity.</dd></div>
-                <div><dt>why</dt><dd class="soft">Groups usually pick a table and a game together. Starting from the group answers "what can the four of us play in two hours?", which a title list can't.</dd></div>
+                <div><dt>options</dt><dd class="soft">Recommend games from a list of titles, or start from who's playing.</dd></div>
+                <div><dt>I chose</dt><dd>A preferences step that asks about the types of games you enjoy, typical group size and complexity, so recommendations fit the group.</dd></div>
+                <div><dt>why</dt><dd class="soft">Groups pick a table and a game together. Starting from the group answers "what can the four of us play tonight?", which a title list can't.</dd></div>
               </dl>
+              <p class="fine-print">The preferences step was built, but we ran out of time to build the recommendations it would feed.</p>
             </div>
             <div class="choice-img lightbox-img">
-              <img class="shot shot--gatore" src="../img/gatore/find-by-game.png" alt="GATORE Find by game page listing board games with player count, play time, and difficulty" loading="lazy" decoding="async">
+              <img class="shot shot--gatore crop-prefs" src="../img/gatore/preferences-after.webp" alt="GATORE game preferences step asking for typical group size (Duo, Small group, Big table) and preferred complexity" loading="lazy" decoding="async">
             </div>
           </li>
           <li>
@@ -135,13 +136,13 @@
               <span class="choice-num" aria-hidden="true">02</span>
               <h3>No account needed</h3>
               <dl>
-                <div><dt>options</dt><dd class="soft">Require an account to book, which most booking tools do, or let guests book with a name and email.</dd></div>
+                <div><dt>options</dt><dd class="soft">Require an account to book, or let guests book with a name and email.</dd></div>
                 <div><dt>I chose</dt><dd>Guest checkout, with accounts offered for booking history and recommendations.</dd></div>
                 <div><dt>why</dt><dd class="soft">Competitors rarely force an account to book a table. Making it optional removes a big drop-off point and still gives regulars a reason to sign up.</dd></div>
               </dl>
             </div>
             <div class="choice-img lightbox-img">
-              <img class="shot shot--gatore" src="../img/gatore/reservation-guest-checkout.png" alt="GATORE reservation flow, Your Details step, offering Sign in to my account or Continue as guest with just name and email" loading="lazy" decoding="async">
+              <img class="shot shot--gatore" src="../img/gatore/reservation-guest-checkout.webp" alt="GATORE reservation flow, Your Details step, offering Sign in to my account or Continue as guest with just name and email" loading="lazy" decoding="async">
             </div>
           </li>
           <li>
@@ -155,11 +156,11 @@
               </dl>
             </div>
             <div class="choice-img lightbox-img">
-              <img class="shot shot--gatore" src="../img/gatore/business-portal-dashboard-reservations.png" alt="GATORE business portal dashboard showing reservations" loading="lazy" decoding="async">
+              <img class="shot shot--gatore" src="../img/gatore/business-portal-dashboard-reservations.webp" alt="GATORE business portal dashboard showing reservations" loading="lazy" decoding="async">
             </div>
           </li>
         </ol>
-        <p class="body-lg">Accounts stayed optional, but I wanted them to be worth having. A player profile saves their usual group size, the kinds of games they like and other preferences, so GATORE can recommend games: new ones to try, and ones they've already played and ranked. Building out the recommendations themselves is my next step.</p>
+        <p class="body-lg">Accounts stayed optional, but I wanted them to be worth having. A player profile saves their usual group size, the kinds of games they like and other preferences, so GATORE could recommend games: new ones to try, and ones they've already played and ranked.</p>
       </section>
 
       <section class="section cs-section" id="cafe-side" aria-labelledby="sc">
@@ -170,7 +171,7 @@
         <p class="body-lg">Players and café owners want different things. Players want to find a game and a table quickly. Owners want to see the whole day at a glance and keep the library accurate. So each side got its own information architecture and interaction patterns, built on the same design system.</p>
         <p class="body-lg">The business portal brings reservations, the game library and daily operations into one dashboard. Like the rest of the business side, it follows patterns staff already know from restaurant tools.</p>
         <figure class="cs-figure lightbox-img">
-          <img class="shot shot--gatore cs-img" src="../img/gatore/User%20Flow%20-%20Daily%20Operations,%20Management%20&amp;%20Inventory.png" alt="GATORE user flow diagram showing daily operations flows" loading="lazy" decoding="async">
+          <img class="shot shot--gatore cs-img" src="../img/gatore/User%20Flow%20-%20Daily%20Operations,%20Management%20&amp;%20Inventory.webp" alt="GATORE user flow diagram showing daily operations flows" loading="lazy" decoding="async">
           <figcaption>User flows for daily operations, management and inventory</figcaption>
         </figure>
       </section>
@@ -184,9 +185,9 @@
         <p class="body-lg">The name plays on “alligator,” but a literal reptile green felt cold, so I went with teal. Warm beige and brown bring in the cozy feel of a café.</p>
         <p class="body-lg">Accessibility was built into the system from the start: colour contrast, readable text sizes and screen reader support. The main teal works for buttons and icons, and where small text needed more contrast, I used a darker teal.</p>
         <p class="body-lg">Both sides share one set of tokens: teal, warm beige and warm brown, DM Sans, an 8px corner radius and a 4px grid. Customer screens use them warmly, with room for discovery. Business screens use the same tokens more densely, so staff can scan and act quickly.</p>
-        <p class="body-lg">The system came together near the end. I meant to start it earlier this time, but there wasn't room for it. With about three months for the whole project, there wasn't much room to experiment, so I built it from the patterns already in my screens. Once it was finished, I implemented it myself as React and Tailwind components, so the build used the same parts I designed with.</p>
+        <p class="body-lg">The system came together near the end. I meant to start it earlier this time, but with about three months for the whole project, there wasn't much room to experiment, so I built it from the patterns already in my screens. Once it was finished, I implemented it myself as React and Tailwind components, so the build used the same parts I designed with.</p>
         <div class="lightbox-img cs-img-wrap">
-          <img class="shot shot--gatore cs-img" src="../img/gatore/find-by-name.png" alt="GATORE café discovery and browse page" loading="lazy" decoding="async">
+          <img class="shot shot--gatore cs-img" src="../img/gatore/find-by-name.webp" alt="GATORE café discovery and browse page" loading="lazy" decoding="async">
         </div>
       </section>
 
@@ -195,14 +196,14 @@
           <p class="label">05 · what I changed</p>
           <h2 class="h-section" id="s5">Making preferences easy to answer</h2>
         </div>
-        <p class="body-lg">The game preferences step feeds GATORE's recommendations, so it had to be quick to fill in and easy to skip. The first version worked, but it asked players to think in bare numbers and labels.</p>
+        <p class="body-lg">The game preferences step was meant to feed GATORE's recommendations, so it had to be quick to fill in and easy to skip. The first version worked, but it asked players to think in bare numbers and labels.</p>
         <div class="before-after">
           <figure>
-            <img src="../img/gatore/preferences-before.png" width="741" height="1201" alt="Early version of the GATORE game preferences step: a large café banner with website and address, game type tiles, group size buttons labelled 2, 3-4 and 5+, and complexity buttons labelled Light, Medium and Heavy." loading="lazy" decoding="async">
+            <img src="../img/gatore/preferences-before.webp" width="741" height="1201" alt="Early version of the GATORE game preferences step: a large café banner with website and address, game type tiles, group size buttons labelled 2, 3-4 and 5+, and complexity buttons labelled Light, Medium and Heavy." loading="lazy" decoding="async">
             <figcaption><span class="label">[before · early version]</span><span>Group sizes as bare numbers, complexity as three similar words, and a large banner with the café website and address.</span></figcaption>
           </figure>
           <figure>
-            <img src="../img/gatore/preferences-after.png" width="1440" height="2258" alt="Final version of the GATORE game preferences step: a compact café header, game type tiles, group size cards for Any, Duo, Small group and Big table, and a complexity scale shown with one to three dots. It is marked Optional." loading="lazy" decoding="async">
+            <img src="../img/gatore/preferences-after.webp" width="1440" height="2258" alt="Final version of the GATORE game preferences step: a compact café header, game type tiles, group size cards for Any, Duo, Small group and Big table, and a complexity scale shown with one to three dots. It is marked Optional." loading="lazy" decoding="async">
             <figcaption><span class="label">[after · final version]</span><span>Group sizes that describe who you play with, a dot scale for complexity, and the same compact header as the booking flow.</span></figcaption>
           </figure>
         </div>
@@ -225,11 +226,11 @@
           <li>Delivered a high-fidelity React prototype covering booking, the game library, and the owner dashboard.</li>
         </ul>
         <div class="poster-pair">
-          <figure class="lightbox-img"><img class="shot" src="../img/gatore/GATORE-POSTERS-01.png" alt="GATORE capstone demo day poster" loading="lazy" decoding="async"></figure>
-          <figure class="lightbox-img"><img class="shot" src="../img/gatore/GATORE-POSTERS-04.png" alt="GATORE capstone demo day poster" loading="lazy" decoding="async"></figure>
+          <figure class="lightbox-img"><img class="shot" src="../img/gatore/GATORE-POSTERS-01.webp" alt="GATORE capstone demo day poster" loading="lazy" decoding="async"></figure>
+          <figure class="lightbox-img"><img class="shot" src="../img/gatore/GATORE-POSTERS-04.webp" alt="GATORE capstone demo day poster" loading="lazy" decoding="async"></figure>
         </div>
         <p class="fine-print">Our demo day posters</p>
-        <p class="body-lg">We didn't have time for usability testing, so before launch I'd test the booking flow with real players and café staff. Then I'd build the recommendation system for real. It was one of my favourite ideas and I want to see it work. After that, the social side: connecting players with similar tastes so they can meet and play together, which is the part the judges were most excited about.</p>
+        <p class="body-lg">We didn't have time for usability testing. If the project had kept going, I'd have tested the booking flow with real players and café staff, then built the recommendation system. It was one of my favourite ideas. After that, the social side: connecting players with similar tastes so they can meet and play together, which is the part the judges were most excited about.</p>
         <ol class="lessons">
           <li>
             <span class="lesson-num" aria-hidden="true">1</span>
@@ -238,13 +239,13 @@
           </li>
           <li>
             <span class="lesson-num" aria-hidden="true">2</span>
-            <h3>Design and development shape each other</h3>
-            <p>Taking it from research to a working build showed me how design and development decisions shape each other.</p>
+            <h3>Practical for staff, still GATORE</h3>
+            <p>Making the business side feel like GATORE while keeping it practical for staff was a challenge. It needed to be faster and denser than the customer side, so I used the same tokens, just more tightly.</p>
           </li>
           <li>
             <span class="lesson-num" aria-hidden="true">3</span>
             <h3>Test before you launch</h3>
-            <p>We didn't have time for usability testing. Next time I'd make room for it before launch.</p>
+            <p>Next time I'd make room for usability testing before launch.</p>
           </li>
         </ol>
       </section>
@@ -256,15 +257,15 @@
         </div>
         <h3 class="h-sub h-sub--sm gallery-head">For players</h3>
         <div class="gallery">
-          <figure class="design-img"><img class="shot shot--gatore" src="../img/gatore/Desktop-Client-Hero.png" alt="GATORE customer home page" loading="lazy" decoding="async"><figcaption>Home</figcaption></figure>
-          <figure class="design-img"><img class="shot shot--gatore" src="../img/gatore/find-by-game.png" alt="GATORE café discovery, browsing by game" loading="lazy" decoding="async"><figcaption>Café discovery, by game</figcaption></figure>
-          <figure class="design-img"><img class="shot shot--gatore" src="../img/gatore/reserve-a-game-reservation-flow.png" alt="GATORE reservation booking flow" loading="lazy" decoding="async"><figcaption>Reservation flow</figcaption></figure>
-          <figure class="design-img"><img class="shot shot--gatore" src="../img/gatore/customer-profile.png" alt="GATORE customer profile page" loading="lazy" decoding="async"><figcaption>Profile</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--gatore" src="../img/gatore/Desktop-Client-Hero.webp" alt="GATORE customer home page" loading="lazy" decoding="async"><figcaption>Home</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--gatore" src="../img/gatore/find-by-game.webp" alt="GATORE café discovery, browsing by game" loading="lazy" decoding="async"><figcaption>Café discovery, by game</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--gatore" src="../img/gatore/reserve-a-game-reservation-flow.webp" alt="GATORE reservation booking flow" loading="lazy" decoding="async"><figcaption>Reservation flow</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--gatore" src="../img/gatore/customer-profile.webp" alt="GATORE customer profile page" loading="lazy" decoding="async"><figcaption>Profile</figcaption></figure>
         </div>
         <h3 class="h-sub h-sub--sm gallery-head gallery-head--next">For café owners</h3>
         <div class="gallery">
-          <figure class="design-img"><img class="shot shot--gatore" src="../img/gatore/business-portal-game-library.png" alt="GATORE business portal game library management" loading="lazy" decoding="async"><figcaption>Game library</figcaption></figure>
-          <figure class="design-img"><img class="shot shot--gatore" src="../img/gatore/reservation-management.png" alt="GATORE business portal reservations management view" loading="lazy" decoding="async"><figcaption>Reservations management</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--gatore" src="../img/gatore/business-portal-game-library.webp" alt="GATORE business portal game library management" loading="lazy" decoding="async"><figcaption>Game library</figcaption></figure>
+          <figure class="design-img"><img class="shot shot--gatore" src="../img/gatore/reservation-management.webp" alt="GATORE business portal reservations management view" loading="lazy" decoding="async"><figcaption>Reservations management</figcaption></figure>
         </div>
       </section>
 
